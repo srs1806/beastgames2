@@ -1,0 +1,6 @@
+{
+  "name": "BEAST GAMES 2",
+  "description": "BEAST GAMES 2: Official MrBeast Season 2 streaming portal. Watch all 10 episodes free, track survival challenges, unlock exclusive badges, and experience the $5M tournament.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
