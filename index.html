@@ -8913,6 +8913,410 @@ body.light-mode .enroll-save-label {
   }
 }
 
+
+/* ================= ENROLLMENT AVATAR SELECTION STYLING ================= */
+.enroll-avatar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.enroll-avatar-selected-preview {
+  font-size: 0.78rem;
+  color: var(--accent, #38bdf8);
+}
+
+.enroll-avatar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  max-height: 175px;
+  overflow-y: auto;
+  padding: 4px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--card-border);
+}
+
+.enroll-avatar-btn {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 7px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.enroll-avatar-btn:hover {
+  border-color: #38bdf8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+}
+
+.enroll-avatar-btn.active {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.18);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+}
+
+.enroll-avatar-btn .avatar-icon {
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.enroll-avatar-btn .avatar-name {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.enroll-avatar-btn.fixed-avatar-btn {
+  border-color: #a855f7;
+  background: rgba(168, 85, 247, 0.08);
+}
+
+.enroll-avatar-btn.fixed-avatar-btn.active {
+  border-color: #c084fc;
+  background: rgba(168, 85, 247, 0.25);
+  box-shadow: 0 0 16px rgba(168, 85, 247, 0.45);
+}
+
+.avatar-lock-badge {
+  font-size: 0.58rem;
+  font-weight: 800;
+  padding: 1px 4px;
+  border-radius: 4px;
+  background: #a855f7;
+  color: #ffffff;
+  margin-top: 2px;
+  text-transform: uppercase;
+}
+
+.enroll-fixed-avatar-notice {
+  font-size: 0.76rem;
+  color: #c084fc;
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+
+/* ================= 3D MINIATURE GOLD & NEON OPENING TRANSITION ================= */
+.miniature-transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: radial-gradient(circle at center, rgba(15, 23, 42, 0.98) 0%, rgba(3, 7, 18, 0.99) 70%, #020617 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1400px;
+  opacity: 1;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.miniature-particle-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.miniature-scene {
+  position: relative;
+  z-index: 2;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.miniature-3d-card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(250, 204, 21, 0.4);
+  border-radius: 28px;
+  padding: 34px 26px 26px;
+  text-align: center;
+  box-shadow:
+    0 0 50px rgba(250, 204, 21, 0.25),
+    0 0 80px rgba(56, 189, 248, 0.25),
+    inset 0 0 25px rgba(250, 204, 21, 0.1),
+    0 25px 60px rgba(0, 0, 0, 0.85);
+  transform: rotateX(6deg) rotateY(-4deg) translateZ(20px);
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+  animation: miniatureFloat 4s ease-in-out infinite;
+}
+
+@keyframes miniatureFloat {
+  0%, 100% {
+    transform: rotateX(6deg) rotateY(-4deg) translateZ(20px) translateY(0);
+  }
+  50% {
+    transform: rotateX(4deg) rotateY(3deg) translateZ(30px) translateY(-8px);
+  }
+}
+
+.miniature-3d-card.flipping-out {
+  transform: rotateY(180deg) scale(0.9) translateZ(60px) !important;
+  opacity: 0 !important;
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.65s ease !important;
+}
+
+.miniature-ambient-glow {
+  position: absolute;
+  top: -20px;
+  left: 15%;
+  right: 15%;
+  height: 40px;
+  background: radial-gradient(ellipse at center, rgba(250, 204, 21, 0.6) 0%, rgba(56, 189, 248, 0.4) 50%, transparent 80%);
+  filter: blur(25px);
+  pointer-events: none;
+}
+
+.miniature-logo-wrap {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateZ(35px);
+}
+
+.miniature-concentric-ring {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.miniature-concentric-ring.ring-1 {
+  inset: -8px;
+  border: 2px dashed rgba(250, 204, 21, 0.65);
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.45);
+  animation: spinSlow 12s linear infinite;
+}
+
+.miniature-concentric-ring.ring-2 {
+  inset: -16px;
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
+  animation: spinReverse 16s linear infinite;
+}
+
+@keyframes spinSlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spinReverse {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.miniature-logo-img {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #facc15;
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.55);
+  z-index: 2;
+  position: relative;
+}
+
+.miniature-logo-sparkle {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  font-size: 1.4rem;
+  z-index: 3;
+  animation: sparklePulse 1.8s ease-in-out infinite;
+}
+
+@keyframes sparklePulse {
+  0%, 100% { transform: scale(0.9) rotate(0deg); opacity: 0.8; }
+  50% { transform: scale(1.25) rotate(20deg); opacity: 1; }
+}
+
+.miniature-title {
+  margin: 0 0 8px;
+  font-size: 1.55rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  transform: translateZ(30px);
+}
+
+.miniature-title-gradient {
+  background: linear-gradient(135deg, #facc15 0%, #fbbf24 40%, #38bdf8 80%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 15px rgba(250, 204, 21, 0.45));
+}
+
+.miniature-signature {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  margin-bottom: 22px;
+  transform: translateZ(25px);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.miniature-heart {
+  color: #ef4444;
+  animation: heartBeat 1.2s infinite;
+  display: inline-block;
+}
+
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.3); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.15); }
+}
+
+.miniature-creator-name {
+  color: #facc15;
+  font-weight: 800;
+  text-shadow: 0 0 12px rgba(250, 204, 21, 0.5);
+}
+
+/* 5-SECOND NEON LOADING BUTTON */
+.miniature-loading-btn-wrap {
+  transform: translateZ(35px);
+  margin-bottom: 16px;
+}
+
+.miniature-loading-btn {
+  position: relative;
+  width: 100%;
+  height: 52px;
+  background: #090d16;
+  border: 1.5px solid rgba(56, 189, 248, 0.45);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow:
+    0 0 20px rgba(56, 189, 248, 0.25),
+    inset 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.miniature-loading-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #f59e0b 0%, #facc15 35%, #06b6d4 70%, #38bdf8 100%);
+  box-shadow: 0 0 22px rgba(56, 189, 248, 0.7);
+  transition: width 0.08s linear;
+}
+
+.miniature-loading-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  box-sizing: border-box;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+.miniature-spinner-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #facc15;
+  box-shadow: 0 0 10px #facc15;
+  animation: pulseDot 1s infinite alternate;
+  flex-shrink: 0;
+}
+
+@keyframes pulseDot {
+  from { opacity: 0.4; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1.2); }
+}
+
+.miniature-loading-text {
+  flex: 1;
+  text-align: left;
+  margin-left: 10px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.miniature-loading-pct {
+  font-family: monospace;
+  font-size: 0.92rem;
+  color: #facc15;
+  flex-shrink: 0;
+}
+
+
+
+
+/* COMPACT ENROLLMENT CARD WITH ZERO SCROLLING */
+.enroll-card {
+  max-width: 380px !important;
+  padding: 24px 22px !important;
+  border-radius: 20px !important;
+}
+
+.enroll-select {
+  cursor: pointer !important;
+  appearance: auto !important;
+  background: var(--card) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--card-border) !important;
+  padding: 10px 14px !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  border-radius: 12px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.enroll-select:focus {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.3) !important;
+}
+
 </style>
 
 </head>
@@ -8936,7 +9340,54 @@ window.handleImgError = function(img) {
 })();
 </script>
 
-<!-- ================= VIEWER ENROLLMENT SCREEN (USERNAME ID & BIRTHDATE) ================= -->
+<!-- ================= 3D MINIATURE GOLD & NEON OPENING TRANSITION ================= -->
+<div id="beastMiniatureTransition" class="miniature-transition-overlay" style="display:none;">
+  <canvas id="miniatureParticleCanvas" class="miniature-particle-canvas"></canvas>
+  <div class="miniature-scene">
+    <div class="miniature-3d-card" id="miniatureCard">
+      <!-- Glow Aura -->
+      <div class="miniature-ambient-glow"></div>
+
+      <!-- 3D Logo Medallion -->
+      <div class="miniature-logo-wrap">
+        <div class="miniature-concentric-ring ring-1"></div>
+        <div class="miniature-concentric-ring ring-2"></div>
+        <img
+          src="https://yt3.googleusercontent.com/M1CoAorn3TEsFnY7XEoCyOU6JFkbe4kC-vLrCG5osjh7Cs6akWEeSW59xcZ7YUCfWSCMT87sUQ=s160-c-k-c0x00ffffff-no-rj"
+          class="miniature-logo-img"
+          alt="BEAST GAMES 2"
+          onerror="handleImgError(this)"
+        />
+        <div class="miniature-logo-sparkle">✨</div>
+      </div>
+
+      <!-- Clean Title & Signature Only -->
+      <h2 class="miniature-title">
+        <span class="miniature-title-gradient">BEAST GAMES 2</span>
+      </h2>
+      <div class="miniature-signature">
+        <span>Made with</span>
+        <span class="miniature-heart">❤️</span>
+        <span>by</span>
+        <strong class="miniature-creator-name">Shahid Shaikh</strong>
+      </div>
+
+      <!-- 5-Second Animated Loading Button -->
+      <div class="miniature-loading-btn-wrap">
+        <div class="miniature-loading-btn">
+          <div class="miniature-loading-fill" id="miniatureLoadingFill"></div>
+          <div class="miniature-loading-content">
+            <span class="miniature-spinner-dot"></span>
+            <span class="miniature-loading-text" id="miniatureLoadingText">Loading...</span>
+            <span class="miniature-loading-pct" id="miniatureLoadingPct">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= VIEWER ENROLLMENT SCREEN (ZERO SCROLLING COMPACT ACCESS PASS) ================= -->
 <div id="enrollmentScreen" class="enroll-overlay" style="display:none;">
   <div class="enroll-card">
     <div class="enroll-logo-box">
@@ -8947,53 +9398,55 @@ window.handleImgError = function(img) {
         title="BEAST GAMES 2"
         onerror="handleImgError(this)"
       />
-      <div class="enroll-badge-pill">🎟️ Official Access Pass</div>
     </div>
     
-    <h1 class="enroll-title"><span class="fire-emoji">🔥</span> Welcome to BEAST GAMES 2 <span class="fire-emoji">🔥</span></h1>
-    <p class="enroll-subtitle">Create your username ID and select your birthdate with calendar to access the website:</p>
+    <h1 class="enroll-title">BEAST GAMES 2</h1>
+    <p class="enroll-subtitle">Enter your Username ID &amp; choose an avatar to enter:</p>
 
     <form class="enroll-form" onsubmit="handleEnrollmentSubmit(event)">
       <div class="enroll-field-group">
-        <label for="enrollNameInput" class="enroll-label">👤 Create your username ID for website:</label>
+        <label for="enrollNameInput" class="enroll-label">👤 Username ID:</label>
         <input
           type="text"
           id="enrollNameInput"
           class="enroll-input"
-          placeholder="Create your username ID (e.g. Alex, User 1...)"
+          placeholder="Enter Username ID (e.g. Alex, User 1...)"
           maxlength="32"
           autocomplete="username"
+          oninput="handleNameInputCheck(this.value)"
         />
       </div>
 
+      <!-- AVATAR SELECTION AS COMPACT DROPDOWN (ZERO SCROLLING) -->
       <div class="enroll-field-group">
-        <label for="enrollDobInput" class="enroll-label">📅 Birthdate (Calendar Option):</label>
-        <input
-          type="date"
-          id="enrollDobInput"
-          class="enroll-input enroll-date-input"
-          required
-        />
+        <label for="enrollAvatarSelect" class="enroll-label">🎭 Select Avatar:</label>
+        <select id="enrollAvatarSelect" class="enroll-input enroll-select" onchange="handleEnrollAvatarChange(this.value)">
+          <option value="👤">👤 Classic</option>
+          <option value="🦁">🦁 Brave Lion</option>
+          <option value="⚡">⚡ Electric</option>
+          <option value="🔥">🔥 Fire Beast</option>
+          <option value="🎮">🎮 Gamer</option>
+          <option value="🚀">🚀 Rocket</option>
+          <option value="🦊">🦊 Fox</option>
+          <option value="🐯">🐯 Tiger</option>
+          <option value="💎">💎 Diamond Legend (Locked Forever)</option>
+        </select>
       </div>
 
       <div class="enroll-save-row">
         <label class="enroll-save-label" for="saveLoginCheckbox">
           <input type="checkbox" id="saveLoginCheckbox" checked />
-          <span>Remember / Save login info on this device</span>
+          <span>Remember on this device</span>
         </label>
       </div>
 
       <div id="enrollErrorNotice" class="enroll-error" style="display:none;"></div>
 
       <button type="submit" class="enroll-submit-btn" id="enrollSubmitBtn">
-        <span>✨ Enter Website</span>
+        <span>Enter Website</span>
         <span>▶</span>
       </button>
     </form>
-    
-    <div class="enroll-footer-note">
-      🔒 Your username ID will be shown when interacting in the Live Community Chat.
-    </div>
   </div>
 </div>
 
@@ -9114,18 +9567,13 @@ window.handleImgError = function(img) {
       <strong id="viewerNumber" class="viewer-num">28,472</strong>
       <span class="viewer-text" id="viewerText">watching now</span>
     </span>
-    <span class="viewer-divider hide-mobile">|</span>
-    <span class="live-status-chip hide-mobile" id="viewerLiveChip">⚡ Real-Time Active</span>
+
   </div>
 </div>
 <!-- ================= NAVIGATION & SORTING TABS ================= -->
 <div class="tabs-super-container">
-  <!-- 1. WEBSITE NAVIGATION (4 SECTIONS) -->
+  <!-- 1. WEBSITE NAVIGATION -->
   <div class="tabs-group-box">
-    <div class="group-header-label">
-      <span class="group-dot"></span>
-      <span>Website Sections</span>
-    </div>
     <div class="nav-buttons-cluster">
       <button onclick="showPage('episodesPage', this)" class="nav-tab-btn active-tab" type="button">
         <span>🎬</span>
@@ -9154,12 +9602,8 @@ window.handleImgError = function(img) {
     </div>
   </div>
 
-  <!-- 2. EPISODE SORTING & FILTER (3 OPTIONS) -->
+  <!-- 2. EPISODE SORTING & FILTER -->
   <div class="tabs-group-box" id="sortingClusterBox">
-    <div class="group-header-label" style="background:rgba(56,189,248,0.1); border-color:rgba(56,189,248,0.3); color:#38bdf8;">
-      <span>⚡</span>
-      <span>Filter & Sort Episodes</span>
-    </div>
     <div class="filter-buttons-cluster">
       <button class="episode-filter-btn active-filter" onclick="filterEpisodes('all', this)" type="button">
         <span>✨ All (10 Episodes)</span>
@@ -9618,10 +10062,7 @@ window.handleImgError = function(img) {
           <span style="color:var(--muted);">Username ID:</span>
           <strong id="profileModalIdText" style="color:var(--text); font-family:monospace;">User 1</strong>
         </div>
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-          <span style="color:var(--muted);">Birthdate:</span>
-          <span id="profileModalDobText" style="color:var(--text);">Not set</span>
-        </div>
+
         <div style="display:flex; justify-content:space-between; align-items:center;">
           <span style="color:var(--muted);">Login Saved:</span>
           <span id="profileModalSavedStatus" style="color:#10b981; font-weight:700;">Enabled</span>
@@ -9631,6 +10072,9 @@ window.handleImgError = function(img) {
       <div class="profile-modal-actions" style="display:flex; flex-direction:column; gap:8px; width:100%; margin-top:14px;">
         <button type="button" class="chat-cta-open-btn" onclick="switchUserAccount()" style="width:100%; justify-content:center; padding:11px;">
           <span>🔄 Change / Re-enter Username ID</span>
+        </button>
+        <button type="button" class="chat-back-btn" onclick="closeProfileModal(); playCinematic3DMiniatureTransition();" style="width:100%; justify-content:center; padding:10px; background:linear-gradient(135deg, rgba(250,204,21,0.15), rgba(56,189,248,0.15)); border:1px solid #facc15;">
+          <span>🎬 Replay 3D Opening Transition</span>
         </button>
         <button type="button" class="chat-back-btn" onclick="closeProfileModal(); navigateToLiveChat();" style="width:100%; justify-content:center; padding:10px;">
           <span>💬 Open Live Community Chat</span>
@@ -10406,8 +10850,10 @@ function completeSubscriptionUnlock() {
   showGateAlert("🎉 Thank you for subscribing! Unlocking Beast Games Season 2...", "success");
 
   setTimeout(() => {
-    triggerWebsiteUnlockFlip();
-  }, 900);
+    playCinematic3DMiniatureTransition(() => {
+      triggerWebsiteUnlockFlip();
+    });
+  }, 700);
 }
 
 // ================= REALISTIC SUBSCRIBE & VERIFY WORKFLOW =================
@@ -10641,11 +11087,14 @@ window.addEventListener("DOMContentLoaded", () => {
   // 1. Enrollment check happens before anything else
   const hasEnrolled = checkUserEnrollment();
   if (!hasEnrolled) {
-    // Wait until visitor enrolls name & birthdate
+    // Wait until visitor enrolls name
     return;
   }
-  initSiteAfterEnrollment();
-  updateHeaderProfileDisplay();
+  // Play 5s 3D miniature transition on website opening
+  playCinematic3DMiniatureTransition(() => {
+    initSiteAfterEnrollment();
+    updateHeaderProfileDisplay();
+  });
 });
 
 /* ================= RELIABLE THEME SWITCHER (PERSISTED IN LOCALSTORAGE) ================= */
@@ -11230,18 +11679,53 @@ async function fetchNextDefaultUserName() {
   } catch (e) {}
 }
 
+
+// =====================================================
+// 🎭 ENROLLMENT AVATAR DROPDOWN & CREATOR CROWN LOGIC
+// =====================================================
+let currentEnrollAvatar = localStorage.getItem("beast_user_avatar") || "👤";
+let isCurrentEnrollAvatarFixed = localStorage.getItem("beast_avatar_is_fixed") === "true";
+
+function handleEnrollAvatarChange(val) {
+  playBeastSound("click");
+  currentEnrollAvatar = val;
+  isCurrentEnrollAvatarFixed = (val === "💎");
+}
+window.handleEnrollAvatarChange = handleEnrollAvatarChange;
+
+function handleNameInputCheck(val) {
+  const isOwner = (val.trim().toUpperCase() === "SRS18062011");
+  const avatarSelect = document.getElementById("enrollAvatarSelect");
+  if (avatarSelect) {
+    if (isOwner) {
+      if (!avatarSelect.querySelector('option[value="👑"]')) {
+        const opt = document.createElement("option");
+        opt.value = "👑";
+        opt.innerText = "👑 Official Creator Crown";
+        avatarSelect.prepend(opt);
+      }
+      avatarSelect.value = "👑";
+      avatarSelect.disabled = true;
+    } else {
+      avatarSelect.disabled = false;
+      const ownerOpt = avatarSelect.querySelector('option[value="👑"]');
+      if (ownerOpt) ownerOpt.remove();
+      if (avatarSelect.value === "👑") avatarSelect.value = "👤";
+    }
+  }
+}
+window.handleNameInputCheck = handleNameInputCheck;
+
 function checkUserEnrollment() {
   const enrollScreen = document.getElementById("enrollmentScreen");
   const gate = document.getElementById("gate");
   const site = document.getElementById("site");
   const nameInput = document.getElementById("enrollNameInput");
-  const dobInput = document.getElementById("enrollDobInput");
   const saveCheckbox = document.getElementById("saveLoginCheckbox");
 
   // Check if save login info is enabled on this device
   const saveLoginEnabled = localStorage.getItem("beast_save_login_info") !== "false";
   const savedId = localStorage.getItem("beast_saved_user_id") || localStorage.getItem("beast_user_id") || "";
-  const savedDob = localStorage.getItem("beast_saved_user_dob") || localStorage.getItem("beast_user_dob") || "";
 
   if (saveCheckbox) {
     saveCheckbox.checked = saveLoginEnabled;
@@ -11249,8 +11733,11 @@ function checkUserEnrollment() {
   if (nameInput && savedId && saveLoginEnabled) {
     nameInput.value = savedId;
   }
-  if (dobInput && savedDob && saveLoginEnabled) {
-    dobInput.value = savedDob;
+  const avatarSelect = document.getElementById("enrollAvatarSelect");
+  const savedAvatar = localStorage.getItem("beast_saved_user_avatar") || localStorage.getItem("beast_user_avatar") || "👤";
+  if (avatarSelect && savedAvatar && saveLoginEnabled) {
+    avatarSelect.value = savedAvatar;
+    currentEnrollAvatar = savedAvatar;
   }
 
   // Ask for ID every time visitor opens/visits the website (tracked per browser session)
@@ -11284,21 +11771,11 @@ function checkUserEnrollment() {
 function handleEnrollmentSubmit(e) {
   if (e) e.preventDefault();
   const nameInput = document.getElementById("enrollNameInput");
-  const dobInput = document.getElementById("enrollDobInput");
   const saveCheckbox = document.getElementById("saveLoginCheckbox");
   const errNotice = document.getElementById("enrollErrorNotice");
 
   let idVal = nameInput ? nameInput.value.trim() : "";
-  const dobVal = dobInput ? dobInput.value : "";
   const shouldSaveLogin = saveCheckbox ? saveCheckbox.checked : true;
-
-  if (!dobVal) {
-    if (errNotice) {
-      errNotice.innerText = "Please select your birthdate using the calendar option.";
-      errNotice.style.display = "block";
-    }
-    return;
-  }
 
   if (!idVal) {
     idVal = suggestedDefaultName || "User 1";
@@ -11310,10 +11787,8 @@ function handleEnrollmentSubmit(e) {
   localStorage.setItem("beast_save_login_info", shouldSaveLogin ? "true" : "false");
   if (shouldSaveLogin) {
     localStorage.setItem("beast_saved_user_id", idVal);
-    localStorage.setItem("beast_saved_user_dob", dobVal);
   } else {
     localStorage.removeItem("beast_saved_user_id");
-    localStorage.removeItem("beast_saved_user_dob");
   }
 
   // Mark session as logged in
@@ -11333,19 +11808,22 @@ function handleEnrollmentSubmit(e) {
   const isOwner = (idVal.toUpperCase() === "SRS18062011");
 
   if (isOwner) {
-    // 👑 OWNER / CREATOR PRIVILEGES
+    // 👑 OWNER / CREATOR PRIVILEGES (ALWAYS CROWN AVATAR)
+    const creatorAvatar = "👑";
     localStorage.setItem("beast_user_enrolled", "true");
     localStorage.setItem("beast_user_name", "Shahid Shaikh");
     localStorage.setItem("beast_user_id", "SRS18062011");
-    localStorage.setItem("beast_user_dob", dobVal);
     localStorage.setItem("beast_is_owner", "true");
+    localStorage.setItem("beast_user_avatar", creatorAvatar);
+    localStorage.setItem("beast_chat_user_avatar", creatorAvatar);
+    localStorage.setItem("beast_avatar_is_fixed", "true");
     localStorage.setItem("beast_chat_owner_token", "beast_owner_verified_auth_token_7777");
     sessionStorage.setItem("beast_games_unlocked_session", "true");
     localStorage.setItem("beast_user_subscribed", "true");
     isSubscribedVerified = true;
 
     playBeastSound("unlock");
-    showToastNotification("👑 Welcome back, Owner Shahid Shaikh! Official Creator access unlocked.");
+    showToastNotification("👑 Welcome back, Owner Shahid Shaikh! Creator Crown unlocked.");
 
     // Hide gate & show site immediately for owner
     if (gate) {
@@ -11362,24 +11840,28 @@ function handleEnrollmentSubmit(e) {
 
     updateChatIdentityDisplay();
     updateHeaderProfileDisplay();
-    initSiteAfterEnrollment();
+    playCinematic3DMiniatureTransition(() => { initSiteAfterEnrollment(); });
   } else {
-    // 👤 REGULAR USER ENROLLMENT
+    // 👤 REGULAR USER ENROLLMENT WITH CHOSEN AVATAR
+    const avatarSelect = document.getElementById("enrollAvatarSelect");
+    const userAvatar = avatarSelect ? avatarSelect.value : (currentEnrollAvatar || "👤");
     localStorage.setItem("beast_user_enrolled", "true");
     localStorage.setItem("beast_user_name", idVal);
     localStorage.setItem("beast_user_id", idVal);
-    localStorage.setItem("beast_user_dob", dobVal);
     localStorage.setItem("beast_is_owner", "false");
+    localStorage.setItem("beast_user_avatar", userAvatar);
+    localStorage.setItem("beast_chat_user_avatar", userAvatar);
+    localStorage.setItem("beast_avatar_is_fixed", isCurrentEnrollAvatarFixed ? "true" : "false");
     localStorage.removeItem("beast_chat_owner_token");
 
     playBeastSound("unlock");
-    showToastNotification(`🎉 Welcome, ${idVal}! ID registered successfully.`);
+    showToastNotification(`🎉 Welcome, ${idVal}! Avatar ${userAvatar} registered.`);
 
     updateChatIdentityDisplay();
     updateHeaderProfileDisplay();
 
-    // Proceed to initialize site & 2-visit interval lock check
-    initSiteAfterEnrollment();
+    // 5-Second 3D miniature transition then gate/site check
+    playCinematic3DMiniatureTransition(() => { initSiteAfterEnrollment(); });
   }
 }
 window.handleEnrollmentSubmit = handleEnrollmentSubmit;
@@ -11467,9 +11949,21 @@ window.switchUserAccount = switchUserAccount;
 let selectedChatAvatar = localStorage.getItem("beast_chat_user_avatar") || "👤";
 
 function selectChatAvatar(emoji) {
+  const isOwner = localStorage.getItem("beast_is_owner") === "true";
+  if (isOwner) {
+    showToastNotification("👑 Creator uses official Crown avatar!");
+    return;
+  }
+  const isFixed = localStorage.getItem("beast_avatar_is_fixed") === "true";
+  if (isFixed) {
+    showToastNotification("🔒 Your avatar is permanently locked to 💎 and cannot be changed!");
+    return;
+  }
   playBeastSound("click");
   selectedChatAvatar = emoji;
   localStorage.setItem("beast_chat_user_avatar", emoji);
+  localStorage.setItem("beast_user_avatar", emoji);
+  updateHeaderProfileDisplay();
   document.querySelectorAll(".chat-avatar-opt").forEach(btn => {
     btn.classList.toggle("active", btn.innerText.trim() === emoji);
   });
