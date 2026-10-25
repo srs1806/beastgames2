@@ -9012,7 +9012,7 @@ body.light-mode .enroll-save-label {
 }
 
 
-/* ================= 3D MINIATURE GOLD & NEON OPENING TRANSITION ================= */
+/* ================= 3D MINIATURE GOLD & NEON OPENING TRANSITION (VERY BIG BOLD LOGO) ================= */
 .miniature-transition-overlay {
   position: fixed;
   inset: 0;
@@ -9050,19 +9050,19 @@ body.light-mode .enroll-save-label {
 .miniature-3d-card {
   position: relative;
   width: 100%;
-  max-width: 440px;
-  background: rgba(15, 23, 42, 0.9);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1.5px solid rgba(250, 204, 21, 0.4);
-  border-radius: 28px;
-  padding: 34px 26px 26px;
+  max-width: 460px;
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 2px solid rgba(250, 204, 21, 0.45);
+  border-radius: 30px;
+  padding: 38px 28px 30px;
   text-align: center;
   box-shadow:
-    0 0 50px rgba(250, 204, 21, 0.25),
-    0 0 80px rgba(56, 189, 248, 0.25),
-    inset 0 0 25px rgba(250, 204, 21, 0.1),
-    0 25px 60px rgba(0, 0, 0, 0.85);
+    0 0 60px rgba(250, 204, 21, 0.3),
+    0 0 90px rgba(56, 189, 248, 0.3),
+    inset 0 0 30px rgba(250, 204, 21, 0.15),
+    0 30px 70px rgba(0, 0, 0, 0.9);
   transform: rotateX(6deg) rotateY(-4deg) translateZ(20px);
   transform-style: preserve-3d;
   transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
@@ -9086,24 +9086,25 @@ body.light-mode .enroll-save-label {
 
 .miniature-ambient-glow {
   position: absolute;
-  top: -20px;
-  left: 15%;
-  right: 15%;
-  height: 40px;
-  background: radial-gradient(ellipse at center, rgba(250, 204, 21, 0.6) 0%, rgba(56, 189, 248, 0.4) 50%, transparent 80%);
-  filter: blur(25px);
+  top: -24px;
+  left: 10%;
+  right: 10%;
+  height: 50px;
+  background: radial-gradient(ellipse at center, rgba(250, 204, 21, 0.65) 0%, rgba(56, 189, 248, 0.45) 50%, transparent 80%);
+  filter: blur(28px);
   pointer-events: none;
 }
 
+/* VERY BIG BOLD LOGO MEDALLION */
 .miniature-logo-wrap {
   position: relative;
-  width: 96px;
-  height: 96px;
-  margin: 0 auto 16px;
+  width: 154px;
+  height: 154px;
+  margin: 0 auto 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateZ(35px);
+  transform: translateZ(45px);
 }
 
 .miniature-concentric-ring {
@@ -9113,16 +9114,16 @@ body.light-mode .enroll-save-label {
 }
 
 .miniature-concentric-ring.ring-1 {
-  inset: -8px;
-  border: 2px dashed rgba(250, 204, 21, 0.65);
-  box-shadow: 0 0 20px rgba(250, 204, 21, 0.45);
+  inset: -12px;
+  border: 3px dashed rgba(250, 204, 21, 0.75);
+  box-shadow: 0 0 28px rgba(250, 204, 21, 0.55);
   animation: spinSlow 12s linear infinite;
 }
 
 .miniature-concentric-ring.ring-2 {
-  inset: -16px;
-  border: 1px solid rgba(56, 189, 248, 0.5);
-  box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
+  inset: -22px;
+  border: 2px solid rgba(56, 189, 248, 0.65);
+  box-shadow: 0 0 35px rgba(56, 189, 248, 0.45);
   animation: spinReverse 16s linear infinite;
 }
 
@@ -9137,12 +9138,15 @@ body.light-mode .enroll-save-label {
 }
 
 .miniature-logo-img {
-  width: 84px;
-  height: 84px;
+  width: 132px;
+  height: 132px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #facc15;
-  box-shadow: 0 0 25px rgba(250, 204, 21, 0.55);
+  border: 4px solid #facc15;
+  box-shadow:
+    0 0 35px rgba(250, 204, 21, 0.7),
+    0 0 65px rgba(56, 189, 248, 0.45),
+    inset 0 0 20px rgba(0, 0, 0, 0.6);
   z-index: 2;
   position: relative;
 }
@@ -9151,29 +9155,29 @@ body.light-mode .enroll-save-label {
   position: absolute;
   top: -4px;
   right: -4px;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   z-index: 3;
   animation: sparklePulse 1.8s ease-in-out infinite;
 }
 
 @keyframes sparklePulse {
   0%, 100% { transform: scale(0.9) rotate(0deg); opacity: 0.8; }
-  50% { transform: scale(1.25) rotate(20deg); opacity: 1; }
+  50% { transform: scale(1.3) rotate(20deg); opacity: 1; }
 }
 
 .miniature-title {
   margin: 0 0 8px;
-  font-size: 1.55rem;
-  font-weight: 900;
+  font-size: 1.85rem;
+  font-weight: 950;
   letter-spacing: 0.05em;
-  transform: translateZ(30px);
+  transform: translateZ(35px);
 }
 
 .miniature-title-gradient {
   background: linear-gradient(135deg, #facc15 0%, #fbbf24 40%, #38bdf8 80%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 15px rgba(250, 204, 21, 0.45));
+  filter: drop-shadow(0 0 18px rgba(250, 204, 21, 0.5));
 }
 
 .miniature-signature {
@@ -9181,13 +9185,13 @@ body.light-mode .enroll-save-label {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   color: #cbd5e1;
-  margin-bottom: 22px;
-  transform: translateZ(25px);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 6px 14px;
+  margin-bottom: 24px;
+  transform: translateZ(30px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 7px 18px;
   border-radius: 999px;
 }
 
@@ -9206,26 +9210,26 @@ body.light-mode .enroll-save-label {
 
 .miniature-creator-name {
   color: #facc15;
-  font-weight: 800;
-  text-shadow: 0 0 12px rgba(250, 204, 21, 0.5);
+  font-weight: 850;
+  text-shadow: 0 0 14px rgba(250, 204, 21, 0.6);
 }
 
 /* 5-SECOND NEON LOADING BUTTON */
 .miniature-loading-btn-wrap {
-  transform: translateZ(35px);
-  margin-bottom: 16px;
+  transform: translateZ(40px);
+  margin-bottom: 8px;
 }
 
 .miniature-loading-btn {
   position: relative;
   width: 100%;
-  height: 52px;
+  height: 54px;
   background: #090d16;
-  border: 1.5px solid rgba(56, 189, 248, 0.45);
+  border: 1.5px solid rgba(56, 189, 248, 0.5);
   border-radius: 16px;
   overflow: hidden;
   box-shadow:
-    0 0 20px rgba(56, 189, 248, 0.25),
+    0 0 25px rgba(56, 189, 248, 0.3),
     inset 0 0 15px rgba(0, 0, 0, 0.6);
 }
 
@@ -9236,7 +9240,7 @@ body.light-mode .enroll-save-label {
   height: 100%;
   width: 0%;
   background: linear-gradient(90deg, #f59e0b 0%, #facc15 35%, #06b6d4 70%, #38bdf8 100%);
-  box-shadow: 0 0 22px rgba(56, 189, 248, 0.7);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.75);
   transition: width 0.08s linear;
 }
 
@@ -9248,9 +9252,9 @@ body.light-mode .enroll-save-label {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16px;
+  padding: 0 18px;
   box-sizing: border-box;
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   font-weight: 800;
   color: #ffffff;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
@@ -9261,7 +9265,7 @@ body.light-mode .enroll-save-label {
   height: 10px;
   border-radius: 50%;
   background: #facc15;
-  box-shadow: 0 0 10px #facc15;
+  box-shadow: 0 0 12px #facc15;
   animation: pulseDot 1s infinite alternate;
   flex-shrink: 0;
 }
@@ -9274,7 +9278,7 @@ body.light-mode .enroll-save-label {
 .miniature-loading-text {
   flex: 1;
   text-align: left;
-  margin-left: 10px;
+  margin-left: 12px;
   letter-spacing: 0.02em;
   white-space: nowrap;
   overflow: hidden;
@@ -9283,40 +9287,24 @@ body.light-mode .enroll-save-label {
 
 .miniature-loading-pct {
   font-family: monospace;
-  font-size: 0.92rem;
+  font-size: 0.96rem;
   color: #facc15;
   flex-shrink: 0;
 }
 
-
-
-
-/* COMPACT ENROLLMENT CARD WITH ZERO SCROLLING */
-.enroll-card {
-  max-width: 380px !important;
-  padding: 24px 22px !important;
-  border-radius: 20px !important;
+@media (max-width: 640px) {
+  .miniature-logo-wrap {
+    width: 124px;
+    height: 124px;
+  }
+  .miniature-logo-img {
+    width: 106px;
+    height: 106px;
+  }
+  .miniature-title {
+    font-size: 1.55rem;
+  }
 }
-
-.enroll-select {
-  cursor: pointer !important;
-  appearance: auto !important;
-  background: var(--card) !important;
-  color: var(--text) !important;
-  border: 1px solid var(--card-border) !important;
-  padding: 10px 14px !important;
-  font-size: 0.92rem !important;
-  font-weight: 700 !important;
-  border-radius: 12px !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-.enroll-select:focus {
-  border-color: #38bdf8 !important;
-  box-shadow: 0 0 14px rgba(56, 189, 248, 0.3) !important;
-}
-
 </style>
 
 </head>
@@ -10099,6 +10087,233 @@ window.handleImgError = function(img) {
 
 
 <script>
+
+// =========================================================================
+// 🎬 CORE LIFECYCLE & 3D MINIATURE TRANSITION ENGINE (GUARANTEED GLOBAL)
+// =========================================================================
+const VISIT_COUNT_KEY = "beast_games_visit_count";
+const SESSION_UNLOCKED_KEY = "beast_games_unlocked_session";
+
+let isMiniatureTransitionPlaying = false;
+
+function startMiniatureParticleBurst(canvas) {
+  if (!canvas) return null;
+  const ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const particles = [];
+  const colors = ["#facc15", "#f59e0b", "#38bdf8", "#06b6d4", "#c084fc", "#ffffff"];
+
+  for (let i = 0; i < 50; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 3 + 1,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      vx: (Math.random() - 0.5) * 1.5,
+      vy: (Math.random() - 0.5) * 1.5 - 0.5,
+      alpha: Math.random() * 0.7 + 0.3,
+    });
+  }
+
+  let animId;
+  function loop() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (const p of particles) {
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0) p.x = canvas.width;
+      if (p.x > canvas.width) p.x = 0;
+      if (p.y < 0) p.y = canvas.height;
+      if (p.y > canvas.height) p.y = 0;
+
+      ctx.save();
+      ctx.globalAlpha = p.alpha;
+      ctx.fillStyle = p.color;
+      ctx.shadowBlur = 10;
+      ctx.shadowColor = p.color;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+    animId = requestAnimationFrame(loop);
+  }
+  loop();
+
+  return () => {
+    cancelAnimationFrame(animId);
+  };
+}
+
+function playCinematic3DMiniatureTransition(onComplete) {
+  if (isMiniatureTransitionPlaying) {
+    if (typeof onComplete === "function") onComplete();
+    return;
+  }
+  isMiniatureTransitionPlaying = true;
+
+  const overlay = document.getElementById("beastMiniatureTransition");
+  const card = document.getElementById("miniatureCard");
+  const fill = document.getElementById("miniatureLoadingFill");
+  const pctEl = document.getElementById("miniatureLoadingPct");
+  const textEl = document.getElementById("miniatureLoadingText");
+  const canvas = document.getElementById("miniatureParticleCanvas");
+
+  if (!overlay || !card) {
+    isMiniatureTransitionPlaying = false;
+    if (typeof onComplete === "function") onComplete();
+    return;
+  }
+
+  overlay.style.display = "flex";
+  overlay.style.opacity = "1";
+  card.classList.remove("flipping-out");
+  document.body.style.overflow = "hidden";
+
+  let stopParticles = null;
+  if (canvas) {
+    stopParticles = startMiniatureParticleBurst(canvas);
+  }
+
+  try {
+    if (typeof playBeastSound === "function") playBeastSound("click");
+  } catch (e) {}
+
+  const DURATION_MS = 5000; // Exactly 5 Seconds
+  const startTime = Date.now();
+
+  const statusMessages = [
+    { at: 0, text: "Initializing 3D Beast Hub..." },
+    { at: 20, text: "Connecting to HD Streams..." },
+    { at: 45, text: "Charging Gold & Neon Lighting..." },
+    { at: 70, text: "Unlocking Miniature 3D Portal..." },
+    { at: 90, text: "Ready! Detonating 3D Flip..." }
+  ];
+
+  const timer = setInterval(() => {
+    const elapsed = Date.now() - startTime;
+    const progress = Math.min(100, Math.round((elapsed / DURATION_MS) * 100));
+
+    if (fill) fill.style.width = `${progress}%`;
+    if (pctEl) pctEl.innerText = `${progress}%`;
+
+    const msg = statusMessages.slice().reverse().find(m => progress >= m.at);
+    if (textEl && msg) textEl.innerText = msg.text;
+
+    if (progress >= 100) {
+      clearInterval(timer);
+
+      // Detonate 3D flip + particle explosion
+      card.classList.add("flipping-out");
+      try {
+        if (typeof playBeastSound === "function") playBeastSound("unlock");
+        if (typeof launchConfetti === "function") launchConfetti();
+        if (typeof launchFireworks === "function") launchFireworks();
+      } catch (e) {}
+
+      setTimeout(() => {
+        overlay.style.opacity = "0";
+        setTimeout(() => {
+          overlay.style.display = "none";
+          document.body.style.overflow = "auto";
+          if (stopParticles) stopParticles();
+          isMiniatureTransitionPlaying = false;
+          if (typeof onComplete === "function") onComplete();
+        }, 500);
+      }, 700);
+    }
+  }, 40);
+}
+window.playCinematic3DMiniatureTransition = playCinematic3DMiniatureTransition;
+
+// Unified open site routine
+function openSiteProperly() {
+  const gate = document.getElementById("gate");
+  const site = document.getElementById("site");
+  const enroll = document.getElementById("enrollmentScreen");
+
+  if (enroll) {
+    enroll.classList.add("hidden");
+    enroll.style.setProperty("display", "none", "important");
+  }
+  if (gate) {
+    gate.classList.add("gate-hidden");
+    gate.classList.remove("gate-flipping-out");
+    gate.style.setProperty("display", "none", "important");
+  }
+  if (site) {
+    site.classList.remove("hidden");
+    site.classList.add("site-active");
+    site.style.setProperty("display", "block", "important");
+  }
+
+  document.body.style.overflow = "auto";
+  document.documentElement.style.overflow = "auto";
+
+  if (typeof updateHeaderProfileDisplay === "function") updateHeaderProfileDisplay();
+  if (typeof updateAllCardProgress === "function") updateAllCardProgress();
+  if (typeof initChatLiveSync === "function") initChatLiveSync();
+}
+window.openSiteProperly = openSiteProperly;
+
+function showEnrollmentScreen() {
+  const enrollScreen = document.getElementById("enrollmentScreen");
+  const gate = document.getElementById("gate");
+  const site = document.getElementById("site");
+
+  if (gate) gate.style.setProperty("display", "none", "important");
+  if (site) site.style.setProperty("display", "none", "important");
+
+  if (enrollScreen) {
+    enrollScreen.classList.remove("hidden");
+    enrollScreen.style.setProperty("display", "flex", "important");
+  }
+  document.body.style.overflow = "hidden";
+  document.documentElement.style.overflow = "hidden";
+
+  if (typeof fetchNextDefaultUserName === "function") fetchNextDefaultUserName();
+}
+window.showEnrollmentScreen = showEnrollmentScreen;
+
+function showSubscribeGate(visitNumber) {
+  const gate = document.getElementById("gate");
+  const site = document.getElementById("site");
+  const enroll = document.getElementById("enrollmentScreen");
+
+  if (enroll) enroll.style.setProperty("display", "none", "important");
+  if (site) site.style.setProperty("display", "none", "important");
+
+  if (gate) {
+    gate.classList.remove("gate-hidden");
+    gate.classList.remove("gate-flipping-out");
+    gate.style.setProperty("display", "flex", "important");
+  }
+  document.body.style.overflow = "hidden";
+  document.documentElement.style.overflow = "hidden";
+
+  const intervalBadge = document.getElementById("gateIntervalBadge");
+  if (intervalBadge) {
+    intervalBadge.innerText = `🛡️ Community Access Gate • Checkpoint (Visit #${visitNumber} • Appears every 2 visits)`;
+  }
+
+  const subBtn = document.getElementById("subscribeBtn");
+  const subText = document.getElementById("subBtnText");
+  const subIcon = document.getElementById("subBtnIcon");
+  const subBox = document.getElementById("subVerifyingBox");
+  if (subText) subText.innerText = "🔴 Subscribe on YouTube to Unlock";
+  if (subIcon) subIcon.innerText = "🔥";
+  if (subBtn) {
+    subBtn.className = "gate-btn subscribe-btn fire-wave-btn";
+    subBtn.style.pointerEvents = "auto";
+    subBtn.style.background = "";
+  }
+  if (subBox) subBox.style.display = "none";
+}
+window.showSubscribeGate = showSubscribeGate;
+
+
 
 
 
@@ -11083,18 +11298,70 @@ function initSiteAfterEnrollment() {
 }
 window.initSiteAfterEnrollment = initSiteAfterEnrollment;
 
+// =========================================================================
+// 🚀 MASTER STARTUP LIFECYCLE CONTROLLER (EXACT USER SPECIFICATION)
+// =========================================================================
 window.addEventListener("DOMContentLoaded", () => {
-  // 1. Enrollment check happens before anything else
-  const hasEnrolled = checkUserEnrollment();
-  if (!hasEnrolled) {
-    // Wait until visitor enrolls name
-    return;
+  // Always set theme first
+  const currentSavedTheme = localStorage.getItem("beast_theme_mode") || "dark";
+  setTheme(currentSavedTheme, true);
+
+  // Increment visit count once per browser session
+  if (!sessionStorage.getItem("beast_session_counted")) {
+    sessionStorage.setItem("beast_session_counted", "true");
+    const currentVisits = parseInt(localStorage.getItem(VISIT_COUNT_KEY) || "0", 10) + 1;
+    localStorage.setItem(VISIT_COUNT_KEY, currentVisits.toString());
   }
-  // Play 5s 3D miniature transition on website opening
-  playCinematic3DMiniatureTransition(() => {
-    initSiteAfterEnrollment();
-    updateHeaderProfileDisplay();
-  });
+
+  const visitCount = parseInt(localStorage.getItem(VISIT_COUNT_KEY) || "1", 10);
+  const saveLoginEnabled = localStorage.getItem("beast_save_login_info") !== "false";
+  const savedId = localStorage.getItem("beast_saved_user_id");
+  const isOwner = localStorage.getItem("beast_is_owner") === "true";
+  const hasSavedLogin = saveLoginEnabled && !!savedId;
+
+  // Restore saved login fields into inputs
+  const nameInput = document.getElementById("enrollNameInput");
+  const avatarSelect = document.getElementById("enrollAvatarSelect");
+  const saveCheckbox = document.getElementById("saveLoginCheckbox");
+  if (saveCheckbox) saveCheckbox.checked = saveLoginEnabled;
+  if (nameInput && savedId) nameInput.value = savedId;
+  const savedAvatar = localStorage.getItem("beast_saved_user_avatar") || localStorage.getItem("beast_user_avatar") || "👤";
+  if (avatarSelect && savedAvatar) avatarSelect.value = savedAvatar;
+
+  // 100% Exact User Rule for Gate:
+  // "First time appear, second time do not, third time, fourth time do not, fifth time, sixth time do not."
+  // Math: (visitCount % 2 === 1) -> Odd visits (1, 3, 5, 7...) APPEAR! Even visits (2, 4, 6...) DO NOT!
+  const shouldGateThisVisit = !isOwner && ((visitCount % 2) === 1);
+
+  if (!hasSavedLogin) {
+    // =====================================================================
+    // SCENARIO A: FIRST-TIME USER (OR LOGIN NOT SAVED)
+    // 1. Step 1: Animation transition with logo and loading button
+    // 2. Step 2: Interface for entering username and selecting avatar
+    // 3. Step 3: Subscribe to unlock panel (on Visit 1)
+    // 4. Step 4: Again animation transition -> opens website properly
+    // =====================================================================
+    playCinematic3DMiniatureTransition(() => {
+      showEnrollmentScreen();
+    });
+  } else {
+    // =====================================================================
+    // SCENARIO B: NEXT-TIME USER (LOGIN PERMANENTLY SAVED)
+    // 1. Step 1: Animation transition with loading button
+    // 2. Skip Step 2 (do not show username screen)
+    // 3. Step 3: Every 2nd time, verify subscription. (Visit 2 do not, Visit 3 appear, Visit 4 do not, Visit 5 appear...)
+    // 4. Step 4: Opens website (with animation if gated)
+    // =====================================================================
+    playCinematic3DMiniatureTransition(() => {
+      if (shouldGateThisVisit) {
+        // Visit 3, 5, 7... -> Show Subscribe to Unlock Gate!
+        showSubscribeGate(visitCount);
+      } else {
+        // Visit 2, 4, 6... -> Directly opens website!
+        openSiteProperly();
+      }
+    });
+  }
 });
 
 /* ================= RELIABLE THEME SWITCHER (PERSISTED IN LOCALSTORAGE) ================= */
@@ -11771,11 +12038,13 @@ function checkUserEnrollment() {
 function handleEnrollmentSubmit(e) {
   if (e) e.preventDefault();
   const nameInput = document.getElementById("enrollNameInput");
+  const avatarSelect = document.getElementById("enrollAvatarSelect");
   const saveCheckbox = document.getElementById("saveLoginCheckbox");
   const errNotice = document.getElementById("enrollErrorNotice");
 
   let idVal = nameInput ? nameInput.value.trim() : "";
   const shouldSaveLogin = saveCheckbox ? saveCheckbox.checked : true;
+  let chosenAvatar = avatarSelect ? avatarSelect.value : (currentEnrollAvatar || "👤");
 
   if (!idVal) {
     idVal = suggestedDefaultName || "User 1";
@@ -11787,18 +12056,15 @@ function handleEnrollmentSubmit(e) {
   localStorage.setItem("beast_save_login_info", shouldSaveLogin ? "true" : "false");
   if (shouldSaveLogin) {
     localStorage.setItem("beast_saved_user_id", idVal);
+    localStorage.setItem("beast_saved_user_avatar", chosenAvatar);
   } else {
     localStorage.removeItem("beast_saved_user_id");
+    localStorage.removeItem("beast_saved_user_avatar");
   }
 
-  // Mark session as logged in
   sessionStorage.setItem("beast_session_logged_in", "true");
 
   const enrollScreen = document.getElementById("enrollmentScreen");
-  const gate = document.getElementById("gate");
-  const site = document.getElementById("site");
-
-  // Completely hide enrollment overlay
   if (enrollScreen) {
     enrollScreen.classList.add("hidden");
     enrollScreen.style.setProperty("display", "none", "important");
@@ -11822,46 +12088,40 @@ function handleEnrollmentSubmit(e) {
     localStorage.setItem("beast_user_subscribed", "true");
     isSubscribedVerified = true;
 
-    playBeastSound("unlock");
-    showToastNotification("👑 Welcome back, Owner Shahid Shaikh! Creator Crown unlocked.");
-
-    // Hide gate & show site immediately for owner
-    if (gate) {
-      gate.classList.add("gate-hidden");
-      gate.style.setProperty("display", "none", "important");
-    }
-    if (site) {
-      site.classList.remove("hidden");
-      site.classList.add("site-active");
-      site.style.setProperty("display", "block", "important");
-    }
-    document.body.style.overflow = "auto";
-    document.documentElement.style.overflow = "auto";
+    try {
+      if (typeof playBeastSound === "function") playBeastSound("unlock");
+      if (typeof showToastNotification === "function") showToastNotification("👑 Welcome back, Owner Shahid Shaikh! Official Creator access unlocked.");
+    } catch (e) {}
 
     updateChatIdentityDisplay();
     updateHeaderProfileDisplay();
-    playCinematic3DMiniatureTransition(() => { initSiteAfterEnrollment(); });
+
+    // Step 4: Play transition animation again and open website
+    playCinematic3DMiniatureTransition(() => {
+      openSiteProperly();
+    });
   } else {
-    // 👤 REGULAR USER ENROLLMENT WITH CHOSEN AVATAR
-    const avatarSelect = document.getElementById("enrollAvatarSelect");
-    const userAvatar = avatarSelect ? avatarSelect.value : (currentEnrollAvatar || "👤");
+    // 👤 REGULAR USER ENROLLMENT WITH CHOSEN DROPDOWN AVATAR
+    const isFixed = (chosenAvatar === "💎");
     localStorage.setItem("beast_user_enrolled", "true");
     localStorage.setItem("beast_user_name", idVal);
     localStorage.setItem("beast_user_id", idVal);
     localStorage.setItem("beast_is_owner", "false");
-    localStorage.setItem("beast_user_avatar", userAvatar);
-    localStorage.setItem("beast_chat_user_avatar", userAvatar);
-    localStorage.setItem("beast_avatar_is_fixed", isCurrentEnrollAvatarFixed ? "true" : "false");
+    localStorage.setItem("beast_user_avatar", chosenAvatar);
+    localStorage.setItem("beast_chat_user_avatar", chosenAvatar);
+    localStorage.setItem("beast_avatar_is_fixed", isFixed ? "true" : "false");
     localStorage.removeItem("beast_chat_owner_token");
 
-    playBeastSound("unlock");
-    showToastNotification(`🎉 Welcome, ${idVal}! Avatar ${userAvatar} registered.`);
+    try {
+      if (typeof playBeastSound === "function") playBeastSound("unlock");
+      if (typeof showToastNotification === "function") showToastNotification(`🎉 Welcome, ${idVal}! Avatar ${chosenAvatar} registered.`);
+    } catch (e) {}
 
     updateChatIdentityDisplay();
     updateHeaderProfileDisplay();
 
-    // 5-Second 3D miniature transition then gate/site check
-    playCinematic3DMiniatureTransition(() => { initSiteAfterEnrollment(); });
+    // Step 3: First time visit always shows Subscribe to Unlock panel!
+    showSubscribeGate(1);
   }
 }
 window.handleEnrollmentSubmit = handleEnrollmentSubmit;
