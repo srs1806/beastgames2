@@ -2,11 +2,21 @@ import express from 'express';
 import { createServer as createViteServer } from 'vite';
 import fs from 'fs';
 import path from 'path';
+import { GoogleGenAI } from '@google/genai';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
+
+const ai = new GoogleGenAI({
+  apiKey: process.env.GEMINI_API_KEY,
+  httpOptions: {
+    headers: {
+      'User-Agent': 'aistudio-build',
+    },
+  },
+});
 
 // In-memory presence tracker
 // Key: clientId (string), Value: timestamp of last heartbeat
@@ -372,6 +382,78 @@ app.get('/api/chat/stream', (req, res) => {
   req.on('close', () => {
     clearInterval(heartbeatTimer);
     sseClients.delete(res);
+  });
+});
+
+// 6. Gemini AI Celebration Proclamation Generator
+app.post('/api/ai/celebrate', async (req, res) => {
+  const { username = 'Contestant', avatar = '👤', milestone = 10 } = req.body;
+  const milestoneNumber = parseInt(milestone, 10) || 10;
+  const isGrand10 = milestoneNumber >= 10;
+
+  const fallbackCommentaries: Record<number, string> = {
+    3: `Certified by Beast Survival AI: ${username} conquered the initial gauntlet! Completing 3 episodes unlocks the Bronze Survivor badge with an 88.5% tactical grit rating!`,
+    5: `Beast Intelligence Protocol: Halfway mark breached! ${username} (${avatar}) outsmarted 500 eliminated rivals to secure the Silver Tactician badge with a 94.2% decision index!`,
+    8: `Elite Beast Analysis: Only top-tier survivors make it through 8 grueling trials. ${username} unlocks the Gold Eliminator badge with a 97.9% composure score!`,
+    10: `Official Beast Grand Champion Declaration: ${username} (${avatar}) has conquered all 10 brutal episodes of Beast Games Season 2, outlasting 1,000 players to claim the $5,000,000 Golden Trophy!`,
+  };
+
+  const defaultTitles: Record<number, { badge: string; iq: string; title: string }> = {
+    3: { badge: '🥉 Bronze Survivor', iq: '88.5%', title: 'BRONZE BADGE UNLOCKED' },
+    5: { badge: '🥈 Silver Tactician', iq: '94.2%', title: 'SILVER BADGE UNLOCKED' },
+    8: { badge: '🥇 Gold Eliminator', iq: '97.9%', title: 'GOLD BADGE UNLOCKED' },
+    10: { badge: '👑 Grand Champion', iq: '99.8%', title: 'VICTORY UNLOCKED!' },
+  };
+
+  const selectedTier = defaultTitles[milestoneNumber] || defaultTitles[10];
+
+  try {
+    if (process.env.GEMINI_API_KEY) {
+      const prompt = `You are the electrifying, official Beast Games AI Analyst and Referee for Beast Games Season 2.
+A viewer named "${username}" (avatar: ${avatar}) has just completed Episode ${milestoneNumber} of 10.
+${isGrand10 ? 'They have completed ALL 10 EPISODES and won the Grand Championship!' : `They just unlocked the Milestone Badge for completing ${milestoneNumber} episodes.`}
+Generate an exciting, high-energy, personalized celebration statement (max 2 short sentences), a custom tactical IQ score (e.g. 98.4%), and a 2-3 word survival title.
+Return strictly valid JSON with this exact structure:
+{
+  "title": "${selectedTier.title}",
+  "badgeTitle": "${selectedTier.badge}",
+  "tacticalIq": "e.g. 99.4%",
+  "commentary": "Your customized exciting celebration speech."
+}`;
+
+      const response = await ai.models.generateContent({
+        model: 'gemini-3.8-flash',
+        contents: prompt,
+        config: {
+          responseMimeType: 'application/json',
+          temperature: 0.85,
+        },
+      });
+
+      const responseText = response.text?.trim();
+      if (responseText) {
+        const parsed = JSON.parse(responseText);
+        return res.json({
+          title: parsed.title || selectedTier.title,
+          badgeTitle: parsed.badgeTitle || selectedTier.badge,
+          tacticalIq: parsed.tacticalIq || selectedTier.iq,
+          commentary: parsed.commentary || fallbackCommentaries[milestoneNumber],
+          milestone: milestoneNumber,
+          isGrand10,
+        });
+      }
+    }
+  } catch (err) {
+    console.warn('Gemini AI celebrate route fell back gracefully:', err);
+  }
+
+  res.json({
+    title: selectedTier.title,
+    badgeTitle: selectedTier.badge,
+    tacticalIq: selectedTier.iq,
+    commentary: fallbackCommentaries[milestoneNumber] || fallbackCommentaries[10],
+    milestone: milestoneNumber,
+    isGrand10,
   });
 });
 

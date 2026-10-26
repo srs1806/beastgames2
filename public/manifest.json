@@ -1,0 +1,24 @@
+{
+  "name": "BEAST GAMES 2 — Official MrBeast Season 2 Hub",
+  "short_name": "BEAST GAMES 2",
+  "description": "Watch all 10 episodes of BEAST GAMES 2 free, track survival challenges, unlock exclusive badges, and experience the $5,000,000 tournament.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#030712",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "https://yt3.googleusercontent.com/M1CoAorn3TEsFnY7XEoCyOU6JFkbe4kC-vLrCG5osjh7Cs6akWEeSW59xcZ7YUCfWSCMT87sUQ=s160-c-k-c0x00ffffff-no-rj",
+      "sizes": "160x160",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://yt3.googleusercontent.com/M1CoAorn3TEsFnY7XEoCyOU6JFkbe4kC-vLrCG5osjh7Cs6akWEeSW59xcZ7YUCfWSCMT87sUQ=s160-c-k-c0x00ffffff-no-rj",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

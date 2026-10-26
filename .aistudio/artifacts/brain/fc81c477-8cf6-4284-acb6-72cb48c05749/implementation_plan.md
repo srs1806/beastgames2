@@ -1,83 +1,86 @@
-# 3D Miniature Gold & Neon Opening Transition Plan
+# Google Gemini AI 3D Celebration & Milestone Engine Plan
 
-Architectural blueprint for implementing a cinematic 5-second 3D miniature splash transition featuring gold and neon ambient lighting, an interactive logo loading button, floating neon particle bursts, the official "Made with ❤️ by Shahid Shaikh" signature, and 3D card flip physics across initial website entry and subscription lock gate unlocking.
+Architectural blueprint for integrating server-side Google Gemini AI (`gemini-3.8-flash`) to generate unique, personalized celebrations for viewers at key episode milestones (3, 5, 8, and the Grand 10-Episode Champion celebration). The celebration triggers strictly upon closing the video player, adapts fluidly across all mobile and desktop screen sizes with responsive 3D miniature depth, and automatically resets on the user's next visit.
 
 ## User Review & Critical Decisions
 
 > [!IMPORTANT]
-> The following design decisions were explicitly confirmed by the user:
+> The following core behaviors were confirmed by the user:
 
-- **Duration**: Precisely 5 seconds of cinematic loading transition with dynamic progress bar and synchronized audio cues.
-- **Visual Aesthetic**: 3D miniature tilt-shift depth-of-field, gold and neon cyan/amber ambient illumination, floating radiant particle bursts, and physical 3D card flipping perspective (`perspective: 1200px; transform: rotateY(180deg)`).
-- **Branded Signature**: Prominently highlights the official website emblem, glowing neon pulse, and title `Made with ❤️ by Shahid Shaikh`.
-- **Display Triggers**: Fires seamlessly **both on initial visit** (after ID entry) and **upon unlocking the subscription lock gate** to provide a consistent high-end theater opening experience.
-
----
-
-## 1. Overview & Core Concept
-
-- **What It Does**: Introduces a high-fidelity 3D splash & transition overlay (`#beastMiniatureTransition`) that bridges entry checkpoints into the main streaming theater. It renders the rotating 3D Beast Games 2 medallion, neon ambient glow rings, a fluid 5-second particle-emitting progress button, and smooth physical card flip transitions.
-- **User Experience**:
-  1. **Checkpoint**: User logs in with Username ID or clicks Subscribe on the lock gate.
-  2. **3D Miniature Reveal**: The screen smoothly enters a tilt-shift 3D isometric plane with deep dark neon background, ambient gold light rays, and floating embers.
-  3. **Branded Medallion & Signature**: The circular Beast logo floats with an 3D optical tilt, glowing cyan/gold neon ring, and the message `Made with ❤️ by Shahid Shaikh`.
-  4. **Dynamic 5s Loading Pulse**: A neon-accented loading meter fills with countdown milestones, accompanied by sound effects.
-  5. **Card Flip Unlock**: At the 5-second mark, a gold particle burst detonates as the card flips 180 degrees in 3D space to reveal the full website.
+- **AI-Powered Personalization**: Real Gemini AI generation (`gemini-3.8-flash`) via server-side `/api/ai/celebrate` that crafts unique, tailored victory speeches, tactical ratings, and survival praises for each viewer's registered username and avatar.
+- **Milestone Tier Celebrations**: Triggers at milestone badges:
+  - **3 Episodes**: Bronze Survivor badge celebration with custom AI commentary.
+  - **5 Episodes**: Silver Tactician badge celebration with custom AI commentary.
+  - **8 Episodes**: Gold Eliminator badge celebration with custom AI commentary.
+  - **10 Episodes**: Grand 3D Champion Celebration with 3D Gold Panther Trophy, AI Survival Assessment, and $5,000,000 Championship Certificate.
+- **Strict Exit Trigger**: The celebration **only** fires when the user closes/exits the video player (`closeVideoPlayer()`), never during playback.
+- **Device-Sustainable 3D Miniature Card**: Uses fluid CSS clamping (`clamp()`), stereoscopic 3D perspective (`perspective: 1400px; transform-style: preserve-3d`), dynamic viewport units (`dvh` / `vw`), and touch-friendly scaling for phones, tablets, and desktops.
+- **Next-Visit Fresh Reset**: If a user previously completed all 10 episodes and celebrated, their next visit opens cleanly without repeating the celebration, resetting watched episodes to 0 so they can start fresh.
 
 ---
 
-## 2. User Experience & Visual Design
-
-### A. 3D Miniature Spatial Architecture
-- **Perspective Canvas**: `perspective: 1400px; perspective-origin: 50% 50%;` container creating realistic stereoscopic depth.
-- **Miniature Tilt-Shift Blur**: Soft peripheral vignettes with sharp central focus giving cards a physical 3D miniature diorama feel.
-- **Lighting Palette**:
-  - Dominant Neutral: Deep space void (`#030712` / `rgba(3, 7, 18, 0.96)`).
-  - Ambient Neon Accents: High-intensity gold (`#f59e0b` / `#fbbf24`), electric cyan (`#38bdf8`), and neon purple (`#c084fc`).
-  - Specular Highlights: Dynamic radial glow following floating particles.
-
-### B. Medallion & Loading Button Component
-- **3D Floating Medallion**: $84\text{px}$ circular Beast Games emblem with multi-layer concentric neon rings, subtle 3D rotational tilt on hover/motion (`transform: rotateX(8deg) rotateY(-12deg)`), and metallic rim lighting.
-- **Progress Button / Pill**: Interactive capsule showing live percentage ($0\% \rightarrow 100\%$) and status text: `Initializing Beast Games 2 Streaming Hub...`.
-- **Signature Kicker**: Elegant typography in display font with soft gold gradient: `Made with ❤️ by Shahid Shaikh`.
-
-### C. 3D Card Flip Mechanics
-- Flip card container with `transform-style: preserve-3d; transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1)`.
-- Front face: Lock Gate / Loading Medallion.
-- Back face: Full Beast Games 2 portal.
-- Triggered simultaneously with confetti burst, audio chime, and smooth viewport scroll reset.
-
----
-
-## 3. Key Technical Decisions & Execution Flow
+## 1. System Architecture & Execution Flow
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                     USER ACTION TRIGGER                     │
-│  (1) Initial Username ID Entry  OR  (2) YouTube Sub Unlock  │
+│                 USER WATCHES IN VIDEO THEATER               │
+│  (Marks Episode 3, 5, 8, or 10 as completed)                │
 └──────────────────────────────┬──────────────────────────────┘
                                │
                                ▼
 ┌─────────────────────────────────────────────────────────────┐
-│         #beastMiniatureTransition OVERLAY ACTIVATES         │
-│  • 3D Miniature Tilt-Shift Isometric View                   │
-│  • Floating Beast Logo Medallion with Gold & Neon Aura      │
-│  • "Made with ❤️ by Shahid Shaikh" Glowing Subtitle         │
-│  • 5-Second Fluid Neon Progress Loading Button              │
-│  • Ambient Canvas Particle Burst Engine                     │
+│               USER CLOSES VIDEO PLAYER (EXIT)               │
+│  • Halts video & audio stream immediately                   │
+│  • Checks for uncelebrated milestone (3, 5, 8, or 10)       │
 └──────────────────────────────┬──────────────────────────────┘
-                               │ (After 5 Seconds)
+                               │
                                ▼
 ┌─────────────────────────────────────────────────────────────┐
-│               3D CARD FLIP DETONATION                       │
-│  • 180-Degree 3D Card Flip Transition                       │
-│  • Confetti Cannon Burst + Audio Fanfare                    │
-│  • Reveals Main Viewport Site Smoothly                      │
+│       SERVER-SIDE GEMINI API CALL (/api/ai/celebrate)       │
+│  • Model: 'gemini-3.8-flash'                                │
+│  • Input: Username, Avatar, Milestone (3, 5, 8, or 10)      │
+│  • Output: Unique personalized AI commentary & tactical IQ  │
+│  • Graceful fallback to localized templates if offline      │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│         RESPONSIVE 3D MINIATURE CELEBRATION MODAL           │
+│  • Fluid card scaling: clamp(300px, 90vw, 520px)            │
+│  • 3D rotating trophy / badge with gold & neon particle rays│
+│  • Animated AI commentary with typing effect                │
+│  • Fireworks, confetti cannons, and audio fanfare           │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-- **Clean DOM Integration**: Encapsulated within a reusable `#beastMiniatureTransition` overlay component with zero third-party framework dependencies.
-- **Universal Trigger Hooks**:
-  - Attached to `handleEnrollmentSubmit()` after valid ID input.
-  - Attached to `handleSubscribeAction()` on step 2 completion.
-  - Attached to manual replay button in Profile Modal.
+---
+
+## 2. Server-Side Gemini API Implementation (`server.ts`)
+
+- Expose a secure server-side endpoint `POST /api/ai/celebrate`.
+- Uses `@google/genai` with `gemini-3.8-flash` and `User-Agent: 'aistudio-build'`.
+- System instruction prompts the model in the high-energy, electrifying voice of the official Beast Games referee and analyst.
+- Returns structured JSON:
+  ```json
+  {
+    "title": "ULTIMATE SURVIVOR",
+    "badgeTitle": "Grand Champion",
+    "tacticalIq": "99.8%",
+    "commentary": "Personalized speech generated dynamically for [Username]..."
+  }
+  ```
+
+---
+
+## 3. Responsive 3D Miniature Frontend Experience (`index.html`)
+
+- **3D Stereoscopic Stage**:
+  - `perspective: 1400px; transform-style: preserve-3d;`
+  - Floating 3D Gold Panther Trophy (for 10 episodes) or 3D Holographic Medallion (for 3, 5, 8).
+  - Concentric rotating neon laser rings in gold (`#facc15`) and cyan (`#38bdf8`).
+- **Device Sustainability**:
+  - Height fits within `max-height: 90dvh` with internal scroll if needed on ultra-compact phones.
+  - Width scales smoothly via `width: min(92vw, 480px)`.
+- **Milestone Tracking**:
+  - Tracks `beast_celebrated_milestones` array in `localStorage` so each milestone (3, 5, 8, 10) is celebrated once per cycle.
+  - On the user's next visit after completing all 10 episodes, the cycle resets automatically.
