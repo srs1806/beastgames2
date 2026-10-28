@@ -9454,6 +9454,566 @@ body.light-mode .enroll-save-label {
   transform: translateY(-2px);
   box-shadow: 0 0 32px rgba(250, 204, 21, 0.8);
 }
+
+/* ================= PERMANENT MINIMAL RATING BAR (FIXED ON EVERY PAGE) ================= */
+.permanent-rating-strip {
+  width: 95% !important;
+  max-width: 1000px !important;
+  margin: 6px auto 16px !important;
+  background: rgba(15, 23, 42, 0.85) !important;
+  border: 1px solid rgba(250, 204, 21, 0.3) !important;
+  border-radius: 16px !important;
+  padding: 8px 16px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(250, 204, 21, 0.05) !important;
+  box-sizing: border-box !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  min-height: 44px !important;
+}
+
+.rating-strip-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-shrink: 0 !important;
+}
+
+.rating-strip-tag {
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  color: #facc15 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  background: rgba(250, 204, 21, 0.12) !important;
+  padding: 2px 8px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(250, 204, 21, 0.3) !important;
+}
+
+.rating-strip-score-val {
+  font-size: 0.95rem !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 3px !important;
+}
+
+.rating-strip-votes-count {
+  font-size: 0.76rem !important;
+  color: #94a3b8 !important;
+  font-weight: 600 !important;
+}
+
+.rating-strip-center {
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+
+.strip-star-btn {
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-size: 1.25rem !important;
+  line-height: 1 !important;
+  padding: 2px 4px !important;
+  transition: transform 0.15s ease, filter 0.15s ease !important;
+  filter: grayscale(0.8) opacity(0.5) !important;
+}
+
+.strip-star-btn:hover,
+.strip-star-btn.hovered,
+.strip-star-btn.active {
+  filter: grayscale(0) opacity(1) drop-shadow(0 0 6px rgba(250, 204, 21, 0.8)) !important;
+  transform: scale(1.2) !important;
+}
+
+.rating-strip-status {
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  color: #cbd5e1 !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+@media (max-width: 640px) {
+  .permanent-rating-strip {
+    padding: 6px 10px !important;
+    gap: 6px !important;
+  }
+  .rating-strip-tag {
+    display: none !important;
+  }
+  .rating-strip-votes-count {
+    display: none !important;
+  }
+  .strip-star-btn {
+    font-size: 1.1rem !important;
+    padding: 1px 2px !important;
+  }
+  .rating-strip-status {
+    font-size: 0.72rem !important;
+  }
+}
+
+/* ================= FULL-WIDTH ROW NAVIGATION HUB (ONE BELOW ANOTHER) ================= */
+.nav-hub-card-list {
+  width: 95% !important;
+  max-width: 1000px !important;
+  margin: 12px auto 26px !important;
+  display: flex !important;
+  flex-direction: column !important; /* ONE BELOW ANOTHER */
+  gap: 12px !important;
+  box-sizing: border-box !important;
+}
+
+.hub-nav-row {
+  width: 100% !important;
+  background: rgba(15, 23, 42, 0.9) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 18px !important;
+  padding: 14px 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3) !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.hub-nav-row:hover {
+  transform: translateY(-2px) scale(1.008) !important;
+  border-color: #38bdf8 !important;
+  box-shadow: 0 8px 28px rgba(56, 189, 248, 0.25) !important;
+  background: rgba(15, 23, 42, 0.98) !important;
+}
+
+.hub-nav-row.active-hub-row {
+  border-color: #facc15 !important;
+  box-shadow: 0 0 24px rgba(250, 204, 21, 0.3) !important;
+  background: linear-gradient(90deg, rgba(250, 204, 21, 0.1) 0%, rgba(15, 23, 42, 0.95) 100%) !important;
+}
+
+.hub-nav-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+.hub-nav-icon {
+  font-size: 1.8rem !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+}
+
+.hub-nav-text {
+  text-align: left !important;
+}
+
+.hub-nav-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  font-size: 0.68rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #38bdf8 !important;
+  background: rgba(56, 189, 248, 0.12) !important;
+  padding: 2px 8px !important;
+  border-radius: 999px !important;
+  margin-bottom: 4px !important;
+}
+
+.hub-nav-badge.live-badge {
+  color: #ef4444 !important;
+  background: rgba(239, 68, 68, 0.15) !important;
+}
+
+.hub-live-dot {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background: #ef4444 !important;
+  box-shadow: 0 0 8px #ef4444 !important;
+  animation: pulseDot 1s infinite alternate !important;
+}
+
+.hub-nav-title {
+  margin: 0 !important;
+  font-size: 1.05rem !important;
+  font-weight: 850 !important;
+  color: #ffffff !important;
+}
+
+.hub-nav-sub {
+  margin: 2px 0 0 !important;
+  font-size: 0.8rem !important;
+  color: #94a3b8 !important;
+}
+
+.hub-nav-right {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-shrink: 0 !important;
+}
+
+.hub-nav-btn {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  padding: 7px 14px !important;
+  border-radius: 12px !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+.hub-nav-row:hover .hub-nav-btn {
+  background: #38bdf8 !important;
+  color: #000000 !important;
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.5) !important;
+}
+
+@media (max-width: 640px) {
+  .hub-nav-row {
+    padding: 12px 14px !important;
+  }
+  .hub-nav-left {
+    gap: 12px !important;
+  }
+  .hub-nav-icon {
+    font-size: 1.45rem !important;
+  }
+  .hub-nav-title {
+    font-size: 0.95rem !important;
+  }
+  .hub-nav-sub {
+    font-size: 0.74rem !important;
+  }
+  .hub-nav-btn span:first-child {
+    display: none !important; /* Show only arrow on small phones */
+  }
+}
+
+/* DEDICATED PAGE TOP SWITCHER BAR */
+.dedicated-page-header-bar {
+  width: 95% !important;
+  max-width: 1000px !important;
+  margin: 10px auto 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  background: rgba(15, 23, 42, 0.75) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 10px 16px !important;
+  border-radius: 16px !important;
+}
+
+.dedicated-back-hub-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #facc15 !important;
+  padding: 7px 14px !important;
+  border-radius: 12px !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+.dedicated-back-hub-btn:hover {
+  background: rgba(250, 204, 21, 0.2) !important;
+  border-color: #facc15 !important;
+}
+
+.dedicated-quick-pills {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  flex-wrap: wrap !important;
+}
+
+.dedicated-pill-btn {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #cbd5e1 !important;
+  padding: 5px 10px !important;
+  border-radius: 999px !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.dedicated-pill-btn.active,
+.dedicated-pill-btn:hover {
+  background: rgba(56, 189, 248, 0.2) !important;
+  border-color: #38bdf8 !important;
+  color: #ffffff !important;
+}
+
+
+/* ================= AESTHETIC & ATTRACTIVE PERMANENT RATING BAR ================= */
+.aesthetic-rating-bar {
+  position: relative;
+  width: 95%;
+  max-width: 980px;
+  margin: 10px auto 18px;
+  background: linear-gradient(135deg, rgba(24, 24, 37, 0.95) 0%, rgba(15, 23, 42, 0.98) 50%, rgba(20, 20, 35, 0.96) 100%);
+  border: 1.5px solid rgba(250, 204, 21, 0.45);
+  border-radius: 20px;
+  padding: 10px 18px;
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.55),
+    0 0 25px rgba(250, 204, 21, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aesthetic-rating-bar:hover {
+  border-color: rgba(250, 204, 21, 0.7);
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.65),
+    0 0 35px rgba(250, 204, 21, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.rating-bar-glow {
+  position: absolute;
+  top: -50%;
+  left: 20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(250, 204, 21, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  animation: goldPulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes goldPulse {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  100% { transform: scale(1.15); opacity: 1; }
+}
+
+.rating-bar-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.rating-brand-side {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rating-live-sparkle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: linear-gradient(135deg, rgba(250, 204, 21, 0.25) 0%, rgba(234, 179, 8, 0.15) 100%);
+  border: 1px solid rgba(250, 204, 21, 0.45);
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 850;
+  color: #facc15;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.2);
+}
+
+.rating-score-display {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.rating-big-star {
+  color: #facc15;
+  font-size: 1.25rem;
+  line-height: 1;
+  filter: drop-shadow(0 0 6px #facc15);
+}
+
+.rating-avg-num {
+  font-size: 1.2rem;
+  font-weight: 950;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.rating-out-of {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  font-weight: 700;
+}
+
+.rating-votes-tag {
+  font-size: 0.76rem;
+  color: #94a3b8;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.rating-stars-interactive-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rating-stars-box {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px 8px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cool-star-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 4px;
+  line-height: 1;
+  transition: transform 0.18s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cool-star-btn .star-glyph {
+  font-size: 1.45rem;
+  color: #475569;
+  transition: color 0.2s ease, filter 0.2s ease;
+  display: inline-block;
+}
+
+.cool-star-btn:hover {
+  transform: scale(1.3) translateY(-2px);
+}
+
+.cool-star-btn.hovered .star-glyph,
+.cool-star-btn.active .star-glyph {
+  color: #facc15 !important;
+  filter: drop-shadow(0 0 8px rgba(250, 204, 21, 0.95)) drop-shadow(0 0 16px rgba(234, 179, 8, 0.6)) !important;
+}
+
+.rating-status-bubble {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(250, 204, 21, 0.35);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #facc15;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+/* SCREEN TOP BACK BAR (ONLY ONE OPTION: BACK TO HOME SCREEN) */
+.screen-back-bar {
+  width: 95%;
+  max-width: 980px;
+  margin: 6px auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+.back-to-home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(250, 204, 21, 0.2) 0%, rgba(234, 179, 8, 0.1) 100%);
+  border: 1.5px solid #facc15;
+  color: #facc15;
+  font-size: 0.88rem;
+  font-weight: 850;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.25);
+}
+
+.back-to-home-btn:hover {
+  background: #facc15;
+  color: #000000;
+  transform: translateX(-3px);
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.65);
+}
+
+.screen-indicator-pill {
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+@media (max-width: 640px) {
+  .aesthetic-rating-bar {
+    padding: 8px 12px;
+  }
+  .rating-bar-content {
+    justify-content: center;
+    gap: 8px;
+  }
+  .rating-brand-side {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .rating-stars-interactive-wrap {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .cool-star-btn .star-glyph {
+    font-size: 1.25rem;
+  }
+  .screen-back-bar {
+    padding: 8px 10px;
+  }
+  .back-to-home-btn {
+    padding: 7px 14px;
+    font-size: 0.82rem;
+  }
+}
+
 </style>
 
 </head>
@@ -9706,54 +10266,149 @@ window.handleImgError = function(img) {
 
   </div>
 </div>
-<!-- ================= NAVIGATION & SORTING TABS ================= -->
-<div class="tabs-super-container">
-  <!-- 1. WEBSITE NAVIGATION -->
-  <div class="tabs-group-box">
-    <div class="nav-buttons-cluster">
-      <button onclick="showPage('episodesPage', this)" class="nav-tab-btn active-tab" type="button">
-        <span>🎬</span>
-        <span>Episodes</span>
-      </button>
-      <button onclick="navigateToLiveChat()" id="chatNavTabBtn" class="nav-tab-btn" type="button">
-        <span>💬</span>
-        <span>Live Chat</span>
-      </button>
-      <button onclick="showPage('infoPage', this)" class="nav-tab-btn" type="button">
-        <span>ℹ️</span>
-        <span>Show Info</span>
-      </button>
-      <button onclick="showPage('achievementPage', this)" class="nav-tab-btn" type="button">
-        <span>🏅</span>
-        <span>Badges</span>
-      </button>
-      <button onclick="showPage('communityHub', this)" class="nav-tab-btn" type="button">
-        <span>🌐</span>
-        <span>Community & Links</span>
-      </button>
-      <button onclick="showPage('ratingPage', this)" class="nav-tab-btn" type="button">
-        <span>⭐</span>
-        <span>Rating</span>
-      </button>
+<!-- ================= AESTHETIC PERMANENT RATING BAR (FIXED ON EACH & EVERY SCREEN) ================= -->
+<div class="aesthetic-rating-bar" id="permanentRatingStrip">
+  <div class="rating-bar-glow"></div>
+  <div class="rating-bar-content">
+    <div class="rating-brand-side">
+      <div class="rating-live-sparkle">
+        <span>✨</span>
+        <span>COMMUNITY RATING</span>
+      </div>
+      <div class="rating-score-display">
+        <span class="rating-big-star">★</span>
+        <strong id="stripAvgScore" class="rating-avg-num">4.9</strong>
+        <span class="rating-out-of">/ 5.0</span>
+        <span id="stripTotalVotes" class="rating-votes-tag">(1,250+ verified)</span>
+      </div>
     </div>
-  </div>
 
-  <!-- 2. EPISODE SORTING & FILTER -->
-  <div class="tabs-group-box" id="sortingClusterBox">
-    <div class="filter-buttons-cluster">
-      <button class="episode-filter-btn active-filter" onclick="filterEpisodes('all', this)" type="button">
-        <span>✨ All (10 Episodes)</span>
-      </button>
-      <button class="episode-filter-btn" onclick="filterEpisodes('watched', this)" type="button">
-        <span>✅ Watched (<strong id="filterWatchedCount">0</strong>)</span>
-      </button>
-      <button class="episode-filter-btn" onclick="filterEpisodes('unwatched', this)" type="button">
-        <span>🔒 Unwatched (<strong id="filterUnwatchedCount">10</strong>)</span>
-      </button>
+    <!-- 5 INTERACTIVE NEON STARS -->
+    <div class="rating-stars-interactive-wrap">
+      <div class="rating-stars-box" id="starPicker5" role="radiogroup" aria-label="Rate Beast Games 5 stars">
+        <button class="cool-star-btn" data-val="1" type="button" aria-label="1 star" onclick="submitRealRating(1)" onmouseenter="previewHoverStar(1)" onmouseleave="clearHoverStar()">
+          <span class="star-glyph">★</span>
+        </button>
+        <button class="cool-star-btn" data-val="2" type="button" aria-label="2 stars" onclick="submitRealRating(2)" onmouseenter="previewHoverStar(2)" onmouseleave="clearHoverStar()">
+          <span class="star-glyph">★</span>
+        </button>
+        <button class="cool-star-btn" data-val="3" type="button" aria-label="3 stars" onclick="submitRealRating(3)" onmouseenter="previewHoverStar(3)" onmouseleave="clearHoverStar()">
+          <span class="star-glyph">★</span>
+        </button>
+        <button class="cool-star-btn" data-val="4" type="button" aria-label="4 stars" onclick="submitRealRating(4)" onmouseenter="previewHoverStar(4)" onmouseleave="clearHoverStar()">
+          <span class="star-glyph">★</span>
+        </button>
+        <button class="cool-star-btn" data-val="5" type="button" aria-label="5 stars" onclick="submitRealRating(5)" onmouseenter="previewHoverStar(5)" onmouseleave="clearHoverStar()">
+          <span class="star-glyph">★</span>
+        </button>
+      </div>
+      <div class="rating-status-bubble" id="ratingStripStatus">Tap a star to rate</div>
     </div>
   </div>
 </div>
-<section class="page active" id="episodesPage">
+
+<!-- ================= 🏠 HOME SCREEN (CONTAINS ONLY THE 5 OPTIONS STACKED ONE BELOW ANOTHER) ================= -->
+<div id="homeScreen" class="app-screen active-screen">
+  <div class="nav-hub-card-list" id="navHubContainer">
+    <!-- OPTION 1: EPISODES PORTAL -->
+    <div class="hub-nav-row" onclick="openScreen('episodesScreen')" role="button" tabindex="0">
+      <div class="hub-nav-left">
+        <span class="hub-nav-icon">🎬</span>
+        <div class="hub-nav-text">
+          <div class="hub-nav-badge">HD THEATER</div>
+          <h3 class="hub-nav-title">Episodes Portal</h3>
+          <p class="hub-nav-sub">Watch all 10 episodes in HD theater mode • $5M tournament</p>
+        </div>
+      </div>
+      <div class="hub-nav-right">
+        <div class="hub-nav-btn">
+          <span>Open Episodes</span>
+          <span>▶</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPTION 2: LIVE COMMUNITY CHAT -->
+    <div class="hub-nav-row" onclick="openScreen('chatScreen')" role="button" tabindex="0">
+      <div class="hub-nav-left">
+        <span class="hub-nav-icon">💬</span>
+        <div class="hub-nav-text">
+          <div class="hub-nav-badge live-badge"><span class="hub-live-dot"></span>LIVE DISCUSSION</div>
+          <h3 class="hub-nav-title">Live Community Chat</h3>
+          <p class="hub-nav-sub">Real-time chat with active viewers &amp; verified Creator</p>
+        </div>
+      </div>
+      <div class="hub-nav-right">
+        <div class="hub-nav-btn">
+          <span>Open Live Chat</span>
+          <span>▶</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPTION 3: SHOW INFORMATION -->
+    <div class="hub-nav-row" onclick="openScreen('infoScreen')" role="button" tabindex="0">
+      <div class="hub-nav-left">
+        <span class="hub-nav-icon">ℹ️</span>
+        <div class="hub-nav-text">
+          <div class="hub-nav-badge">SHOW GUIDE</div>
+          <h3 class="hub-nav-title">Show Information</h3>
+          <p class="hub-nav-sub">Tournament rules, $5,000,000 prize breakdown &amp; survival guidelines</p>
+        </div>
+      </div>
+      <div class="hub-nav-right">
+        <div class="hub-nav-btn">
+          <span>View Info</span>
+          <span>▶</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPTION 4: BADGES & ACHIEVEMENTS -->
+    <div class="hub-nav-row" onclick="openScreen('badgesScreen')" role="button" tabindex="0">
+      <div class="hub-nav-left">
+        <span class="hub-nav-icon">🏅</span>
+        <div class="hub-nav-text">
+          <div class="hub-nav-badge">TROPHY ROOM</div>
+          <h3 class="hub-nav-title">Badges &amp; Achievements</h3>
+          <p class="hub-nav-sub">Track Bronze, Silver, Gold and Grand Champion unlock progress</p>
+        </div>
+      </div>
+      <div class="hub-nav-right">
+        <div class="hub-nav-btn">
+          <span>View Badges</span>
+          <span>▶</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPTION 5: COMMUNITY & OFFICIAL LINKS -->
+    <div class="hub-nav-row" onclick="openScreen('communityScreen')" role="button" tabindex="0">
+      <div class="hub-nav-left">
+        <span class="hub-nav-icon">🌐</span>
+        <div class="hub-nav-text">
+          <div class="hub-nav-badge">OFFICIAL LINKS</div>
+          <h3 class="hub-nav-title">Community &amp; Official Links</h3>
+          <p class="hub-nav-sub">Official YouTube channel, creator links, and community resources</p>
+        </div>
+      </div>
+      <div class="hub-nav-right">
+        <div class="hub-nav-btn">
+          <span>Open Links</span>
+          <span>▶</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ================= 🎬 SCREEN 1: EPISODES SCREEN ONLY ================= -->
+<section class="app-screen" id="episodesScreen" style="display:none;">
+  <div class="screen-back-bar">
+    <button type="button" class="back-to-home-btn" onclick="openScreen('homeScreen')">
+      <span>◀ Back to Home Screen</span>
+    </button>
+    <span class="screen-indicator-pill">🎬 Episodes Portal</span>
+  </div>
   <!-- REAL SERIES PROGRESS DASHBOARD (NO GLASSMORPHISM) -->
   <div class="series-progress-wrapper">
     <div class="series-progress-card" id="seriesProgressCard">
@@ -9802,7 +10457,14 @@ window.handleImgError = function(img) {
 </section>
 
 <!-- ================= DEDICATED LIVE CHAT PAGE ================= -->
-<section class="page" id="chatPage" style="display:none;">
+<!-- ================= 💬 SCREEN 2: LIVE CHAT SCREEN ONLY ================= -->
+<section class="app-screen" id="chatScreen" style="display:none;">
+  <div class="screen-back-bar">
+    <button type="button" class="back-to-home-btn" onclick="openScreen('homeScreen')">
+      <span>◀ Back to Home Screen</span>
+    </button>
+    <span class="screen-indicator-pill">💬 Live Community Chat</span>
+  </div>
   <div class="chat-page-top-bar">
     <button type="button" class="chat-back-btn" onclick="navigateToEpisodes()">
       <span>◀ Back to Episodes</span>
@@ -9916,7 +10578,14 @@ window.handleImgError = function(img) {
 <!-- ================= INFO SECTION ================= -->
 
 <!-- ================= INFO SECTION (SMALL CARDS) ================= -->
-<section class="page info-section" id="infoPage">
+<!-- ================= ℹ️ SCREEN 3: SHOW INFORMATION SCREEN ONLY ================= -->
+<section class="app-screen info-section" id="infoScreen" style="display:none;">
+  <div class="screen-back-bar">
+    <button type="button" class="back-to-home-btn" onclick="openScreen('homeScreen')">
+      <span>◀ Back to Home Screen</span>
+    </button>
+    <span class="screen-indicator-pill">ℹ️ Show Information</span>
+  </div>
   <h2>🏆 Beast Games Season 2 Blueprint &amp; Specs</h2>
   <div class="blueprint-showcase-grid">
     <!-- Left Column: Tournament Blueprint -->
@@ -9983,7 +10652,14 @@ window.handleImgError = function(img) {
 </section>
 <!-- ================= ACHIEVEMENT BADGES ================= -->
 
-<section class="page info-section" id="achievementPage">
+<!-- ================= 🏅 SCREEN 4: BADGES & ACHIEVEMENTS SCREEN ONLY ================= -->
+<section class="app-screen info-section" id="badgesScreen" style="display:none;">
+  <div class="screen-back-bar">
+    <button type="button" class="back-to-home-btn" onclick="openScreen('homeScreen')">
+      <span>◀ Back to Home Screen</span>
+    </button>
+    <span class="screen-indicator-pill">🏅 Badges &amp; Achievements</span>
+  </div>
 
   <h2>🏅 Viewer Achievements 🏅</h2>
 
@@ -10041,7 +10717,14 @@ window.handleImgError = function(img) {
 <!-- ================= RATING ================= -->
 
 <!-- ================= COMMUNITY & LEGAL HUB (ABOUT TO SUBSCRIBE) ================= -->
-<section class="page community-hub-section" id="communityHub">
+<!-- ================= 🌐 SCREEN 5: COMMUNITY & OFFICIAL LINKS SCREEN ONLY ================= -->
+<section class="app-screen community-hub-section" id="communityScreen" style="display:none;">
+  <div class="screen-back-bar">
+    <button type="button" class="back-to-home-btn" onclick="openScreen('homeScreen')">
+      <span>◀ Back to Home Screen</span>
+    </button>
+    <span class="screen-indicator-pill">🌐 Community &amp; Official Links</span>
+  </div>
   <div class="hub-header">
     <h2>🌐 Beast Games Season 2 Links & Community</h2>
     <p>Official links, show background, community guidelines, and direct YouTube channel subscription.</p>
@@ -10092,42 +10775,7 @@ window.handleImgError = function(img) {
   </div>
 </section>
 
-<section class="page final-subscribe" id="ratingPage">
-  <div class="rating-header-wrap">
-    <h2>⭐ Rate Beast Games Season 2 ⭐</h2>
-    <p>
-      Share your rating on a <strong>5-Star scale</strong>! Every rating syncs live with the dynamic community score 🔥
-    </p>
-  </div>
-
-  <!-- Real Global Scoreboard -->
-  <div class="global-scoreboard-card" id="globalScoreboard">
-    <div class="scoreboard-main-col">
-      <div class="scoreboard-big-score" id="globalAverageScore">4.9</div>
-      <div class="scoreboard-out-of">/ 5.0</div>
-      <div class="scoreboard-stars-visual" id="globalAverageStars">⭐⭐⭐⭐⭐</div>
-      <div class="scoreboard-count" id="globalTotalVotesText">Based on 1,250 verified ratings</div>
-    </div>
-    <!-- Rating Distribution Bars -->
-    <div class="scoreboard-dist-col" id="ratingDistributionBars">
-      <!-- Injected by renderRatingDistribution() -->
-    </div>
-  </div>
-
-  <!-- Interactive 5-Star Rating Bar -->
-  <div class="user-rating-interactive-box">
-    <div class="rating-prompt-title">Tap a star to rate Beast Games Season 2:</div>
-    <div class="rating-box-5" id="starPicker5">
-      <button class="star-btn" data-val="1" type="button" aria-label="1 star" onclick="submitRealRating(1)" onmouseenter="previewHoverStar(1)" onmouseleave="clearHoverStar()">⭐<span class="star-sub-num">1</span></button>
-      <button class="star-btn" data-val="2" type="button" aria-label="2 stars" onclick="submitRealRating(2)" onmouseenter="previewHoverStar(2)" onmouseleave="clearHoverStar()">⭐<span class="star-sub-num">2</span></button>
-      <button class="star-btn" data-val="3" type="button" aria-label="3 stars" onclick="submitRealRating(3)" onmouseenter="previewHoverStar(3)" onmouseleave="clearHoverStar()">⭐<span class="star-sub-num">3</span></button>
-      <button class="star-btn" data-val="4" type="button" aria-label="4 stars" onclick="submitRealRating(4)" onmouseenter="previewHoverStar(4)" onmouseleave="clearHoverStar()">⭐<span class="star-sub-num">4</span></button>
-      <button class="star-btn" data-val="5" type="button" aria-label="5 stars" onclick="submitRealRating(5)" onmouseenter="previewHoverStar(5)" onmouseleave="clearHoverStar()">⭐<span class="star-sub-num">5</span></button>
-    </div>
-    <div id="ratingHoverLabel" class="rating-hover-label">Tap to select your rating (1 to 5 Stars)</div>
-    <div id="userVoteConfirmation" class="user-vote-confirmation" style="display:none;"></div>
-  </div>
-</section>
+<!-- Rating is now permanently fixed to every page via #permanentRatingStrip -->
 
 <!-- ================= ALWAYS PINNED ULTRA-COMPACT FOOTER (SEAMLESS IN-SITE) ================= -->
 <footer class="pinned-bottom-footer">
@@ -10235,6 +10883,160 @@ window.handleImgError = function(img) {
 
 
 <script>
+
+// =========================================================================
+// 🔊 BEAST GAMES WEB AUDIO SYNTHESIZER SOUND ENGINE (GLOBAL)
+// =========================================================================
+let beastAudioCtx = null;
+
+function getBeastAudioContext() {
+  try {
+    if (!beastAudioCtx && (window.AudioContext || window.webkitAudioContext)) {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      beastAudioCtx = new AudioCtx();
+    }
+    if (beastAudioCtx && beastAudioCtx.state === "suspended") {
+      beastAudioCtx.resume().catch(() => {});
+    }
+  } catch (e) {}
+  return beastAudioCtx;
+}
+
+function playBeastSound(type) {
+  try {
+    const ctx = getBeastAudioContext();
+    if (!ctx) return;
+
+    const now = ctx.currentTime;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+
+    if (type === "click") {
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(450, now);
+      osc.frequency.exponentialRampToValueAtTime(150, now + 0.04);
+      gain.gain.setValueAtTime(0.12, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.04);
+      osc.start(now);
+      osc.stop(now + 0.045);
+    } else if (type === "unlock") {
+      const notes = [523.25, 659.25, 783.99, 1046.50];
+      notes.forEach((freq, idx) => {
+        try {
+          const o = ctx.createOscillator();
+          const g = ctx.createGain();
+          o.type = "triangle";
+          o.frequency.setValueAtTime(freq, now + idx * 0.08);
+          g.gain.setValueAtTime(0.15, now + idx * 0.08);
+          g.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.08 + 0.25);
+          o.connect(g);
+          g.connect(ctx.destination);
+          o.start(now + idx * 0.08);
+          o.stop(now + idx * 0.08 + 0.26);
+        } catch (err) {}
+      });
+    } else if (type === "verify") {
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(587.33, now);
+      osc.frequency.exponentialRampToValueAtTime(880, now + 0.08);
+      gain.gain.setValueAtTime(0.15, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.12);
+      osc.start(now);
+      osc.stop(now + 0.13);
+    } else {
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(350, now);
+      gain.gain.setValueAtTime(0.08, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
+      osc.start(now);
+      osc.stop(now + 0.06);
+    }
+  } catch (e) {
+    // Autoplay or audio disabled: fail gracefully
+  }
+}
+window.playBeastSound = playBeastSound;
+
+// =========================================================================
+// 📱 SCREEN ROUTER ENGINE (DEDICATED SCREENS WITH ONLY "BACK TO HOME SCREEN")
+// =========================================================================
+const ALL_APP_SCREENS = [
+  "homeScreen",
+  "episodesScreen",
+  "chatScreen",
+  "infoScreen",
+  "badgesScreen",
+  "communityScreen"
+];
+
+function openScreen(targetScreenId) {
+  if (typeof playBeastSound === "function") playBeastSound("click");
+
+  const aliasMap = {
+    "episodesPage": "episodesScreen",
+    "chatPage": "chatScreen",
+    "infoPage": "infoScreen",
+    "achievementPage": "badgesScreen",
+    "communityHub": "communityScreen"
+  };
+
+  const actualId = aliasMap[targetScreenId] || targetScreenId;
+  const validId = ALL_APP_SCREENS.includes(actualId) ? actualId : "homeScreen";
+
+  ALL_APP_SCREENS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      if (id === validId) {
+        el.style.display = "block";
+        el.classList.add("active-screen");
+      } else {
+        el.style.display = "none";
+        el.classList.remove("active-screen");
+      }
+    }
+  });
+
+  if (validId === "chatScreen") {
+    if (typeof updateChatIdentityDisplay === "function") updateChatIdentityDisplay();
+    if (typeof fetchChatMessages === "function") fetchChatMessages();
+  }
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+window.openScreen = openScreen;
+window.showPage = openScreen; // Seamless backwards compatibility
+window.navigateToEpisodes = () => openScreen("episodesScreen");
+window.navigateToLiveChat = () => openScreen("chatScreen");
+
+// =========================================================================
+// 🔄 AUTOMATIC RESET ON NEW VISIT / NEXT DAY (PRESERVES LOGIN, RESETS EPISODES)
+// =========================================================================
+let isSiteFullyOpened = false;
+
+function checkAndResetEpisodesForNewVisit() {
+  const TODAY_STR = new Date().toISOString().slice(0, 10); // "YYYY-MM-DD"
+  const lastActiveDate = localStorage.getItem("beast_last_active_date");
+  const hadCompletedAll = (localStorage.getItem("beast_all_completed_celebrated") === "true") || (getCompletionStats().count >= 10);
+  const isDifferentDay = lastActiveDate && (lastActiveDate !== TODAY_STR);
+
+  if (hadCompletedAll || isDifferentDay) {
+    // Reset ONLY completed episodes (never touch login credentials, user ID, or avatar!)
+    for (let i = 1; i <= 10; i++) {
+      localStorage.removeItem(`watched-${i}`);
+    }
+    localStorage.removeItem("watched_episodes");
+    localStorage.removeItem("beast_all_completed_celebrated");
+    localStorage.removeItem("beast_celebrated_milestones");
+    sessionStorage.removeItem("beast_celebration_shown_this_run");
+
+    if (typeof updateAllCardProgress === "function") updateAllCardProgress();
+    if (typeof checkAchievements === "function") checkAchievements();
+  }
+
+  localStorage.setItem("beast_last_active_date", TODAY_STR);
+}
 
 // =========================================================================
 // 🎬 CORE LIFECYCLE & 3D MINIATURE TRANSITION ENGINE (GUARANTEED GLOBAL)
@@ -10380,6 +11182,7 @@ window.playCinematic3DMiniatureTransition = playCinematic3DMiniatureTransition;
 
 // Unified open site routine
 function openSiteProperly() {
+  isSiteFullyOpened = true;
   const gate = document.getElementById("gate");
   const site = document.getElementById("site");
   const enroll = document.getElementById("enrollmentScreen");
@@ -10399,6 +11202,11 @@ function openSiteProperly() {
     site.style.setProperty("display", "block", "important");
   }
 
+  // Activate Home Screen with the 5 options by default
+  if (typeof openScreen === "function") {
+    openScreen("homeScreen");
+  }
+
   document.body.style.overflow = "auto";
   document.documentElement.style.overflow = "auto";
 
@@ -10408,26 +11216,131 @@ function openSiteProperly() {
 }
 window.openSiteProperly = openSiteProperly;
 
-function showEnrollmentScreen() {
-  const enrollScreen = document.getElementById("enrollmentScreen");
-  const gate = document.getElementById("gate");
-  const site = document.getElementById("site");
-
-  if (gate) gate.style.setProperty("display", "none", "important");
-  if (site) site.style.setProperty("display", "none", "important");
-
-  if (enrollScreen) {
-    enrollScreen.classList.remove("hidden");
-    enrollScreen.style.setProperty("display", "flex", "important");
-  }
-  document.body.style.overflow = "hidden";
-  document.documentElement.style.overflow = "hidden";
-
-  if (typeof fetchNextDefaultUserName === "function") fetchNextDefaultUserName();
+// =========================================================================
+// ⭐ PERMANENT MINIMAL RATING STRIP CONTROLLER
+// =========================================================================
+function previewHoverStar(val) {
+  document.querySelectorAll(".cool-star-btn").forEach(btn => {
+    const bVal = parseInt(btn.getAttribute("data-val"), 10);
+    btn.classList.toggle("hovered", bVal <= val);
+  });
+  const statusEl = document.getElementById("ratingStripStatus");
+  if (statusEl) statusEl.innerText = `Rate ${val} / 5 Stars`;
 }
-window.showEnrollmentScreen = showEnrollmentScreen;
+window.previewHoverStar = previewHoverStar;
 
-function showSubscribeGate(visitNumber) {
+function clearHoverStar() {
+  document.querySelectorAll(".cool-star-btn").forEach(btn => btn.classList.remove("hovered"));
+  const savedRating = parseInt(localStorage.getItem("beast_user_rating_5") || "0", 10);
+  const statusEl = document.getElementById("ratingStripStatus");
+  if (statusEl) {
+    if (savedRating > 0) statusEl.innerText = `✅ Your rating: ${savedRating}⭐`;
+    else statusEl.innerText = "Tap a star to rate";
+  }
+}
+window.clearHoverStar = clearHoverStar;
+
+function highlightSelectedStars(val) {
+  document.querySelectorAll(".cool-star-btn").forEach(btn => {
+    const bVal = parseInt(btn.getAttribute("data-val"), 10);
+    btn.classList.toggle("active", bVal <= val);
+  });
+}
+window.highlightSelectedStars = highlightSelectedStars;
+
+async function submitRealRating(val) {
+  playBeastSound("click");
+  localStorage.setItem("beast_user_rating_5", val.toString());
+  highlightSelectedStars(val);
+
+  if (val >= 4) {
+    playBeastSound("verify");
+    if (typeof launchConfetti === "function") launchConfetti();
+  }
+
+  const statusEl = document.getElementById("ratingStripStatus");
+  if (statusEl) {
+    statusEl.innerText = `✅ You rated ${val}⭐!`;
+    statusEl.style.color = "#facc15";
+  }
+
+  try {
+    const clientId = localStorage.getItem("beast_user_id") || "viewer";
+    const res = await fetch("/api/ratings", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ rating: val, clientId: clientId }),
+    });
+    if (res.ok) {
+      const stats = await res.json();
+      updateScoreboardUI(stats);
+    }
+  } catch (err) {}
+}
+window.submitRealRating = submitRealRating;
+
+function updateScoreboardUI(stats) {
+  const stripAvg = document.getElementById("stripAvgScore");
+  const stripTotal = document.getElementById("stripTotalVotes");
+  if (stats) {
+    if (stripAvg && stats.average) stripAvg.innerText = stats.average;
+    if (stripTotal && stats.totalVotes) stripTotal.innerText = `(${parseInt(stats.totalVotes, 10).toLocaleString()}+ ratings)`;
+  }
+}
+window.updateScoreboardUI = updateScoreboardUI;
+
+async function fetchGlobalRatings() {
+  try {
+    const res = await fetch("/api/ratings");
+    if (res.ok) {
+      const stats = await res.json();
+      updateScoreboardUI(stats);
+    }
+  } catch (e) {}
+}
+window.fetchGlobalRatings = fetchGlobalRatings;
+
+// =========================================================================
+// 🔒 REPAIRED SUBSCRIPTION LOCK & ACCESS GATE CONTROLLER
+// =========================================================================
+let isSubscribedVerified = false;
+let isSubscribingStep2 = false;
+
+function checkUserEnrollmentAndGate() {
+  let currentVisits = parseInt(localStorage.getItem(VISIT_COUNT_KEY) || "0", 10) + 1;
+  localStorage.setItem(VISIT_COUNT_KEY, currentVisits.toString());
+
+  const isOwner = localStorage.getItem("beast_is_owner") === "true";
+  const isSubscribed = localStorage.getItem("beast_user_subscribed") === "true";
+  const hasSessionUnlock = sessionStorage.getItem(SESSION_UNLOCKED_KEY) === "true";
+
+  // Checkpoint: First visit is ALWAYS locked until subscribed.
+  // Every 2 visits triggers checkpoint unless already unlocked in current session.
+  const isGateVisit = (currentVisits === 1) || (currentVisits % 2 === 0);
+  const isLocked = (!isSubscribed || (!hasSessionUnlock && isGateVisit)) && !isOwner;
+
+  if (isLocked) {
+    showSubscribeGate(currentVisits);
+    return;
+  }
+
+  // If subscription lock passed, check user enrollment
+  const savedName = localStorage.getItem("beast_user_name");
+  const savedId = localStorage.getItem("beast_user_id");
+
+  if (!savedName && !savedId && !isOwner) {
+    showEnrollmentScreen();
+    return;
+  }
+
+  // Already enrolled & unlocked: play 3D opening transition & open site
+  playCinematic3DMiniatureTransition(() => {
+    openSiteProperly();
+  });
+}
+window.checkUserEnrollmentAndGate = checkUserEnrollmentAndGate;
+
+function showSubscribeGate(visitNumber = 1) {
   const gate = document.getElementById("gate");
   const site = document.getElementById("site");
   const enroll = document.getElementById("enrollmentScreen");
@@ -10463,9 +11376,179 @@ function showSubscribeGate(visitNumber) {
 }
 window.showSubscribeGate = showSubscribeGate;
 
+function handleSubscribeAction() {
+  playBeastSound("click");
+  const isOwner = localStorage.getItem("beast_is_owner") === "true";
 
+  if (isOwner) {
+    completeSubscriptionUnlock();
+    return;
+  }
 
+  const subBtn = document.getElementById("subscribeBtn");
+  const subText = document.getElementById("subBtnText");
+  const subIcon = document.getElementById("subBtnIcon");
+  const subBox = document.getElementById("subVerifyingBox");
+  const subFill = document.getElementById("subVerifyFill");
+  const verifyText = document.getElementById("subVerifyText");
+  const spinner = document.getElementById("gateSpinner");
 
+  if (!isSubscribingStep2) {
+    isSubscribingStep2 = true;
+    try {
+      const win = window.open("https://www.youtube.com/@TrendzOfShahid?sub_confirmation=1", "_blank");
+      if (!win) {
+        const a = document.createElement("a");
+        a.href = "https://www.youtube.com/@TrendzOfShahid?sub_confirmation=1";
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.click();
+      }
+    } catch (e) {}
+
+    if (subBox) subBox.style.display = "block";
+    if (spinner) spinner.style.display = "block";
+    if (subFill) subFill.style.width = "45%";
+    if (verifyText) verifyText.innerText = "Step 1: Subscribed on YouTube? Click below to confirm unlock!";
+    if (subIcon) subIcon.innerText = "🛡️";
+    if (subText) subText.innerText = "Step 2: Confirm & Unlock Website ▶";
+    if (subBtn) {
+      subBtn.style.background = "linear-gradient(90deg, #10b981 0%, #059669 100%)";
+      subBtn.style.borderColor = "#10b981";
+    }
+  } else {
+    if (verifyText) verifyText.innerText = "Verifying subscription status with YouTube...";
+    if (subFill) subFill.style.width = "85%";
+    if (subBtn) subBtn.style.pointerEvents = "none";
+
+    setTimeout(() => {
+      completeSubscriptionUnlock();
+    }, 750);
+  }
+}
+window.handleSubscribeAction = handleSubscribeAction;
+
+function completeSubscriptionUnlock() {
+  sessionStorage.setItem(SESSION_UNLOCKED_KEY, "true");
+  localStorage.setItem("beast_user_subscribed", "true");
+  isSubscribedVerified = true;
+  isSubscribingStep2 = false;
+
+  const gate = document.getElementById("gate");
+  const subFill = document.getElementById("subVerifyFill");
+  const verifyText = document.getElementById("subVerifyText");
+  const spinner = document.getElementById("gateSpinner");
+
+  if (spinner) spinner.style.display = "none";
+  if (subFill) subFill.style.width = "100%";
+  if (verifyText) verifyText.innerText = "✅ Subscription Confirmed! Unlocking Hub...";
+
+  try {
+    if (typeof playBeastSound === "function") playBeastSound("unlock");
+    if (typeof launchConfetti === "function") launchConfetti();
+  } catch (e) {}
+
+  setTimeout(() => {
+    if (gate) {
+      gate.classList.add("gate-hidden");
+      gate.style.setProperty("display", "none", "important");
+    }
+
+    const savedName = localStorage.getItem("beast_user_name");
+    const savedId = localStorage.getItem("beast_user_id");
+    const isOwner = localStorage.getItem("beast_is_owner") === "true";
+
+    if (!savedName && !savedId && !isOwner) {
+      showEnrollmentScreen();
+    } else {
+      playCinematic3DMiniatureTransition(() => {
+        openSiteProperly();
+      });
+    }
+  }, 600);
+}
+window.completeSubscriptionUnlock = completeSubscriptionUnlock;
+
+// =========================================================================
+// 👤 VIEWER ENROLLMENT CONTROLLERS
+// =========================================================================
+function showEnrollmentScreen() {
+  const enrollScreen = document.getElementById("enrollmentScreen");
+  const gate = document.getElementById("gate");
+  const site = document.getElementById("site");
+
+  if (gate) gate.style.setProperty("display", "none", "important");
+  if (site) site.style.setProperty("display", "none", "important");
+
+  if (enrollScreen) {
+    enrollScreen.classList.remove("hidden");
+    enrollScreen.style.setProperty("display", "flex", "important");
+  }
+  document.body.style.overflow = "hidden";
+  document.documentElement.style.overflow = "hidden";
+
+  const nameInput = document.getElementById("enrollNameInput");
+  if (nameInput) {
+    const existing = localStorage.getItem("beast_user_name") || localStorage.getItem("beast_user_id");
+    if (existing) nameInput.value = existing;
+    else nameInput.value = "User 1";
+    setTimeout(() => nameInput.focus(), 150);
+  }
+}
+window.showEnrollmentScreen = showEnrollmentScreen;
+
+function handleNameInputCheck(val) {
+  const err = document.getElementById("enrollErrorNotice");
+  if (err) err.style.display = "none";
+}
+window.handleNameInputCheck = handleNameInputCheck;
+
+function handleEnrollAvatarChange(val) {
+  playBeastSound("click");
+}
+window.handleEnrollAvatarChange = handleEnrollAvatarChange;
+
+function handleEnrollmentSubmit(e) {
+  if (e) e.preventDefault();
+  playBeastSound("click");
+
+  const nameInput = document.getElementById("enrollNameInput");
+  const avatarSelect = document.getElementById("enrollAvatarSelect");
+  const rememberBox = document.getElementById("saveLoginCheckbox");
+  const errEl = document.getElementById("enrollErrorNotice");
+
+  const rawName = nameInput ? nameInput.value.trim() : "";
+  const name = rawName || "User 1";
+  const avatar = avatarSelect ? avatarSelect.value : "👤";
+  const shouldSave = rememberBox ? rememberBox.checked : true;
+
+  if (avatar === "💎" && localStorage.getItem("beast_is_owner") !== "true") {
+    if (errEl) {
+      errEl.innerText = "The 💎 Diamond Legend avatar is reserved exclusively for the Creator!";
+      errEl.style.display = "block";
+    }
+    return;
+  }
+
+  localStorage.setItem("beast_user_name", name);
+  localStorage.setItem("beast_user_id", name);
+  localStorage.setItem("beast_user_avatar", avatar);
+  localStorage.setItem("beast_chat_user_avatar", avatar);
+  localStorage.setItem("beast_save_login_info", shouldSave ? "true" : "false");
+
+  if (typeof updateChatIdentityDisplay === "function") updateChatIdentityDisplay();
+  if (typeof updateHeaderProfileDisplay === "function") updateHeaderProfileDisplay();
+
+  const enrollScreen = document.getElementById("enrollmentScreen");
+  if (enrollScreen) {
+    enrollScreen.style.setProperty("display", "none", "important");
+  }
+
+  playCinematic3DMiniatureTransition(() => {
+    openSiteProperly();
+  });
+}
+window.handleEnrollmentSubmit = handleEnrollmentSubmit;
 
 // Page navigation handled by main showPage routine
 
@@ -10765,1871 +11848,40 @@ function scrollToSection(id) {
 })();
 
 // Page Navigation
-function showPage(pageId, btn) {
-  const allPages = document.querySelectorAll(".page");
-  if (pageId === "chatPage") {
-    navigateToLiveChat();
-    return;
-  }
-
-  allPages.forEach(p => {
-    if (p.id === "chatPage") {
-      p.style.display = "none";
-    } else {
-      p.style.display = "block";
-    }
-  });
-
-  const section = document.getElementById(pageId);
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-  document.querySelectorAll(".nav-tab-btn").forEach(b => b.classList.remove("active-tab"));
-  if (btn) {
-    btn.classList.add("active-tab");
-  }
-}
-
-// Episode Filtering
-function filterEpisodes(type, btn) {
-  const cards = document.querySelectorAll(".card");
-  document.querySelectorAll(".episode-filter-btn").forEach(b => b.classList.remove("active-filter"));
-  if (btn) btn.classList.add("active-filter");
-
-  cards.forEach(card => {
-    if (type === "all") {
-      card.style.display = "flex";
-    } else if (type === "watched") {
-      card.style.display = (card.dataset.status === "watched") ? "flex" : "none";
-    } else if (type === "unwatched") {
-      card.style.display = (card.dataset.status !== "watched") ? "flex" : "none";
-    }
-  });
-}
-
-// ================= COMMUNITY HUB MODALS (CENTERED ON SCREEN WITH FULL DETAILS) =================
-const modalData = {
-  aboutModal: {
-    title: "ℹ️ About Beast Games Season 2",
-    body: `
-      <p><strong>Beast Games Season 2</strong> is the largest, most ambitious reality survival competition in entertainment history, created and hosted by <strong>MrBeast (Jimmy Donaldson)</strong>.</p>
-      <div class="modal-detail-grid">
-        <div class="modal-detail-card">
-          <strong>💰 Grand Prize</strong>
-          <span>$5,000,000 Cash + Private Island</span>
-        </div>
-        <div class="modal-detail-card">
-          <strong>👥 Contestants</strong>
-          <span>1,000 Global Challengers</span>
-        </div>
-        <div class="modal-detail-card">
-          <strong>🎬 Total Episodes</strong>
-          <span>10 Full-Length Episodes</span>
-        </div>
-        <div class="modal-detail-card">
-          <strong>🗣️ Audio Languages</strong>
-          <span>Hindi Dubbed & English HD</span>
-        </div>
-      </div>
-      <h4 style="color:#00e5ff; margin:14px 0 6px; font-size:0.95rem;">🔥 Key Show Highlights</h4>
-      <ul class="modal-detail-list">
-        <li><strong>Mega Beast City Arena:</strong> Custom-built $14M+ walled city and towering challenge arenas engineered specifically for Season 2.</li>
-        <li><strong>Mental, Physical & Loyalty Tests:</strong> Contestants face million-dollar bribes, solitary confinement, glass bridges, and strategic alliances.</li>
-        <li><strong>Interactive Fan Hub:</strong> Curated with ❤️ by <strong>Shahid Shaikh (Trendz of Shahid)</strong> so fans can stream episodes, track completion, and unlock achievement badges.</li>
-      </ul>
-    `
-  },
-  privacyModal: {
-    title: "🔐 Privacy Policy & Data Protection",
-    body: `
-      <p>Your privacy and digital safety are our top priority. The <strong>Beast Games Season 2 Hub</strong> operates with a strict <strong>Zero-Server Personal Data Policy</strong>.</p>
-      <div class="modal-detail-grid">
-        <div class="modal-detail-card">
-          <strong>🛡️ Personal Data</strong>
-          <span>0% Collected or Sold</span>
-        </div>
-        <div class="modal-detail-card">
-          <strong>💾 Storage Type</strong>
-          <span>100% Browser LocalStorage</span>
-        </div>
-      </div>
-      <h4 style="color:#00e5ff; margin:14px 0 6px; font-size:0.95rem;">📋 What Is Stored Locally on Your Device?</h4>
-      <ul class="modal-detail-list">
-        <li><strong>Watched Progress (<code>watched-1</code> to <code>watched-10</code>):</strong> Remembers which episodes you have completed so your badges stay unlocked.</li>
-        <li><strong>Subscription Token (<code>yt_subscribed_verified</code>):</strong> Stores your verified subscriber status for <code>@TrendzOfShahid</code> for automatic 5-second startup unlocking.</li>
-        <li><strong>Theme & Rating Preferences:</strong> Saves your chosen visual mode (Dark, Light, Gold, Cyber, Matrix) and star rating.</li>
-        <li><strong>Embedded Video Streams:</strong> Episodes stream via official Google Drive & YouTube players under Google's standard HTTPS encryption.</li>
-      </ul>
-    `
-  },
-  termsModal: {
-    title: "📜 Terms of Service & Usage Rules",
-    body: `
-      <p>By accessing and streaming on the <strong>Beast Games Season 2 Official Fan Hub</strong>, you agree to the following community terms:</p>
-      <ul class="modal-detail-list">
-        <li><strong>1. Subscription Gate Verification:</strong> Access to the streaming library requires an active subscription to our official YouTube channel (<strong>@TrendzOfShahid</strong>). The system automatically verifies subscription status on every website startup.</li>
-        <li><strong>2. Personal Non-Commercial Viewing:</strong> All episode streams, descriptions, and interactive achievement systems are provided free of charge for personal entertainment only.</li>
-        <li><strong>3. Fair-Play Badge System:</strong> Viewer badges (<em>Beginner Viewer</em>, <em>Hardcore Fan</em>, <em>Beast Master</em>, and <em>Ultimate Champion</em>) are designed to reward genuine episode completion.</li>
-        <li><strong>4. Respectful Community Conduct:</strong> Please support the creator community positively by rating fairly and sharing official links.</li>
-      </ul>
-    `
-  },
-  contactModal: {
-    title: "📞 Contact Us & Creator Support",
-    body: `
-      <p>Need help with an episode stream, want to report a bug, or looking to collaborate with us? Reach out directly to the creator!</p>
-      <div class="modal-detail-grid">
-        <div class="modal-detail-card">
-          <strong>👑 Lead Creator</strong>
-          <span>Shahid Shaikh</span>
-        </div>
-        <div class="modal-detail-card">
-          <strong>📺 Official Channel</strong>
-          <span>Trendz of Shahid</span>
-        </div>
-        <div class="modal-detail-card">
-          <strong>⚡ Response Time</strong>
-          <span>Within 24 Hours</span>
-        </div>
-        <div class="modal-detail-card">
-          <strong>🌍 Availability</strong>
-          <span>24/7 Community Support</span>
-        </div>
-      </div>
-      <h4 style="color:#00e5ff; margin:14px 0 6px; font-size:0.95rem;">💬 How Can We Help You?</h4>
-      <ul class="modal-detail-list">
-        <li>Report broken or buffering Google Drive / YouTube episode links.</li>
-        <li>Request new visual themes, Season 2 bonus clips, or Hindi audio updates.</li>
-        <li>Business inquiries, shoutouts, and channel collaborations.</li>
-      </ul>
-      <a href="https://www.youtube.com/@TrendzOfShahid?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="modal-cta-btn">
-        🔴 Visit & Message @TrendzOfShahid on YouTube
-      </a>
-    `
-  },
-  disclaimerModal: {
-    title: "⚠️ Official Disclaimer & Fair Use Notice",
-    body: `
-      <p>Please read the following legal and copyright disclaimer regarding the <strong>Beast Games Season 2</strong> platform:</p>
-      <ul class="modal-detail-list">
-        <li><strong>Independent Fan Community Hub:</strong> This website is an interactive fan-made streaming portal created with ❤️ by <strong>Shahid Shaikh (Trendz of Shahid)</strong> for fans of MrBeast.</li>
-        <li><strong>Trademarks & Copyright:</strong> <em>Beast Games</em>, the MrBeast panther logo, episode titles, and related intellectual property are owned by <strong>Jimmy Donaldson (MrBeast)</strong>, <strong>Beast Productions</strong>, and <strong>Amazon MGM Studios / Prime Video</strong>.</li>
-        <li><strong>External Media Hosting:</strong> This site does not host pirated files on its own servers; all video links point to publicly embedded YouTube and cloud-shared educational/fan streams.</li>
-        <li><strong>Zero Paywall Policy:</strong> This platform is 100% free for viewers and does not charge any money or subscription fees.</li>
-      </ul>
-    `
-  }
-};
-
-// ================= IN-APP THEATER VIDEO PLAYER CONTROLLER =================
-let currentPlayingEpisodeNum = 1;
-
-function getEmbedUrlForEpisode(ep) {
-  if (!ep || !ep.link) return "";
-  // YouTube link conversion to embed format
-  if (ep.link.includes("youtube.com") || ep.link.includes("youtu.be")) {
-    let videoId = "";
-    if (ep.link.includes("v=")) {
-      videoId = ep.link.split("v=")[1].split("&")[0];
-    } else if (ep.link.includes("youtu.be/")) {
-      videoId = ep.link.split("youtu.be/")[1].split("?")[0];
-    }
-    return `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
-  }
-  // Google Drive link conversion to preview embed
-  if (ep.link.includes("drive.google.com")) {
-    const m = ep.link.match(/\/d\/([a-zA-Z0-9_-]+)/);
-    if (m && m[1]) {
-      return `https://drive.google.com/file/d/${m[1]}/preview`;
-    }
-  }
-  return ep.link;
-}
-
-function openVideoPlayer(num) {
-  playBeastSound("click");
-  const ep = episodes.find(e => e.number === num);
-  if (!ep) return;
-
-  currentPlayingEpisodeNum = num;
-
-  const modal = document.getElementById("videoTheaterModal");
-  const iframe = document.getElementById("videoTheaterIframe");
-  const titleEl = document.getElementById("videoModalTitle");
-  const counterEl = document.getElementById("videoEpCounter");
-  const externalLinkEl = document.getElementById("videoExternalLink");
-  const prevBtn = document.getElementById("videoPrevBtn");
-  const nextBtn = document.getElementById("videoNextBtn");
-  const watchedBadge = document.getElementById("videoWatchedBadge");
-
-  if (titleEl) titleEl.innerText = `Episode ${ep.number}: ${ep.title}`;
-  if (counterEl) counterEl.innerText = `Episode ${ep.number} of ${episodes.length}`;
-  if (externalLinkEl) externalLinkEl.href = ep.link;
-
-  if (prevBtn) prevBtn.disabled = ep.number <= 1;
-  if (nextBtn) nextBtn.disabled = ep.number >= episodes.length;
-
-  const embedUrl = getEmbedUrlForEpisode(ep);
-  if (iframe) iframe.src = embedUrl;
-
-  if (modal) modal.style.display = "flex";
-
-  // Mark watched immediately upon playing & sync achievements
-  markWatched(num);
-
-  if (watchedBadge) {
-    watchedBadge.style.display = "inline-flex";
-    watchedBadge.innerText = "✅ Completed";
-  }
-}
-window.openVideoPlayer = openVideoPlayer;
-
-function navigateVideo(direction) {
-  const newNum = currentPlayingEpisodeNum + direction;
-  if (newNum >= 1 && newNum <= episodes.length) {
-    openVideoPlayer(newNum);
-  }
-}
-window.navigateVideo = navigateVideo;
-
-
 // =========================================================================
-// 🏆 GEMINI AI 3D CELEBRATION ENGINE (MILESTONES 3, 5, 8, 10 ON EXIT)
+// 📄 DEDICATED PAGE NAVIGATION (EACH SECTION STANDALONE LIKE LIVE CHAT)
 // =========================================================================
-let currentActiveCelebrationMilestone = 10;
-
-async function fetchGeminiAiCelebration(milestone) {
-  const isOwner = localStorage.getItem("beast_is_owner") === "true";
-  const userName = isOwner ? "Shahid Shaikh" : (localStorage.getItem("beast_user_name") || "User 1");
-  const userAvatar = isOwner ? "👑" : (localStorage.getItem("beast_user_avatar") || "👤");
-
-  try {
-    const res = await fetch("/api/ai/celebrate", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        username: userName,
-        avatar: userAvatar,
-        milestone: milestone
-      })
-    });
-    if (res.ok) {
-      return await res.json();
-    }
-  } catch (err) {
-    console.warn("AI celebration fetch fallback:", err);
-  }
-
-  // Local fallback data
-  const fallbackMap = {
-    3: {
-      title: "BRONZE BADGE UNLOCKED",
-      badgeTitle: "🥉 Bronze Survivor",
-      tacticalIq: "88.5%",
-      commentary: `Certified by Beast Survival AI: ${userName} conquered the initial gauntlet! Completing 3 episodes unlocks the Bronze Survivor badge with an 88.5% tactical grit rating!`,
-      isGrand10: false
-    },
-    5: {
-      title: "SILVER BADGE UNLOCKED",
-      badgeTitle: "🥈 Silver Tactician",
-      tacticalIq: "94.2%",
-      commentary: `Beast Intelligence Protocol: Halfway mark breached! ${userName} (${userAvatar}) outsmarted 500 eliminated rivals to secure the Silver Tactician badge with a 94.2% decision index!`,
-      isGrand10: false
-    },
-    8: {
-      title: "GOLD BADGE UNLOCKED",
-      badgeTitle: "🥇 Gold Eliminator",
-      tacticalIq: "97.9%",
-      commentary: `Elite Beast Analysis: Only top-tier survivors make it through 8 grueling trials. ${userName} unlocks the Gold Eliminator badge with a 97.9% composure score!`,
-      isGrand10: false
-    },
-    10: {
-      title: "VICTORY UNLOCKED!",
-      badgeTitle: "👑 Grand Champion",
-      tacticalIq: "99.8%",
-      commentary: `Official Beast Grand Champion Declaration: ${userName} (${userAvatar}) has conquered all 10 brutal episodes of Beast Games Season 2, outlasting 1,000 players to claim the $5,000,000 Golden Trophy!`,
-      isGrand10: true
-    }
-  };
-  return fallbackMap[milestone] || fallbackMap[10];
-}
-
-async function generateAiCommentary() {
-  const box = document.getElementById("aiCelebrationText");
-  const regenBtn = document.getElementById("aiRegenerateBtn");
-  if (regenBtn) regenBtn.disabled = true;
-  if (box) box.style.opacity = "0.4";
-
-  if (typeof playBeastSound === "function") playBeastSound("click");
-
-  const data = await fetchGeminiAiCelebration(currentActiveCelebrationMilestone);
-  if (box && data && data.commentary) {
-    box.innerText = `"${data.commentary}"`;
-    box.style.opacity = "1";
-  }
-  if (regenBtn) regenBtn.disabled = false;
-}
-window.generateAiCommentary = generateAiCommentary;
-
-async function launchGrand3DAICelebration(milestoneNumber = 10) {
-  currentActiveCelebrationMilestone = milestoneNumber;
-  const isGrand10 = milestoneNumber >= 10;
-
-  // Prevent duplicate celebration modals
-  const existing = document.getElementById("grand3DCelebrationModal");
-  if (existing) existing.remove();
-
-  const isOwner = localStorage.getItem("beast_is_owner") === "true";
-  const userName = isOwner ? "Shahid Shaikh" : (localStorage.getItem("beast_user_name") || "User 1");
-  const userAvatar = isOwner ? "👑" : (localStorage.getItem("beast_user_avatar") || "👤");
-
-  const emblemEmoji = isGrand10 ? "🏆" : (milestoneNumber === 8 ? "🥇" : (milestoneNumber === 5 ? "🥈" : "🥉"));
-  const prizeLabel = isGrand10 ? "$5,000,000 Trophy" : (milestoneNumber === 8 ? "Gold Tier Unlock" : (milestoneNumber === 5 ? "Silver Tier Unlock" : "Bronze Tier Unlock"));
-
-  const modal = document.createElement("div");
-  modal.id = "grand3DCelebrationModal";
-  modal.className = "grand-3d-celebration-overlay";
-
-  modal.innerHTML = `
-    <div class="grand-celebration-card">
-      <div class="grand-badge-pill" id="grandBadgePill">
-        <span>${emblemEmoji}</span>
-        <span id="grandBadgeTitleText">${isGrand10 ? 'Ultimate Champion • 10/10 Episodes' : `Milestone • ${milestoneNumber}/10 Episodes`}</span>
-      </div>
-
-      <div class="grand-trophy-3d-wrap">
-        <div class="grand-trophy-ring outer"></div>
-        <div class="grand-trophy-ring inner"></div>
-        <div class="grand-trophy-emblem">
-          <span>${emblemEmoji}</span>
-        </div>
-      </div>
-
-      <h1 class="grand-celebration-title" id="grandCelebrationTitle">${isGrand10 ? 'VICTORY UNLOCKED!' : 'MILESTONE UNLOCKED!'}</h1>
-      <p class="grand-celebration-subtitle">
-        Congratulations <strong>${userAvatar} ${userName}</strong>! You reached <strong>${milestoneNumber} of 10 Episodes</strong>!
-      </p>
-
-      <!-- AI BEAST SURVIVAL INTELLIGENCE REPORT -->
-      <div class="ai-victory-card">
-        <div class="ai-header-bar">
-          <div class="ai-header-title">
-            <span class="ai-badge-pulse"></span>
-            <span>Beast AI Survival Intelligence</span>
-          </div>
-          <span style="font-size:0.75rem; color:#facc15; font-weight:800;" id="aiRankText">
-            ${isGrand10 ? 'RANK #1 / 1,000' : `TIER #${milestoneNumber} REACHED`}
-          </span>
-        </div>
-
-        <div class="ai-stat-grid">
-          <div class="ai-stat-box">
-            <div class="ai-stat-val">${milestoneNumber}/10</div>
-            <div class="ai-stat-label">Episodes</div>
-          </div>
-          <div class="ai-stat-box">
-            <div class="ai-stat-val" id="aiTacticalIqVal">${isGrand10 ? '99.8%' : (milestoneNumber === 8 ? '97.9%' : (milestoneNumber === 5 ? '94.2%' : '88.5%'))}</div>
-            <div class="ai-stat-label">Tactical IQ</div>
-          </div>
-          <div class="ai-stat-box">
-            <div class="ai-stat-val" style="font-size:0.78rem;">${prizeLabel}</div>
-            <div class="ai-stat-label">Reward</div>
-          </div>
-        </div>
-
-        <div class="ai-commentary-box" id="aiCelebrationText">
-          "Contacting Beast AI Intelligence Engine for personalized commentary..."
-        </div>
-
-        <button type="button" class="ai-regenerate-btn" id="aiRegenerateBtn" onclick="generateAiCommentary()">
-          <span>✨</span>
-          <span>Generate New AI Victory Commentary</span>
-        </button>
-      </div>
-
-      <div class="grand-action-row">
-        <button type="button" class="grand-close-btn" onclick="closeGrandCelebration()">
-          <span>🎉 ${isGrand10 ? 'Claim Trophy & Continue' : 'Claim Badge & Continue'}</span>
-        </button>
-      </div>
-    </div>
-  `;
-
-  document.body.appendChild(modal);
-
-  try {
-    if (typeof playBeastSound === "function") playBeastSound("unlock");
-    if (typeof launchConfetti === "function") launchConfetti();
-    if (typeof launchFireworks === "function") launchFireworks();
-  } catch (e) {}
-
-  // Fetch real Gemini AI proclamation
-  fetchGeminiAiCelebration(milestoneNumber).then(data => {
-    if (data) {
-      const box = document.getElementById("aiCelebrationText");
-      if (box && data.commentary) box.innerText = `"${data.commentary}"`;
-      const iq = document.getElementById("aiTacticalIqVal");
-      if (iq && data.tacticalIq) iq.innerText = data.tacticalIq;
-      const titleEl = document.getElementById("grandCelebrationTitle");
-      if (titleEl && data.title) titleEl.innerText = data.title;
-      const badgePillText = document.getElementById("grandBadgeTitleText");
-      if (badgePillText && data.badgeTitle) badgePillText.innerText = data.badgeTitle;
-    }
-  });
-}
-window.launchGrand3DAICelebration = launchGrand3DAICelebration;
-
-function closeGrandCelebration() {
-  const modal = document.getElementById("grand3DCelebrationModal");
-  if (modal) {
-    modal.style.transition = "opacity 0.35s ease";
-    modal.style.opacity = "0";
-    setTimeout(() => modal.remove(), 350);
-  }
-}
-window.closeGrandCelebration = closeGrandCelebration;
-
-// Check completion strictly after user closes the video player
-function checkAndTriggerMilestoneCelebration() {
-  try {
-    const stats = getCompletionStats();
-    const count = stats.count;
-
-    let celebrated = [];
-    try {
-      celebrated = JSON.parse(localStorage.getItem("beast_celebrated_milestones") || "[]");
-    } catch (e) { celebrated = []; }
-
-    // Check milestones in descending priority: 10, 8, 5, 3
-    if (count >= 10 && !celebrated.includes(10)) {
-      celebrated.push(10);
-      localStorage.setItem("beast_all_completed_celebrated", "true");
-      localStorage.setItem("beast_celebrated_milestones", JSON.stringify(celebrated));
-      sessionStorage.setItem("beast_celebration_shown_this_run", "true");
-      setTimeout(() => launchGrand3DAICelebration(10), 350);
-    } else if (count >= 8 && !celebrated.includes(8)) {
-      celebrated.push(8);
-      localStorage.setItem("beast_celebrated_milestones", JSON.stringify(celebrated));
-      setTimeout(() => launchGrand3DAICelebration(8), 350);
-    } else if (count >= 5 && !celebrated.includes(5)) {
-      celebrated.push(5);
-      localStorage.setItem("beast_celebrated_milestones", JSON.stringify(celebrated));
-      setTimeout(() => launchGrand3DAICelebration(5), 350);
-    } else if (count >= 3 && !celebrated.includes(3)) {
-      celebrated.push(3);
-      localStorage.setItem("beast_celebrated_milestones", JSON.stringify(celebrated));
-      setTimeout(() => launchGrand3DAICelebration(3), 350);
-    }
-  } catch (e) {
-    console.error("Milestone celebration check error:", e);
-  }
-}
-window.checkAndTriggerMilestoneCelebration = checkAndTriggerMilestoneCelebration;
-
-function closeVideoPlayer() {
+function showPage(pageId) {
   playBeastSound("click");
-  const modal = document.getElementById("videoTheaterModal");
-  const iframe = document.getElementById("videoTheaterIframe");
-  if (iframe) iframe.src = ""; // Halts audio playback immediately
-  if (modal) modal.style.display = "none";
 
-  // Trigger celebration strictly after user exits the main player!
-  checkAndTriggerMilestoneCelebration();
-}
-window.closeVideoPlayer = closeVideoPlayer;
+  const validPages = ["episodesPage", "chatPage", "infoPage", "achievementPage", "communityHub"];
+  const targetId = validPages.includes(pageId) ? pageId : "episodesPage";
 
-window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    closeVideoPlayer();
-  } else if (e.key === "ArrowRight") {
-    const modal = document.getElementById("videoTheaterModal");
-    if (modal && modal.style.display === "flex") navigateVideo(1);
-  } else if (e.key === "ArrowLeft") {
-    const modal = document.getElementById("videoTheaterModal");
-    if (modal && modal.style.display === "flex") navigateVideo(-1);
-  }
-});
-
-function openAppModal(key) {
-  const data = modalData[key];
-  if (!data) return;
-  playBeastSound("click");
-  document.getElementById("appModalTitle").innerHTML = data.title;
-  document.getElementById("appModalBody").innerHTML = data.body;
-  const overlay = document.getElementById("appModalOverlay");
-  overlay.style.display = "flex";
-}
-
-function closeAppModal() {
-  playBeastSound("click");
-  const overlay = document.getElementById("appModalOverlay");
-  if (overlay) overlay.style.display = "none";
-}
-window.openAppModal = openAppModal;
-window.closeAppModal = closeAppModal;
-
-window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    closeAppModal();
-  }
-});
-
-// ================= AUDIO SYNTHESIZER =================
-function playBeastSound(type) {
-  try {
-    const AudioCtx = window.AudioContext || window.webkitAudioContext;
-    if (!AudioCtx) return;
-    const ctx = new AudioCtx();
-    if (ctx.state === "suspended") ctx.resume();
-
-    if (type === "unlock") {
-      const notes = [523.25, 659.25, 783.99, 1046.50, 1318.51];
-      notes.forEach((freq, idx) => {
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.type = "triangle";
-        osc.frequency.setValueAtTime(freq, ctx.currentTime + idx * 0.08);
-        gain.gain.setValueAtTime(0.2, ctx.currentTime + idx * 0.08);
-        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + idx * 0.08 + 0.45);
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-        osc.start(ctx.currentTime + idx * 0.08);
-        osc.stop(ctx.currentTime + idx * 0.08 + 0.5);
-      });
-    } else if (type === "verify") {
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.type = "sine";
-      osc.frequency.setValueAtTime(440, ctx.currentTime);
-      osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime + 0.18);
-      gain.gain.setValueAtTime(0.2, ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.35);
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.start();
-      osc.stop(ctx.currentTime + 0.4);
-    } else if (type === "click") {
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.type = "sine";
-      osc.frequency.setValueAtTime(600, ctx.currentTime);
-      gain.gain.setValueAtTime(0.12, ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.06);
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.start();
-      osc.stop(ctx.currentTime + 0.07);
-    }
-  } catch (err) {}
-}
-
-// ================= SMOOTH HIGH-TECH INTRO LOADING ANIMATION (~2.2 SECONDS) =================
-function runIntroAnimation(onCompleteCallback) {
-  if (onCompleteCallback) onCompleteCallback();
-}
-// ================= UNIVERSAL REAL SUBSCRIPTION VERIFICATION =================
-// The lock gate is showcased EVERY SINGLE TIME a visitor opens or reopens the website.
-// Verification unlocks access for the current active visit.
-let isSubscribedVerified = false;
-let hasOpenedYouTubeChannel = false;
-let youTubeOpenedTimestamp = 0;
-let unlockTriggered = false;
-
-const subscribeBtn = document.getElementById("subscribeBtn");
-const subBtnText = document.getElementById("subBtnText");
-const subBtnIcon = document.getElementById("subBtnIcon");
-const subVerifyingBox = document.getElementById("subVerifyingBox");
-const subVerifyText = document.getElementById("subVerifyText");
-const subVerifyFill = document.getElementById("subVerifyFill");
-const gateAlert = document.getElementById("gateAlert");
-const gateStatusPill = document.getElementById("gateStatusPill");
-const gateMainHeading = document.getElementById("gateMainHeading");
-const gateMainDesc = document.getElementById("gateMainDesc");
-const gateSpinner = document.getElementById("gateSpinner");
-const gateLogo = document.getElementById("gateLogo");
-
-function showGateAlert(msg, type) {
-  if (!gateAlert) return;
-  gateAlert.innerHTML = msg;
-  gateAlert.className = "gate-alert " + (type || "error");
-  gateAlert.style.display = "block";
-  if (type === "error") {
-    gateAlert.style.animation = "none";
-    void gateAlert.offsetWidth;
-    gateAlert.style.animation = "shakeAlert 0.4s ease";
-  }
-}
-
-function launchPostUnlockPortalEffect() {
-  const portal = document.createElement("div");
-  portal.className = "unlock-portal-fx";
-  portal.innerHTML = `
-    <div class="portal-shockwave"></div>
-    <div class="portal-badge-card">
-      <img
-        src="https://yt3.googleusercontent.com/M1CoAorn3TEsFnY7XEoCyOU6JFkbe4kC-vLrCG5osjh7Cs6akWEeSW59xcZ7YUCfWSCMT87sUQ=s160-c-k-c0x00ffffff-no-rj"
-        class="portal-badge-logo" onerror="handleImgError(this)"
-        alt="Logo"
-      />
-      <div class="portal-badge-title">🔓 Website Unlocked!</div>
-      <div class="portal-badge-sub">⚡ Welcome to Beast Games Season 2!</div>
-    </div>
-  `;
-  document.body.appendChild(portal);
-  setTimeout(() => {
-    portal.remove();
-  }, 1400);
-}
-
-// ================= GUARANTEED 3D FLIP UNLOCK TRANSITION =================
-function triggerWebsiteUnlockFlip() {
-  if (unlockTriggered) return;
-  unlockTriggered = true;
-
-  playBeastSound("unlock");
-  launchConfetti();
-  if (typeof launchFireworks === "function") launchFireworks();
-  launchPostUnlockPortalEffect();
-
-  document.body.classList.add("flip-in-progress");
-
-  const gate = document.getElementById("gate");
-  const site = document.getElementById("site");
-
-  if (gate) {
-    gate.classList.add("gate-flipping-out");
-  }
-  if (site) {
-    site.classList.remove("hidden");
-    site.classList.add("site-flipping-in", "site-active");
-    site.style.setProperty("display", "block", "important");
-  }
-
-  showToastNotification("🎉 Subscription Verified! Welcome to Beast Games Season 2!");
-
-  setTimeout(() => {
-    if (gate) {
-      gate.classList.add("gate-hidden");
-      gate.classList.remove("gate-flipping-out");
-      gate.style.setProperty("display", "none", "important");
-    }
-    if (site) {
-      site.classList.remove("site-flipping-in");
-      site.classList.add("site-active");
-      site.style.setProperty("display", "block", "important");
-    }
-    document.body.classList.remove("flip-in-progress");
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, 1100);
-}
-
-// ================= SUCCESSFUL VERIFICATION COMPLETION =================
-function completeSubscriptionUnlock() {
-  sessionStorage.setItem("beast_games_unlocked_session", "true");
-  isSubscribedVerified = true;
-  document.body.style.overflow = "auto";
-  document.documentElement.style.overflow = "auto";
-
-  playBeastSound("verify");
-  launchConfetti();
-
-  if (gateStatusPill) {
-    gateStatusPill.className = "gate-status-pill unlocked-pill";
-    gateStatusPill.innerText = "✅ Subscribed";
-  }
-
-  if (subscribeBtn) {
-    subscribeBtn.className = "gate-btn subscribe-btn verified";
-    subscribeBtn.innerHTML = "<span>✅</span><span>Subscribed! Unlocking Website...</span>";
-    subscribeBtn.style.pointerEvents = "none";
-  }
-
-  if (gateSpinner) gateSpinner.style.display = "none";
-  if (subVerifyFill) subVerifyFill.style.width = "100%";
-  if (subVerifyText) subVerifyText.innerText = "✅ Subscription Confirmed! Launching website...";
-  if (gateAlert) gateAlert.style.display = "none";
-
-  showGateAlert("🎉 Thank you for subscribing! Unlocking Beast Games Season 2...", "success");
-
-  setTimeout(() => {
-    playCinematic3DMiniatureTransition(() => {
-      triggerWebsiteUnlockFlip();
-    });
-  }, 700);
-}
-
-// ================= REALISTIC SUBSCRIBE & VERIFY WORKFLOW =================
-function handleSubscribeAction() {
-  playBeastSound("click");
-  const subVerifyingBox = document.getElementById("subVerifyingBox");
-  if (subVerifyingBox) subVerifyingBox.style.display = "flex";
-
-  // Step 1: Open YouTube channel
-  if (!hasOpenedYouTubeChannel) {
-    hasOpenedYouTubeChannel = true;
-    try {
-      const w = window.open("https://www.youtube.com/@TrendzOfShahid?sub_confirmation=1", "_blank");
-      if (!w) throw new Error("popup blocked");
-    } catch (err) {
-      const a = document.createElement("a");
-      a.href = "https://www.youtube.com/@TrendzOfShahid?sub_confirmation=1";
-      a.target = "_blank";
-      a.rel = "noopener noreferrer";
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-    }
-
-    if (subBtnText) subBtnText.innerText = "🛡️ Step 2: Confirm & Unlock Website";
-    if (subBtnIcon) subBtnIcon.innerText = "✨";
-    if (subscribeBtn) {
-      subscribeBtn.style.background = "linear-gradient(135deg, #10b981, #059669)";
-      subscribeBtn.style.boxShadow = "0 0 20px rgba(16, 185, 129, 0.5)";
-    }
-    if (subVerifyFill) subVerifyFill.style.width = "100%";
-    if (subVerifyText) subVerifyText.innerText = "👉 Click 'Subscribe' on YouTube, then click here to unlock";
-    if (gateAlert) gateAlert.style.display = "none";
-    return;
-  }
-
-  // Step 2: Real instant unlock without fake spinner delays
-  completeSubscriptionUnlock();
-}
-window.handleSubscribeAction = handleSubscribeAction;
-
-// Update UI when user switches back from YouTube tab
-function onReturnFromYouTube() {
-  if (isSubscribedVerified || !hasOpenedYouTubeChannel) return;
-
-  const elapsedMs = Date.now() - youTubeOpenedTimestamp;
-  if (elapsedMs < 1500) return;
-
-  if (subBtnText) subBtnText.innerText = "🛡️ Step 2: Confirm & Verify Subscription";
-  if (subVerifyText) subVerifyText.innerText = "👉 Ready! Click above to verify your subscription & enter";
-  if (subVerifyFill) subVerifyFill.style.width = "55%";
-}
-
-window.addEventListener("focus", onReturnFromYouTube);
-window.addEventListener("pageshow", onReturnFromYouTube);
-document.addEventListener("visibilitychange", () => {
-  if (!document.hidden) onReturnFromYouTube();
-});
-
-// ================= STARTUP CHECK =================
-function runStartupSubscriptionVerification() {
-  if (isSubscribedVerified) {
-    document.body.style.overflow = "auto";
-    document.documentElement.style.overflow = "auto";
-    return;
-  }
-  document.body.style.overflow = "hidden";
-  document.documentElement.style.overflow = "hidden";
-  if (subVerifyText) subVerifyText.innerText = "Step 1: Click button to open channel & subscribe";
-}
-
-// ================= SHARE WEBSITE LINK BUTTON =================
-function shareWebsite() {
-  playBeastSound("click");
-  const shareBtn = document.getElementById("footerShareBtn");
-  const shareText = document.getElementById("shareBtnText");
-  const currentUrl = window.location.href;
-  const shareTitle = "Beast Games Season 2 - All 10 Episodes";
-  const shareDesc = "Watch all 10 episodes of Beast Games Season 2 online with official streams, creator badges, and live ratings!";
-
-  const triggerCopyFeedback = () => {
-    if (shareText) shareText.innerText = "Copied! 🎉";
-    if (shareBtn) {
-      shareBtn.classList.add("copied-pulse");
-      setTimeout(() => {
-        if (shareText) shareText.innerText = "Share Website";
-        shareBtn.classList.remove("copied-pulse");
-      }, 2500);
-    }
-    showToastNotification("🔗 Website link copied to clipboard! Share it with friends!");
-  };
-
-  if (navigator.share && navigator.canShare && navigator.canShare({ url: currentUrl })) {
-    navigator.share({
-      title: shareTitle,
-      text: shareDesc,
-      url: currentUrl
-    }).catch(() => {});
-    return;
-  }
-
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(currentUrl).then(triggerCopyFeedback).catch(() => {
-      fallbackCopyText(currentUrl, triggerCopyFeedback);
-    });
-  } else {
-    fallbackCopyText(currentUrl, triggerCopyFeedback);
-  }
-}
-
-function fallbackCopyText(textToCopy, callback) {
-  try {
-    const tempInput = document.createElement("input");
-    tempInput.value = textToCopy;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand("copy");
-    tempInput.remove();
-    if (callback) callback();
-  } catch (err) {
-    showToastNotification("Link: " + window.location.href);
-  }
-}
-
-function showToastNotification(msg) {
-  const existing = document.querySelector(".unlocked-toast");
-  if (existing) existing.remove();
-  const toast = document.createElement("div");
-  toast.className = "unlocked-toast";
-  toast.innerHTML = `<span>${msg}</span>`;
-  document.body.appendChild(toast);
-  setTimeout(() => toast.classList.add("show"), 50);
-  setTimeout(() => {
-    toast.classList.remove("show");
-    setTimeout(() => toast.remove(), 400);
-  }, 4000);
-}
-
-window.shareWebsite = shareWebsite;
-window.showToastNotification = showToastNotification;
-
-// ================= INITIALIZATION ON EVERY WEBSITE START =================
-function initSiteAfterEnrollment() {
-  const currentSavedTheme = localStorage.getItem("beast_theme_mode") || localStorage.getItem("theme") || "dark";
-  setTheme(currentSavedTheme, true);
-  if (typeof updateAllCardProgress === "function") updateAllCardProgress();
-
-  const gate = document.getElementById("gate");
-  const site = document.getElementById("site");
-  const isOwner = localStorage.getItem("beast_is_owner") === "true";
-
-  // Every 2 visits tracking logic
-  const VISIT_COUNT_KEY = "beast_games_visit_count";
-  const SESSION_UNLOCKED_KEY = "beast_games_unlocked_session";
-
-  if (!sessionStorage.getItem("beast_games_session_counted")) {
-    sessionStorage.setItem("beast_games_session_counted", "true");
-    let currentVisits = parseInt(localStorage.getItem(VISIT_COUNT_KEY) || "0", 10) + 1;
-    localStorage.setItem(VISIT_COUNT_KEY, currentVisits.toString());
-  }
-
-  const totalVisits = parseInt(localStorage.getItem(VISIT_COUNT_KEY) || "1", 10);
-  // Interval of two visits: 1, 3, 5, 7...
-  const shouldShowGateThisVisit = ((totalVisits - 1) % 2 === 0);
-
-  const intervalBadge = document.getElementById("gateIntervalBadge");
-  if (intervalBadge) {
-    intervalBadge.innerText = `🛡️ Community Access Gate • Checkpoint (Visit #${totalVisits} • Appears every 2 visits)`;
-  }
-
-  const sessionUnlocked = sessionStorage.getItem(SESSION_UNLOCKED_KEY) === "true";
-
-  if (isOwner || sessionUnlocked || !shouldShowGateThisVisit) {
-    // Unlocked visit - directly show site without lock gate
-    isSubscribedVerified = true;
-    sessionStorage.setItem(SESSION_UNLOCKED_KEY, "true");
-    if (gate) {
-      gate.classList.add("gate-hidden");
-      gate.style.setProperty("display", "none", "important");
-    }
-    if (site) {
-      site.classList.remove("hidden");
-      site.classList.add("site-active");
-      site.style.setProperty("display", "block", "important");
-    }
-    document.body.style.overflow = "auto";
-    document.documentElement.style.overflow = "auto";
-  } else {
-    // Checkpoint visit (Visit 1, 3, 5...) - showcase Subscribe Gate with 3D Flip transition!
-    isSubscribedVerified = false;
-    hasOpenedYouTubeChannel = false;
-    unlockTriggered = false;
-
-    if (gate) {
-      gate.classList.remove("gate-hidden");
-      gate.classList.remove("gate-flipping-out");
-      gate.style.setProperty("display", "flex", "important");
-    }
-    if (site) {
-      site.classList.add("hidden");
-      site.classList.remove("site-active");
-      site.classList.remove("site-flipping-in");
-      site.style.setProperty("display", "none", "important");
-    }
-    document.body.style.overflow = "hidden";
-    document.documentElement.style.overflow = "hidden";
-
-    const subBtn = document.getElementById("subscribeBtn");
-    const subText = document.getElementById("subBtnText");
-    const subIcon = document.getElementById("subBtnIcon");
-    const subBox = document.getElementById("subVerifyingBox");
-    if (subText) subText.innerText = "🔴 Subscribe on YouTube to Unlock";
-    if (subIcon) subIcon.innerText = "🔥";
-    if (subBtn) {
-      subBtn.className = "gate-btn subscribe-btn fire-wave-btn";
-      subBtn.style.pointerEvents = "auto";
-      subBtn.style.background = "";
-    }
-    if (subBox) subBox.style.display = "none";
-
-    runStartupSubscriptionVerification();
-  }
-
-  if (typeof initChatLiveSync === "function") {
-    initChatLiveSync();
-  }
-}
-window.initSiteAfterEnrollment = initSiteAfterEnrollment;
-
-// =========================================================================
-// 🚀 MASTER STARTUP LIFECYCLE CONTROLLER (EXACT USER SPECIFICATION)
-// =========================================================================
-window.addEventListener("DOMContentLoaded", () => {
-  // Always set theme first
-  const currentSavedTheme = localStorage.getItem("beast_theme_mode") || "dark";
-  setTheme(currentSavedTheme, true);
-
-  // If user completed all 10 episodes in previous visit and already saw celebration:
-  // Reset completed episodes on this new visit so they start fresh, and DO NOT show celebration again!
-  if (localStorage.getItem("beast_all_completed_celebrated") === "true") {
-    for (let i = 1; i <= 10; i++) {
-      localStorage.removeItem(`watched-${i}`);
-    }
-    localStorage.removeItem("watched_episodes");
-    localStorage.removeItem("beast_all_completed_celebrated");
-    localStorage.removeItem("beast_celebrated_milestones");
-    sessionStorage.removeItem("beast_celebration_shown_this_run");
-    if (typeof updateAllCardProgress === "function") updateAllCardProgress();
-    if (typeof updateBadgeUI === "function") updateBadgeUI();
-  }
-
-  // Increment visit count once per browser session
-  if (!sessionStorage.getItem("beast_session_counted")) {
-    sessionStorage.setItem("beast_session_counted", "true");
-    const currentVisits = parseInt(localStorage.getItem(VISIT_COUNT_KEY) || "0", 10) + 1;
-    localStorage.setItem(VISIT_COUNT_KEY, currentVisits.toString());
-  }
-
-  const visitCount = parseInt(localStorage.getItem(VISIT_COUNT_KEY) || "1", 10);
-  const saveLoginEnabled = localStorage.getItem("beast_save_login_info") !== "false";
-  const savedId = localStorage.getItem("beast_saved_user_id");
-  const isOwner = localStorage.getItem("beast_is_owner") === "true";
-  const hasSavedLogin = saveLoginEnabled && !!savedId;
-
-  // Restore saved login fields into inputs
-  const nameInput = document.getElementById("enrollNameInput");
-  const avatarSelect = document.getElementById("enrollAvatarSelect");
-  const saveCheckbox = document.getElementById("saveLoginCheckbox");
-  if (saveCheckbox) saveCheckbox.checked = saveLoginEnabled;
-  if (nameInput && savedId) nameInput.value = savedId;
-  const savedAvatar = localStorage.getItem("beast_saved_user_avatar") || localStorage.getItem("beast_user_avatar") || "👤";
-  if (avatarSelect && savedAvatar) avatarSelect.value = savedAvatar;
-
-  // 100% Exact User Rule for Gate:
-  // "First time appear, second time do not, third time, fourth time do not, fifth time, sixth time do not."
-  // Math: (visitCount % 2 === 1) -> Odd visits (1, 3, 5, 7...) APPEAR! Even visits (2, 4, 6...) DO NOT!
-  const shouldGateThisVisit = !isOwner && ((visitCount % 2) === 1);
-
-  if (!hasSavedLogin) {
-    // =====================================================================
-    // SCENARIO A: FIRST-TIME USER (OR LOGIN NOT SAVED)
-    // 1. Step 1: Animation transition with logo and loading button
-    // 2. Step 2: Interface for entering username and selecting avatar
-    // 3. Step 3: Subscribe to unlock panel (on Visit 1)
-    // 4. Step 4: Again animation transition -> opens website properly
-    // =====================================================================
-    playCinematic3DMiniatureTransition(() => {
-      showEnrollmentScreen();
-    });
-  } else {
-    // =====================================================================
-    // SCENARIO B: NEXT-TIME USER (LOGIN PERMANENTLY SAVED)
-    // 1. Step 1: Animation transition with loading button
-    // 2. Skip Step 2 (do not show username screen)
-    // 3. Step 3: Every 2nd time, verify subscription. (Visit 2 do not, Visit 3 appear, Visit 4 do not, Visit 5 appear...)
-    // 4. Step 4: Opens website (with animation if gated)
-    // =====================================================================
-    playCinematic3DMiniatureTransition(() => {
-      if (shouldGateThisVisit) {
-        // Visit 3, 5, 7... -> Show Subscribe to Unlock Gate!
-        showSubscribeGate(visitCount);
-      } else {
-        // Visit 2, 4, 6... -> Directly opens website!
-        openSiteProperly();
-      }
-    });
-  }
-});
-
-/* ================= RELIABLE THEME SWITCHER (PERSISTED IN LOCALSTORAGE) ================= */
-function setTheme(mode, silentInit) {
-  const validModes = ["dark", "light", "gold", "cyber", "matrix"];
-  const normalizedMode = validModes.includes(mode) ? mode : "dark";
-
-  if (!silentInit) {
-    playBeastSound("click");
-  }
-
-  const body = document.body;
-  body.classList.remove("light-mode", "gold-mode", "cyber-mode", "matrix-mode");
-  document.documentElement.setAttribute("data-theme", normalizedMode);
-
-  document.querySelectorAll(".theme-option").forEach(btn => {
-    btn.classList.remove("active-theme");
-    btn.setAttribute("aria-pressed", "false");
+  // Hide all sections, display ONLY the selected dedicated page
+  document.querySelectorAll(".page").forEach(p => {
+    p.style.display = (p.id === targetId) ? "block" : "none";
   });
 
-  const btnMap = {
-    dark: "darkModeBtn",
-    light: "lightModeBtn",
-    gold: "goldModeBtn",
-    cyber: "cyberModeBtn",
-    matrix: "matrixModeBtn"
-  };
-
-  if (normalizedMode !== "dark") {
-    body.classList.add(normalizedMode + "-mode");
-  }
-
-  const targetBtn = document.getElementById(btnMap[normalizedMode]);
-  if (targetBtn) {
-    targetBtn.classList.add("active-theme");
-    targetBtn.setAttribute("aria-pressed", "true");
-  }
-  const unifiedSelect = document.getElementById("unifiedThemeSelect");
-  if (unifiedSelect && unifiedSelect.value !== normalizedMode) {
-    unifiedSelect.value = normalizedMode;
-  }
-  const mobileSelect = document.getElementById("mobileThemeSelect");
-  if (mobileSelect && mobileSelect.value !== normalizedMode) {
-    mobileSelect.value = normalizedMode;
-  }
-
-  try {
-    localStorage.setItem("theme", normalizedMode);
-    localStorage.setItem("beast_theme_mode", normalizedMode);
-  } catch (e) {}
-}
-window.setTheme = setTheme;
-
-setTheme(localStorage.getItem("beast_theme_mode") || localStorage.getItem("theme") || "dark", true);
-
-window.addEventListener("storage", (e) => {
-  if ((e.key === "beast_theme_mode" || e.key === "theme") && e.newValue) {
-    setTheme(e.newValue, true);
-  }
-});
-
-// ================= REAL 5-STAR COMMUNITY RATING ENGINE =================
-function getBeastClientId() {
-  let id = localStorage.getItem("beast_client_id");
-  if (!id) {
-    id = "client_" + Date.now() + "_" + Math.random().toString(36).substring(2, 9);
-    localStorage.setItem("beast_client_id", id);
-  }
-  return id;
-}
-const beastClientId = getBeastClientId();
-window.beastClientId = beastClientId;
-
-const ratingDescriptions = {
-  1: "1/5 • Disappointing 👎",
-  2: "2/5 • Needs Improvement ⚠️",
-  3: "3/5 • Good Entertainment 👍",
-  4: "4/5 • Amazing Challenges 🔥",
-  5: "5/5 • Masterpiece! Peak Beast Games! 👑"
-};
-
-let currentSelectedRating = parseInt(localStorage.getItem("beast_user_rating_5") || localStorage.getItem("beast_user_rating_10") || "0", 10);
-if (currentSelectedRating > 5) currentSelectedRating = Math.round(currentSelectedRating / 2);
-
-function getDynamicVisitScore() {
-  const visits = parseInt(localStorage.getItem("beast_games_visit_count") || "1", 10);
-  const baseAvg = 4.9;
-  const variation = ((visits % 5) - 2) * 0.02; // dynamic fluctuation: 4.86 to 4.94
-  const dynamicAvg = (baseAvg + variation).toFixed(1);
-  const dynamicVotes = 1250 + (visits * 7);
-  return { average: dynamicAvg, totalVotes: dynamicVotes };
-}
-
-function renderRatingDistribution(dist, total) {
-  const container = document.getElementById("ratingDistributionBars");
-  if (!container) return;
-  const safeTotal = total > 0 ? total : 1;
-  let htmlStr = "";
-  for (let s = 5; s >= 1; s--) {
-    const count = dist && dist[s] !== undefined ? dist[s] : Math.round(safeTotal * (s === 5 ? 0.77 : s === 4 ? 0.16 : 0.04));
-    const pct = Math.round((count / safeTotal) * 100);
-    htmlStr += `
-      <div class="dist-row">
-        <span class="dist-star-label">${s}⭐</span>
-        <div class="dist-bar-track">
-          <div class="dist-bar-fill" style="width: ${pct}%"></div>
-        </div>
-        <span class="dist-pct">${pct}%</span>
-      </div>
-    `;
-  }
-  container.innerHTML = htmlStr;
-}
-
-function updateScoreboardUI(stats) {
-  const avgEl = document.getElementById("globalAverageScore");
-  const countEl = document.getElementById("globalTotalVotesText");
-  const starsEl = document.getElementById("globalAverageStars");
-  const dyn = getDynamicVisitScore();
-
-  const avgVal = stats && stats.average ? stats.average : dyn.average;
-  const totalVal = stats && stats.totalVotes ? stats.totalVotes : dyn.totalVotes;
-
-  if (avgEl) avgEl.innerText = avgVal;
-  if (countEl) countEl.innerText = `Based on ${totalVal.toLocaleString()} verified ratings`;
-  if (starsEl) {
-    const rounded = Math.round(parseFloat(avgVal));
-    starsEl.innerText = "⭐".repeat(Math.max(1, Math.min(5, rounded)));
-  }
-
-  const defaultDist = stats && stats.distribution ? stats.distribution : { 5: Math.round(totalVal * 0.77), 4: Math.round(totalVal * 0.16), 3: Math.round(totalVal * 0.04), 2: Math.round(totalVal * 0.02), 1: Math.round(totalVal * 0.01) };
-  renderRatingDistribution(defaultDist, totalVal);
-}
-
-function previewHoverStar(val) {
-  const labelEl = document.getElementById("ratingHoverLabel");
-  if (labelEl) labelEl.innerText = ratingDescriptions[val] || `${val}/5 Stars`;
-  const buttons = document.querySelectorAll("#starPicker5 .star-btn");
-  buttons.forEach(btn => {
-    const bVal = parseInt(btn.getAttribute("data-val"), 10);
-    btn.classList.toggle("hovered", bVal <= val);
-  });
-}
-
-function clearHoverStar() {
-  const labelEl = document.getElementById("ratingHoverLabel");
-  if (currentSelectedRating > 0) {
-    if (labelEl) labelEl.innerText = `Your Vote: ${ratingDescriptions[currentSelectedRating] || currentSelectedRating + "/5 Stars"}`;
-  } else {
-    if (labelEl) labelEl.innerText = "Tap to select your rating (1 to 5 Stars)";
-  }
-  document.querySelectorAll("#starPicker5 .star-btn").forEach(btn => btn.classList.remove("hovered"));
-}
-
-function highlightSelectedStars(val) {
-  const buttons = document.querySelectorAll("#starPicker5 .star-btn");
-  buttons.forEach(btn => {
-    const bVal = parseInt(btn.getAttribute("data-val"), 10);
-    if (bVal <= val) {
-      btn.classList.add("active-star");
-      btn.classList.remove("dimmed-star");
-    } else {
-      btn.classList.remove("active-star");
-      btn.classList.add("dimmed-star");
-    }
-  });
-}
-
-async function submitRealRating(val) {
-  playBeastSound("click");
-  currentSelectedRating = val;
-  localStorage.setItem("beast_user_rating_5", val.toString());
-  highlightSelectedStars(val);
-
-  if (val >= 4) {
-    playBeastSound("verify");
-    launchConfetti();
-  }
-
-  const confirmEl = document.getElementById("userVoteConfirmation");
-  if (confirmEl) {
-    confirmEl.innerHTML = `✅ You Rated <strong>${val}/5 Stars</strong>! Saving to community tally...`;
-    confirmEl.style.display = "inline-flex";
-  }
-
-  const labelEl = document.getElementById("ratingHoverLabel");
-  if (labelEl) {
-    labelEl.innerText = `Your Vote: ${ratingDescriptions[val] || val + "/5 Stars"}`;
-  }
-
-  try {
-    const cId = typeof beastClientId !== "undefined" ? beastClientId : getBeastClientId();
-    const res = await fetch("/api/ratings", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ rating: val, clientId: cId }),
-    });
-    if (res.ok) {
-      const stats = await res.json();
-      updateScoreboardUI(stats);
-      if (confirmEl) {
-        confirmEl.innerHTML = `✅ Successfully Recorded! Current Community Average: <strong>${stats.average}/5.0</strong> (${stats.totalVotes} votes)`;
-      }
-    }
-  } catch (err) {
-    console.error("Error submitting rating:", err);
-  }
-}
-
-async function fetchGlobalRatings() {
-  try {
-    const res = await fetch("/api/ratings");
-    if (res.ok) {
-      const stats = await res.json();
-      updateScoreboardUI(stats);
-    } else {
-      updateScoreboardUI(null);
-    }
-  } catch (e) {
-    updateScoreboardUI(null);
-  }
-}
-
-fetchGlobalRatings();
-setInterval(fetchGlobalRatings, 12000);
-
-if (currentSelectedRating > 0) {
-  highlightSelectedStars(currentSelectedRating);
-  const confirmEl = document.getElementById("userVoteConfirmation");
-  if (confirmEl) {
-    confirmEl.innerHTML = `⭐ You Previously Rated <strong>${currentSelectedRating}/5 Stars</strong>`;
-    confirmEl.style.display = "inline-flex";
-  }
-}
-
-
-/* ================= ACHIEVEMENTS ================= */
-
-function checkAchievements() {
-  let watchedCount = 0;
-  episodes.forEach(ep => {
-    if (localStorage.getItem(`watched-${ep.number}`) === "true") {
-      watchedCount++;
-    }
+  // Highlight active row in full-width navigation hub
+  document.querySelectorAll(".hub-nav-row").forEach(row => {
+    row.classList.toggle("active-hub-row", row.dataset.page === targetId);
   });
 
-  const b1 = document.getElementById("badge1");
-  const b2 = document.getElementById("badge2");
-  const b3 = document.getElementById("badge3");
-  const b4 = document.getElementById("badge4");
-
-  if (b1) {
-    if (watchedCount >= 3) b1.classList.remove("locked");
-    else b1.classList.add("locked");
-  }
-  if (b2) {
-    if (watchedCount >= 5) b2.classList.remove("locked");
-    else b2.classList.add("locked");
-  }
-  if (b3) {
-    if (watchedCount >= 8) b3.classList.remove("locked");
-    else b3.classList.add("locked");
-  }
-  if (b4) {
-    if (watchedCount >= episodes.length) b4.classList.remove("locked");
-    else b4.classList.add("locked");
-  }
-}
-window.checkAchievements = checkAchievements;
-
-/* ================= CONFETTI ================= */
-
-function launchConfetti() {
-  let canvas = document.getElementById("confettiCanvas");
-  if (!canvas) {
-    canvas = document.createElement("canvas");
-    canvas.id = "confettiCanvas";
-    canvas.style.position = "fixed";
-    canvas.style.top = "0";
-    canvas.style.left = "0";
-    canvas.style.width = "100%";
-    canvas.style.height = "100%";
-    canvas.style.pointerEvents = "none";
-    canvas.style.zIndex = "99999999";
-    document.body.appendChild(canvas);
-  }
-  const ctx = canvas.getContext("2d");
-  if (!ctx) return;
-
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-
-  const pieces = [];
-  const colors = ["#facc15", "#38bdf8", "#ec4899", "#10b981", "#8b5cf6", "#f97316"];
-  for (let i = 0; i < 220; i++) {
-    pieces.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height - canvas.height,
-      size: Math.random() * 10 + 5,
-      speed: Math.random() * 4 + 2,
-      rotation: Math.random() * 360,
-      rotSpeed: (Math.random() - 0.5) * 8,
-      color: colors[Math.floor(Math.random() * colors.length)]
-    });
-  }
-
-  let animationId;
-  let frameCount = 0;
-  function updateConfetti() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (const p of pieces) {
-      p.y += p.speed;
-      p.rotation += p.rotSpeed;
-      if (p.y > canvas.height) {
-        p.y = -20;
-        p.x = Math.random() * canvas.width;
-      }
-      ctx.save();
-      ctx.translate(p.x, p.y);
-      ctx.rotate((p.rotation * Math.PI) / 180);
-      ctx.fillStyle = p.color;
-      ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
-      ctx.restore();
-    }
-    frameCount++;
-    if (frameCount < 300) {
-      animationId = requestAnimationFrame(updateConfetti);
-    } else {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-    }
-  }
-  updateConfetti();
-}
-window.launchConfetti = launchConfetti;
-
-/* ===================================================== */
-/* 👑 ULTIMATE TROPHY CELEBRATION */
-/* ===================================================== */
-
-function launchUltimateCelebration(){
-
-  const celebration =
-    document.createElement("div");
-
-  celebration.id =
-    "ultimateCelebration";
-
-  celebration.innerHTML = `
-
-    <div class="celebration-overlay">
-
-      <div class="fireworks"></div>
-
-      <div class="big-badge">
-        🏅
-      </div>
-
-      <h1>
-        ALL BADGES UNLOCKED
-      </h1>
-
-      <p>
-        You Completed All 10 Episodes 🔥
-      </p>
-
-    <div class="party-icons">
-
-  🎉 🎊 ✨ 🎆 🎇 💥 🎈
-
-</div>
-
-<button class="close-celebration"
-onclick="document.getElementById('ultimateCelebration').remove()">
-
-  ❌ Close Celebration
-
-</button>
-
-    </div>
-
-  `;
-
-  document.body.appendChild(
-    celebration
-  );
-
-  launchConfetti();
-
-  launchFireworks();
-
-  setTimeout(()=>{
-
-    celebration.remove();
-
-  },9000);
-
-}
-
-/* ===================================================== */
-/* 🎆 FIREWORKS EFFECT */
-/* ===================================================== */
-
-function launchFireworks(){
-
-  for(let i=0;i<25;i++){
-
-    const firework =
-      document.createElement("div");
-
-    firework.className =
-      "firework";
-
-    firework.style.left =
-      Math.random()*100 + "vw";
-
-    firework.style.top =
-      Math.random()*100 + "vh";
-
-    firework.style.animationDelay =
-      Math.random()*2 + "s";
-
-    document.body.appendChild(
-      firework
-    );
-
-    setTimeout(()=>{
-
-      firework.remove();
-
-    },4000);
-
-  }
-
-}
-
-checkAchievements();
-	
-
- 
-function openModal(id){
-  document.getElementById(id).style.display = "flex";
-}
-
-function closeModal(id){
-  document.getElementById(id).style.display = "none";
-}
-
-window.addEventListener("click", function(e){
-  const modals = document.querySelectorAll(".modal");
-  modals.forEach(m=>{
-    if(e.target === m){
-      m.style.display = "none";
-    }
+  // Update quick switcher pills if present
+  document.querySelectorAll(".dedicated-pill-btn").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.page === targetId);
   });
-});
 
-function openDesc(num) {
-  const ep = episodes.find(e => e.number === num);
-  if (!ep) return;
-  playBeastSound("click");
-  document.getElementById("appModalTitle").innerHTML = "🎬 Episode " + ep.number + ": " + ep.title;
-  document.getElementById("appModalBody").innerHTML = `
-    <div class="modal-detail-grid">
-      <div class="modal-detail-card">
-        <strong>📺 Episode Number</strong>
-        <span>Season 2 • Episode ${ep.number}</span>
-      </div>
-      <div class="modal-detail-card">
-        <strong>🗣️ Audio & Quality</strong>
-        <span>1080p Full HD • Hindi / EN</span>
-      </div>
-    </div>
-    <h4 style="color:#00e5ff; margin:14px 0 6px; font-size:0.95rem;">📖 Episode Synopsis</h4>
-    <p style="font-size:0.95rem; line-height:1.7; color:#f1f5f9;">${ep.desc}</p>
-    <a href="${ep.link}" target="_blank" rel="noopener noreferrer" onclick="markWatched(${ep.number})" class="modal-cta-btn" style="background:linear-gradient(135deg,#00e5ff,#2563eb); box-shadow:0 4px 15px rgba(0,229,255,0.4);">
-      ▶ Watch Episode ${ep.number} Now
-    </a>
-  `;
-  const overlay = document.getElementById("appModalOverlay");
-  overlay.style.display = "flex";
-}
-
-
-
-
-// =====================================================
-// 🎟️ PRE-SITE VIEWER ENROLLMENT (EVERY VISIT ID PROMPT & SAVE LOGIN)
-// =====================================================
-let suggestedDefaultName = "User 1";
-
-async function fetchNextDefaultUserName() {
-  try {
-    const res = await fetch("/api/chat/next-user");
-    if (res.ok) {
-      const data = await res.json();
-      if (data && data.defaultName) {
-        suggestedDefaultName = data.defaultName;
-        const input = document.getElementById("enrollNameInput");
-        if (input && !input.value) {
-          input.placeholder = `Create your username ID (e.g. ${suggestedDefaultName})`;
-        }
-      }
-    }
-  } catch (e) {}
-}
-
-
-// =====================================================
-// 🎭 ENROLLMENT AVATAR DROPDOWN & CREATOR CROWN LOGIC
-// =====================================================
-let currentEnrollAvatar = localStorage.getItem("beast_user_avatar") || "👤";
-let isCurrentEnrollAvatarFixed = localStorage.getItem("beast_avatar_is_fixed") === "true";
-
-function handleEnrollAvatarChange(val) {
-  playBeastSound("click");
-  currentEnrollAvatar = val;
-  isCurrentEnrollAvatarFixed = (val === "💎");
-}
-window.handleEnrollAvatarChange = handleEnrollAvatarChange;
-
-function handleNameInputCheck(val) {
-  const isOwner = (val.trim().toUpperCase() === "SRS18062011");
-  const avatarSelect = document.getElementById("enrollAvatarSelect");
-  if (avatarSelect) {
-    if (isOwner) {
-      if (!avatarSelect.querySelector('option[value="👑"]')) {
-        const opt = document.createElement("option");
-        opt.value = "👑";
-        opt.innerText = "👑 Official Creator Crown";
-        avatarSelect.prepend(opt);
-      }
-      avatarSelect.value = "👑";
-      avatarSelect.disabled = true;
-    } else {
-      avatarSelect.disabled = false;
-      const ownerOpt = avatarSelect.querySelector('option[value="👑"]');
-      if (ownerOpt) ownerOpt.remove();
-      if (avatarSelect.value === "👑") avatarSelect.value = "👤";
-    }
-  }
-}
-window.handleNameInputCheck = handleNameInputCheck;
-
-function checkUserEnrollment() {
-  const enrollScreen = document.getElementById("enrollmentScreen");
-  const gate = document.getElementById("gate");
-  const site = document.getElementById("site");
-  const nameInput = document.getElementById("enrollNameInput");
-  const saveCheckbox = document.getElementById("saveLoginCheckbox");
-
-  // Check if save login info is enabled on this device
-  const saveLoginEnabled = localStorage.getItem("beast_save_login_info") !== "false";
-  const savedId = localStorage.getItem("beast_saved_user_id") || localStorage.getItem("beast_user_id") || "";
-
-  if (saveCheckbox) {
-    saveCheckbox.checked = saveLoginEnabled;
-  }
-  if (nameInput && savedId && saveLoginEnabled) {
-    nameInput.value = savedId;
-  }
-  const avatarSelect = document.getElementById("enrollAvatarSelect");
-  const savedAvatar = localStorage.getItem("beast_saved_user_avatar") || localStorage.getItem("beast_user_avatar") || "👤";
-  if (avatarSelect && savedAvatar && saveLoginEnabled) {
-    avatarSelect.value = savedAvatar;
-    currentEnrollAvatar = savedAvatar;
-  }
-
-  // Ask for ID every time visitor opens/visits the website (tracked per browser session)
-  const sessionLoggedIn = sessionStorage.getItem("beast_session_logged_in") === "true";
-
-  if (!sessionLoggedIn) {
-    if (enrollScreen) {
-      enrollScreen.classList.remove("hidden");
-      enrollScreen.style.setProperty("display", "flex", "important");
-    }
-    if (gate) {
-      gate.style.setProperty("display", "none", "important");
-    }
-    if (site) {
-      site.style.setProperty("display", "none", "important");
-    }
-    document.body.style.overflow = "hidden";
-    document.documentElement.style.overflow = "hidden";
-    fetchNextDefaultUserName();
-    return false;
-  }
-
-  if (enrollScreen) {
-    enrollScreen.classList.add("hidden");
-    enrollScreen.style.setProperty("display", "none", "important");
-  }
-  updateHeaderProfileDisplay();
-  return true;
-}
-
-function handleEnrollmentSubmit(e) {
-  if (e) e.preventDefault();
-  const nameInput = document.getElementById("enrollNameInput");
-  const avatarSelect = document.getElementById("enrollAvatarSelect");
-  const saveCheckbox = document.getElementById("saveLoginCheckbox");
-  const errNotice = document.getElementById("enrollErrorNotice");
-
-  let idVal = nameInput ? nameInput.value.trim() : "";
-  const shouldSaveLogin = saveCheckbox ? saveCheckbox.checked : true;
-  let chosenAvatar = avatarSelect ? avatarSelect.value : (currentEnrollAvatar || "👤");
-
-  if (!idVal) {
-    idVal = suggestedDefaultName || "User 1";
-  }
-
-  if (errNotice) errNotice.style.display = "none";
-
-  // Save login preference
-  localStorage.setItem("beast_save_login_info", shouldSaveLogin ? "true" : "false");
-  if (shouldSaveLogin) {
-    localStorage.setItem("beast_saved_user_id", idVal);
-    localStorage.setItem("beast_saved_user_avatar", chosenAvatar);
-  } else {
-    localStorage.removeItem("beast_saved_user_id");
-    localStorage.removeItem("beast_saved_user_avatar");
-  }
-
-  sessionStorage.setItem("beast_session_logged_in", "true");
-
-  const enrollScreen = document.getElementById("enrollmentScreen");
-  if (enrollScreen) {
-    enrollScreen.classList.add("hidden");
-    enrollScreen.style.setProperty("display", "none", "important");
-  }
-
-  // Check if entered ID is the OWNER ID: SRS18062011 (never shown in UI)
-  const isOwner = (idVal.toUpperCase() === "SRS18062011");
-
-  if (isOwner) {
-    // 👑 OWNER / CREATOR PRIVILEGES (ALWAYS CROWN AVATAR)
-    const creatorAvatar = "👑";
-    localStorage.setItem("beast_user_enrolled", "true");
-    localStorage.setItem("beast_user_name", "Shahid Shaikh");
-    localStorage.setItem("beast_user_id", "SRS18062011");
-    localStorage.setItem("beast_is_owner", "true");
-    localStorage.setItem("beast_user_avatar", creatorAvatar);
-    localStorage.setItem("beast_chat_user_avatar", creatorAvatar);
-    localStorage.setItem("beast_avatar_is_fixed", "true");
-    localStorage.setItem("beast_chat_owner_token", "beast_owner_verified_auth_token_7777");
-    sessionStorage.setItem("beast_games_unlocked_session", "true");
-    localStorage.setItem("beast_user_subscribed", "true");
-    isSubscribedVerified = true;
-
-    try {
-      if (typeof playBeastSound === "function") playBeastSound("unlock");
-      if (typeof showToastNotification === "function") showToastNotification("👑 Welcome back, Owner Shahid Shaikh! Official Creator access unlocked.");
-    } catch (e) {}
-
+  if (targetId === "chatPage") {
     updateChatIdentityDisplay();
-    updateHeaderProfileDisplay();
-
-    // Step 4: Play transition animation again and open website
-    playCinematic3DMiniatureTransition(() => {
-      openSiteProperly();
-    });
-  } else {
-    // 👤 REGULAR USER ENROLLMENT WITH CHOSEN DROPDOWN AVATAR
-    const isFixed = (chosenAvatar === "💎");
-    localStorage.setItem("beast_user_enrolled", "true");
-    localStorage.setItem("beast_user_name", idVal);
-    localStorage.setItem("beast_user_id", idVal);
-    localStorage.setItem("beast_is_owner", "false");
-    localStorage.setItem("beast_user_avatar", chosenAvatar);
-    localStorage.setItem("beast_chat_user_avatar", chosenAvatar);
-    localStorage.setItem("beast_avatar_is_fixed", isFixed ? "true" : "false");
-    localStorage.removeItem("beast_chat_owner_token");
-
-    try {
-      if (typeof playBeastSound === "function") playBeastSound("unlock");
-      if (typeof showToastNotification === "function") showToastNotification(`🎉 Welcome, ${idVal}! Avatar ${chosenAvatar} registered.`);
-    } catch (e) {}
-
-    updateChatIdentityDisplay();
-    updateHeaderProfileDisplay();
-
-    // Step 3: First time visit always shows Subscribe to Unlock panel!
-    showSubscribeGate(1);
+    fetchChatMessages();
   }
-}
-window.handleEnrollmentSubmit = handleEnrollmentSubmit;
-
-// =====================================================
-// 👤 HEADER PROFILE OPTION & MODAL CONTROLLERS
-// =====================================================
-function updateHeaderProfileDisplay() {
-  const avatarEl = document.getElementById("headerProfileAvatar");
-  const btnEl = document.getElementById("headerProfileBtn");
-  const isOwner = localStorage.getItem("beast_is_owner") === "true";
-  const userName = isOwner ? "Shahid Shaikh" : (localStorage.getItem("beast_user_name") || "User 1");
-  const userAvatar = isOwner ? "👑" : (localStorage.getItem("beast_chat_user_avatar") || "👤");
-
-  if (avatarEl) avatarEl.innerText = userAvatar;
-  if (btnEl) {
-    btnEl.title = isOwner ? `👑 ${userName} (Creator)` : `👤 ${userName} (Profile)`;
-    if (isOwner) btnEl.classList.add("is-owner");
-    else btnEl.classList.remove("is-owner");
-  }
-}
-window.updateHeaderProfileDisplay = updateHeaderProfileDisplay;
-
-function openProfileModal() {
-  playBeastSound("click");
-  const isOwner = localStorage.getItem("beast_is_owner") === "true";
-  const userName = isOwner ? "Shahid Shaikh" : (localStorage.getItem("beast_user_name") || "User 1");
-  const userId = localStorage.getItem("beast_user_id") || userName;
-  const userDob = localStorage.getItem("beast_user_dob") || "Not set";
-  const isSaved = localStorage.getItem("beast_save_login_info") !== "false";
-
-  const modal = document.getElementById("profileModal");
-  const avatar = document.getElementById("profileModalAvatar");
-  const nameText = document.getElementById("profileModalName");
-  const roleBadge = document.getElementById("profileModalRoleBadge");
-  const idText = document.getElementById("profileModalIdText");
-  const dobText = document.getElementById("profileModalDobText");
-  const savedStatus = document.getElementById("profileModalSavedStatus");
-
-  if (avatar) avatar.innerText = isOwner ? "👑" : "👤";
-  if (nameText) nameText.innerText = userName;
-  if (roleBadge) {
-    roleBadge.innerText = isOwner ? "👑 Verified Owner & Creator" : "👤 Community Member";
-    roleBadge.style.color = isOwner ? "#facc15" : "#38bdf8";
-    roleBadge.style.borderColor = isOwner ? "#facc15" : "rgba(56, 189, 248, 0.3)";
-  }
-  if (idText) idText.innerText = userId;
-  if (dobText) dobText.innerText = userDob;
-  if (savedStatus) {
-    savedStatus.innerText = isSaved ? "✅ Enabled" : "❌ Disabled";
-    savedStatus.style.color = isSaved ? "#10b981" : "#ef4444";
-  }
-
-  if (modal) modal.style.display = "flex";
-}
-window.openProfileModal = openProfileModal;
-
-function closeProfileModal() {
-  const modal = document.getElementById("profileModal");
-  if (modal) modal.style.display = "none";
-}
-window.closeProfileModal = closeProfileModal;
-
-function switchUserAccount() {
-  closeProfileModal();
-  sessionStorage.removeItem("beast_session_logged_in");
-  const enrollScreen = document.getElementById("enrollmentScreen");
-  if (enrollScreen) {
-    enrollScreen.classList.remove("hidden");
-    enrollScreen.style.setProperty("display", "flex", "important");
-  }
-  document.body.style.overflow = "hidden";
-  document.documentElement.style.overflow = "hidden";
-  const nameInput = document.getElementById("enrollNameInput");
-  if (nameInput) {
-    setTimeout(() => {
-      nameInput.focus();
-      nameInput.select();
-    }, 100);
-  }
-}
-window.switchUserAccount = switchUserAccount;
-
-
-let selectedChatAvatar = localStorage.getItem("beast_chat_user_avatar") || "👤";
-
-function selectChatAvatar(emoji) {
-  const isOwner = localStorage.getItem("beast_is_owner") === "true";
-  if (isOwner) {
-    showToastNotification("👑 Creator uses official Crown avatar!");
-    return;
-  }
-  const isFixed = localStorage.getItem("beast_avatar_is_fixed") === "true";
-  if (isFixed) {
-    showToastNotification("🔒 Your avatar is permanently locked to 💎 and cannot be changed!");
-    return;
-  }
-  playBeastSound("click");
-  selectedChatAvatar = emoji;
-  localStorage.setItem("beast_chat_user_avatar", emoji);
-  localStorage.setItem("beast_user_avatar", emoji);
-  updateHeaderProfileDisplay();
-  document.querySelectorAll(".chat-avatar-opt").forEach(btn => {
-    btn.classList.toggle("active", btn.innerText.trim() === emoji);
-  });
-}
-window.selectChatAvatar = selectChatAvatar;
-
-// =====================================================
-// 💬 DEDICATED LIVE CHAT ENGINE (REAL CHATS ONLY)
-// =====================================================
-let activeChatReply = null;
-let chatMessagesCache = [];
-let chatEventSource = null;
-
-// CHAT_OWNER_TOKEN_KEY declared at script top
-
-function getEnrolledChatName() {
-  const ownerToken = localStorage.getItem(CHAT_OWNER_TOKEN_KEY);
-  if (ownerToken) return "Shahid Shaikh";
-  return localStorage.getItem("beast_user_name") || "User 1";
-}
-
-function updateChatIdentityDisplay() {
-  const displayEl = document.getElementById("chatEnrolledUserNameDisplay");
-  const userBadge = document.getElementById("chatEnrolledUserBadge");
-  const ownerBtn = document.getElementById("chatOwnerBtn");
-  const ownerToken = localStorage.getItem(CHAT_OWNER_TOKEN_KEY);
-
-  if (ownerToken) {
-    if (userBadge) {
-      userBadge.innerHTML = `<span style="color:#facc15; font-weight:800;">👑 Shahid Shaikh (Creator)</span>`;
-    }
-    if (ownerBtn) {
-      ownerBtn.innerHTML = `🔓 Creator Mode (Logout)`;
-      ownerBtn.onclick = () => logoutOwner();
-    }
-  } else {
-    const name = getEnrolledChatName();
-    if (displayEl) displayEl.innerText = name;
-    if (userBadge) {
-      userBadge.innerHTML = `<span>👤</span><span>${name}</span>`;
-    }
-    if (ownerBtn) {
-      ownerBtn.innerHTML = `👑 Creator Login`;
-      ownerBtn.onclick = () => openOwnerPinModal();
-    }
-  }
-}
-
-// Navigation to Dedicated Live Chat Page and Back
-function navigateToLiveChat() {
-  playBeastSound("click");
-  const allPages = document.querySelectorAll(".page");
-  allPages.forEach(p => {
-    p.style.display = (p.id === "chatPage") ? "block" : "none";
-  });
-  document.querySelectorAll(".nav-tab-btn").forEach(b => b.classList.remove("active-tab"));
-  const chatNavBtn = document.getElementById("chatNavTabBtn");
-  if (chatNavBtn) chatNavBtn.classList.add("active-tab");
 
   window.scrollTo({ top: 0, behavior: "smooth" });
-  updateChatIdentityDisplay();
-  fetchChatMessages();
 }
-window.navigateToLiveChat = navigateToLiveChat;
-
-function navigateToEpisodes() {
-  playBeastSound("click");
-  const allPages = document.querySelectorAll(".page");
-  allPages.forEach(p => {
-    if (p.id === "chatPage") {
-      p.style.display = "none";
-    } else {
-      p.style.display = "block";
-    }
-  });
-  document.querySelectorAll(".nav-tab-btn").forEach(b => b.classList.remove("active-tab"));
-  const firstNavBtn = document.querySelector(".nav-tab-btn");
-  if (firstNavBtn) firstNavBtn.classList.add("active-tab");
-
-  const epSection = document.getElementById("episodesPage");
-  if (epSection) epSection.scrollIntoView({ behavior: "smooth", block: "start" });
-}
-window.navigateToEpisodes = navigateToEpisodes;
+window.showPage = showPage;
+window.navigateToEpisodes = () => showPage("episodesPage");
+window.navigateToLiveChat = () => showPage("chatPage");
 
 // WhatsApp Quoted Reply Management
 function setChatReply(msgId, sender, textSnippet) {
@@ -12916,6 +12168,54 @@ function logoutOwner() {
 window.logoutOwner = logoutOwner;
 
 // Initialize Server-Sent Events (SSE) for Real-Time Instant Messages
+
+// =========================================================================
+// 💬 CHAT IDENTITY & LIVE DISPLAY SYNC (GUARANTEED GLOBAL)
+// =========================================================================
+function getEnrolledChatName() {
+  const isOwner = localStorage.getItem("beast_is_owner") === "true";
+  const ownerToken = localStorage.getItem(CHAT_OWNER_TOKEN_KEY);
+  if (isOwner || ownerToken) return "Shahid Shaikh";
+  return localStorage.getItem("beast_user_name") || localStorage.getItem("beast_user_id") || "User 1";
+}
+window.getEnrolledChatName = getEnrolledChatName;
+
+function updateChatIdentityDisplay() {
+  const isOwner = localStorage.getItem("beast_is_owner") === "true";
+  const ownerToken = localStorage.getItem(CHAT_OWNER_TOKEN_KEY);
+  const enrolledName = getEnrolledChatName();
+  const avatar = (isOwner || ownerToken) ? "👑" : (localStorage.getItem("beast_chat_user_avatar") || localStorage.getItem("beast_user_avatar") || "👤");
+
+  const nameEl = document.getElementById("chatCurrentUserName");
+  const avatarEl = document.getElementById("chatCurrentUserAvatar");
+  const badgeEl = document.getElementById("chatCurrentUserBadge");
+  const ownerBtn = document.getElementById("chatOwnerBtn");
+  const logoutBtn = document.getElementById("chatLogoutBtn");
+
+  if (nameEl) nameEl.innerText = enrolledName;
+  if (avatarEl) avatarEl.innerText = avatar;
+
+  if (badgeEl) {
+    if (isOwner || ownerToken) {
+      badgeEl.innerText = "👑 Official Creator";
+      badgeEl.style.display = "inline-flex";
+      badgeEl.className = "chat-role-badge creator-role";
+    } else {
+      badgeEl.innerText = "👤 Community Member";
+      badgeEl.style.display = "inline-flex";
+      badgeEl.className = "chat-role-badge viewer-role";
+    }
+  }
+
+  if (ownerBtn) {
+    ownerBtn.style.display = (isOwner || ownerToken) ? "none" : "inline-flex";
+  }
+  if (logoutBtn) {
+    logoutBtn.style.display = (isOwner || ownerToken) ? "inline-flex" : "none";
+  }
+}
+window.updateChatIdentityDisplay = updateChatIdentityDisplay;
+
 function initChatLiveSync() {
   updateChatIdentityDisplay();
   fetchChatMessages();
@@ -12952,12 +12252,33 @@ function initChatLiveSync() {
   }
 }
 
-// Start chat engine when DOM ready
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initChatLiveSync);
-} else {
-  initChatLiveSync();
-}
+// =========================================================================
+// 🚀 DOMCONTENTLOADED ROOT INITIALIZATION
+// =========================================================================
+window.addEventListener("DOMContentLoaded", () => {
+  // 1. Theme initialization
+  const currentSavedTheme = localStorage.getItem("beast_theme_mode") || "dark";
+  if (typeof setTheme === "function") setTheme(currentSavedTheme, true);
+
+  // 2. Next-day / next-visit episode reset
+  checkAndResetEpisodesForNewVisit();
+
+  // 3. Highlight saved user rating on strip & fetch live ratings
+  const savedRating = parseInt(localStorage.getItem("beast_user_rating_5") || "0", 10);
+  if (savedRating > 0 && typeof highlightSelectedStars === "function") highlightSelectedStars(savedRating);
+  if (typeof fetchGlobalRatings === "function") fetchGlobalRatings();
+
+  // 4. Update header profile & cards
+  if (typeof updateHeaderProfileDisplay === "function") updateHeaderProfileDisplay();
+  if (typeof updateAllCardProgress === "function") updateAllCardProgress();
+  if (typeof checkAchievements === "function") checkAchievements();
+
+  // 5. Subscription Gate & Enrollment Check (REPAIRED)
+  checkUserEnrollmentAndGate();
+
+  // 6. Live Chat sync
+  if (typeof initChatLiveSync === "function") initChatLiveSync();
+});
 
 </script>
 <canvas id="confettiCanvas"></canvas>

@@ -1,86 +1,73 @@
-# Google Gemini AI 3D Celebration & Milestone Engine Plan
+# Comprehensive SEO, Viral Discoverability & App Shortcut Icons Plan
 
-Architectural blueprint for integrating server-side Google Gemini AI (`gemini-3.8-flash`) to generate unique, personalized celebrations for viewers at key episode milestones (3, 5, 8, and the Grand 10-Episode Champion celebration). The celebration triggers strictly upon closing the video player, adapts fluidly across all mobile and desktop screen sizes with responsive 3D miniature depth, and automatically resets on the user's next visit.
+Elevate Beast Games Season 2 with production-grade search engine optimization (SEO), viral social meta tags, rich Schema.org structured data, and local Progressive Web App (PWA) icon assets so that search engines, social shares, and mobile home screen shortcuts display the full high-resolution official logo instead of generic placeholders.
+
+---
 
 ## User Review & Critical Decisions
 
 > [!IMPORTANT]
-> The following core behaviors were confirmed by the user:
-
-- **AI-Powered Personalization**: Real Gemini AI generation (`gemini-3.8-flash`) via server-side `/api/ai/celebrate` that crafts unique, tailored victory speeches, tactical ratings, and survival praises for each viewer's registered username and avatar.
-- **Milestone Tier Celebrations**: Triggers at milestone badges:
-  - **3 Episodes**: Bronze Survivor badge celebration with custom AI commentary.
-  - **5 Episodes**: Silver Tactician badge celebration with custom AI commentary.
-  - **8 Episodes**: Gold Eliminator badge celebration with custom AI commentary.
-  - **10 Episodes**: Grand 3D Champion Celebration with 3D Gold Panther Trophy, AI Survival Assessment, and $5,000,000 Championship Certificate.
-- **Strict Exit Trigger**: The celebration **only** fires when the user closes/exits the video player (`closeVideoPlayer()`), never during playback.
-- **Device-Sustainable 3D Miniature Card**: Uses fluid CSS clamping (`clamp()`), stereoscopic 3D perspective (`perspective: 1400px; transform-style: preserve-3d`), dynamic viewport units (`dvh` / `vw`), and touch-friendly scaling for phones, tablets, and desktops.
-- **Next-Visit Fresh Reset**: If a user previously completed all 10 episodes and celebrated, their next visit opens cleanly without repeating the celebration, resetting watched episodes to 0 so they can start fresh.
+> The user confirmed the following architectural and branding decisions in Phase 1:
+> - **Website Title**: `Beast Games Season 2 - Official Free Streaming Hub`
+> - **Logo & App Icon**: Use the official Beast Games circular high-resolution logo for browser tabs (`favicon.ico`), Apple Touch icon (`apple-touch-icon.png`), and Android/PWA home screen shortcuts (`pwa-192x192.png` and `pwa-512x512.png`).
+> - **SEO & Social Strategy**: Comprehensive viral SEO package covering global Google searches, free episode streaming, and Dual Audio (Hindi & English) support.
 
 ---
 
-## 1. System Architecture & Execution Flow
+## 1. Overview & Core Concept
+
+- **What It Delivers**:
+  - Full search engine indexability and social share card richness for Google, Bing, Facebook, X (Twitter), WhatsApp, Telegram, Discord, and iMessage.
+  - Native home screen installability and shortcut icons, ensuring that when users add the website to their home screen or launch it on mobile/desktop, the vibrant official Beast Games logo appears instead of a default browser letter "B".
+  - Structured metadata schema (JSON-LD) registered under `VideoSeries`, `WebApplication`, and `Organization` to power Google search snippets, rich stars, and knowledge graph carousels.
+
+---
+
+## 2. Technical Architecture & Asset Strategy
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                 USER WATCHES IN VIDEO THEATER               │
-│  (Marks Episode 3, 5, 8, or 10 as completed)                │
-└──────────────────────────────┬──────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────┐
-│               USER CLOSES VIDEO PLAYER (EXIT)               │
-│  • Halts video & audio stream immediately                   │
-│  • Checks for uncelebrated milestone (3, 5, 8, or 10)       │
-└──────────────────────────────┬──────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────┐
-│       SERVER-SIDE GEMINI API CALL (/api/ai/celebrate)       │
-│  • Model: 'gemini-3.8-flash'                                │
-│  • Input: Username, Avatar, Milestone (3, 5, 8, or 10)      │
-│  • Output: Unique personalized AI commentary & tactical IQ  │
-│  • Graceful fallback to localized templates if offline      │
-└──────────────────────────────┬──────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────┐
-│         RESPONSIVE 3D MINIATURE CELEBRATION MODAL           │
-│  • Fluid card scaling: clamp(300px, 90vw, 520px)            │
-│  • 3D rotating trophy / badge with gold & neon particle rays│
-│  • Animated AI commentary with typing effect                │
-│  • Fireworks, confetti cannons, and audio fanfare           │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────────────────┐
+│                           SEARCH & APP IDENTITY                           │
+├──────────────────────────────────────┬────────────────────────────────────┤
+│           SEO & DISCOVERABILITY      │        HOME SCREEN & PWA ASSETS    │
+├──────────────────────────────────────┼────────────────────────────────────┤
+│ • <title>: Beast Games Season 2...   │ • /public/favicon.ico (Multi-size) │
+│ • <meta name="description">: Dual... │ • /public/apple-touch-icon.png     │
+│ • <meta name="keywords">: Viral tags │ • /public/pwa-192x192.png          │
+│ • OpenGraph & Twitter Cards          │ • /public/pwa-512x512.png          │
+│ • Schema.org (VideoSeries & WebApp)  │ • /public/manifest.json (Updated)  │
+└──────────────────────────────────────┴────────────────────────────────────┘
 ```
 
+### Component & Asset Plan:
+1. **Local Icon Generation**:
+   - Download the official high-resolution Beast Games circular logo and generate local static image files in `/public`:
+     - `/public/favicon.ico`
+     - `/public/apple-touch-icon.png` (180x180)
+     - `/public/pwa-192x192.png` (192x192 for Android home screen)
+     - `/public/pwa-512x512.png` (512x512 for splash screen and app stores)
+     - `/public/pwa-maskable-512x512.png` (with 15% safe padding for Android adaptive icons)
+2. **Web App Manifest (`/public/manifest.json`)**:
+   - Update `name`, `short_name` (≤ 12 chars: `"BeastGames2"`), `description`, and point icons to local relative paths (`/pwa-192x192.png`, `/pwa-512x512.png`).
+3. **Head Metadata (`index.html`)**:
+   - Set `<title>Beast Games Season 2 - Official Free Streaming Hub</title>`.
+   - Update `description`, `keywords`, hashtags, author (`Shahid Shaikh`), and canonical tags.
+   - Configure OpenGraph (`og:title`, `og:description`, `og:image`, `og:type: video.tv_show`) and Twitter Cards (`summary_large_image`).
+   - Configure Schema.org JSON-LD with `@type: "VideoSeries"` containing the 10 episodes, Dual Audio tags, and free streaming offers.
+4. **Applet Metadata (`metadata.json`)**:
+   - Synchronize `name` and `description` to match the exact branding.
+
 ---
 
-## 2. Server-Side Gemini API Implementation (`server.ts`)
+## 3. Step-by-Step Implementation Flow
 
-- Expose a secure server-side endpoint `POST /api/ai/celebrate`.
-- Uses `@google/genai` with `gemini-3.8-flash` and `User-Agent: 'aistudio-build'`.
-- System instruction prompts the model in the high-energy, electrifying voice of the official Beast Games referee and analyst.
-- Returns structured JSON:
-  ```json
-  {
-    "title": "ULTIMATE SURVIVOR",
-    "badgeTitle": "Grand Champion",
-    "tacticalIq": "99.8%",
-    "commentary": "Personalized speech generated dynamically for [Username]..."
-  }
-  ```
-
----
-
-## 3. Responsive 3D Miniature Frontend Experience (`index.html`)
-
-- **3D Stereoscopic Stage**:
-  - `perspective: 1400px; transform-style: preserve-3d;`
-  - Floating 3D Gold Panther Trophy (for 10 episodes) or 3D Holographic Medallion (for 3, 5, 8).
-  - Concentric rotating neon laser rings in gold (`#facc15`) and cyan (`#38bdf8`).
-- **Device Sustainability**:
-  - Height fits within `max-height: 90dvh` with internal scroll if needed on ultra-compact phones.
-  - Width scales smoothly via `width: min(92vw, 480px)`.
-- **Milestone Tracking**:
-  - Tracks `beast_celebrated_milestones` array in `localStorage` so each milestone (3, 5, 8, 10) is celebrated once per cycle.
-  - On the user's next visit after completing all 10 episodes, the cycle resets automatically.
+1. **Step 1: Generate & Store Local Icon Assets**:
+   - Fetch the official high-resolution logo graphic and render it into PNG and ICO formats inside `/public/` so home screen shortcuts and browser tabs load immediately without cross-origin CDN latency.
+2. **Step 2: Update Web App Manifest**:
+   - Ensure complete PWA compliance (`id`, `name`, `short_name: "BeastGames2"`, `start_url: "/"`, `display: "standalone"`, `theme_color: "#0f172a"`, `background_color: "#030712"`).
+3. **Step 3: Enrich HTML Head & SEO Meta**:
+   - Insert viral hashtags and keywords, social cards, viewport settings, and Schema.org rich snippets in `index.html`.
+4. **Step 4: Sync Metadata**:
+   - Update `metadata.json` to keep applet metadata consistent with the web application.
+5. **Step 5: Verification & Dev Server Build**:
+   - Validate with `node --check`, HTML parser, `lint_applet`, and `compile_applet`. Verify favicon and manifest responses on `localhost:3000`.
