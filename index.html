@@ -7962,6 +7962,69 @@ body.light-mode .enroll-input {
   box-shadow: 0 8px 24px rgba(2, 132, 199, 0.55);
 }
 
+/* Compact Emoji Select Dropdown & Creator Auto-Detection Badge */
+.enroll-emoji-select-row {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  margin-top: 4px !important;
+}
+
+.enroll-label-sub {
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  color: #93c5fd !important;
+}
+
+body.light-mode .enroll-label-sub {
+  color: #0369a1 !important;
+}
+
+.enroll-emoji-dropdown {
+  width: 100% !important;
+  padding: 10px 14px !important;
+  border-radius: 12px !important;
+  border: 1px solid #334155 !important;
+  background: #1e293b !important;
+  color: #ffffff !important;
+  font-size: 0.92rem !important;
+  font-family: inherit !important;
+  outline: none !important;
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+  transition: all 0.2s ease !important;
+}
+
+body.light-mode .enroll-emoji-dropdown {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+.enroll-emoji-dropdown:focus {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.3) !important;
+}
+
+.creator-detected-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: rgba(250, 204, 21, 0.16) !important;
+  border: 1px solid rgba(250, 204, 21, 0.45) !important;
+  color: #facc15 !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  padding: 2px 10px !important;
+  border-radius: 999px !important;
+  animation: pulseGoldBadge 1.8s infinite alternate !important;
+}
+
+@keyframes pulseGoldBadge {
+  0% { transform: scale(0.96); box-shadow: 0 0 4px rgba(250, 204, 21, 0.2); }
+  100% { transform: scale(1.02); box-shadow: 0 0 12px rgba(250, 204, 21, 0.5); }
+}
+
 /* ================= DUAL AVATAR SELECTION (CUSTOM EMOJI / GALLERY PHOTO) ================= */
 .avatar-creation-section {
   display: flex;
@@ -8087,124 +8150,89 @@ body.light-mode .avatar-creation-section {
   margin-top: 5px;
 }
 
-/* PC / DESKTOP EMOJI PICKER PALETTE */
-.pc-emoji-picker-container {
-  margin-top: 10px;
-  background: rgba(3, 7, 18, 0.65);
-  border: 1px solid rgba(56, 189, 248, 0.22);
-  border-radius: 14px;
-  padding: 10px 12px;
-  box-sizing: border-box;
+/* ================= DISTINCT PORTAL TRANSITION SECTOR STYLES ================= */
+.beast-portal-warp.warp-portal-chat {
+  background: radial-gradient(circle at center, rgba(16, 185, 129, 0.32) 0%, rgba(6, 78, 59, 0.95) 50%, #022c22 100%) !important;
+}
+.warp-portal-chat .warp-hud-card {
+  border-color: rgba(16, 185, 129, 0.6) !important;
+  box-shadow: 0 0 65px rgba(16, 185, 129, 0.45), 0 24px 50px rgba(0, 0, 0, 0.8) !important;
+}
+.warp-portal-chat .warp-teleport-badge {
+  border-color: rgba(16, 185, 129, 0.6) !important;
+  background: rgba(16, 185, 129, 0.15) !important;
+  color: #34d399 !important;
+}
+.warp-portal-chat .warp-pulse-dot {
+  background: #10b981 !important;
+  box-shadow: 0 0 10px #10b981 !important;
+}
+.warp-portal-chat .warp-progress-fill {
+  background: linear-gradient(90deg, #059669, #10b981, #6ee7b7, #ffffff) !important;
+  box-shadow: 0 0 16px #10b981 !important;
 }
 
-body.light-mode .pc-emoji-picker-container {
-  background: #ffffff;
-  border-color: #cbd5e1;
+.beast-portal-warp.warp-portal-info {
+  background: radial-gradient(circle at center, rgba(245, 158, 11, 0.3) 0%, rgba(120, 53, 15, 0.95) 50%, #1c0a00 100%) !important;
+}
+.warp-portal-info .warp-hud-card {
+  border-color: rgba(245, 158, 11, 0.6) !important;
+  box-shadow: 0 0 65px rgba(245, 158, 11, 0.45), 0 24px 50px rgba(0, 0, 0, 0.8) !important;
+}
+.warp-portal-info .warp-teleport-badge {
+  border-color: rgba(245, 158, 11, 0.6) !important;
+  background: rgba(245, 158, 11, 0.15) !important;
+  color: #fbbf24 !important;
+}
+.warp-portal-info .warp-pulse-dot {
+  background: #f59e0b !important;
+  box-shadow: 0 0 10px #f59e0b !important;
+}
+.warp-portal-info .warp-progress-fill {
+  background: linear-gradient(90deg, #d97706, #f59e0b, #fef08a, #ffffff) !important;
+  box-shadow: 0 0 16px #f59e0b !important;
 }
 
-.pc-emoji-picker-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-  flex-wrap: wrap;
-  gap: 6px;
+.beast-portal-warp.warp-portal-badges {
+  background: radial-gradient(circle at center, rgba(250, 204, 21, 0.35) 0%, rgba(113, 63, 18, 0.95) 50%, #170d02 100%) !important;
+}
+.warp-portal-badges .warp-hud-card {
+  border-color: rgba(250, 204, 21, 0.75) !important;
+  box-shadow: 0 0 75px rgba(250, 204, 21, 0.5), 0 24px 50px rgba(0, 0, 0, 0.8) !important;
+}
+.warp-portal-badges .warp-teleport-badge {
+  border-color: rgba(250, 204, 21, 0.7) !important;
+  background: rgba(250, 204, 21, 0.2) !important;
+  color: #facc15 !important;
+}
+.warp-portal-badges .warp-pulse-dot {
+  background: #facc15 !important;
+  box-shadow: 0 0 12px #facc15 !important;
+}
+.warp-portal-badges .warp-progress-fill {
+  background: linear-gradient(90deg, #ca8a04, #facc15, #fef08a, #ffffff) !important;
+  box-shadow: 0 0 18px #facc15 !important;
 }
 
-.pc-emoji-title {
-  font-size: 0.8rem;
-  font-weight: 800;
-  color: #facc15;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+.beast-portal-warp.warp-portal-community {
+  background: radial-gradient(circle at center, rgba(168, 85, 247, 0.32) 0%, rgba(88, 28, 135, 0.95) 50%, #1e0538 100%) !important;
 }
-
-body.light-mode .pc-emoji-title {
-  color: #b45309;
+.warp-portal-community .warp-hud-card {
+  border-color: rgba(168, 85, 247, 0.6) !important;
+  box-shadow: 0 0 65px rgba(168, 85, 247, 0.45), 0 24px 50px rgba(0, 0, 0, 0.8) !important;
 }
-
-.pc-emoji-hint-badge {
-  font-size: 0.7rem;
-  color: #38bdf8;
-  background: rgba(56, 189, 248, 0.12);
-  border: 1px solid rgba(56, 189, 248, 0.25);
-  padding: 2px 8px;
-  border-radius: 999px;
-  font-weight: 700;
+.warp-portal-community .warp-teleport-badge {
+  border-color: rgba(168, 85, 247, 0.6) !important;
+  background: rgba(168, 85, 247, 0.15) !important;
+  color: #c084fc !important;
 }
-
-.pc-emoji-category-bar {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 8px;
-  overflow-x: auto;
-  padding-bottom: 4px;
-  scrollbar-width: thin;
+.warp-portal-community .warp-pulse-dot {
+  background: #a855f7 !important;
+  box-shadow: 0 0 10px #a855f7 !important;
 }
-
-.pc-category-btn {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #94a3b8;
-  padding: 4px 9px;
-  border-radius: 8px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.2s ease;
-}
-
-.pc-category-btn:hover {
-  background: rgba(56, 189, 248, 0.15);
-  color: #ffffff;
-}
-
-.pc-category-btn.active {
-  background: linear-gradient(135deg, #0284c7, #2563eb);
-  color: #ffffff;
-  border-color: #38bdf8;
-  box-shadow: 0 0 10px rgba(56, 189, 248, 0.35);
-}
-
-.pc-emoji-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
-  gap: 6px;
-  max-height: 135px;
-  overflow-y: auto;
-  padding: 3px;
-  border-radius: 8px;
-  scrollbar-width: thin;
-}
-
-.pc-emoji-item-btn {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  font-size: 1.25rem;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.18s ease;
-  user-select: none;
-}
-
-.pc-emoji-item-btn:hover {
-  background: rgba(56, 189, 248, 0.22);
-  border-color: #38bdf8;
-  transform: scale(1.18);
-  box-shadow: 0 0 10px rgba(56, 189, 248, 0.35);
-}
-
-.pc-emoji-item-btn.active-pc-emoji {
-  background: linear-gradient(135deg, rgba(250, 204, 21, 0.35), rgba(56, 189, 248, 0.3));
-  border: 2px solid #facc15;
-  box-shadow: 0 0 12px rgba(250, 204, 21, 0.6);
-  transform: scale(1.12);
+.warp-portal-community .warp-progress-fill {
+  background: linear-gradient(90deg, #7e22ce, #a855f7, #e9d5ff, #ffffff) !important;
+  box-shadow: 0 0 16px #a855f7 !important;
 }
 
 .direct-channel-link-row {
@@ -9441,6 +9469,227 @@ body.light-mode .enroll-save-label {
     font-size: 1.15rem !important;
   }
 }
+
+/* ================= 🚀 TOP SITE HEADER: SINGLE ROW (LEFT LOGO, THEME MODE & CREATOR BADGE) ================= */
+.site-header-single-row {
+  width: 95% !important;
+  max-width: 1180px !important;
+  margin: 12px auto 20px !important;
+  padding: 8px 16px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: nowrap !important; /* STRICT SINGLE LINE */
+  background: var(--card, rgba(15, 23, 42, 0.75)) !important;
+  border: 1px solid var(--card-border, rgba(56, 189, 248, 0.22)) !important;
+  border-radius: 20px !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  box-sizing: border-box !important;
+  gap: 12px !important;
+  position: relative !important;
+  z-index: 50 !important;
+}
+
+.header-logo-brand-left {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important;
+  cursor: pointer !important;
+  transition: transform 0.25s ease !important;
+}
+
+.header-logo-brand-left:hover {
+  transform: translateY(-1px) scale(1.02) !important;
+}
+
+.header-logo-frame {
+  position: relative !important;
+  width: 58px !important;
+  height: 58px !important;
+  flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.header-logo-ring-glow {
+  position: absolute !important;
+  inset: -3px !important;
+  border-radius: 50% !important;
+  background: conic-gradient(from 0deg, #38bdf8, #facc15, #ec4899, #38bdf8) !important;
+  filter: blur(6px) !important;
+  opacity: 0.6 !important;
+  animation: logoGlowSpin 6s linear infinite !important;
+}
+
+@keyframes logoGlowSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.header-main-brand-logo {
+  position: relative !important;
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 2px solid var(--accent, #38bdf8) !important;
+  background: #020617 !important;
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.45) !important;
+  z-index: 2 !important;
+  display: block !important;
+}
+
+.header-brand-title-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  line-height: 1.1 !important;
+}
+
+.header-brand-title-text {
+  font-size: 1.15rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.05em !important;
+  color: var(--text, #ffffff) !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6) !important;
+  white-space: nowrap !important;
+}
+
+.header-brand-season-tag {
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  color: #facc15 !important;
+  text-transform: uppercase !important;
+  text-shadow: 0 0 8px rgba(250, 204, 21, 0.4) !important;
+}
+
+.header-controls-single-line {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex-wrap: nowrap !important; /* STRICT SINGLE LINE */
+  flex-shrink: 0 !important;
+}
+
+.header-theme-dropdown-wrap {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-shrink: 0 !important;
+}
+
+.header-profile-circle-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 6px 14px !important;
+  border-radius: 999px !important;
+  background: var(--card, rgba(30, 41, 59, 0.8)) !important;
+  border: 1.5px solid var(--card-border, rgba(56, 189, 248, 0.35)) !important;
+  color: var(--text, #ffffff) !important;
+  font-size: 0.84rem !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  flex-shrink: 0 !important;
+}
+
+.header-profile-circle-btn:hover {
+  transform: translateY(-2px) scale(1.03) !important;
+  border-color: #facc15 !important;
+  box-shadow: 0 0 16px rgba(250, 204, 21, 0.4) !important;
+}
+
+.header-profile-circle-btn.is-creator {
+  border-color: #facc15 !important;
+  background: rgba(250, 204, 21, 0.15) !important;
+  box-shadow: 0 0 16px rgba(250, 204, 21, 0.45) !important;
+}
+
+.header-creator-label {
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.02em !important;
+  white-space: nowrap !important;
+}
+
+/* RESPONSIVE OPTIMIZATIONS FOR ALL SCREENS */
+@media (max-width: 768px) {
+  .site-header-single-row {
+    margin: 8px auto 14px !important;
+    padding: 6px 10px !important;
+    gap: 8px !important;
+  }
+  .header-logo-frame {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  .header-main-brand-logo {
+    width: 44px !important;
+    height: 44px !important;
+  }
+  .header-brand-title-text {
+    font-size: 0.98rem !important;
+  }
+  .header-brand-season-tag {
+    font-size: 0.66rem !important;
+  }
+  .unified-theme-select {
+    min-width: 110px !important;
+    max-width: 125px !important;
+    padding: 6px 8px !important;
+    font-size: 0.78rem !important;
+  }
+  .header-profile-circle-btn {
+    padding: 5px 10px !important;
+    font-size: 0.78rem !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-header-single-row {
+    padding: 5px 8px !important;
+    gap: 6px !important;
+    border-radius: 14px !important;
+  }
+  .header-logo-brand-left {
+    gap: 6px !important;
+  }
+  .header-logo-frame {
+    width: 42px !important;
+    height: 42px !important;
+  }
+  .header-main-brand-logo {
+    width: 38px !important;
+    height: 38px !important;
+  }
+  .header-brand-title-wrap {
+    display: none !important; /* On narrow phones, enlarged logo stands alone on the left */
+  }
+  .theme-dropdown-label {
+    display: none !important;
+  }
+  .unified-theme-select {
+    min-width: 96px !important;
+    max-width: 110px !important;
+    padding: 5px 6px !important;
+    font-size: 0.75rem !important;
+  }
+  .header-profile-circle-btn {
+    padding: 5px 8px !important;
+    font-size: 0.75rem !important;
+    gap: 4px !important;
+  }
+}
+
 /* ================= 3D MINIATURE GOLD & NEON OPENING TRANSITION (VERY BIG BOLD LOGO) ================= */
 .miniature-transition-overlay {
   position: fixed;
@@ -11144,12 +11393,12 @@ body.light-mode .enroll-save-label {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  background: radial-gradient(circle at center, rgba(14, 165, 233, 0.25) 0%, rgba(15, 23, 42, 0.94) 50%, #030712 100%) !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
+  background: radial-gradient(circle at center, rgba(14, 165, 233, 0.28) 0%, rgba(15, 23, 42, 0.96) 50%, #030712 100%) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.22s ease-out !important;
+  transition: opacity 0.38s ease-out !important;
   overflow: hidden !important;
 }
 
@@ -11180,14 +11429,14 @@ body.light-mode .enroll-save-label {
 }
 
 .warp-active .warp-shockwave-ring.ring-outer {
-  animation: warpRingBurst 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+  animation: warpRingBurst 1.25s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
 }
 .warp-active .warp-shockwave-ring.ring-mid {
-  animation: warpRingBurst 0.65s 0.08s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+  animation: warpRingBurst 1.25s 0.12s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
   border-color: rgba(250, 204, 21, 0.75) !important;
 }
 .warp-active .warp-shockwave-ring.ring-inner {
-  animation: warpRingBurst 0.65s 0.16s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+  animation: warpRingBurst 1.25s 0.24s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
   border-color: rgba(239, 68, 68, 0.75) !important;
 }
 
@@ -11210,18 +11459,18 @@ body.light-mode .enroll-save-label {
 .warp-hud-card {
   position: relative !important;
   z-index: 10 !important;
-  background: rgba(10, 15, 29, 0.9) !important;
-  border: 1.5px solid rgba(56, 189, 248, 0.5) !important;
+  background: rgba(10, 15, 29, 0.92) !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.55) !important;
   border-radius: 20px !important;
   padding: 30px 36px !important;
   max-width: 90vw !important;
   width: 440px !important;
   text-align: center !important;
-  box-shadow: 0 0 60px rgba(14, 165, 233, 0.35),
-              0 20px 45px rgba(0, 0, 0, 0.7),
-              inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 0 65px rgba(14, 165, 233, 0.4),
+              0 24px 50px rgba(0, 0, 0, 0.75),
+              inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
   transform: scale(0.88);
-  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
   overflow: hidden !important;
 }
 
@@ -11338,7 +11587,7 @@ body.light-mode .enroll-save-label {
   background: linear-gradient(90deg, #0284c7, #38bdf8, #facc15, #ffffff) !important;
   box-shadow: 0 0 15px #38bdf8 !important;
   border-radius: 999px !important;
-  transition: width 0.32s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+  transition: width 0.85s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .warp-hud-footer {
@@ -11560,76 +11809,114 @@ window.handleImgError = function(img) {
     </div>
     
     <h1 class="enroll-title">BEAST GAMES <span class="enroll-season-tag">SEASON 2</span></h1>
-    <p class="enroll-subtitle">Enter your Username ID &amp; choose an avatar to enter:</p>
+    <p class="enroll-subtitle">Choose your Username &amp; Profile Picture to enter Beast Games Season 2:</p>
 
     <form class="enroll-form" onsubmit="handleEnrollmentSubmit(event)">
+      <!-- USERNAME SELECTION WITH REAL-TIME CREATOR RECOGNITION -->
       <div class="enroll-field-group">
-        <label for="enrollNameInput" class="enroll-label">👤 Username ID:</label>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2px;">
+          <label for="enrollUsernameInput" class="enroll-label">👤 Choose Username / ID:</label>
+          <span id="creatorDetectBadge" class="creator-detected-badge" style="display:none;">👑 Official Creator (Shahid Shaikh)</span>
+        </div>
         <input
           type="text"
-          id="enrollNameInput"
+          id="enrollUsernameInput"
           class="enroll-input"
-          placeholder="Enter Username ID (e.g. Alex, User 1...)"
+          placeholder="Enter username (or Creator ID: SRS18062011)..."
           maxlength="32"
           autocomplete="username"
-          oninput="handleNameInputCheck(this.value)"
+          oninput="handleUsernameInputChange(this.value)"
         />
+        <input type="hidden" id="enrollNameInput" value="" />
       </div>
 
-      <!-- DUAL AVATAR OPTIONS: 1. TYPE ANY EMOJI  2. FROM GALLERY (DEVICE SAVED MEMORY) -->
+      <!-- SELECT AVATAR (DROPDOWN OR GALLERY) -->
       <div class="avatar-creation-section">
-        <label class="enroll-label">🎭 Select Avatar (Emoji or Device Gallery):</label>
-        
         <div class="avatar-preview-wrapper">
-          <div id="enrollAvatarDisplay" class="enroll-avatar-display">👤</div>
+          <div id="enrollAvatarDisplay" class="enroll-avatar-display">🦁</div>
           <div>
-            <div class="avatar-source-pill" id="avatarSourcePill">Normal Emoji</div>
-            <div style="font-size:0.75rem; color:var(--muted); margin-top:3px;" id="avatarPreviewLabel">Selected Avatar Preview</div>
+            <div class="avatar-source-pill" id="avatarSourcePill">Contestant Avatar</div>
+            <div style="font-size:0.75rem; color:var(--muted); margin-top:3px;" id="avatarPreviewLabel">Selected Profile Picture</div>
           </div>
         </div>
 
         <div class="avatar-tabs-row">
           <button type="button" class="avatar-tab-btn active" id="tabEmojiBtn" onclick="switchAvatarTab('emoji')">
-            😀 1. Keyboard Emoji
+            😀 1. Emoji Avatar
           </button>
           <button type="button" class="avatar-tab-btn" id="tabGalleryBtn" onclick="switchAvatarTab('gallery')">
             🖼️ 2. From Gallery
           </button>
         </div>
 
-        <!-- TAB 1: EMOJI (Allows typing ANY emoji from mobile keyboard OR selecting from PC Emoji Palette) -->
+        <!-- TAB 1: EMOJI (Compact Dropdown Menu + Custom Typing, Zero vertical clutter) -->
         <div id="avatarEmojiTabPane" class="avatar-tab-pane">
-          <input
-            type="text"
-            id="enrollEmojiInput"
-            class="enroll-input emoji-type-input"
-            placeholder="Type or click any emoji below..."
-            maxlength="16"
-            value="👤"
-            oninput="handleCustomEmojiInput(this.value)"
-          />
-          <div class="emoji-keyboard-hint">💡 Mobile: Type directly with your keyboard. <strong>PC / Desktop Users:</strong> Click any emoji below!</div>
+          <div class="enroll-emoji-select-row">
+            <label for="enrollEmojiDropdown" class="enroll-label-sub">⚡ Select Emoji from Dropdown:</label>
+            <select id="enrollEmojiDropdown" class="enroll-emoji-dropdown" onchange="handleEmojiDropdownSelect(this.value)">
+              <option value="">-- Click to choose emoji from list --</option>
+              <optgroup label="🔥 Beast &amp; Power">
+                <option value="🦁" selected>🦁 Lion (Official Beast)</option>
+                <option value="🔥">🔥 Fire Wave</option>
+                <option value="⚡">⚡ Lightning Bolt</option>
+                <option value="🏆">🏆 Golden Trophy</option>
+                <option value="👑">👑 Royal Crown (Creator)</option>
+                <option value="💎">💎 Diamond Legend</option>
+                <option value="⭐">⭐ Star</option>
+                <option value="🚀">🚀 Rocket</option>
+                <option value="💥">💥 Explosion</option>
+                <option value="⚔️">⚔️ Crossed Swords</option>
+                <option value="🛡️">🛡️ Arena Shield</option>
+              </optgroup>
+              <optgroup label="🎮 Gaming &amp; Challenge">
+                <option value="🎮">🎮 Gaming Controller</option>
+                <option value="🕹️">🕹️ Retro Arcade</option>
+                <option value="👾">👾 Space Invader</option>
+                <option value="🤖">🤖 Battle Robot</option>
+                <option value="🎯">🎯 Direct Bullseye</option>
+                <option value="🎲">🎲 Game Dice</option>
+                <option value="🥇">🥇 Gold Medalist</option>
+                <option value="🏁">🏁 Finish Flag</option>
+                <option value="🦾">🦾 Bionic Challenger</option>
+                <option value="🎧">🎧 Gaming Headset</option>
+              </optgroup>
+              <optgroup label="🦁 Animals">
+                <option value="🐯">🐯 Tiger</option>
+                <option value="🐺">🐺 Lone Wolf</option>
+                <option value="🦅">🦅 Wild Eagle</option>
+                <option value="🦈">🦈 Mega Shark</option>
+                <option value="🐉">🐉 Fire Dragon</option>
+                <option value="🦍">🦍 Silverback Gorilla</option>
+                <option value="🦊">🦊 Swift Fox</option>
+                <option value="🐻">🐻 Grizzly Bear</option>
+                <option value="🐆">🐆 Leopard</option>
+              </optgroup>
+              <optgroup label="😎 Characters &amp; Faces">
+                <option value="😎">😎 Cool Shades</option>
+                <option value="🤩">🤩 Star Struck</option>
+                <option value="🤠">🤠 Arena Cowboy</option>
+                <option value="🥳">🥳 Celebration Face</option>
+                <option value="🤯">🤯 Mind Blown</option>
+                <option value="🥷">🥷 Stealth Ninja</option>
+                <option value="🕵️">🕵️ Detective</option>
+                <option value="🦸">🦸 Superhero</option>
+                <option value="🧙">🧙 Tournament Wizard</option>
+                <option value="👤">👤 Member ID</option>
+              </optgroup>
+            </select>
+          </div>
 
-          <!-- PC / DESKTOP EMOJI PICKER PALETTE -->
-          <div class="pc-emoji-picker-container" id="pcEmojiPickerContainer">
-            <div class="pc-emoji-picker-header">
-              <span class="pc-emoji-title">💻 PC / Desktop Emoji Palette:</span>
-              <span class="pc-emoji-hint-badge">Click to select as avatar</span>
-            </div>
-
-            <!-- Category Filters -->
-            <div class="pc-emoji-category-bar">
-              <button type="button" class="pc-category-btn active" onclick="filterPCEmojis('all', this)">🔥 All</button>
-              <button type="button" class="pc-category-btn" onclick="filterPCEmojis('power', this)">⚡ Beast &amp; Power</button>
-              <button type="button" class="pc-category-btn" onclick="filterPCEmojis('animals', this)">🦁 Animals</button>
-              <button type="button" class="pc-category-btn" onclick="filterPCEmojis('gaming', this)">🎮 Gaming</button>
-              <button type="button" class="pc-category-btn" onclick="filterPCEmojis('faces', this)">😎 Faces</button>
-            </div>
-
-            <!-- Interactive Clickable Emoji Grid -->
-            <div class="pc-emoji-grid" id="pcEmojiGrid">
-              <!-- Dynamically rendered by renderPCEmojiGrid() -->
-            </div>
+          <div style="margin-top: 8px;">
+            <label for="enrollEmojiInput" class="enroll-label-sub">⌨️ Or Type Any Keyboard Emoji:</label>
+            <input
+              type="text"
+              id="enrollEmojiInput"
+              class="enroll-input emoji-type-input"
+              placeholder="Type any emoji here (e.g. 🦁, 🔥)..."
+              maxlength="8"
+              value="🦁"
+              oninput="handleCustomEmojiInput(this.value)"
+            />
           </div>
         </div>
 
@@ -11723,7 +12010,7 @@ window.handleImgError = function(img) {
 
     <div class="warp-hud-footer">
       <span>QUANTUM CHANNEL: <strong>BEAST-S2-SYNC</strong></span>
-      <span>READY IN: <strong>0.3s</strong></span>
+      <span>READY IN: <strong>0.8s</strong></span>
     </div>
   </div>
 </div>
@@ -11735,41 +12022,45 @@ window.handleImgError = function(img) {
 
 <header>
   <!-- TOP BAR CREATOR BADGE -->
-  <!-- ================= THEME SWITCHER & BRAND HEADER ================= -->
-<div class="theme-switcher-wrapper unified-header">
-  <!-- RIGHT: THEME DROPDOWN & COMPACT CIRCLE PROFILE (ALL DEVICES) -->
-  <div class="header-right-controls">
-    <div class="header-theme-dropdown-wrap">
-      <label for="unifiedThemeSelect" class="theme-dropdown-label">🎨 Theme:</label>
-      <select id="unifiedThemeSelect" class="unified-theme-select" onchange="setTheme(this.value)" aria-label="Select website theme mode">
-        <option value="dark">🌙 Dark Mode</option>
-        <option value="light">☀️ Light Mode</option>
-        <option value="gold">👑 Gold Mode</option>
-        <option value="cyber">⚡ Cyber Mode</option>
-        <option value="matrix">💚 Matrix Mode</option>
-      </select>
+  <!-- ================= SINGLE LINE HEADER (LEFT LOGO, RIGHT THEME MODES & CREATOR BADGE) ================= -->
+  <div class="site-header-single-row">
+    <!-- LEFT: ENLARGED LOGO ALIGNED TO LEFT -->
+    <a href="javascript:void(0)" onclick="openScreen('homeScreen')" class="header-logo-brand-left" title="Beast Games Season 2 - Central Hub">
+      <div class="header-logo-frame">
+        <div class="header-logo-ring-glow"></div>
+        <img
+          src="/assets/aistudio/LOGO-_beast_games_61e24fa3.png"
+          class="header-main-brand-logo"
+          alt="BEAST GAMES 2 Logo"
+          title="BEAST GAMES 2"
+          onerror="handleImgError(this)"
+        />
+      </div>
+      <div class="header-brand-title-wrap">
+        <span class="header-brand-title-text">BEAST GAMES</span>
+        <span class="header-brand-season-tag">SEASON 2</span>
+      </div>
+    </a>
+
+    <!-- RIGHT: THEME MODE SELECTION & CREATOR BADGE ON THE SAME SINGLE LINE -->
+    <div class="header-controls-single-line">
+      <div class="header-theme-dropdown-wrap">
+        <label for="unifiedThemeSelect" class="theme-dropdown-label">🎨 Mode:</label>
+        <select id="unifiedThemeSelect" class="unified-theme-select" onchange="setTheme(this.value)" aria-label="Select website theme mode">
+          <option value="dark">🌙 Dark</option>
+          <option value="light">☀️ Light</option>
+          <option value="gold">👑 Gold</option>
+          <option value="cyber">⚡ Cyber</option>
+          <option value="matrix">💚 Matrix</option>
+        </select>
+      </div>
+
+      <!-- CREATOR'S BADGE & PROFILE BUTTON (ON SAME SINGLE LINE) -->
+      <button type="button" class="header-profile-circle-btn" id="headerProfileBtn" onclick="openProfileModal()" title="View Creator &amp; Account Profile">
+        <span class="profile-avatar-chip" id="headerProfileAvatar">👤</span>
+        <span class="header-creator-label" id="headerCreatorLabel">Profile</span>
+      </button>
     </div>
-
-    <!-- COMPACT CIRCULAR PROFILE AVATAR (SHOWS ENROLLED USER AVATAR) -->
-    <button type="button" class="header-profile-circle-btn" id="headerProfileBtn" onclick="openProfileModal()" title="View Profile &amp; Account">
-      <span class="profile-avatar-chip" id="headerProfileAvatar">👤</span>
-    </button>
-  </div>
-</div>
-
-<!-- ================= MAIN HEADING ================= -->
-
-
-  <!-- ================= MAIN HERO BRAND LOGO EMBLEM (PROMINENT & RESPONSIVE) ================= -->
-  <div class="main-page-logo-container">
-    <div class="main-logo-concentric-glow"></div>
-    <img
-      src="/assets/aistudio/LOGO-_beast_games_61e24fa3.png"
-      class="main-page-hero-logo"
-      alt="BEAST GAMES 2 Logo"
-      title="BEAST GAMES 2 - Season 2 Official Hub"
-      onerror="handleImgError(this)"
-    />
   </div>
 
 <h1 class="brand-heading main-beast-title">
@@ -12533,70 +12824,10 @@ let isPortalWarpInProgress = false;
 let warpCanvasAnimationId = null;
 
 function playQuantumWarpSound() {
-  try {
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    if (!AudioContext) return;
-    const ctx = new AudioContext();
-    if (ctx.state === "suspended") ctx.resume();
-
-    const now = ctx.currentTime;
-
-    // 1. Resonant Sub-Bass Surge
-    const oscBass = ctx.createOscillator();
-    const gainBass = ctx.createGain();
-    oscBass.type = "sine";
-    oscBass.frequency.setValueAtTime(160, now);
-    oscBass.frequency.exponentialRampToValueAtTime(45, now + 0.36);
-    gainBass.gain.setValueAtTime(0.3, now);
-    gainBass.gain.exponentialRampToValueAtTime(0.001, now + 0.38);
-    oscBass.connect(gainBass);
-    gainBass.connect(ctx.destination);
-    oscBass.start(now);
-    oscBass.stop(now + 0.4);
-
-    // 2. Sci-Fi Hyperspace Frequency Glide
-    const oscWarp = ctx.createOscillator();
-    const gainWarp = ctx.createGain();
-    const filter = ctx.createBiquadFilter();
-    oscWarp.type = "sawtooth";
-    filter.type = "bandpass";
-    filter.frequency.setValueAtTime(450, now);
-    filter.frequency.exponentialRampToValueAtTime(2200, now + 0.26);
-    filter.frequency.exponentialRampToValueAtTime(500, now + 0.38);
-    filter.Q.value = 4.0;
-
-    oscWarp.frequency.setValueAtTime(220, now);
-    oscWarp.frequency.exponentialRampToValueAtTime(1100, now + 0.28);
-    gainWarp.gain.setValueAtTime(0.18, now);
-    gainWarp.gain.linearRampToValueAtTime(0.28, now + 0.2);
-    gainWarp.gain.exponentialRampToValueAtTime(0.001, now + 0.38);
-
-    oscWarp.connect(filter);
-    filter.connect(gainWarp);
-    gainWarp.connect(ctx.destination);
-    oscWarp.start(now);
-    oscWarp.stop(now + 0.4);
-
-    // 3. Arrival Resonance Chime
-    setTimeout(() => {
-      try {
-        const zap = ctx.createOscillator();
-        const zapGain = ctx.createGain();
-        zap.type = "sine";
-        zap.frequency.setValueAtTime(784, ctx.currentTime);
-        zap.frequency.exponentialRampToValueAtTime(1568, ctx.currentTime + 0.12);
-        zapGain.gain.setValueAtTime(0.15, ctx.currentTime);
-        zapGain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.14);
-        zap.connect(zapGain);
-        zapGain.connect(ctx.destination);
-        zap.start(ctx.currentTime);
-        zap.stop(ctx.currentTime + 0.15);
-      } catch (e) {}
-    }, 280);
-  } catch (e) {}
+  // Sound effect disabled per user request: silent warp
 }
 
-function startWarpSpeedAnimation(canvas) {
+function startWarpSpeedAnimation(canvas, portalVisualMode = "beast") {
   if (!canvas) return () => {};
   const ctx = canvas.getContext("2d");
   if (!ctx) return () => {};
@@ -12612,8 +12843,19 @@ function startWarpSpeedAnimation(canvas) {
 
   const cx = width / 2;
   const cy = height / 2;
-  const numStars = 95;
+  const numStars = 100;
   const stars = [];
+
+  // Distinct color palettes per portal
+  const paletteMap = {
+    matrix: ["#22c55e", "#10b981", "#4ade80", "#86efac", "#059669"],
+    tactical: ["#f59e0b", "#ef4444", "#f97316", "#fbbf24", "#ffffff"],
+    goldburst: ["#facc15", "#fde047", "#eab308", "#fbbf24", "#ffffff"],
+    cosmic: ["#a855f7", "#ec4899", "#8b5cf6", "#d946ef", "#c084fc"],
+    cinema: ["#38bdf8", "#06b6d4", "#67e8f9", "#0284c7", "#ffffff"],
+    beast: ["#facc15", "#38bdf8", "#ec4899", "#ffffff", "#f59e0b"]
+  };
+  const currentPalette = paletteMap[portalVisualMode] || paletteMap.beast;
 
   for (let i = 0; i < numStars; i++) {
     stars.push({
@@ -12621,20 +12863,36 @@ function startWarpSpeedAnimation(canvas) {
       y: (Math.random() - 0.5) * height,
       z: Math.random() * width,
       pz: Math.random() * width,
-      color: i % 3 === 0 ? "#facc15" : (i % 3 === 1 ? "#38bdf8" : "#ffffff")
+      color: currentPalette[i % currentPalette.length]
     });
   }
 
   let running = true;
   function render() {
     if (!running) return;
-    ctx.fillStyle = "rgba(3, 7, 18, 0.28)";
-    ctx.fillRect(0, 0, width, height);
+    const mode = portalVisualMode || "beast";
+
+    if (mode === "matrix") {
+      ctx.fillStyle = "rgba(2, 18, 10, 0.22)";
+      ctx.fillRect(0, 0, width, height);
+    } else if (mode === "goldburst") {
+      ctx.fillStyle = "rgba(20, 16, 2, 0.22)";
+      ctx.fillRect(0, 0, width, height);
+    } else if (mode === "tactical") {
+      ctx.fillStyle = "rgba(24, 8, 4, 0.22)";
+      ctx.fillRect(0, 0, width, height);
+    } else if (mode === "cosmic") {
+      ctx.fillStyle = "rgba(14, 5, 24, 0.22)";
+      ctx.fillRect(0, 0, width, height);
+    } else {
+      ctx.fillStyle = "rgba(3, 7, 18, 0.24)";
+      ctx.fillRect(0, 0, width, height);
+    }
 
     for (let i = 0; i < numStars; i++) {
       const s = stars[i];
       s.pz = s.z;
-      s.z -= 38; // High-speed hyperspace rush
+      s.z -= 24; // Smooth, deliberate cinematic hyperspace velocity
       if (s.z <= 0) {
         s.z = width;
         s.pz = width;
@@ -12642,18 +12900,18 @@ function startWarpSpeedAnimation(canvas) {
         s.y = (Math.random() - 0.5) * height;
       }
 
-      const k = 250 / s.z;
+      const k = 260 / s.z;
       const px = s.x * k + cx;
       const py = s.y * k + cy;
 
-      const pk = 250 / s.pz;
+      const pk = 260 / s.pz;
       const ppx = s.x * pk + cx;
       const ppy = s.y * pk + cy;
 
       const alpha = Math.min(1, Math.max(0, 1 - s.z / width));
       ctx.strokeStyle = s.color;
       ctx.globalAlpha = alpha;
-      ctx.lineWidth = Math.min(4, Math.max(1, (1 - s.z / width) * 4));
+      ctx.lineWidth = Math.min(4.5, Math.max(1.2, (1 - s.z / width) * 4.5));
       ctx.beginPath();
       ctx.moveTo(ppx, ppy);
       ctx.lineTo(px, py);
@@ -12677,32 +12935,44 @@ const PORTAL_METADATA = {
   "homeScreen": {
     title: "BEAST ARENA HUB",
     icon: "🏠",
-    tag: "CENTRAL COMMAND • SEASON 2 MAIN ARENA"
+    tag: "CENTRAL COMMAND • MAIN STAGE TELEPORT",
+    themeClass: "warp-portal-home",
+    vfxMode: "beast"
   },
   "episodesScreen": {
-    title: "EPISODES PORTAL",
+    title: "EPISODES THEATER",
     icon: "🎬",
-    tag: "SECTOR 01 • HD THEATER & DUAL AUDIO ($5M TOURNAMENT)"
+    tag: "SECTOR 01 • CINEMATIC HD WARP ($5M ARENA)",
+    themeClass: "warp-portal-episodes",
+    vfxMode: "cinema"
   },
   "chatScreen": {
     title: "LIVE COMMUNITY CHAT",
     icon: "💬",
-    tag: "SECTOR 02 • REAL-TIME VIEWER ARENA & CREATOR CHAT"
+    tag: "SECTOR 02 • NEON MATRIX STREAM & CREATOR ARENA",
+    themeClass: "warp-portal-chat",
+    vfxMode: "matrix"
   },
   "infoScreen": {
     title: "SHOW INFORMATION",
     icon: "ℹ️",
-    tag: "SECTOR 03 • RULES, $5,000,000 PRIZE & SURVIVAL GUIDE"
+    tag: "SECTOR 03 • TACTICAL RADAR INTEL & SURVIVAL GUIDE",
+    themeClass: "warp-portal-info",
+    vfxMode: "tactical"
   },
   "badgesScreen": {
     title: "BADGES & ACHIEVEMENTS",
     icon: "🏅",
-    tag: "SECTOR 04 • TROPHY ROOM & CONTESTANT UNLOCKS"
+    tag: "SECTOR 04 • IMPERIAL GOLD VAULT & TROPHY UNLOCKS",
+    themeClass: "warp-portal-badges",
+    vfxMode: "goldburst"
   },
   "communityScreen": {
     title: "COMMUNITY & OFFICIAL LINKS",
     icon: "🌐",
-    tag: "SECTOR 05 • @TrendzOfShahid & OFFICIAL PLATFORMS"
+    tag: "SECTOR 05 • COSMIC ORBITAL HUB • @TrendzOfShahid",
+    themeClass: "warp-portal-community",
+    vfxMode: "cosmic"
   }
 };
 
@@ -12764,19 +13034,34 @@ function openScreen(targetScreenId, options = {}) {
   const meta = PORTAL_METADATA[validId] || {
     title: "BEAST PORTAL",
     icon: "⚡",
-    tag: "QUANTUM SECURE CONNECTION"
+    tag: "QUANTUM SECURE CONNECTION",
+    themeClass: "warp-portal-home",
+    vfxMode: "beast"
   };
+
+  // Remove any previous portal-specific styling classes
+  if (warpOverlay) {
+    warpOverlay.classList.remove(
+      "warp-portal-chat",
+      "warp-portal-info",
+      "warp-portal-badges",
+      "warp-portal-community",
+      "warp-portal-episodes",
+      "warp-portal-home"
+    );
+    if (meta.themeClass) {
+      warpOverlay.classList.add(meta.themeClass);
+    }
+  }
 
   if (warpSymbol) warpSymbol.innerText = meta.icon;
   if (warpTitle) warpTitle.innerText = meta.title;
   if (warpSectorTag) warpSectorTag.innerText = meta.tag;
   if (warpProgressFill) warpProgressFill.style.width = "0%";
 
-  playQuantumWarpSound();
-
   let stopCanvas = null;
   if (warpCanvas) {
-    stopCanvas = startWarpSpeedAnimation(warpCanvas);
+    stopCanvas = startWarpSpeedAnimation(warpCanvas, meta.vfxMode);
   }
 
   if (warpOverlay) {
@@ -12785,16 +13070,16 @@ function openScreen(targetScreenId, options = {}) {
     warpOverlay.classList.add("warp-active");
   }
 
-  // Animate hyper-charge progress
+  // Slower, satisfying cinematic hypercharge: 1100ms smooth fill
   setTimeout(() => {
     if (warpProgressFill) warpProgressFill.style.width = "100%";
-  }, 30);
+  }, 50);
 
-  // Peak hyperspace warp: switch screen under warp cover at 320ms
+  // Switch screen under high-density warp cover at 1200ms
   setTimeout(() => {
     executeScreenSwitch(validId);
 
-    // Fade out warp smoothly
+    // Hold at destination portal arena for 550ms so user clearly perceives the portal arrival
     setTimeout(() => {
       if (warpOverlay) {
         warpOverlay.classList.remove("warp-active");
@@ -12802,13 +13087,13 @@ function openScreen(targetScreenId, options = {}) {
           warpOverlay.style.display = "none";
           if (stopCanvas) stopCanvas();
           isPortalWarpInProgress = false;
-        }, 200);
+        }, 450);
       } else {
         if (stopCanvas) stopCanvas();
         isPortalWarpInProgress = false;
       }
-    }, 130);
-  }, 320);
+    }, 550);
+  }, 1200);
 }
 window.openScreen = openScreen;
 window.showPage = openScreen; // Seamless backwards compatibility
@@ -13047,17 +13332,13 @@ function runStartupSequence() {
   }
 
   // -----------------------------------------------------------------------
-  // STEP 1 — LOADING ANIMATION (3D DIORAMA TRANSITION)
+  // STEP 1 — OPENING ANIMATION TRANSITION
   // -----------------------------------------------------------------------
   playCinematic3DMiniatureTransition(() => {
-    // If user has already entered a username/avatar, directly enter the site!
-    const savedName = localStorage.getItem("beast_user_name");
-    const savedAvatar = localStorage.getItem("beast_user_avatar");
-    if (savedName && savedAvatar) {
-      openSiteProperly();
-    } else {
-      showEnrollmentScreen();
-    }
+    // ---------------------------------------------------------------------
+    // STEP 2 — SECTION OF WRITING THE SURNAME & SELECTING AUTHOR
+    // ---------------------------------------------------------------------
+    showEnrollmentScreen();
   }, "init");
 }
 window.runStartupSequence = runStartupSequence;
@@ -13100,8 +13381,10 @@ function playCinematic3DMiniatureTransition(onComplete, mode = "init") {
     if (typeof playBeastSound === "function") playBeastSound("click");
   } catch (e) {}
 
-  const DURATION_MS = 5000; // Exactly 5 Seconds
+  const DURATION_MS = 4500; // Snappy 4.5 Seconds
   const startTime = Date.now();
+
+  const authorName = localStorage.getItem("beast_user_name") || "Author";
 
   const initMessages = [
     { at: 0, text: "Initializing 3D Beast Hub..." },
@@ -13112,11 +13395,11 @@ function playCinematic3DMiniatureTransition(onComplete, mode = "init") {
   ];
 
   const unlockMessages = [
-    { at: 0, text: "Subscription Confirmed! Loading Hub..." },
-    { at: 20, text: "Unlocking $5M Tournament Streams..." },
-    { at: 45, text: "Opening HD Community Portal..." },
-    { at: 70, text: "Preparing Beast Games 2..." },
-    { at: 90, text: "Welcome to Beast Games 2!" }
+    { at: 0, text: `Author ${authorName} Confirmed!` },
+    { at: 20, text: "Syncing Author & Tournament Pass..." },
+    { at: 45, text: "Unlocking $5M Tournament Main Interface..." },
+    { at: 70, text: "Launching Beast Games Season 2..." },
+    { at: 90, text: `Welcome Author ${authorName}!` }
   ];
 
   const statusMessages = (mode === "unlock") ? unlockMessages : initMessages;
@@ -13158,8 +13441,55 @@ function playCinematic3DMiniatureTransition(onComplete, mode = "init") {
 window.playCinematic3DMiniatureTransition = playCinematic3DMiniatureTransition;
 
 // =========================================================================
-// 👤 STEP 2 CONTROLLERS: SELECTING AVATAR AND USERNAME (ACCESS PASS FORM)
+// 👤 STEP 2 CONTROLLERS: USERNAME & AVATAR ENROLLMENT (ACCESS PASS)
 // =========================================================================
+let currentEnrollAvatar = "🦁";
+let currentAvatarMode = "emoji";
+
+function handleUsernameInputChange(val) {
+  const trimmed = (val || "").trim();
+  const badge = document.getElementById("creatorDetectBadge");
+  const errEl = document.getElementById("enrollErrorNotice");
+  if (errEl) errEl.style.display = "none";
+
+  const isCreatorId = trimmed.toUpperCase() === "SRS18062011";
+
+  if (isCreatorId) {
+    if (badge) badge.style.display = "inline-flex";
+    currentEnrollAvatar = "👑";
+    renderEnrollAvatarPreview("👑");
+    const emojiDropdown = document.getElementById("enrollEmojiDropdown");
+    if (emojiDropdown) emojiDropdown.value = "👑";
+    const emojiInput = document.getElementById("enrollEmojiInput");
+    if (emojiInput) emojiInput.value = "👑";
+    const sourcePill = document.getElementById("avatarSourcePill");
+    if (sourcePill) sourcePill.innerText = "👑 Official Creator Avatar";
+  } else {
+    if (badge) badge.style.display = "none";
+    // If it was crown and user types normal username, keep user's selection or fallback
+    if (currentEnrollAvatar === "👑") {
+      const emojiDropdown = document.getElementById("enrollEmojiDropdown");
+      const selected = emojiDropdown ? emojiDropdown.value : "🦁";
+      currentEnrollAvatar = selected;
+      renderEnrollAvatarPreview(selected);
+      const sourcePill = document.getElementById("avatarSourcePill");
+      if (sourcePill) sourcePill.innerText = "Normal Emoji";
+    }
+  }
+}
+window.handleUsernameInputChange = handleUsernameInputChange;
+
+function handleEmojiDropdownSelect(emoji) {
+  if (typeof playBeastSound === "function") playBeastSound("click");
+  currentEnrollAvatar = emoji;
+  const emojiInput = document.getElementById("enrollEmojiInput");
+  if (emojiInput) emojiInput.value = emoji;
+  const sourcePill = document.getElementById("avatarSourcePill");
+  if (sourcePill) sourcePill.innerText = "Normal Emoji";
+  renderEnrollAvatarPreview(emoji);
+}
+window.handleEmojiDropdownSelect = handleEmojiDropdownSelect;
+
 function showEnrollmentScreen() {
   const enrollScreen = document.getElementById("enrollmentScreen");
   const gate = document.getElementById("gate");
@@ -13182,14 +13512,23 @@ function showEnrollmentScreen() {
   document.body.style.overflow = "hidden";
   document.documentElement.style.overflow = "hidden";
 
-  const nameInput = document.getElementById("enrollNameInput");
+  const usernameInput = document.getElementById("enrollUsernameInput");
   const emojiInput = document.getElementById("enrollEmojiInput");
+  const emojiDropdown = document.getElementById("enrollEmojiDropdown");
 
-  if (nameInput) {
-    const existing = localStorage.getItem("beast_user_name") || localStorage.getItem("beast_user_id");
-    if (existing && existing !== "Shahid Shaikh") nameInput.value = existing;
-    else if (!nameInput.value) nameInput.value = "User 1";
-    setTimeout(() => nameInput.focus(), 150);
+  const savedUsername = localStorage.getItem("beast_username") || localStorage.getItem("beast_user_name") || "";
+  const isOwner = localStorage.getItem("beast_is_owner") === "true";
+
+  if (usernameInput) {
+    if (isOwner) {
+      usernameInput.value = "SRS18062011";
+    } else if (savedUsername) {
+      usernameInput.value = savedUsername;
+    } else {
+      usernameInput.value = "Contestant";
+    }
+    handleUsernameInputChange(usernameInput.value);
+    setTimeout(() => usernameInput.focus(), 150);
   }
 
   const savedAvatar = localStorage.getItem("beast_user_avatar");
@@ -13202,19 +13541,16 @@ function showEnrollmentScreen() {
     } else {
       switchAvatarTab("emoji");
       if (emojiInput) emojiInput.value = savedAvatar;
+      if (emojiDropdown) emojiDropdown.value = savedAvatar;
     }
   } else {
-    currentEnrollAvatar = "👤";
+    currentEnrollAvatar = isOwner ? "👑" : "🦁";
     switchAvatarTab("emoji");
+    if (emojiDropdown) emojiDropdown.value = currentEnrollAvatar;
   }
   renderEnrollAvatarPreview(currentEnrollAvatar);
-  renderPCEmojiGrid("all");
 }
 window.showEnrollmentScreen = showEnrollmentScreen;
-
-// Dual Avatar Mode State: "emoji" or "gallery"
-let currentEnrollAvatar = "👤";
-let currentAvatarMode = "emoji";
 
 function switchAvatarTab(mode) {
   if (typeof playBeastSound === "function") playBeastSound("click");
@@ -13232,11 +13568,14 @@ function switchAvatarTab(mode) {
     if (galleryPane) galleryPane.style.display = "none";
     if (sourcePill) sourcePill.innerText = "Normal Emoji";
 
+    const emojiDropdown = document.getElementById("enrollEmojiDropdown");
     const emojiInput = document.getElementById("enrollEmojiInput");
-    if (emojiInput) {
-      currentEnrollAvatar = emojiInput.value.trim() || "👤";
-      renderEnrollAvatarPreview(currentEnrollAvatar);
+    if (emojiDropdown && emojiDropdown.value) {
+      currentEnrollAvatar = emojiDropdown.value;
+    } else if (emojiInput && emojiInput.value) {
+      currentEnrollAvatar = emojiInput.value.trim();
     }
+    renderEnrollAvatarPreview(currentEnrollAvatar);
   } else {
     if (tabGalleryBtn) tabGalleryBtn.classList.add("active");
     if (tabEmojiBtn) tabEmojiBtn.classList.remove("active");
@@ -13262,113 +13601,10 @@ function handleCustomEmojiInput(val) {
   const trimmed = val.trim();
   currentEnrollAvatar = trimmed || "👤";
   renderEnrollAvatarPreview(currentEnrollAvatar);
-  renderPCEmojiGrid(activePCEmojiCategory);
+  const emojiDropdown = document.getElementById("enrollEmojiDropdown");
+  if (emojiDropdown) emojiDropdown.value = currentEnrollAvatar;
 }
 window.handleCustomEmojiInput = handleCustomEmojiInput;
-
-// =========================================================================
-// 💻 PC & DESKTOP USERS INTERACTIVE EMOJI PALETTE (36+ CURATED AVATARS)
-// =========================================================================
-const PC_AVATAR_EMOJIS = [
-  // Beast & Power
-  { emoji: "⚡", category: "power", label: "Lightning" },
-  { emoji: "🔥", category: "power", label: "Fire" },
-  { emoji: "🏆", category: "power", label: "Trophy" },
-  { emoji: "👑", category: "power", label: "Crown" },
-  { emoji: "💥", category: "power", label: "Explosion" },
-  { emoji: "⭐", category: "power", label: "Star" },
-  { emoji: "🚀", category: "power", label: "Rocket" },
-  { emoji: "⚔️", category: "power", label: "Swords" },
-  { emoji: "🛡️", category: "power", label: "Shield" },
-  { emoji: "💎", category: "power", label: "Diamond" },
-  // Animals
-  { emoji: "🦁", category: "animals", label: "Lion" },
-  { emoji: "🐯", category: "animals", label: "Tiger" },
-  { emoji: "🐺", category: "animals", label: "Wolf" },
-  { emoji: "🦅", category: "animals", label: "Eagle" },
-  { emoji: "🦈", category: "animals", label: "Shark" },
-  { emoji: "🐉", category: "animals", label: "Dragon" },
-  { emoji: "🦍", category: "animals", label: "Gorilla" },
-  { emoji: "🦊", category: "animals", label: "Fox" },
-  { emoji: "🐻", category: "animals", label: "Bear" },
-  { emoji: "🐆", category: "animals", label: "Leopard" },
-  // Gaming
-  { emoji: "🎮", category: "gaming", label: "Gaming Controller" },
-  { emoji: "🕹️", category: "gaming", label: "Retro Joystick" },
-  { emoji: "👾", category: "gaming", label: "Space Invader" },
-  { emoji: "🤖", category: "gaming", label: "Robot" },
-  { emoji: "🎯", category: "gaming", label: "Bullseye" },
-  { emoji: "🎲", category: "gaming", label: "Dice" },
-  { emoji: "🦾", category: "gaming", label: "Bionic Arm" },
-  { emoji: "🎧", category: "gaming", label: "Gaming Headset" },
-  { emoji: "🏁", category: "gaming", label: "Finish Flag" },
-  { emoji: "🥇", category: "gaming", label: "Gold Medal" },
-  // Faces
-  { emoji: "😎", category: "faces", label: "Cool Shades" },
-  { emoji: "🤩", category: "faces", label: "Star Struck" },
-  { emoji: "🤠", category: "faces", label: "Cowboy" },
-  { emoji: "🥳", category: "faces", label: "Party Face" },
-  { emoji: "🤯", category: "faces", label: "Mind Blown" },
-  { emoji: "🥷", category: "faces", label: "Ninja" },
-  { emoji: "🕵️", category: "faces", label: "Detective" },
-  { emoji: "🦸", category: "faces", label: "Superhero" },
-  { emoji: "🧙", category: "faces", label: "Wizard" },
-  { emoji: "👤", category: "faces", label: "Default Member" }
-];
-
-let activePCEmojiCategory = "all";
-
-function renderPCEmojiGrid(category = "all") {
-  const grid = document.getElementById("pcEmojiGrid");
-  if (!grid) return;
-  activePCEmojiCategory = category;
-
-  const filtered = category === "all"
-    ? PC_AVATAR_EMOJIS
-    : PC_AVATAR_EMOJIS.filter(item => item.category === category);
-
-  grid.innerHTML = filtered.map(item => {
-    const isSelected = currentEnrollAvatar === item.emoji;
-    return `
-      <button
-        type="button"
-        class="pc-emoji-item-btn ${isSelected ? 'active-pc-emoji' : ''}"
-        onclick="selectPCEmoji('${item.emoji}')"
-        title="${item.label} (${item.emoji})"
-      >
-        <span class="pc-emoji-char">${item.emoji}</span>
-      </button>
-    `;
-  }).join("");
-}
-window.renderPCEmojiGrid = renderPCEmojiGrid;
-
-function filterPCEmojis(category, btn) {
-  if (typeof playBeastSound === "function") playBeastSound("click");
-  const container = document.getElementById("pcEmojiPickerContainer");
-  if (container) {
-    const btns = container.querySelectorAll(".pc-category-btn");
-    btns.forEach(b => b.classList.remove("active"));
-  }
-  if (btn) btn.classList.add("active");
-  renderPCEmojiGrid(category);
-}
-window.filterPCEmojis = filterPCEmojis;
-
-function selectPCEmoji(emoji) {
-  if (typeof playBeastSound === "function") playBeastSound("click");
-  currentEnrollAvatar = emoji;
-  const emojiInput = document.getElementById("enrollEmojiInput");
-  if (emojiInput) emojiInput.value = emoji;
-  renderEnrollAvatarPreview(emoji);
-
-  const sourcePill = document.getElementById("avatarSourcePill");
-  if (sourcePill) sourcePill.innerText = "Normal Emoji";
-
-  renderPCEmojiGrid(activePCEmojiCategory);
-}
-window.selectPCEmoji = selectPCEmoji;
-
 
 function handleGalleryFileChosen(e) {
   const file = e.target.files && e.target.files[0];
@@ -13407,8 +13643,7 @@ function handleGalleryFileChosen(e) {
 window.handleGalleryFileChosen = handleGalleryFileChosen;
 
 function handleNameInputCheck(val) {
-  const err = document.getElementById("enrollErrorNotice");
-  if (err) err.style.display = "none";
+  handleUsernameInputChange(val);
 }
 window.handleNameInputCheck = handleNameInputCheck;
 
@@ -13416,21 +13651,26 @@ function handleEnrollmentSubmit(e) {
   if (e) e.preventDefault();
   if (typeof playBeastSound === "function") playBeastSound("click");
 
-  const nameInput = document.getElementById("enrollNameInput");
+  const usernameInput = document.getElementById("enrollUsernameInput");
   const rememberBox = document.getElementById("saveLoginCheckbox");
   const errEl = document.getElementById("enrollErrorNotice");
 
-  const rawName = nameInput ? nameInput.value.trim() : "";
-  const name = rawName || "User 1";
-  const avatar = currentEnrollAvatar || "👤";
+  const rawUsername = usernameInput ? usernameInput.value.trim() : "";
+  const username = rawUsername || "Contestant";
   const shouldSave = rememberBox ? rememberBox.checked : true;
 
-  // Secret Owner PIN/ID Check (SRS18062011)
-  if (name.toUpperCase() === "SRS18062011") {
+  // Check Creator PIN/Username (SRS18062011)
+  const isCreatorId = username.toUpperCase() === "SRS18062011";
+
+  if (isCreatorId) {
     localStorage.setItem("beast_is_owner", "true");
     localStorage.setItem(CHAT_OWNER_TOKEN_KEY, "beast_owner_verified_auth_token_7777");
-    localStorage.setItem("beast_user_name", "Shahid Shaikh");
-    localStorage.setItem("beast_user_id", "Shahid Shaikh");
+    localStorage.setItem("beast_username", "SRS18062011");
+    localStorage.setItem("beast_first_name", "Shahid");
+    localStorage.setItem("beast_surname", "Shaikh");
+    localStorage.setItem("beast_author_role", "Official Creator");
+    localStorage.setItem("beast_user_name", "Shahid Shaikh (SRS18062011)");
+    localStorage.setItem("beast_user_id", "Shahid Shaikh (SRS18062011)");
     localStorage.setItem("beast_user_avatar", "👑");
     localStorage.setItem("beast_chat_user_avatar", "👑");
     localStorage.setItem("beast_save_login_info", "true");
@@ -13444,12 +13684,16 @@ function handleEnrollmentSubmit(e) {
       enrollScreen.style.setProperty("display", "none", "important");
     }
 
-    // Direct entry to website - subscription block removed from opening
-    openSiteProperly();
-    if (typeof launchConfetti === "function") launchConfetti();
-    if (typeof launchFireworks === "function") launchFireworks();
+    // Trigger animation transition AGAIN, then open main website interface
+    playCinematic3DMiniatureTransition(() => {
+      openSiteProperly();
+      if (typeof launchConfetti === "function") launchConfetti();
+      if (typeof launchFireworks === "function") launchFireworks();
+    }, "unlock");
     return;
   }
+
+  const avatar = currentEnrollAvatar || "🦁";
 
   if (avatar === "💎" && localStorage.getItem("beast_is_owner") !== "true") {
     if (errEl) {
@@ -13459,14 +13703,17 @@ function handleEnrollmentSubmit(e) {
     return;
   }
 
-  // Save credentials permanently/per-device
-  localStorage.setItem("beast_user_name", name);
-  localStorage.setItem("beast_user_id", name);
+  // Regular user save
+  localStorage.setItem("beast_username", username);
+  localStorage.setItem("beast_user_name", username);
+  localStorage.setItem("beast_user_id", username);
   localStorage.setItem("beast_user_avatar", avatar);
   localStorage.setItem("beast_chat_user_avatar", avatar);
+  localStorage.setItem("beast_author_role", "Contestant");
   localStorage.setItem("beast_save_login_info", shouldSave ? "true" : "false");
+  localStorage.removeItem("beast_is_owner");
+  localStorage.removeItem(CHAT_OWNER_TOKEN_KEY);
 
-  // IMMEDIATELY update header profile avatar with enrolled avatar!
   updateHeaderProfileDisplay();
   if (typeof updateChatIdentityDisplay === "function") updateChatIdentityDisplay();
 
@@ -13476,10 +13723,12 @@ function handleEnrollmentSubmit(e) {
     enrollScreen.style.setProperty("display", "none", "important");
   }
 
-  // Direct entry to website - subscription block removed from opening
-  openSiteProperly();
-  if (typeof launchConfetti === "function") launchConfetti();
-  if (typeof launchFireworks === "function") launchFireworks();
+  // Animation transition AGAIN after enrollment, then open main website interface
+  playCinematic3DMiniatureTransition(() => {
+    openSiteProperly();
+    if (typeof launchConfetti === "function") launchConfetti();
+    if (typeof launchFireworks === "function") launchFireworks();
+  }, "unlock");
 }
 window.handleEnrollmentSubmit = handleEnrollmentSubmit;
 
@@ -13492,124 +13741,6 @@ function showSubscribeGate() {
     weeklyAutoUnlockTimer = null;
   }
   openSiteProperly();
-}
-  checkAndVerifyDirectYouTubeReturn();
-
-  const gate = document.getElementById("gate");
-  const site = document.getElementById("site");
-  const enroll = document.getElementById("enrollmentScreen");
-  const overlay = document.getElementById("beastMiniatureTransition");
-
-  if (overlay) overlay.style.setProperty("display", "none", "important");
-  if (enroll) {
-    enroll.classList.add("hidden");
-    enroll.style.setProperty("display", "none", "important");
-  }
-  if (site) {
-    site.style.setProperty("display", "none", "important");
-  }
-
-  if (gate) {
-    gate.classList.remove("gate-hidden");
-    gate.classList.remove("gate-flipping-out");
-    gate.style.setProperty("display", "flex", "important");
-  }
-  document.body.style.overflow = "hidden";
-  document.documentElement.style.overflow = "hidden";
-
-  const intervalBadge = document.getElementById("gateIntervalBadge");
-  const mainHeading = document.getElementById("gateMainHeading");
-  const mainDesc = document.getElementById("gateMainDesc");
-  const statusPill = document.getElementById("gateStatusPill");
-  const subBtn = document.getElementById("subscribeBtn");
-  const subText = document.getElementById("subBtnText");
-  const subIcon = document.getElementById("subBtnIcon");
-  const subBox = document.getElementById("subVerifyingBox");
-  const subFill = document.getElementById("subVerifyFill");
-  const verifyText = document.getElementById("subVerifyText");
-  const spinner = document.getElementById("gateSpinner");
-  const gateAlert = document.getElementById("gateAlert");
-
-  if (gateAlert) gateAlert.style.display = "none";
-
-  const sessionVerified = sessionStorage.getItem("beast_session_yt_verified") === "true";
-  const isOwner = localStorage.getItem("beast_is_owner") === "true";
-
-  if (isOwner || sessionVerified) {
-    // Verified session: ready for user to enter
-    const remainingDays = getRemainingDaysText();
-    if (intervalBadge) {
-      intervalBadge.innerText = `🛡️ YouTube Checkpoint • Verified Active (${remainingDays} remaining)`;
-    }
-    if (statusPill) {
-      statusPill.style.display = "inline-block";
-      statusPill.innerText = "✅ YouTube Subscription Confirmed";
-      statusPill.style.background = "#10b981";
-    }
-    if (mainHeading) {
-      mainHeading.innerHTML = `<span class="realistic-fire-flame" aria-hidden="true"><svg class="fire-flame-svg" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="16" cy="30" rx="12" ry="7" fill="url(#realFlameAuraGrad)" class="flame-aura"/><path class="flame-tongue flame-base" d="M16 2 C19 12, 28 17, 28 27 C28 34, 22.5 38, 16 38 C9.5 38, 4 34, 4 27 C4 18, 12 11, 16 2 Z" fill="url(#realFlameBodyGrad)"/><path class="flame-tongue flame-mid" d="M16 8 C18 15, 24 19, 24 28 C24 33, 20.5 36, 16 36 C11.5 36, 8 33, 8 28 C8 20, 14 14, 16 8 Z" fill="url(#realFlameMidGrad)"/><path class="flame-tongue flame-core" d="M16 16 C17.5 21, 21 24, 21 29 C21 33, 18.8 35, 16 35 C13.2 35, 11 33, 11 29 C11 23, 14.5 20, 16 16 Z" fill="url(#realFlameCoreGrad)"/><circle cx="12" cy="18" r="1.2" fill="#fff" class="flame-spark spark-1"/><circle cx="20" cy="14" r="1" fill="#fff" class="flame-spark spark-2"/></svg></span> Weekly Pass Active <span class="realistic-fire-flame" aria-hidden="true"><svg class="fire-flame-svg" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="16" cy="30" rx="12" ry="7" fill="url(#realFlameAuraGrad)" class="flame-aura"/><path class="flame-tongue flame-base" d="M16 2 C19 12, 28 17, 28 27 C28 34, 22.5 38, 16 38 C9.5 38, 4 34, 4 27 C4 18, 12 11, 16 2 Z" fill="url(#realFlameBodyGrad)"/><path class="flame-tongue flame-mid" d="M16 8 C18 15, 24 19, 24 28 C24 33, 20.5 36, 16 36 C11.5 36, 8 33, 8 28 C8 20, 14 14, 16 8 Z" fill="url(#realFlameMidGrad)"/><path class="flame-tongue flame-core" d="M16 16 C17.5 21, 21 24, 21 29 C21 33, 18.8 35, 16 35 C13.2 35, 11 33, 11 29 C11 23, 14.5 20, 16 16 Z" fill="url(#realFlameCoreGrad)"/><circle cx="12" cy="18" r="1.2" fill="#fff" class="flame-spark spark-1"/><circle cx="20" cy="14" r="1" fill="#fff" class="flame-spark spark-2"/></svg></span>`;
-    }
-    if (mainDesc) {
-      mainDesc.innerHTML = `Your subscription to <strong>@TrendzOfShahid</strong> is verified. Click below to enter Beast Games Season 2!`;
-    }
-    if (subText) subText.innerText = "✨ Enter Beast Games Season 2 ▶";
-    if (subIcon) subIcon.innerText = "👑";
-    if (subBtn) {
-      subBtn.className = "gate-btn subscribe-btn fire-wave-btn";
-      subBtn.style.pointerEvents = "auto";
-      subBtn.style.background = "linear-gradient(90deg, #10b981 0%, #059669 100%)";
-      subBtn.style.borderColor = "#10b981";
-      subBtn.style.boxShadow = "0 0 25px rgba(16, 185, 129, 0.6)";
-      subBtn.onclick = function(e) {
-        if (e) e.preventDefault();
-        completeSubscriptionUnlock();
-      };
-    }
-    if (subBox) subBox.style.display = "block";
-    if (subFill) {
-      subFill.style.width = "100%";
-      subFill.style.background = "linear-gradient(90deg, #10b981, #059669)";
-    }
-    if (spinner) spinner.style.display = "none";
-    if (verifyText) verifyText.innerHTML = "✅ Verified! Click <strong>'Enter Beast Games Season 2 ▶'</strong> above to launch the website.";
-
-    // Strictly NO auto timer! The gate remains stationary waiting for user click.
-  } else {
-    // Locked! Compulsory YouTube redirection required
-    if (intervalBadge) {
-      intervalBadge.innerText = "🛡️ Compulsory Checkpoint • YouTube Subscription Required";
-    }
-    if (statusPill) {
-      statusPill.style.display = "inline-block";
-      statusPill.innerText = "🔒 Channel Subscription Locked";
-      statusPill.style.background = "#ef4444";
-    }
-    if (mainHeading) {
-      mainHeading.innerHTML = `<span class="realistic-fire-flame" aria-hidden="true"><svg class="fire-flame-svg" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="16" cy="30" rx="12" ry="7" fill="url(#realFlameAuraGrad)" class="flame-aura"/><path class="flame-tongue flame-base" d="M16 2 C19 12, 28 17, 28 27 C28 34, 22.5 38, 16 38 C9.5 38, 4 34, 4 27 C4 18, 12 11, 16 2 Z" fill="url(#realFlameBodyGrad)"/><path class="flame-tongue flame-mid" d="M16 8 C18 15, 24 19, 24 28 C24 33, 20.5 36, 16 36 C11.5 36, 8 33, 8 28 C8 20, 14 14, 16 8 Z" fill="url(#realFlameMidGrad)"/><path class="flame-tongue flame-core" d="M16 16 C17.5 21, 21 24, 21 29 C21 33, 18.8 35, 16 35 C13.2 35, 11 33, 11 29 C11 23, 14.5 20, 16 16 Z" fill="url(#realFlameCoreGrad)"/><circle cx="12" cy="18" r="1.2" fill="#fff" class="flame-spark spark-1"/><circle cx="20" cy="14" r="1" fill="#fff" class="flame-spark spark-2"/></svg></span> Weekly YouTube Checkpoint <span class="realistic-fire-flame" aria-hidden="true"><svg class="fire-flame-svg" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="16" cy="30" rx="12" ry="7" fill="url(#realFlameAuraGrad)" class="flame-aura"/><path class="flame-tongue flame-base" d="M16 2 C19 12, 28 17, 28 27 C28 34, 22.5 38, 16 38 C9.5 38, 4 34, 4 27 C4 18, 12 11, 16 2 Z" fill="url(#realFlameBodyGrad)"/><path class="flame-tongue flame-mid" d="M16 8 C18 15, 24 19, 24 28 C24 33, 20.5 36, 16 36 C11.5 36, 8 33, 8 28 C8 20, 14 14, 16 8 Z" fill="url(#realFlameMidGrad)"/><path class="flame-tongue flame-core" d="M16 16 C17.5 21, 21 24, 21 29 C21 33, 18.8 35, 16 35 C13.2 35, 11 33, 11 29 C11 23, 14.5 20, 16 16 Z" fill="url(#realFlameCoreGrad)"/><circle cx="12" cy="18" r="1.2" fill="#fff" class="flame-spark spark-1"/><circle cx="20" cy="14" r="1" fill="#fff" class="flame-spark spark-2"/></svg></span>`;
-    }
-    if (mainDesc) {
-      mainDesc.innerHTML = `Compulsory access: You must visit and subscribe to <strong>@TrendzOfShahid</strong> on YouTube to unlock Beast Games Season 2!`;
-    }
-    if (subText) subText.innerText = "🔴 Go to YouTube & Subscribe to @TrendzOfShahid";
-    if (subIcon) subIcon.innerText = "🔴";
-    if (subBtn) {
-      subBtn.className = "gate-btn subscribe-btn fire-wave-btn";
-      subBtn.style.pointerEvents = "auto";
-      subBtn.style.background = "";
-      subBtn.style.borderColor = "";
-      subBtn.style.boxShadow = "";
-      subBtn.onclick = handleSubscribeAction;
-    }
-    if (subBox) subBox.style.display = "block";
-    if (subFill) {
-      subFill.style.width = "0%";
-      subFill.style.background = "linear-gradient(90deg, #ef4444, #f59e0b)";
-    }
-    if (spinner) spinner.style.display = "none";
-    if (verifyText) {
-      verifyText.innerHTML = "👉 Click the red button above to go to YouTube. Website unlocks when you return from subscribing!";
-    }
-  }
 }
 window.showSubscribeGate = showSubscribeGate;
 
@@ -13808,11 +13939,19 @@ function updateHeaderProfileDisplay() {
   }
 
   const headerBtnEl = document.getElementById("headerProfileBtn");
+  const creatorLabelEl = document.getElementById("headerCreatorLabel");
   if (headerBtnEl) {
-    headerBtnEl.title = `${name} (${isOwner ? "👑 Creator" : "Official Contestant"})`;
+    headerBtnEl.title = `${name} (${isOwner ? "👑 Official Creator" : "Official Contestant"})`;
     if (isOwner) {
+      headerBtnEl.classList.add("is-creator");
       headerBtnEl.style.borderColor = "#facc15";
-      headerBtnEl.style.boxShadow = "0 0 15px rgba(250, 204, 21, 0.6)";
+      headerBtnEl.style.boxShadow = "0 0 16px rgba(250, 204, 21, 0.55)";
+      if (creatorLabelEl) creatorLabelEl.innerHTML = `👑 Creator`;
+    } else {
+      headerBtnEl.classList.remove("is-creator");
+      headerBtnEl.style.borderColor = "";
+      headerBtnEl.style.boxShadow = "";
+      if (creatorLabelEl) creatorLabelEl.innerText = `Profile`;
     }
   }
 
