@@ -1,4 +1,33 @@
 {
-  "messages": [],
+  "messages": [
+    {
+      "id": "msg-1793616942434-oxdmz",
+      "sender": "Shahid Fan 99",
+      "avatar": "🦁",
+      "text": "Testing live chat with custom emoji and identity preservation!",
+      "timestamp": 1793616942434,
+      "isOwner": false,
+      "reactions": {
+        "fire": 1,
+        "heart": 0,
+        "laugh": 0,
+        "clap": 0
+      }
+    },
+    {
+      "id": "msg-1793616950629-ans0c",
+      "sender": "GalleryUser",
+      "avatar": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAP//////////////////////////////////////////////////////////////////////////////////////wgALCAABAAEBAREA/8QAFBABAAAAAAAAAAAAAAAAAAAAAP/aAAgBAQABPxA=",
+      "text": "Testing gallery image upload avatar in chat!",
+      "timestamp": 1793616950629,
+      "isOwner": false,
+      "reactions": {
+        "fire": 0,
+        "heart": 0,
+        "laugh": 0,
+        "clap": 0
+      }
+    }
+  ],
   "nextUserIndex": 1
 }

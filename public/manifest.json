@@ -40,6 +40,12 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    },
+    {
+      "src": "/assets/aistudio/LOGO-_beast_games_61e24fa3.png",
+      "sizes": "1264x1264",
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }

@@ -7,7 +7,7 @@ import { GoogleGenAI } from '@google/genai';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.json());
+app.use(express.json({ limit: '10mb' }));
 
 const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
@@ -284,9 +284,17 @@ app.post('/api/chat/messages', (req, res) => {
     authorName = `User ${nextNum}`;
   }
 
-  const authorAvatar = isOwnerVerified
-    ? '👑'
-    : (avatar && typeof avatar === 'string' && avatar.trim() ? avatar.trim().slice(0, 8) : '👤');
+  let authorAvatar = '👤';
+  if (isOwnerVerified) {
+    authorAvatar = '👑';
+  } else if (avatar && typeof avatar === 'string' && avatar.trim()) {
+    const cleanAvatar = avatar.trim();
+    if (cleanAvatar.startsWith('data:image/') || cleanAvatar.startsWith('http://') || cleanAvatar.startsWith('https://')) {
+      authorAvatar = cleanAvatar.slice(0, 350000); // support gallery photo data URLs
+    } else {
+      authorAvatar = cleanAvatar.slice(0, 32); // support any mobile keyboard emoji
+    }
+  }
 
   const newMessage: ChatMessage = {
     id: `msg-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`,

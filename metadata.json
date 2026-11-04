@@ -1,6 +1,6 @@
 {
   "name": "BEAST GAMES 2",
-  "description": "Beast Games Season 2: Official MrBeast Season 2 streaming portal. Watch all 10 episodes free, track survival challenges, unlock exclusive badges, and experience the $5,000,000 tournament with Dual Audio.",
+  "description": "Official Beast Games Season 2 streaming portal by Shahid Shaikh (@TrendzOfShahid). Watch all 10 episodes free in HD with Dual Audio, track survival challenges, unlock exclusive badges, and experience the $5,000,000 tournament hub.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

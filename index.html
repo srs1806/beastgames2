@@ -6,14 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Beast Games Season 2 - Official Free Streaming Hub</title>
+<link rel="icon" type="image/png" href="/assets/aistudio/LOGO-_beast_games_61e24fa3.png">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/assets/aistudio/LOGO-_beast_games_61e24fa3.png">
 <link rel="manifest" href="/manifest.json">
 
 <!-- ================= PRODUCTION VIRAL SEO & PWA TAGS ================= -->
-<meta name="description" content="Watch all 10 episodes of Beast Games Season 2 free in HD theater mode with Dual Audio (Hindi & English). Track survival challenges in MrBeast's $5,000,000 tournament, unlock exclusive badges, and join the live community chat.">
+<meta name="description" content="Official Beast Games Season 2 streaming portal by Shahid Shaikh (@TrendzOfShahid). Watch all 10 episodes free in HD with Dual Audio, track survival challenges, unlock exclusive badges, and experience the $5,000,000 tournament hub.">
 <meta name="keywords" content="Beast Games Season 2, Beast Games 2, MrBeast, Mr Beast, MrBeast Season 2, MrBeast new video, MrBeast $5 million, watch MrBeast online, Beast Games episodes, MrBeast reality show, watch episodes free, survival competition show, Beast Games winner, Beast Games badges, Dual Audio Beast Games, Hindi Beast Games, Trendz of Shahid, Shahid Shaikh, #BeastGamesSeason2, #BeastGames2, #MrBeast, #MrBeastSeason2, #MrBeast5Million, #BeastGamesEpisodes, #FreeStreaming, #DualAudio, #WatchFree">
 <meta name="author" content="Shahid Shaikh (@TrendzOfShahid)">
 <meta name="application-name" content="Beast Games Season 2">
@@ -26,10 +28,15 @@
 <meta name="theme-color" content="#0f172a">
 <link rel="canonical" href="https://beastgames2.pages.dev/">
 
+<!-- Google Fonts for Beast Games Season 2 Typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800;900&family=Outfit:wght@800;900&family=Rajdhani:wght@700;800;900&family=Teko:wght@700&display=swap" rel="stylesheet">
+
 <!-- Open Graph (Facebook / WhatsApp / Discord / LinkedIn / Telegram) -->
 <meta property="og:site_name" content="Beast Games Season 2">
 <meta property="og:title" content="Beast Games Season 2 - Official Free Streaming Hub">
-<meta property="og:description" content="Watch all 10 episodes of Beast Games Season 2 free in HD theater mode with Dual Audio (Hindi & English). Track survival challenges in MrBeast's $5,000,000 tournament, unlock exclusive badges, and join the live community chat.">
+<meta property="og:description" content="Official Beast Games Season 2 streaming portal by Shahid Shaikh (@TrendzOfShahid). Watch all 10 episodes free in HD with Dual Audio, track survival challenges, unlock exclusive badges, and experience the $5,000,000 tournament hub.">
 <meta property="og:image" content="/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -42,7 +49,7 @@
 <meta name="twitter:site" content="@TrendzOfShahid">
 <meta name="twitter:creator" content="@TrendzOfShahid">
 <meta name="twitter:title" content="Beast Games Season 2 - Official Free Streaming Hub">
-<meta name="twitter:description" content="Watch all 10 episodes of Beast Games Season 2 free in HD theater mode with Dual Audio (Hindi & English). Track survival challenges in MrBeast's $5,000,000 tournament!">
+<meta name="twitter:description" content="Official Beast Games Season 2 streaming portal by Shahid Shaikh (@TrendzOfShahid). Watch all 10 episodes free in HD with Dual Audio, track survival challenges, unlock exclusive badges, and experience the $5,000,000 tournament hub.">
 <meta name="twitter:image" content="/og-image.png">
 
 <!-- Schema.org Structured Data (JSON-LD) for Maximum Google & Chrome Top Ranking -->
@@ -7305,8 +7312,39 @@ body.light-mode .chat-msg-item.is-creator .chat-msg-bubble {
 }
 
 .chat-msg-time {
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+  cursor: help;
+  transition: all 0.2s ease;
+}
+.chat-msg-time:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+body.light-mode .chat-msg-time {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.08);
+  color: #64748b;
+}
+body.light-mode .chat-msg-time:hover {
+  background: rgba(0, 0, 0, 0.08);
+  color: #0f172a;
+}
+.chat-time-icon {
+  font-size: 0.7rem;
+  opacity: 0.85;
 }
 
 /* WhatsApp-Style Quoted Preview Inside Message */
@@ -7922,6 +7960,389 @@ body.light-mode .enroll-input {
   background: linear-gradient(135deg, #0369a1, #1d4ed8);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(2, 132, 199, 0.55);
+}
+
+/* ================= DUAL AVATAR SELECTION (CUSTOM EMOJI / GALLERY PHOTO) ================= */
+.avatar-creation-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-sizing: border-box;
+}
+
+body.light-mode .avatar-creation-section {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.avatar-preview-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.enroll-avatar-display {
+  width: 66px;
+  height: 66px;
+  min-width: 66px;
+  min-height: 66px;
+  border-radius: 50%;
+  border: 2.5px solid #facc15;
+  background: rgba(250, 204, 21, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.3rem;
+  overflow: hidden;
+  box-shadow: 0 0 16px rgba(250, 204, 21, 0.45);
+}
+
+.enroll-avatar-display img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.avatar-source-pill {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.18);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.avatar-tabs-row {
+  display: flex;
+  gap: 8px;
+}
+
+.avatar-tab-btn {
+  flex: 1;
+  padding: 9px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.avatar-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.avatar-tab-btn.active {
+  background: linear-gradient(135deg, rgba(250, 204, 21, 0.25), rgba(56, 189, 248, 0.25));
+  border-color: #facc15;
+  color: #facc15;
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.35);
+}
+
+.emoji-type-input {
+  font-size: 1.15rem !important;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.gallery-choose-btn {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1.5px dashed #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  font-size: 0.86rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.gallery-choose-btn:hover {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: #facc15;
+  color: #ffffff;
+}
+
+.emoji-keyboard-hint, .gallery-upload-hint {
+  font-size: 0.73rem;
+  color: #94a3b8;
+  line-height: 1.35;
+  margin-top: 5px;
+}
+
+/* PC / DESKTOP EMOJI PICKER PALETTE */
+.pc-emoji-picker-container {
+  margin-top: 10px;
+  background: rgba(3, 7, 18, 0.65);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 14px;
+  padding: 10px 12px;
+  box-sizing: border-box;
+}
+
+body.light-mode .pc-emoji-picker-container {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.pc-emoji-picker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pc-emoji-title {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #facc15;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+body.light-mode .pc-emoji-title {
+  color: #b45309;
+}
+
+.pc-emoji-hint-badge {
+  font-size: 0.7rem;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.pc-emoji-category-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+}
+
+.pc-category-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  padding: 4px 9px;
+  border-radius: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.pc-category-btn:hover {
+  background: rgba(56, 189, 248, 0.15);
+  color: #ffffff;
+}
+
+.pc-category-btn.active {
+  background: linear-gradient(135deg, #0284c7, #2563eb);
+  color: #ffffff;
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.35);
+}
+
+.pc-emoji-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+  gap: 6px;
+  max-height: 135px;
+  overflow-y: auto;
+  padding: 3px;
+  border-radius: 8px;
+  scrollbar-width: thin;
+}
+
+.pc-emoji-item-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  font-size: 1.25rem;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  user-select: none;
+}
+
+.pc-emoji-item-btn:hover {
+  background: rgba(56, 189, 248, 0.22);
+  border-color: #38bdf8;
+  transform: scale(1.18);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.35);
+}
+
+.pc-emoji-item-btn.active-pc-emoji {
+  background: linear-gradient(135deg, rgba(250, 204, 21, 0.35), rgba(56, 189, 248, 0.3));
+  border: 2px solid #facc15;
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.6);
+  transform: scale(1.12);
+}
+
+.direct-channel-link-row {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.direct-channel-anchor {
+  color: #facc15;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.direct-channel-anchor:hover {
+  color: #38bdf8;
+}
+
+.gate-redirect-direct-btn {
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.gate-redirect-direct-btn:hover {
+  background: rgba(239, 68, 68, 0.18);
+  border-color: #ef4444;
+  color: #f87171;
+}
+
+.chat-msg-avatar-img, .profile-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.chat-user-badge-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 1.15rem;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  flex-shrink: 0;
+}
+
+.chat-user-badge-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.chat-active-identity-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.chat-identity-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.86rem;
+}
+
+.chat-identity-label {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.chat-composer-avatar-preview {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 1.05rem;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  flex-shrink: 0;
+}
+
+.chat-composer-name-preview {
+  color: var(--text);
+  font-weight: 700;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chat-change-id-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.chat-change-id-btn:hover {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: #38bdf8;
+  color: #38bdf8;
 }
 
 .enroll-footer-note {
@@ -9179,6 +9600,19 @@ body.light-mode .enroll-save-label {
   font-weight: 950;
   letter-spacing: 0.05em;
   transform: translateZ(35px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.miniature-title-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .miniature-title-gradient {
@@ -10404,38 +10838,650 @@ body.light-mode .enroll-save-label {
   pointer-events: none !important;
 }
 
-/* REPLAY INTRO BUTTON IN HEADER */
-.replay-intro-header-btn {
-  display: inline-flex;
+
+
+
+/* ================= MAIN PAGE HERO LOGO & RESPONSIVE ARRANGEMENT ================= */
+.main-page-logo-container {
+  position: relative;
+  width: 145px;
+  height: 145px;
+  margin: 14px auto 16px;
+  display: flex;
   align-items: center;
-  gap: 6px;
-  background: rgba(250, 204, 21, 0.15);
-  border: 1px solid rgba(250, 204, 21, 0.45);
-  color: #facc15;
-  font-size: 0.76rem;
-  font-weight: 800;
-  padding: 5px 12px;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  margin-left: 8px;
+  justify-content: center;
 }
 
-.replay-intro-header-btn:hover {
-  background: #facc15;
-  color: #000000;
+.main-logo-concentric-glow {
+  position: absolute;
+  inset: -15px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(250, 204, 21, 0.4) 0%, rgba(56, 189, 248, 0.25) 50%, transparent 75%);
+  filter: blur(14px);
+  pointer-events: none;
+  animation: logoPulseGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes logoPulseGlow {
+  0% { transform: scale(0.95); opacity: 0.7; }
+  100% { transform: scale(1.12); opacity: 1; }
+}
+
+.main-page-hero-logo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+  border: none;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 22px rgba(56, 189, 248, 0.35));
+  z-index: 2;
+  position: relative;
+  display: block;
+  image-rendering: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.main-page-hero-logo:hover {
   transform: scale(1.04);
+  filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 32px rgba(250, 204, 21, 0.55));
+}
+
+.enroll-logo, .gate-logo, .miniature-logo {
+  image-rendering: auto;
+}
+
+/* TOP BAR THEME & PROFILE WRAPPER */
+.theme-switcher-wrapper.unified-header {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin: 10px auto 16px !important;
+  padding: 0 4px !important;
+  width: 100% !important;
+  max-width: 960px !important;
+  box-sizing: border-box !important;
+}
+
+/* RESPONSIVE SCALING (PERFECTLY FITTED HD LOGO) */
+@media (max-width: 640px) {
+  .main-page-logo-container {
+    width: 115px;
+    height: 115px;
+    margin: 12px auto 14px;
+  }
+  .theme-switcher-wrapper.unified-header {
+    gap: 8px !important;
+    margin-bottom: 12px !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .main-page-logo-container {
+    width: 130px;
+    height: 130px;
+    margin: 14px auto 16px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .main-page-logo-container {
+    width: 145px;
+    height: 145px;
+    margin: 16px auto 18px;
+  }
+}
+
+/* ================= PROPER BLINKING HEART (FOOTER SIGNATURE) ================= */
+.proper-beating-heart {
+  display: inline-block !important;
+  margin: 0 4px !important;
+  font-size: 1.12rem !important;
+  line-height: 1 !important;
+  vertical-align: middle !important;
+  animation: properHeartPulse 1.35s ease-in-out infinite !important;
+  transform-origin: center center !important;
+  filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.85)) !important;
+}
+
+@keyframes properHeartPulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 3px rgba(239, 68, 68, 0.5));
+    opacity: 0.95;
+  }
+  14% {
+    transform: scale(1.32);
+    filter: drop-shadow(0 0 12px rgba(239, 68, 68, 1)) drop-shadow(0 0 20px rgba(255, 80, 80, 0.7));
+    opacity: 1;
+  }
+  28% {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 5px rgba(239, 68, 68, 0.6));
+    opacity: 0.95;
+  }
+  42% {
+    transform: scale(1.24);
+    filter: drop-shadow(0 0 9px rgba(239, 68, 68, 0.9));
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 3px rgba(239, 68, 68, 0.4));
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 3px rgba(239, 68, 68, 0.5));
+    opacity: 0.95;
+  }
+}
+
+/* ================= REALISTIC FLICKERING FIRE (NOT EMOJI WAVING) ================= */
+.realistic-fire-flame {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: middle !important;
+  width: 1.3em !important;
+  height: 1.55em !important;
+  margin: 0 4px !important;
+  position: relative !important;
+  pointer-events: none !important;
+  flex-shrink: 0 !important;
+}
+
+.fire-flame-svg {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: visible !important;
+  filter: drop-shadow(0 -2px 6px rgba(239, 68, 68, 0.85)) drop-shadow(0 -5px 14px rgba(245, 158, 11, 0.65)) !important;
+}
+
+.flame-base {
+  animation: realFlameBase 0.8s infinite alternate ease-in-out !important;
+  transform-origin: 16px 36px !important;
+}
+
+.flame-mid {
+  animation: realFlameMid 0.55s infinite alternate ease-in-out !important;
+  transform-origin: 16px 36px !important;
+}
+
+.flame-core {
+  animation: realFlameCore 0.38s infinite alternate ease-in-out !important;
+  transform-origin: 16px 36px !important;
+}
+
+.flame-aura {
+  animation: realFlameAura 1.1s infinite alternate ease-in-out !important;
+  transform-origin: 16px 30px !important;
+}
+
+.flame-spark {
+  animation: realFlameSpark 1.2s infinite ease-in !important;
+}
+.flame-spark.spark-2 {
+  animation-delay: 0.6s !important;
+}
+
+@keyframes realFlameBase {
+  0% { transform: scale(0.96, 1) skewX(-2.5deg); opacity: 0.94; }
+  50% { transform: scale(1.04, 1.05) skewX(2deg); opacity: 1; }
+  100% { transform: scale(0.94, 1.07) skewX(-1.5deg); opacity: 0.92; }
+}
+
+@keyframes realFlameMid {
+  0% { transform: scale(1.02, 0.96) skewX(3deg); }
+  50% { transform: scale(0.96, 1.06) skewX(-3deg); }
+  100% { transform: scale(1.04, 1.02) skewX(1.5deg); }
+}
+
+@keyframes realFlameCore {
+  0% { transform: scale(0.94, 0.98) translateY(1px); opacity: 0.92; }
+  100% { transform: scale(1.06, 1.06) translateY(-1px); opacity: 1; }
+}
+
+@keyframes realFlameAura {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  100% { transform: scale(1.18); opacity: 0.95; }
+}
+
+@keyframes realFlameSpark {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-16px) scale(0.2); opacity: 0; }
+}
+
+/* ================= 👑 BEAST GAMES SEASON 2 BRAND TYPOGRAPHY ================= */
+.brand-heading.main-beast-title {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+  margin: 12px auto 6px !important;
+  padding: 0 8px !important;
+}
+
+.title-text-wrap {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+}
+
+.title-main-beast {
+  font-family: 'Outfit', 'Montserrat', -apple-system, sans-serif !important;
+  font-weight: 900 !important;
+  font-size: clamp(1.9rem, 6.4vw, 3.35rem) !important;
+  letter-spacing: -0.015em !important;
+  text-transform: uppercase !important;
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 35%, #38bdf8 70%, #00e5ff 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 3px 0 rgba(2, 132, 199, 0.85))
+          drop-shadow(0 0 25px rgba(56, 189, 248, 0.45)) !important;
+  line-height: 1.1 !important;
+  transition: all 0.3s ease !important;
+}
+
+.title-season-tag {
+  font-family: 'Rajdhani', 'Teko', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: clamp(0.92rem, 2.7vw, 1.45rem) !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  color: #0b0f19 !important;
+  background: linear-gradient(135deg, #facc15 0%, #f59e0b 50%, #ea580c 100%) !important;
+  padding: 5px 14px !important;
+  border-radius: 12px !important;
+  border: 1.5px solid #fef08a !important;
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+  transform: translateY(-2px) rotate(-1deg) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  transition: all 0.3s ease !important;
+}
+
+.mini-season-tag,
+.enroll-season-tag {
+  font-family: 'Rajdhani', 'Teko', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 0.76em !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  color: #050811 !important;
+  -webkit-text-fill-color: #050811 !important;
+  background: linear-gradient(135deg, #facc15 0%, #f59e0b 50%, #ea580c 100%) !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  padding: 3px 10px !important;
+  border-radius: 8px !important;
+  border: 1.5px solid #fef08a !important;
+  box-shadow: 0 0 16px rgba(250, 204, 21, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.7) !important;
+  transform: translateY(-2px) !important;
+  vertical-align: middle !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  margin-left: 6px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-shadow: none !important;
+  line-height: 1.15 !important;
+  z-index: 10 !important;
+}
+
+/* ================= ⚡ THE BEAST ARENA HYPER-WARP TRANSITION (UNIQUE CINEMATIC PORTAL TELEPORT) ================= */
+.beast-portal-warp {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 999999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: radial-gradient(circle at center, rgba(14, 165, 233, 0.25) 0%, rgba(15, 23, 42, 0.94) 50%, #030712 100%) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease-out !important;
+  overflow: hidden !important;
+}
+
+.beast-portal-warp.warp-active {
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+
+.warp-canvas {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none !important;
+}
+
+/* Expanding Holographic Shockwave Rings */
+.warp-shockwave-ring {
+  position: absolute !important;
+  border-radius: 50% !important;
+  pointer-events: none !important;
+  border: 2px solid rgba(56, 189, 248, 0.65) !important;
+  box-shadow: 0 0 35px rgba(56, 189, 248, 0.4), inset 0 0 25px rgba(250, 204, 21, 0.3) !important;
+  transform: translate(-50%, -50%) scale(0.1) !important;
+  top: 50% !important;
+  left: 50% !important;
+  opacity: 0;
+}
+
+.warp-active .warp-shockwave-ring.ring-outer {
+  animation: warpRingBurst 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
+.warp-active .warp-shockwave-ring.ring-mid {
+  animation: warpRingBurst 0.65s 0.08s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+  border-color: rgba(250, 204, 21, 0.75) !important;
+}
+.warp-active .warp-shockwave-ring.ring-inner {
+  animation: warpRingBurst 0.65s 0.16s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+  border-color: rgba(239, 68, 68, 0.75) !important;
+}
+
+@keyframes warpRingBurst {
+  0% {
+    width: 60px;
+    height: 60px;
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 1;
+  }
+  100% {
+    width: 900px;
+    height: 900px;
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* Central Tactical Hologram Teleport Card */
+.warp-hud-card {
+  position: relative !important;
+  z-index: 10 !important;
+  background: rgba(10, 15, 29, 0.9) !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.5) !important;
+  border-radius: 20px !important;
+  padding: 30px 36px !important;
+  max-width: 90vw !important;
+  width: 440px !important;
+  text-align: center !important;
+  box-shadow: 0 0 60px rgba(14, 165, 233, 0.35),
+              0 20px 45px rgba(0, 0, 0, 0.7),
+              inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  transform: scale(0.88);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  overflow: hidden !important;
+}
+
+.warp-active .warp-hud-card {
+  transform: scale(1) !important;
+}
+
+/* Sci-fi scanner bar sweeping top to bottom */
+.warp-hud-scanner {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, transparent, #38bdf8, #facc15, #38bdf8, transparent) !important;
+  box-shadow: 0 0 15px #38bdf8, 0 0 25px #facc15 !important;
+  animation: warpScanline 0.7s infinite linear !important;
+}
+
+@keyframes warpScanline {
+  0% { top: 0%; opacity: 0.9; }
+  100% { top: 100%; opacity: 0.9; }
+}
+
+.warp-teleport-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(56, 189, 248, 0.12) !important;
+  border: 1px solid rgba(56, 189, 248, 0.4) !important;
+  padding: 4px 14px !important;
+  border-radius: 999px !important;
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 0.76rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.16em !important;
+  color: #38bdf8 !important;
+  text-transform: uppercase !important;
+  margin-bottom: 14px !important;
+}
+
+.warp-pulse-dot {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: #38bdf8 !important;
+  box-shadow: 0 0 10px #38bdf8 !important;
+  animation: warpDotPulse 0.5s infinite alternate !important;
+}
+
+@keyframes warpDotPulse {
+  0% { transform: scale(0.8); opacity: 0.6; }
+  100% { transform: scale(1.4); opacity: 1; }
+}
+
+.warp-holo-symbol {
+  font-size: 3.2rem !important;
+  line-height: 1 !important;
+  margin-bottom: 12px !important;
+  filter: drop-shadow(0 0 20px rgba(250, 204, 21, 0.7)) !important;
+  animation: warpHoloFloat 0.8s ease-in-out infinite alternate !important;
+}
+
+@keyframes warpHoloFloat {
+  0% { transform: translateY(0) scale(0.96); }
+  100% { transform: translateY(-6px) scale(1.08); }
+}
+
+.warp-action-label {
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 0.74rem !important;
+  font-weight: 750 !important;
+  letter-spacing: 0.22em !important;
+  color: #94a3b8 !important;
+  text-transform: uppercase !important;
+  margin-bottom: 4px !important;
+}
+
+.warp-title {
+  font-family: 'Rajdhani', 'Teko', sans-serif !important;
+  font-size: clamp(1.6rem, 5vw, 2.2rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  margin: 0 0 6px !important;
+  text-shadow: 0 0 25px rgba(56, 189, 248, 0.8), 0 0 45px rgba(250, 204, 21, 0.4) !important;
+}
+
+.warp-sector-tag {
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 0.82rem !important;
+  font-weight: 750 !important;
+  letter-spacing: 0.12em !important;
+  color: #facc15 !important;
+  margin-bottom: 18px !important;
+  text-shadow: 0 0 10px rgba(250, 204, 21, 0.5) !important;
+}
+
+.warp-progress-track {
+  width: 100% !important;
+  height: 7px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-radius: 999px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  margin-bottom: 14px !important;
+}
+
+.warp-progress-fill {
+  width: 0% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, #0284c7, #38bdf8, #facc15, #ffffff) !important;
+  box-shadow: 0 0 15px #38bdf8 !important;
+  border-radius: 999px !important;
+  transition: width 0.32s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+.warp-hud-footer {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.1em !important;
+  color: #64748b !important;
+  text-transform: uppercase !important;
+}
+
+.warp-hud-footer strong {
+  color: #cbd5e1 !important;
+}
+
+/* Landing camera deceleration & neon arrival shockwave */
+.app-screen.teleport-landed {
+  animation: teleportLanded 0.42s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
+
+@keyframes teleportLanded {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.975) translateY(12px);
+    filter: drop-shadow(0 0 35px rgba(56, 189, 248, 0.8));
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: none;
+  }
+}
+
+/* ================= MULTI-THEME ALIGNMENT (5 THEME MODES) ================= */
+/* ☀️ 1. Light Mode */
+body.light-mode .title-main-beast {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 55%, #0284c7 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 2px 8px rgba(15, 23, 42, 0.25)) !important;
+}
+body.light-mode .title-season-tag {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+  color: #ffffff !important;
+  border-color: #fca5a5 !important;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4) !important;
+}
+
+/* 👑 2. Gold Mode */
+body.gold-mode .title-main-beast {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef08a 30%, #eab308 65%, #ca8a04 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 3px 0 rgba(161, 98, 7, 0.9))
+          drop-shadow(0 0 35px rgba(250, 204, 21, 0.65)) !important;
+}
+body.gold-mode .title-season-tag {
+  background: linear-gradient(135deg, #fef08a 0%, #eab308 100%) !important;
+  color: #171003 !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 0 24px rgba(250, 204, 21, 0.8) !important;
+}
+body.gold-mode .fire-flame-svg {
+  filter: drop-shadow(0 -2px 6px rgba(250, 204, 21, 0.9)) drop-shadow(0 -5px 14px rgba(245, 158, 11, 0.75)) !important;
+}
+
+/* ⚡ 3. Cyber Mode */
+body.cyber-mode .title-main-beast {
+  background: linear-gradient(135deg, #00f0ff 0%, #ffffff 40%, #f43f5e 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 3px 0 rgba(225, 29, 72, 0.9))
+          drop-shadow(0 0 30px rgba(0, 240, 255, 0.6)) !important;
+}
+body.cyber-mode .title-season-tag {
+  background: linear-gradient(135deg, #f43f5e 0%, #a855f7 100%) !important;
+  color: #ffffff !important;
+  border-color: #00f0ff !important;
+  box-shadow: 0 0 22px rgba(244, 63, 94, 0.8), 0 0 10px rgba(0, 240, 255, 0.6) !important;
+}
+body.cyber-mode .fire-flame-svg {
+  filter: drop-shadow(0 -2px 8px rgba(0, 240, 255, 0.9)) drop-shadow(0 -5px 16px rgba(244, 63, 94, 0.75)) !important;
+}
+
+/* 💚 4. Matrix Mode */
+body.matrix-mode .title-main-beast {
+  background: linear-gradient(135deg, #bbf7d0 0%, #4ade80 45%, #16a34a 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 3px 0 rgba(22, 101, 52, 0.9))
+          drop-shadow(0 0 30px rgba(74, 222, 128, 0.65)) !important;
+}
+body.matrix-mode .title-season-tag {
+  background: linear-gradient(135deg, #22c55e 0%, #15803d 100%) !important;
+  color: #021a08 !important;
+  border-color: #86efac !important;
+  box-shadow: 0 0 22px rgba(34, 197, 94, 0.85) !important;
+}
+body.matrix-mode .fire-flame-svg {
+  filter: drop-shadow(0 -2px 8px rgba(74, 222, 128, 0.95)) drop-shadow(0 -5px 16px rgba(34, 197, 94, 0.75)) !important;
 }
 
 </style>
 
 </head>
 <body>
+<!-- ================= REALISTIC FLAME SVG DEFINITIONS ================= -->
+<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true" focusable="false">
+  <defs>
+    <radialGradient id="realFlameAuraGrad" cx="50%" cy="80%" r="65%">
+      <stop offset="0%" stop-color="#ff2200" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#ff7700" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#ff0000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="realFlameBodyGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#dc2626"/>
+      <stop offset="30%" stop-color="#ea580c"/>
+      <stop offset="65%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fef08a"/>
+    </linearGradient>
+    <linearGradient id="realFlameMidGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="45%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="realFlameCoreGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="55%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+</svg>
 <script>
 window.handleImgError = function(img) {
   if (!img) return;
   img.onerror = null;
-  img.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230f172a' stroke='%2338bdf8' stroke-width='4'/%3E%3Ctext x='50%25' y='46%25' text-anchor='middle' font-size='32'%3E%F0%9F%94%A5%3C/text%3E%3Ctext x='50%25' y='76%25' text-anchor='middle' font-size='13' font-weight='900' fill='%2338bdf8' font-family='sans-serif'%3EBEAST%3C/text%3E%3C/svg%3E";
+  if (!img.src.includes("LOGO-_beast_games_61e24fa3.png")) {
+    img.src = "/assets/aistudio/LOGO-_beast_games_61e24fa3.png";
+  } else {
+    img.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230f172a' stroke='%2338bdf8' stroke-width='4'/%3E%3Ctext x='50%25' y='46%25' text-anchor='middle' font-size='32'%3E%F0%9F%94%A5%3C/text%3E%3Ctext x='50%25' y='76%25' text-anchor='middle' font-size='13' font-weight='900' fill='%2338bdf8' font-family='sans-serif'%3EBEAST%3C/text%3E%3C/svg%3E";
+  }
 };
 (function() {
   try {
@@ -10451,7 +11497,7 @@ window.handleImgError = function(img) {
 </script>
 
 <!-- ================= 3D MINIATURE GOLD & NEON OPENING TRANSITION ================= -->
-<div id="beastMiniatureTransition" class="miniature-transition-overlay" style="display:none;">
+<div id="beastMiniatureTransition" class="miniature-transition-overlay" style="display:flex;">
   <canvas id="miniatureParticleCanvas" class="miniature-particle-canvas"></canvas>
   <div class="miniature-scene">
     <div class="miniature-3d-card" id="miniatureCard">
@@ -10463,7 +11509,7 @@ window.handleImgError = function(img) {
         <div class="miniature-concentric-ring ring-1"></div>
         <div class="miniature-concentric-ring ring-2"></div>
         <img
-          src="https://yt3.googleusercontent.com/M1CoAorn3TEsFnY7XEoCyOU6JFkbe4kC-vLrCG5osjh7Cs6akWEeSW59xcZ7YUCfWSCMT87sUQ=s160-c-k-c0x00ffffff-no-rj"
+          src="/assets/aistudio/LOGO-_beast_games_61e24fa3.png"
           class="miniature-logo-img"
           alt="BEAST GAMES 2"
           onerror="handleImgError(this)"
@@ -10473,7 +11519,10 @@ window.handleImgError = function(img) {
 
       <!-- Clean Title & Signature Only -->
       <h2 class="miniature-title">
-        <span class="miniature-title-gradient">BEAST GAMES 2</span>
+        <span class="miniature-title-text">
+          <span class="miniature-title-gradient">BEAST GAMES</span>
+          <span class="mini-season-tag" aria-label="Season 2">SEASON 2</span>
+        </span>
       </h2>
       <div class="miniature-signature">
         <span>Made with</span>
@@ -10502,7 +11551,7 @@ window.handleImgError = function(img) {
   <div class="enroll-card">
     <div class="enroll-logo-box">
       <img
-        src="https://yt3.googleusercontent.com/M1CoAorn3TEsFnY7XEoCyOU6JFkbe4kC-vLrCG5osjh7Cs6akWEeSW59xcZ7YUCfWSCMT87sUQ=s160-c-k-c0x00ffffff-no-rj"
+        src="/assets/aistudio/LOGO-_beast_games_61e24fa3.png"
         class="enroll-logo"
         alt="BEAST GAMES 2 Logo"
         title="BEAST GAMES 2"
@@ -10510,7 +11559,7 @@ window.handleImgError = function(img) {
       />
     </div>
     
-    <h1 class="enroll-title">BEAST GAMES 2</h1>
+    <h1 class="enroll-title">BEAST GAMES <span class="enroll-season-tag">SEASON 2</span></h1>
     <p class="enroll-subtitle">Enter your Username ID &amp; choose an avatar to enter:</p>
 
     <form class="enroll-form" onsubmit="handleEnrollmentSubmit(event)">
@@ -10527,20 +11576,78 @@ window.handleImgError = function(img) {
         />
       </div>
 
-      <!-- AVATAR SELECTION AS COMPACT DROPDOWN (ZERO SCROLLING) -->
-      <div class="enroll-field-group">
-        <label for="enrollAvatarSelect" class="enroll-label">🎭 Select Avatar:</label>
-        <select id="enrollAvatarSelect" class="enroll-input enroll-select" onchange="handleEnrollAvatarChange(this.value)">
-          <option value="👤">👤 Classic</option>
-          <option value="🦁">🦁 Brave Lion</option>
-          <option value="⚡">⚡ Electric</option>
-          <option value="🔥">🔥 Fire Beast</option>
-          <option value="🎮">🎮 Gamer</option>
-          <option value="🚀">🚀 Rocket</option>
-          <option value="🦊">🦊 Fox</option>
-          <option value="🐯">🐯 Tiger</option>
-          <option value="💎">💎 Diamond Legend (Locked Forever)</option>
-        </select>
+      <!-- DUAL AVATAR OPTIONS: 1. TYPE ANY EMOJI  2. FROM GALLERY (DEVICE SAVED MEMORY) -->
+      <div class="avatar-creation-section">
+        <label class="enroll-label">🎭 Select Avatar (Emoji or Device Gallery):</label>
+        
+        <div class="avatar-preview-wrapper">
+          <div id="enrollAvatarDisplay" class="enroll-avatar-display">👤</div>
+          <div>
+            <div class="avatar-source-pill" id="avatarSourcePill">Normal Emoji</div>
+            <div style="font-size:0.75rem; color:var(--muted); margin-top:3px;" id="avatarPreviewLabel">Selected Avatar Preview</div>
+          </div>
+        </div>
+
+        <div class="avatar-tabs-row">
+          <button type="button" class="avatar-tab-btn active" id="tabEmojiBtn" onclick="switchAvatarTab('emoji')">
+            😀 1. Keyboard Emoji
+          </button>
+          <button type="button" class="avatar-tab-btn" id="tabGalleryBtn" onclick="switchAvatarTab('gallery')">
+            🖼️ 2. From Gallery
+          </button>
+        </div>
+
+        <!-- TAB 1: EMOJI (Allows typing ANY emoji from mobile keyboard OR selecting from PC Emoji Palette) -->
+        <div id="avatarEmojiTabPane" class="avatar-tab-pane">
+          <input
+            type="text"
+            id="enrollEmojiInput"
+            class="enroll-input emoji-type-input"
+            placeholder="Type or click any emoji below..."
+            maxlength="16"
+            value="👤"
+            oninput="handleCustomEmojiInput(this.value)"
+          />
+          <div class="emoji-keyboard-hint">💡 Mobile: Type directly with your keyboard. <strong>PC / Desktop Users:</strong> Click any emoji below!</div>
+
+          <!-- PC / DESKTOP EMOJI PICKER PALETTE -->
+          <div class="pc-emoji-picker-container" id="pcEmojiPickerContainer">
+            <div class="pc-emoji-picker-header">
+              <span class="pc-emoji-title">💻 PC / Desktop Emoji Palette:</span>
+              <span class="pc-emoji-hint-badge">Click to select as avatar</span>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="pc-emoji-category-bar">
+              <button type="button" class="pc-category-btn active" onclick="filterPCEmojis('all', this)">🔥 All</button>
+              <button type="button" class="pc-category-btn" onclick="filterPCEmojis('power', this)">⚡ Beast &amp; Power</button>
+              <button type="button" class="pc-category-btn" onclick="filterPCEmojis('animals', this)">🦁 Animals</button>
+              <button type="button" class="pc-category-btn" onclick="filterPCEmojis('gaming', this)">🎮 Gaming</button>
+              <button type="button" class="pc-category-btn" onclick="filterPCEmojis('faces', this)">😎 Faces</button>
+            </div>
+
+            <!-- Interactive Clickable Emoji Grid -->
+            <div class="pc-emoji-grid" id="pcEmojiGrid">
+              <!-- Dynamically rendered by renderPCEmojiGrid() -->
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: FROM GALLERY (Choose photo from device memory) -->
+        <div id="avatarGalleryTabPane" class="avatar-tab-pane" style="display:none;">
+          <input
+            type="file"
+            id="enrollGalleryFileInput"
+            accept="image/*"
+            style="display:none;"
+            onchange="handleGalleryFileChosen(event)"
+          />
+          <button type="button" class="gallery-choose-btn" onclick="document.getElementById('enrollGalleryFileInput').click()">
+            <span>📁</span>
+            <span id="galleryBtnText">Choose Photo from Gallery / Device</span>
+          </button>
+          <div class="gallery-upload-hint">Upload any photo or image saved in your device's gallery / memory.</div>
+        </div>
       </div>
 
       <div class="enroll-save-row">
@@ -10560,73 +11667,76 @@ window.handleImgError = function(img) {
   </div>
 </div>
 
-<!-- ================= LOCK SCREEN (ZERO SCROLLING COMPACT GATE) ================= -->
-<div id="gate" class="gate-container">
+<!-- ================= LOCK SCREEN (KEPT HIDDEN - SUBSCRIPTION BLOCK REMOVED FROM HOME OPENING) ================= -->
+<div id="gate" class="gate-container" style="display:none !important;" aria-hidden="true">
   <div class="gate-card">
-    <div class="gate-interval-badge" id="gateIntervalBadge">🛡️ Community Access Gate • Checkpoint (Appears every 2 visits)</div>
+    <div class="gate-interval-badge" id="gateIntervalBadge">🛡️ YouTube Channel Hub</div>
     <div class="gate-logo-box">
       <img
-        src="https://yt3.googleusercontent.com/M1CoAorn3TEsFnY7XEoCyOU6JFkbe4kC-vLrCG5osjh7Cs6akWEeSW59xcZ7YUCfWSCMT87sUQ=s160-c-k-c0x00ffffff-no-rj"
+        src="/assets/aistudio/LOGO-_beast_games_61e24fa3.png"
         class="gate-logo" onerror="handleImgError(this)"
         id="gateLogo"
         alt="BEAST GAMES 2 Logo"
         title="BEAST GAMES 2"
       />
-      <div id="gateStatusPill" class="gate-status-pill" style="display:none;">🔒 Verification Active</div>
     </div>
-
-    <h1 id="gateMainHeading"><span class="fire-emoji">🔥</span> Subscribe to Unlock <span class="fire-emoji">🔥</span></h1>
-    <p class="gate-desc" id="gateMainDesc">
-      Subscribe to <strong>@TrendzOfShahid</strong> on YouTube to unlock all 10 episodes!
-    </p>
-
-    <!-- ACTION AREA: ONE UNIVERSAL BUTTON FOR ALL (OWNER & VIEWERS) -->
     <div class="gate-actions">
-      <button
-        type="button"
+      <a
+        href="https://www.youtube.com/@TrendzOfShahid?sub_confirmation=1"
+        target="_blank"
+        rel="noopener noreferrer"
         class="gate-btn subscribe-btn fire-wave-btn"
         id="subscribeBtn"
-        onclick="handleSubscribeAction()"
       >
-        <span class="fire-emoji" id="subBtnIcon">🔥</span>
-        <span id="subBtnText">🔴 Subscribe on YouTube to Unlock</span>
-      </button>
+        <span class="fire-emoji" id="subBtnIcon">🔴</span>
+        <span id="subBtnText">🔴 Subscribe to @TrendzOfShahid on YouTube</span>
+      </a>
+    </div>
+  </div>
+</div>
 
-      <!-- Compact Live Verification / Status Box -->
-      <div id="subVerifyingBox" class="sub-verifying-box" style="display:none;">
-        <div class="sub-spinner" id="gateSpinner" style="display:none;"></div>
-        <div class="sub-verify-text" id="subVerifyText">Step 1: Click button to open channel &amp; subscribe</div>
-        <div class="sub-verify-bar">
-          <div class="sub-verify-fill" id="subVerifyFill" style="width: 0%;"></div>
-        </div>
-      </div>
+<!-- ================= ⚡ THE BEAST ARENA HYPER-WARP OVERLAY (UNIQUE CINEMATIC PORTAL TELEPORT) ================= -->
+<div id="beastPortalWarpOverlay" class="beast-portal-warp" aria-hidden="true" style="display:none;">
+  <canvas id="warpSpeedCanvas" class="warp-canvas"></canvas>
+  <div class="warp-shockwave-ring ring-outer"></div>
+  <div class="warp-shockwave-ring ring-mid"></div>
+  <div class="warp-shockwave-ring ring-inner"></div>
 
-      <!-- Alert Notice (shows inline only when needed) -->
-      <div id="gateAlert" class="gate-alert error" style="display:none;"></div>
+  <div class="warp-hud-card">
+    <div class="warp-hud-scanner"></div>
+    <div class="warp-teleport-badge">
+      <span class="warp-pulse-dot"></span>
+      <span class="warp-badge-text">TELEPORTING FREQUENCY LOCKED</span>
+    </div>
+
+    <div class="warp-holo-symbol" id="warpHoloSymbol">🎬</div>
+
+    <div class="warp-destination-group">
+      <div class="warp-action-label">WARPING TO PORTAL</div>
+      <h2 class="warp-title" id="warpTitle">EPISODES PORTAL</h2>
+      <div class="warp-sector-tag" id="warpSectorTag">SECTOR 01 • HD THEATER &amp; DUAL AUDIO</div>
+    </div>
+
+    <div class="warp-progress-track">
+      <div class="warp-progress-fill" id="warpProgressFill"></div>
+    </div>
+
+    <div class="warp-hud-footer">
+      <span>QUANTUM CHANNEL: <strong>BEAST-S2-SYNC</strong></span>
+      <span>READY IN: <strong>0.3s</strong></span>
     </div>
   </div>
 </div>
 
 <!-- ================= WEBSITE ================= -->
 
-<div id="site" class="hidden">
+<div id="site" class="hidden" style="display:none;">
   <div class="site-ambient-lighting" id="siteAmbientLighting" aria-hidden="true"></div>
 
 <header>
   <!-- TOP BAR CREATOR BADGE -->
   <!-- ================= THEME SWITCHER & BRAND HEADER ================= -->
 <div class="theme-switcher-wrapper unified-header">
-  <!-- LEFT: LOGO ONLY (TEXT REMOVED AS REQUESTED) -->
-  <div class="header-brand-left">
-    <img
-      src="https://yt3.googleusercontent.com/M1CoAorn3TEsFnY7XEoCyOU6JFkbe4kC-vLrCG5osjh7Cs6akWEeSW59xcZ7YUCfWSCMT87sUQ=s160-c-k-c0x00ffffff-no-rj"
-      class="mode-logo"
-      onerror="handleImgError(this)"
-      alt="BEAST GAMES 2 Logo"
-      title="BEAST GAMES 2"
-    />
-  </div>
-
   <!-- RIGHT: THEME DROPDOWN & COMPACT CIRCLE PROFILE (ALL DEVICES) -->
   <div class="header-right-controls">
     <div class="header-theme-dropdown-wrap">
@@ -10640,13 +11750,7 @@ window.handleImgError = function(img) {
       </select>
     </div>
 
-    <!-- REPLAY INTRO FLOW BUTTON -->
-    <button type="button" class="replay-intro-header-btn" onclick="replayIntroSequence()" title="Re-test the 4-step loading and subscribe sequence">
-      <span>🔄</span>
-      <span>Test Steps</span>
-    </button>
-
-    <!-- SAME COMPACT CIRCULAR PROFILE AVATAR ON ALL DEVICES -->
+    <!-- COMPACT CIRCULAR PROFILE AVATAR (SHOWS ENROLLED USER AVATAR) -->
     <button type="button" class="header-profile-circle-btn" id="headerProfileBtn" onclick="openProfileModal()" title="View Profile &amp; Account">
       <span class="profile-avatar-chip" id="headerProfileAvatar">👤</span>
     </button>
@@ -10655,10 +11759,44 @@ window.handleImgError = function(img) {
 
 <!-- ================= MAIN HEADING ================= -->
 
-<h1 class="brand-heading">
-  <span class="fire-emoji">🔥</span>
-  BEAST GAMES 2
-  <span class="fire-emoji">🔥</span>
+
+  <!-- ================= MAIN HERO BRAND LOGO EMBLEM (PROMINENT & RESPONSIVE) ================= -->
+  <div class="main-page-logo-container">
+    <div class="main-logo-concentric-glow"></div>
+    <img
+      src="/assets/aistudio/LOGO-_beast_games_61e24fa3.png"
+      class="main-page-hero-logo"
+      alt="BEAST GAMES 2 Logo"
+      title="BEAST GAMES 2 - Season 2 Official Hub"
+      onerror="handleImgError(this)"
+    />
+  </div>
+
+<h1 class="brand-heading main-beast-title">
+  <span class="realistic-fire-flame" aria-hidden="true">
+    <svg class="fire-flame-svg" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="16" cy="30" rx="12" ry="7" fill="url(#realFlameAuraGrad)" class="flame-aura"/>
+      <path class="flame-tongue flame-base" d="M16 2 C19 12, 28 17, 28 27 C28 34, 22.5 38, 16 38 C9.5 38, 4 34, 4 27 C4 18, 12 11, 16 2 Z" fill="url(#realFlameBodyGrad)"/>
+      <path class="flame-tongue flame-mid" d="M16 8 C18 15, 24 19, 24 28 C24 33, 20.5 36, 16 36 C11.5 36, 8 33, 8 28 C8 20, 14 14, 16 8 Z" fill="url(#realFlameMidGrad)"/>
+      <path class="flame-tongue flame-core" d="M16 16 C17.5 21, 21 24, 21 29 C21 33, 18.8 35, 16 35 C13.2 35, 11 33, 11 29 C11 23, 14.5 20, 16 16 Z" fill="url(#realFlameCoreGrad)"/>
+      <circle cx="12" cy="18" r="1.2" fill="#fff" class="flame-spark spark-1"/>
+      <circle cx="20" cy="14" r="1" fill="#fff" class="flame-spark spark-2"/>
+    </svg>
+  </span>
+  <span class="title-text-wrap">
+    <span class="title-main-beast">BEAST GAMES</span>
+    <span class="title-season-tag">SEASON 2</span>
+  </span>
+  <span class="realistic-fire-flame" aria-hidden="true">
+    <svg class="fire-flame-svg" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="16" cy="30" rx="12" ry="7" fill="url(#realFlameAuraGrad)" class="flame-aura"/>
+      <path class="flame-tongue flame-base" d="M16 2 C19 12, 28 17, 28 27 C28 34, 22.5 38, 16 38 C9.5 38, 4 34, 4 27 C4 18, 12 11, 16 2 Z" fill="url(#realFlameBodyGrad)"/>
+      <path class="flame-tongue flame-mid" d="M16 8 C18 15, 24 19, 24 28 C24 33, 20.5 36, 16 36 C11.5 36, 8 33, 8 28 C8 20, 14 14, 16 8 Z" fill="url(#realFlameMidGrad)"/>
+      <path class="flame-tongue flame-core" d="M16 16 C17.5 21, 21 24, 21 29 C21 33, 18.8 35, 16 35 C13.2 35, 11 33, 11 29 C11 23, 14.5 20, 16 16 Z" fill="url(#realFlameCoreGrad)"/>
+      <circle cx="12" cy="18" r="1.2" fill="#fff" class="flame-spark spark-1"/>
+      <circle cx="20" cy="14" r="1" fill="#fff" class="flame-spark spark-2"/>
+    </svg>
+  </span>
 </h1>
 
   <p class="brand-subheading">
@@ -10668,7 +11806,7 @@ window.handleImgError = function(img) {
 </header>
 
 <div class="viewer-box-container">
-  <div class="viewer-box" id="viewerCount">
+  <div class="viewer-box" id="viewerCount" onclick="openScreen('chatScreen')" style="cursor:pointer;" title="⚡ Click to teleport to Live Community Chat &amp; Real-Time Viewers" role="button" tabindex="0">
     <div class="live-pill">
       <span class="live-beacon">
         <span class="beacon-ripple"></span>
@@ -10682,7 +11820,6 @@ window.handleImgError = function(img) {
       <strong id="viewerNumber" class="viewer-num">28,472</strong>
       <span class="viewer-text" id="viewerText">watching now</span>
     </span>
-
   </div>
 </div>
 <!-- ================= AESTHETIC PERMANENT RATING BAR (FIXED ON EACH & EVERY SCREEN) ================= -->
@@ -10892,9 +12029,14 @@ window.handleImgError = function(img) {
       <h2>💬 BEAST GAMES 2 Live Community Chat</h2>
       <p>Permanent discussion archive • Real-time conversation</p>
     </div>
-    <div class="chat-page-user-badge" id="chatEnrolledUserBadge">
-      <span>👤</span>
-      <span id="chatEnrolledUserNameDisplay">User 1</span>
+    <div class="chat-page-user-badge" id="chatEnrolledUserBadge" onclick="openProfileModal()" title="View or Edit Profile" style="cursor:pointer;">
+      <div id="chatCurrentUserAvatar" class="chat-user-badge-avatar">👤</div>
+      <div class="chat-user-badge-meta">
+        <span id="chatCurrentUserName" class="chat-user-badge-name">User 1</span>
+        <span id="chatEnrolledUserNameDisplay" style="display:none;">User 1</span>
+        <span id="chatCurrentUserBadge" class="chat-role-badge viewer-role">⭐ Contestant</span>
+      </div>
+      <button type="button" id="chatLogoutBtn" class="chat-logout-mini-btn" style="display:none;" onclick="event.stopPropagation(); logoutOwner()">Logout</button>
     </div>
   </div>
 
@@ -10915,22 +12057,17 @@ window.handleImgError = function(img) {
       <button type="button" class="chat-cancel-reply-btn" onclick="cancelChatReply()" title="Cancel reply">✕</button>
     </div>
 
-    <!-- Quick Emoji Bar -->
-    
-        <!-- User Chat Avatar Selector -->
-        <div class="chat-avatar-picker-bar">
-          <span class="chat-avatar-label">Your Avatar:</span>
-          <div class="chat-avatar-options" id="chatAvatarOptions">
-            <button type="button" class="chat-avatar-opt active" onclick="selectChatAvatar('👤')">👤</button>
-            <button type="button" class="chat-avatar-opt" onclick="selectChatAvatar('🦁')">🦁</button>
-            <button type="button" class="chat-avatar-opt" onclick="selectChatAvatar('⚡')">⚡</button>
-            <button type="button" class="chat-avatar-opt" onclick="selectChatAvatar('🔥')">🔥</button>
-            <button type="button" class="chat-avatar-opt" onclick="selectChatAvatar('🎮')">🎮</button>
-            <button type="button" class="chat-avatar-opt" onclick="selectChatAvatar('🚀')">🚀</button>
-            <button type="button" class="chat-avatar-opt" onclick="selectChatAvatar('🦊')">🦊</button>
-            <button type="button" class="chat-avatar-opt" onclick="selectChatAvatar('🐯')">🐯</button>
-          </div>
-        </div>
+    <!-- User Active Identity Display (Uses Identical Enrolled Avatar & Username) -->
+    <div class="chat-active-identity-bar">
+      <div class="chat-identity-left">
+        <span class="chat-identity-label">Posting as:</span>
+        <div id="chatComposerAvatarPreview" class="chat-composer-avatar-preview">👤</div>
+        <strong id="chatComposerNamePreview" class="chat-composer-name-preview">User 1</strong>
+      </div>
+      <button type="button" class="chat-change-id-btn" onclick="openProfileModal()">
+        <span>👤 Change Avatar / ID</span>
+      </button>
+    </div>
 
     <div class="chat-quick-emojis">
       <button type="button" class="chat-emoji-chip" onclick="insertChatEmoji('🔥')">🔥</button>
@@ -11200,18 +12337,13 @@ window.handleImgError = function(img) {
 <footer class="pinned-bottom-footer">
   <div class="pinned-footer-inner">
     <div class="footer-copy-text">
-      © 2026 BEAST GAMES 2
+      © 2026 BEAST GAMES SEASON 2
     </div>
 
-    <!-- HEART BEATING LOVE BADGE -->
+    <!-- PROPER HEART BLINKING FOOTER BADGE (NO LOGO, HEART INSTEAD OF TEXT 'LOVE') -->
     <div class="creator-badge footer-badge">
-      <span class="love-heart">❤️</span>
-      <span>Made with love</span>
-      <img
-        src="https://yt3.googleusercontent.com/M1CoAorn3TEsFnY7XEoCyOU6JFkbe4kC-vLrCG5osjh7Cs6akWEeSW59xcZ7YUCfWSCMT87sUQ=s160-c-k-c0x00ffffff-no-rj"
-        class="creator-badge-logo" onerror="handleImgError(this)"
-        alt="Shahid Shaikh Logo"
-      />
+      <span>Made with</span>
+      <span class="proper-beating-heart" aria-label="love">❤️</span>
       <span class="creator-author">by <strong class="author-name">Shahid Shaikh</strong></span>
     </div>
 
@@ -11224,7 +12356,14 @@ window.handleImgError = function(img) {
         rel="noopener noreferrer"
         title="Subscribe on YouTube"
       >
-        <span class="fire-emoji">🔥</span>
+        <span class="realistic-fire-flame" style="width:1.15em; height:1.35em;" aria-hidden="true">
+          <svg class="fire-flame-svg" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="16" cy="30" rx="12" ry="7" fill="url(#realFlameAuraGrad)" class="flame-aura"/>
+            <path class="flame-tongue flame-base" d="M16 2 C19 12, 28 17, 28 27 C28 34, 22.5 38, 16 38 C9.5 38, 4 34, 4 27 C4 18, 12 11, 16 2 Z" fill="url(#realFlameBodyGrad)"/>
+            <path class="flame-tongue flame-mid" d="M16 8 C18 15, 24 19, 24 28 C24 33, 20.5 36, 16 36 C11.5 36, 8 33, 8 28 C8 20, 14 14, 16 8 Z" fill="url(#realFlameMidGrad)"/>
+            <path class="flame-tongue flame-core" d="M16 16 C17.5 21, 21 24, 21 29 C21 33, 18.8 35, 16 35 C13.2 35, 11 33, 11 29 C11 23, 14.5 20, 16 16 Z" fill="url(#realFlameCoreGrad)"/>
+          </svg>
+        </span>
         <span>Subscribe</span>
       </a>
       <button onclick="shareWebsite()" class="footer-btn share-btn" id="footerShareBtn" type="button" title="Share Website Link">
@@ -11379,7 +12518,7 @@ function playBeastSound(type) {
 window.playBeastSound = playBeastSound;
 
 // =========================================================================
-// 📱 SCREEN ROUTER ENGINE (DEDICATED SCREENS WITH ONLY "BACK TO HOME SCREEN")
+// ⚡ BEAST ARENA HYPER-WARP CONTROLLER (UNIQUE CINEMATIC PORTAL TELEPORT)
 // =========================================================================
 const ALL_APP_SCREENS = [
   "homeScreen",
@@ -11390,9 +12529,210 @@ const ALL_APP_SCREENS = [
   "communityScreen"
 ];
 
-function openScreen(targetScreenId) {
-  if (typeof playBeastSound === "function") playBeastSound("click");
+let isPortalWarpInProgress = false;
+let warpCanvasAnimationId = null;
 
+function playQuantumWarpSound() {
+  try {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContext) return;
+    const ctx = new AudioContext();
+    if (ctx.state === "suspended") ctx.resume();
+
+    const now = ctx.currentTime;
+
+    // 1. Resonant Sub-Bass Surge
+    const oscBass = ctx.createOscillator();
+    const gainBass = ctx.createGain();
+    oscBass.type = "sine";
+    oscBass.frequency.setValueAtTime(160, now);
+    oscBass.frequency.exponentialRampToValueAtTime(45, now + 0.36);
+    gainBass.gain.setValueAtTime(0.3, now);
+    gainBass.gain.exponentialRampToValueAtTime(0.001, now + 0.38);
+    oscBass.connect(gainBass);
+    gainBass.connect(ctx.destination);
+    oscBass.start(now);
+    oscBass.stop(now + 0.4);
+
+    // 2. Sci-Fi Hyperspace Frequency Glide
+    const oscWarp = ctx.createOscillator();
+    const gainWarp = ctx.createGain();
+    const filter = ctx.createBiquadFilter();
+    oscWarp.type = "sawtooth";
+    filter.type = "bandpass";
+    filter.frequency.setValueAtTime(450, now);
+    filter.frequency.exponentialRampToValueAtTime(2200, now + 0.26);
+    filter.frequency.exponentialRampToValueAtTime(500, now + 0.38);
+    filter.Q.value = 4.0;
+
+    oscWarp.frequency.setValueAtTime(220, now);
+    oscWarp.frequency.exponentialRampToValueAtTime(1100, now + 0.28);
+    gainWarp.gain.setValueAtTime(0.18, now);
+    gainWarp.gain.linearRampToValueAtTime(0.28, now + 0.2);
+    gainWarp.gain.exponentialRampToValueAtTime(0.001, now + 0.38);
+
+    oscWarp.connect(filter);
+    filter.connect(gainWarp);
+    gainWarp.connect(ctx.destination);
+    oscWarp.start(now);
+    oscWarp.stop(now + 0.4);
+
+    // 3. Arrival Resonance Chime
+    setTimeout(() => {
+      try {
+        const zap = ctx.createOscillator();
+        const zapGain = ctx.createGain();
+        zap.type = "sine";
+        zap.frequency.setValueAtTime(784, ctx.currentTime);
+        zap.frequency.exponentialRampToValueAtTime(1568, ctx.currentTime + 0.12);
+        zapGain.gain.setValueAtTime(0.15, ctx.currentTime);
+        zapGain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.14);
+        zap.connect(zapGain);
+        zapGain.connect(ctx.destination);
+        zap.start(ctx.currentTime);
+        zap.stop(ctx.currentTime + 0.15);
+      } catch (e) {}
+    }, 280);
+  } catch (e) {}
+}
+
+function startWarpSpeedAnimation(canvas) {
+  if (!canvas) return () => {};
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return () => {};
+
+  let width = (canvas.width = window.innerWidth);
+  let height = (canvas.height = window.innerHeight);
+
+  const onResize = () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  };
+  window.addEventListener("resize", onResize);
+
+  const cx = width / 2;
+  const cy = height / 2;
+  const numStars = 95;
+  const stars = [];
+
+  for (let i = 0; i < numStars; i++) {
+    stars.push({
+      x: (Math.random() - 0.5) * width,
+      y: (Math.random() - 0.5) * height,
+      z: Math.random() * width,
+      pz: Math.random() * width,
+      color: i % 3 === 0 ? "#facc15" : (i % 3 === 1 ? "#38bdf8" : "#ffffff")
+    });
+  }
+
+  let running = true;
+  function render() {
+    if (!running) return;
+    ctx.fillStyle = "rgba(3, 7, 18, 0.28)";
+    ctx.fillRect(0, 0, width, height);
+
+    for (let i = 0; i < numStars; i++) {
+      const s = stars[i];
+      s.pz = s.z;
+      s.z -= 38; // High-speed hyperspace rush
+      if (s.z <= 0) {
+        s.z = width;
+        s.pz = width;
+        s.x = (Math.random() - 0.5) * width;
+        s.y = (Math.random() - 0.5) * height;
+      }
+
+      const k = 250 / s.z;
+      const px = s.x * k + cx;
+      const py = s.y * k + cy;
+
+      const pk = 250 / s.pz;
+      const ppx = s.x * pk + cx;
+      const ppy = s.y * pk + cy;
+
+      const alpha = Math.min(1, Math.max(0, 1 - s.z / width));
+      ctx.strokeStyle = s.color;
+      ctx.globalAlpha = alpha;
+      ctx.lineWidth = Math.min(4, Math.max(1, (1 - s.z / width) * 4));
+      ctx.beginPath();
+      ctx.moveTo(ppx, ppy);
+      ctx.lineTo(px, py);
+      ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+    warpCanvasAnimationId = requestAnimationFrame(render);
+  }
+
+  render();
+
+  return () => {
+    running = false;
+    if (warpCanvasAnimationId) cancelAnimationFrame(warpCanvasAnimationId);
+    window.removeEventListener("resize", onResize);
+    ctx.clearRect(0, 0, width, height);
+  };
+}
+
+const PORTAL_METADATA = {
+  "homeScreen": {
+    title: "BEAST ARENA HUB",
+    icon: "🏠",
+    tag: "CENTRAL COMMAND • SEASON 2 MAIN ARENA"
+  },
+  "episodesScreen": {
+    title: "EPISODES PORTAL",
+    icon: "🎬",
+    tag: "SECTOR 01 • HD THEATER & DUAL AUDIO ($5M TOURNAMENT)"
+  },
+  "chatScreen": {
+    title: "LIVE COMMUNITY CHAT",
+    icon: "💬",
+    tag: "SECTOR 02 • REAL-TIME VIEWER ARENA & CREATOR CHAT"
+  },
+  "infoScreen": {
+    title: "SHOW INFORMATION",
+    icon: "ℹ️",
+    tag: "SECTOR 03 • RULES, $5,000,000 PRIZE & SURVIVAL GUIDE"
+  },
+  "badgesScreen": {
+    title: "BADGES & ACHIEVEMENTS",
+    icon: "🏅",
+    tag: "SECTOR 04 • TROPHY ROOM & CONTESTANT UNLOCKS"
+  },
+  "communityScreen": {
+    title: "COMMUNITY & OFFICIAL LINKS",
+    icon: "🌐",
+    tag: "SECTOR 05 • @TrendzOfShahid & OFFICIAL PLATFORMS"
+  }
+};
+
+function executeScreenSwitch(validId) {
+  ALL_APP_SCREENS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      if (id === validId) {
+        el.style.display = "block";
+        el.classList.add("active-screen");
+        el.classList.remove("teleport-landed");
+        void el.offsetWidth; // Trigger reflow for landing animation
+        el.classList.add("teleport-landed");
+      } else {
+        el.style.display = "none";
+        el.classList.remove("active-screen");
+        el.classList.remove("teleport-landed");
+      }
+    }
+  });
+
+  if (validId === "chatScreen") {
+    if (typeof updateChatIdentityDisplay === "function") updateChatIdentityDisplay();
+    if (typeof fetchChatMessages === "function") fetchChatMessages();
+  }
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function openScreen(targetScreenId, options = {}) {
   const aliasMap = {
     "episodesPage": "episodesScreen",
     "chatPage": "chatScreen",
@@ -11404,25 +12744,71 @@ function openScreen(targetScreenId) {
   const actualId = aliasMap[targetScreenId] || targetScreenId;
   const validId = ALL_APP_SCREENS.includes(actualId) ? actualId : "homeScreen";
 
-  ALL_APP_SCREENS.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) {
-      if (id === validId) {
-        el.style.display = "block";
-        el.classList.add("active-screen");
-      } else {
-        el.style.display = "none";
-        el.classList.remove("active-screen");
-      }
-    }
-  });
-
-  if (validId === "chatScreen") {
-    if (typeof updateChatIdentityDisplay === "function") updateChatIdentityDisplay();
-    if (typeof fetchChatMessages === "function") fetchChatMessages();
+  // If already on the screen or instant requested (e.g. initial setup)
+  if (options.instant || (typeof isMiniatureTransitionPlaying !== "undefined" && isMiniatureTransitionPlaying)) {
+    executeScreenSwitch(validId);
+    return;
   }
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  // Prevent multiple rapid clicks from glitching
+  if (isPortalWarpInProgress) return;
+  isPortalWarpInProgress = true;
+
+  const warpOverlay = document.getElementById("beastPortalWarpOverlay");
+  const warpSymbol = document.getElementById("warpHoloSymbol");
+  const warpTitle = document.getElementById("warpTitle");
+  const warpSectorTag = document.getElementById("warpSectorTag");
+  const warpProgressFill = document.getElementById("warpProgressFill");
+  const warpCanvas = document.getElementById("warpSpeedCanvas");
+
+  const meta = PORTAL_METADATA[validId] || {
+    title: "BEAST PORTAL",
+    icon: "⚡",
+    tag: "QUANTUM SECURE CONNECTION"
+  };
+
+  if (warpSymbol) warpSymbol.innerText = meta.icon;
+  if (warpTitle) warpTitle.innerText = meta.title;
+  if (warpSectorTag) warpSectorTag.innerText = meta.tag;
+  if (warpProgressFill) warpProgressFill.style.width = "0%";
+
+  playQuantumWarpSound();
+
+  let stopCanvas = null;
+  if (warpCanvas) {
+    stopCanvas = startWarpSpeedAnimation(warpCanvas);
+  }
+
+  if (warpOverlay) {
+    warpOverlay.style.display = "flex";
+    void warpOverlay.offsetWidth;
+    warpOverlay.classList.add("warp-active");
+  }
+
+  // Animate hyper-charge progress
+  setTimeout(() => {
+    if (warpProgressFill) warpProgressFill.style.width = "100%";
+  }, 30);
+
+  // Peak hyperspace warp: switch screen under warp cover at 320ms
+  setTimeout(() => {
+    executeScreenSwitch(validId);
+
+    // Fade out warp smoothly
+    setTimeout(() => {
+      if (warpOverlay) {
+        warpOverlay.classList.remove("warp-active");
+        setTimeout(() => {
+          warpOverlay.style.display = "none";
+          if (stopCanvas) stopCanvas();
+          isPortalWarpInProgress = false;
+        }, 200);
+      } else {
+        if (stopCanvas) stopCanvas();
+        isPortalWarpInProgress = false;
+      }
+    }, 130);
+  }, 320);
 }
 window.openScreen = openScreen;
 window.showPage = openScreen; // Seamless backwards compatibility
@@ -11463,9 +12849,123 @@ function checkAndResetEpisodesForNewVisit() {
 const VISIT_COUNT_KEY = "beast_games_visit_count";
 const CHAT_OWNER_TOKEN_KEY = "beast_chat_owner_token";
 const SESSION_UNLOCKED_KEY = "beast_games_unlocked_session";
-// CHAT_OWNER_TOKEN_KEY declared at script top
+const WEEKLY_EXPIRY_KEY = "beast_subscription_weekly_expiry";
+const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
+
+let ytRedirectPendingTime = null;
+let weeklyAutoUnlockTimer = null;
+
+function isWeeklySubscriptionActive() {
+  if (localStorage.getItem("beast_is_owner") === "true") return true;
+  const expiryStr = localStorage.getItem(WEEKLY_EXPIRY_KEY);
+  if (!expiryStr) return false;
+  const expiry = parseInt(expiryStr, 10);
+  if (isNaN(expiry) || Date.now() >= expiry) {
+    localStorage.removeItem("beast_user_subscribed");
+    sessionStorage.removeItem(SESSION_UNLOCKED_KEY);
+    return false;
+  }
+  return true;
+}
+
+function getRemainingDaysText() {
+  const expiryStr = localStorage.getItem(WEEKLY_EXPIRY_KEY);
+  if (!expiryStr) return "7 days";
+  const diff = parseInt(expiryStr, 10) - Date.now();
+  if (diff <= 0) return "Expired";
+  const days = Math.ceil(diff / (24 * 60 * 60 * 1000));
+  return `${days} day${days > 1 ? 's' : ''}`;
+}
+
+function checkAndVerifyDirectYouTubeReturn() {
+  const directTs = localStorage.getItem("beast_direct_redirect_timestamp");
+  if (directTs) {
+    const awayMs = Date.now() - parseInt(directTs, 10);
+    localStorage.removeItem("beast_direct_redirect_timestamp");
+    if (awayMs >= 3000) {
+      localStorage.setItem(WEEKLY_EXPIRY_KEY, (Date.now() + SEVEN_DAYS_MS).toString());
+      localStorage.setItem("beast_user_subscribed", "true");
+      sessionStorage.setItem(SESSION_UNLOCKED_KEY, "true");
+      return true;
+    }
+  }
+  return false;
+}
+
+function handleWindowFocusOrVisibility() {
+  if (document.hidden) return;
+  const pending = ytRedirectPendingTime || sessionStorage.getItem("beast_yt_redirect_timestamp");
+  if (!pending) return;
+
+  const awayMs = Date.now() - parseInt(pending, 10);
+  if (awayMs >= 3000) {
+    ytRedirectPendingTime = null;
+    sessionStorage.removeItem("beast_yt_redirect_timestamp");
+    sessionStorage.setItem("beast_session_yt_verified", "true");
+    localStorage.setItem(WEEKLY_EXPIRY_KEY, (Date.now() + SEVEN_DAYS_MS).toString());
+    localStorage.setItem("beast_user_subscribed", "true");
+    sessionStorage.setItem(SESSION_UNLOCKED_KEY, "true");
+
+    const subBox = document.getElementById("subVerifyingBox");
+    const verifyText = document.getElementById("subVerifyText");
+    const spinner = document.getElementById("gateSpinner");
+    const subFill = document.getElementById("subVerifyFill");
+    const statusPill = document.getElementById("gateStatusPill");
+    const gateAlert = document.getElementById("gateAlert");
+    const subBtn = document.getElementById("subscribeBtn");
+    const subText = document.getElementById("subBtnText");
+    const subIcon = document.getElementById("subBtnIcon");
+
+    if (gateAlert) gateAlert.style.display = "none";
+    if (statusPill) {
+      statusPill.style.display = "inline-block";
+      statusPill.innerText = "✅ YouTube Subscription Confirmed";
+      statusPill.style.background = "#10b981";
+    }
+    if (subBox) subBox.style.display = "block";
+    if (spinner) spinner.style.display = "none";
+    if (subFill) {
+      subFill.style.width = "100%";
+      subFill.style.background = "linear-gradient(90deg, #10b981, #059669)";
+    }
+    if (verifyText) {
+      verifyText.innerHTML = "🎉 <strong>YouTube Visit Confirmed!</strong> Access unlocked. Tap the button below to enter Beast Games Season 2!";
+    }
+
+    if (subText) subText.innerText = "✨ Enter Beast Games Season 2 ▶";
+    if (subIcon) subIcon.innerText = "👑";
+    if (subBtn) {
+      subBtn.className = "gate-btn subscribe-btn fire-wave-btn";
+      subBtn.style.pointerEvents = "auto";
+      subBtn.style.background = "linear-gradient(90deg, #10b981 0%, #059669 100%)";
+      subBtn.style.borderColor = "#10b981";
+      subBtn.style.boxShadow = "0 0 25px rgba(16, 185, 129, 0.6)";
+      subBtn.onclick = function(e) {
+        if (e) e.preventDefault();
+        completeSubscriptionUnlock();
+      };
+    }
+
+    try {
+      if (typeof playBeastSound === "function") playBeastSound("unlock");
+      if (typeof launchConfetti === "function") launchConfetti();
+    } catch (e) {}
+
+    // Strictly NO auto-advancing timeout - user explicitly clicks Enter button!
+  } else {
+    const gateAlert = document.getElementById("gateAlert");
+    if (gateAlert) {
+      gateAlert.innerText = "⚠️ Compulsory Checkpoint: You must open YouTube and subscribe to @TrendzOfShahid to gain access!";
+      gateAlert.style.display = "block";
+    }
+  }
+}
+
+window.addEventListener("focus", handleWindowFocusOrVisibility);
+document.addEventListener("visibilitychange", handleWindowFocusOrVisibility);
 
 let isMiniatureTransitionPlaying = false;
+
 
 function startMiniatureParticleBurst(canvas) {
   if (!canvas) return null;
@@ -11518,12 +13018,56 @@ function startMiniatureParticleBurst(canvas) {
   };
 }
 
-function playCinematic3DMiniatureTransition(onComplete) {
-  if (isMiniatureTransitionPlaying) {
-    if (typeof onComplete === "function") onComplete();
-    return;
+// =========================================================================
+// 🚀 100% DETERMINISTIC 4-STEP STARTUP SEQUENCE ENGINE
+// STRICT SEQUENCE ON EVERY LOAD:
+// 1. Loading Animation (3D Diorama Transition)
+// 2. Selecting Avatar & Username ID (Access Pass Form)
+// 3. Subscription Lock Gate ("🔴 Subscribe on YouTube to Unlock")
+// 4. Final Website Transition (3D Diorama / Flip Card Logic) -> Opens Website
+// =========================================================================
+
+function runStartupSequence() {
+  const gate = document.getElementById("gate");
+  const enroll = document.getElementById("enrollmentScreen");
+  const site = document.getElementById("site");
+  const overlay = document.getElementById("beastMiniatureTransition");
+
+  // Keep subscription lock gate strictly hidden - subscription block removed from home opening
+  if (gate) {
+    gate.classList.add("gate-hidden");
+    gate.style.setProperty("display", "none", "important");
   }
-  isMiniatureTransitionPlaying = true;
+  if (enroll) {
+    enroll.classList.add("hidden");
+    enroll.style.setProperty("display", "none", "important");
+  }
+  if (site) {
+    site.style.setProperty("display", "none", "important");
+  }
+
+  // -----------------------------------------------------------------------
+  // STEP 1 — LOADING ANIMATION (3D DIORAMA TRANSITION)
+  // -----------------------------------------------------------------------
+  playCinematic3DMiniatureTransition(() => {
+    // If user has already entered a username/avatar, directly enter the site!
+    const savedName = localStorage.getItem("beast_user_name");
+    const savedAvatar = localStorage.getItem("beast_user_avatar");
+    if (savedName && savedAvatar) {
+      openSiteProperly();
+    } else {
+      showEnrollmentScreen();
+    }
+  }, "init");
+}
+window.runStartupSequence = runStartupSequence;
+window.checkUserEnrollmentAndGate = runStartupSequence;
+
+// =========================================================================
+// 🎬 ENHANCED 3D DIORAMA & FLIP CARD TRANSITION
+// =========================================================================
+function playCinematic3DMiniatureTransition(onComplete, mode = "init") {
+  isMiniatureTransitionPlaying = false;
 
   const overlay = document.getElementById("beastMiniatureTransition");
   const card = document.getElementById("miniatureCard");
@@ -11533,14 +13077,18 @@ function playCinematic3DMiniatureTransition(onComplete) {
   const canvas = document.getElementById("miniatureParticleCanvas");
 
   if (!overlay || !card) {
-    isMiniatureTransitionPlaying = false;
     if (typeof onComplete === "function") onComplete();
     return;
   }
 
-  overlay.style.display = "flex";
+  isMiniatureTransitionPlaying = true;
+
+  // Visual reset for pristine animation
   overlay.style.opacity = "1";
+  overlay.style.setProperty("display", "flex", "important");
   card.classList.remove("flipping-out");
+  if (fill) fill.style.width = "0%";
+  if (pctEl) pctEl.innerText = "0%";
   document.body.style.overflow = "hidden";
 
   let stopParticles = null;
@@ -11555,13 +13103,23 @@ function playCinematic3DMiniatureTransition(onComplete) {
   const DURATION_MS = 5000; // Exactly 5 Seconds
   const startTime = Date.now();
 
-  const statusMessages = [
+  const initMessages = [
     { at: 0, text: "Initializing 3D Beast Hub..." },
     { at: 20, text: "Connecting to HD Streams..." },
     { at: 45, text: "Charging Gold & Neon Lighting..." },
     { at: 70, text: "Unlocking Miniature 3D Portal..." },
     { at: 90, text: "Ready! Detonating 3D Flip..." }
   ];
+
+  const unlockMessages = [
+    { at: 0, text: "Subscription Confirmed! Loading Hub..." },
+    { at: 20, text: "Unlocking $5M Tournament Streams..." },
+    { at: 45, text: "Opening HD Community Portal..." },
+    { at: 70, text: "Preparing Beast Games 2..." },
+    { at: 90, text: "Welcome to Beast Games 2!" }
+  ];
+
+  const statusMessages = (mode === "unlock") ? unlockMessages : initMessages;
 
   const timer = setInterval(() => {
     const elapsed = Date.now() - startTime;
@@ -11576,7 +13134,7 @@ function playCinematic3DMiniatureTransition(onComplete) {
     if (progress >= 100) {
       clearInterval(timer);
 
-      // Detonate 3D flip + particle explosion
+      // Detonate 3D flip card tilt + particle explosion + confetti
       card.classList.add("flipping-out");
       try {
         if (typeof playBeastSound === "function") playBeastSound("unlock");
@@ -11587,343 +13145,28 @@ function playCinematic3DMiniatureTransition(onComplete) {
       setTimeout(() => {
         overlay.style.opacity = "0";
         setTimeout(() => {
-          overlay.style.display = "none";
+          overlay.style.setProperty("display", "none", "important");
           document.body.style.overflow = "auto";
           if (stopParticles) stopParticles();
           isMiniatureTransitionPlaying = false;
           if (typeof onComplete === "function") onComplete();
-        }, 500);
-      }, 700);
+        }, 400);
+      }, 600);
     }
   }, 40);
 }
 window.playCinematic3DMiniatureTransition = playCinematic3DMiniatureTransition;
 
-// Unified open site routine
-function openSiteProperly() {
-  isSiteFullyOpened = true;
-  const gate = document.getElementById("gate");
-  const site = document.getElementById("site");
-  const enroll = document.getElementById("enrollmentScreen");
-
-  if (enroll) {
-    enroll.classList.add("hidden");
-    enroll.style.setProperty("display", "none", "important");
-  }
-  if (gate) {
-    gate.classList.add("gate-hidden");
-    gate.classList.remove("gate-flipping-out");
-    gate.style.setProperty("display", "none", "important");
-  }
-  if (site) {
-    site.classList.remove("hidden");
-    site.classList.add("site-active");
-    site.style.setProperty("display", "block", "important");
-  }
-
-  // Activate Home Screen with the 5 options by default
-  if (typeof openScreen === "function") {
-    openScreen("homeScreen");
-  }
-
-  document.body.style.overflow = "auto";
-  document.documentElement.style.overflow = "auto";
-
-  if (typeof updateHeaderProfileDisplay === "function") updateHeaderProfileDisplay();
-  if (typeof updateAllCardProgress === "function") updateAllCardProgress();
-  if (typeof initChatLiveSync === "function") initChatLiveSync();
-}
-window.openSiteProperly = openSiteProperly;
-
 // =========================================================================
-// ⭐ PERMANENT MINIMAL RATING STRIP CONTROLLER
-// =========================================================================
-function previewHoverStar(val) {
-  document.querySelectorAll(".cool-star-btn").forEach(btn => {
-    const bVal = parseInt(btn.getAttribute("data-val"), 10);
-    btn.classList.toggle("hovered", bVal <= val);
-  });
-  const statusEl = document.getElementById("ratingStripStatus");
-  if (statusEl) statusEl.innerText = `Rate ${val} / 5 Stars`;
-}
-window.previewHoverStar = previewHoverStar;
-
-function clearHoverStar() {
-  document.querySelectorAll(".cool-star-btn").forEach(btn => btn.classList.remove("hovered"));
-  const savedRating = parseInt(localStorage.getItem("beast_user_rating_5") || "0", 10);
-  const statusEl = document.getElementById("ratingStripStatus");
-  if (statusEl) {
-    if (savedRating > 0) statusEl.innerText = `✅ Your rating: ${savedRating}⭐`;
-    else statusEl.innerText = "Tap a star to rate";
-  }
-}
-window.clearHoverStar = clearHoverStar;
-
-function highlightSelectedStars(val) {
-  document.querySelectorAll(".cool-star-btn").forEach(btn => {
-    const bVal = parseInt(btn.getAttribute("data-val"), 10);
-    btn.classList.toggle("active", bVal <= val);
-  });
-}
-window.highlightSelectedStars = highlightSelectedStars;
-
-async function submitRealRating(val) {
-  playBeastSound("click");
-  localStorage.setItem("beast_user_rating_5", val.toString());
-  highlightSelectedStars(val);
-
-  if (val >= 4) {
-    playBeastSound("verify");
-    if (typeof launchConfetti === "function") launchConfetti();
-  }
-
-  const statusEl = document.getElementById("ratingStripStatus");
-  if (statusEl) {
-    statusEl.innerText = `✅ You rated ${val}⭐!`;
-    statusEl.style.color = "#facc15";
-  }
-
-  try {
-    const clientId = localStorage.getItem("beast_user_id") || "viewer";
-    const res = await fetch("/api/ratings", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ rating: val, clientId: clientId }),
-    });
-    if (res.ok) {
-      const stats = await res.json();
-      updateScoreboardUI(stats);
-    }
-  } catch (err) {}
-}
-window.submitRealRating = submitRealRating;
-
-function updateScoreboardUI(stats) {
-  const stripAvg = document.getElementById("stripAvgScore");
-  const stripTotal = document.getElementById("stripTotalVotes");
-  if (stats) {
-    if (stripAvg && stats.average) stripAvg.innerText = stats.average;
-    if (stripTotal && stats.totalVotes) stripTotal.innerText = `(${parseInt(stats.totalVotes, 10).toLocaleString()}+ ratings)`;
-  }
-}
-window.updateScoreboardUI = updateScoreboardUI;
-
-async function fetchGlobalRatings() {
-  try {
-    const res = await fetch("/api/ratings");
-    if (res.ok) {
-      const stats = await res.json();
-      updateScoreboardUI(stats);
-    }
-  } catch (e) {}
-}
-window.fetchGlobalRatings = fetchGlobalRatings;
-
-// =========================================================================
-// 🚀 DETERMINISTIC 4-STEP STARTUP SEQUENCE STATE MACHINE (100% WORKING SPEC)
-// =========================================================================
-const VIRAL_SHARE_KEY = "beast_viral_share_count";
-const FLOW_COMPLETED_SESSION_KEY = "beast_session_entrance_completed";
-let isSubscribingStep2 = false;
-
-function getViralShareCount() {
-  const base = 14284;
-  const added = parseInt(localStorage.getItem(VIRAL_SHARE_KEY) || "0", 10);
-  return base + added;
-}
-
-function updateViralShareUI() {
-  const total = getViralShareCount();
-  const textEl = document.getElementById("viralShareCounterText");
-  if (textEl) textEl.innerText = `${total.toLocaleString()} Fans Shared Today`;
-}
-
-function recordViralShare() {
-  const added = parseInt(localStorage.getItem(VIRAL_SHARE_KEY) || "0", 10) + 1;
-  localStorage.setItem(VIRAL_SHARE_KEY, added.toString());
-  updateViralShareUI();
-  try {
-    if (typeof playBeastSound === "function") playBeastSound("unlock");
-    if (typeof launchConfetti === "function") launchConfetti();
-  } catch (e) {}
-}
-
-function openViralShareModal() {
-  if (typeof playBeastSound === "function") playBeastSound("click");
-  updateViralShareUI();
-  const modal = document.getElementById("viralShareModal");
-  if (modal) modal.style.display = "flex";
-}
-window.openViralShareModal = openViralShareModal;
-window.shareWebsite = openViralShareModal; // Connected to bottom bar Share Website button
-
-function closeViralShareModal() {
-  const modal = document.getElementById("viralShareModal");
-  if (modal) modal.style.display = "none";
-}
-window.closeViralShareModal = closeViralShareModal;
-
-function shareToWhatsApp() {
-  recordViralShare();
-  const msg = encodeURIComponent("🔥 Watch MrBeast's Beast Games Season 2 free in Dual Audio (Hindi & English)! 1,000 contestants battle for $5,000,000. Stream all 10 full episodes here: https://beastgames2.pages.dev/ #BeastGames2 #MrBeast");
-  window.open(`https://api.whatsapp.com/send?text=${msg}`, "_blank");
-}
-window.shareToWhatsApp = shareToWhatsApp;
-
-function shareToTelegram() {
-  recordViralShare();
-  const url = encodeURIComponent("https://beastgames2.pages.dev/");
-  const text = encodeURIComponent("🔥 Watch MrBeast's Beast Games Season 2 free in Dual Audio! $5,000,000 Tournament full 10 episodes streaming now:");
-  window.open(`https://t.me/share/url?url=${url}&text=${text}`, "_blank");
-}
-window.shareToTelegram = shareToTelegram;
-
-function shareToTwitter() {
-  recordViralShare();
-  const text = encodeURIComponent("🔥 Watch MrBeast's Beast Games Season 2 free in Dual Audio! $5,000,000 Tournament full 10 episodes streaming now: https://beastgames2.pages.dev/ #BeastGames2 #MrBeast #DualAudio");
-  window.open(`https://twitter.com/intent/tweet?text=${text}`, "_blank");
-}
-window.shareToTwitter = shareToTwitter;
-
-async function shareNative() {
-  recordViralShare();
-  if (navigator.share) {
-    try {
-      await navigator.share({
-        title: "Beast Games Season 2 - Official Free Streaming Hub",
-        text: "Watch all 10 episodes of Beast Games Season 2 free in Dual Audio! $5,000,000 Tournament.",
-        url: "https://beastgames2.pages.dev/"
-      });
-    } catch (e) {}
-  } else {
-    copyDirectLink();
-  }
-}
-window.shareNative = shareNative;
-
-function copyDirectLink() {
-  recordViralShare();
-  const url = "https://beastgames2.pages.dev/";
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(url).then(() => {
-      const btn = document.getElementById("viralCopyBtn");
-      if (btn) btn.innerHTML = "<span>✅ Copied!</span>";
-      showToastNotification("🔗 Link copied to clipboard! Share it with friends!");
-      setTimeout(() => {
-        if (btn) btn.innerHTML = "<span>Copy Link</span>";
-      }, 2500);
-    }).catch(() => fallbackCopy(url));
-  } else {
-    fallbackCopy(url);
-  }
-}
-window.copyDirectLink = copyDirectLink;
-
-function fallbackCopy(text) {
-  const ta = document.createElement("textarea");
-  ta.value = text;
-  document.body.appendChild(ta);
-  ta.select();
-  document.execCommand("copy");
-  document.body.removeChild(ta);
-  showToastNotification("🔗 Link copied to clipboard! Share it with friends!");
-}
-
-// =========================================================================
-// 🚀 MASTER STARTUP LIFECYCLE (THE 100% WORKING PROCEDURE)
-// =========================================================================
-function runStartupSequence(forceReplay = false) {
-  let currentVisits = parseInt(localStorage.getItem(VISIT_COUNT_KEY) || "0", 10) + 1;
-  localStorage.setItem(VISIT_COUNT_KEY, currentVisits.toString());
-
-  const isSessionUnlocked = sessionStorage.getItem(SESSION_UNLOCKED_KEY) === "true";
-  const savedName = localStorage.getItem("beast_user_name") || localStorage.getItem("beast_user_id");
-  const isSavedLogin = localStorage.getItem("beast_save_login_info") === "true";
-  const isOwner = (localStorage.getItem("beast_is_owner") === "true") ||
-                  (savedName === "SRS18062011") ||
-                  (savedName === "Shahid Shaikh");
-
-  // Odd visits: 1, 3, 5, 7, 9... Checkpoint visit
-  const isOddCheckpoint = (currentVisits % 2 !== 0);
-
-  // If forceReplay or not unlocked in this active tab session:
-  // Guarantee the full 4-step entrance flow is displayed!
-  if (forceReplay) {
-    sessionStorage.removeItem(SESSION_UNLOCKED_KEY);
-    sessionStorage.removeItem(FLOW_COMPLETED_SESSION_KEY);
-  }
-
-  // Ensure initial states are locked
-  const gate = document.getElementById("gate");
-  const enroll = document.getElementById("enrollmentScreen");
-  const site = document.getElementById("site");
-  if (gate) {
-    gate.classList.add("gate-hidden");
-    gate.style.setProperty("display", "none", "important");
-  }
-  if (enroll) {
-    enroll.classList.add("hidden");
-    enroll.style.setProperty("display", "none", "important");
-  }
-  if (site) {
-    site.style.setProperty("display", "none", "important");
-  }
-
-  // If already unlocked in this active session and not forceReplay and not an odd checkpoint:
-  if (isSessionUnlocked && !forceReplay && !isOddCheckpoint) {
-    openSiteProperly();
-    return;
-  }
-
-  // -----------------------------------------------------------------------
-  // STEP 1 — OPENING ANIMATION & TRANSITION (5-SECOND 3D DIORAMA)
-  // -----------------------------------------------------------------------
-  playCinematic3DMiniatureTransition(() => {
-    if (isOwner) {
-      // Owner SRS18062011 bypasses all gates permanently
-      openSiteProperly();
-      return;
-    }
-
-    // ---------------------------------------------------------------------
-    // A. FIRST-TIME OR UNLOCKED SESSION VISIT:
-    // STEP 2 — ACCESS PASS FORM (USERNAME ID & AVATAR SELECTION)
-    // ---------------------------------------------------------------------
-    const needsAccessPass = forceReplay || !isSavedLogin || !savedName || !isSessionUnlocked;
-
-    if (needsAccessPass) {
-      showEnrollmentScreen();
-      return;
-    }
-
-    // ---------------------------------------------------------------------
-    // B. RETURNING VISIT WITH SAVED LOGIN:
-    // STEP 2 SKIPPED -> CHECKPOINT CHECK FOR STEP 3
-    // ---------------------------------------------------------------------
-    if (isOddCheckpoint) {
-      showSubscribeGate(currentVisits);
-    } else {
-      openSiteProperly();
-    }
-  });
-}
-window.runStartupSequence = runStartupSequence;
-window.checkUserEnrollmentAndGate = runStartupSequence;
-
-function replayIntroSequence() {
-  if (typeof playBeastSound === "function") playBeastSound("click");
-  runStartupSequence(true);
-}
-window.replayIntroSequence = replayIntroSequence;
-
-// =========================================================================
-// 👤 STEP 2 CONTROLLERS: ACCESS PASS FORM SUBMIT
+// 👤 STEP 2 CONTROLLERS: SELECTING AVATAR AND USERNAME (ACCESS PASS FORM)
 // =========================================================================
 function showEnrollmentScreen() {
   const enrollScreen = document.getElementById("enrollmentScreen");
   const gate = document.getElementById("gate");
   const site = document.getElementById("site");
+  const overlay = document.getElementById("beastMiniatureTransition");
 
+  if (overlay) overlay.style.setProperty("display", "none", "important");
   if (gate) {
     gate.classList.add("gate-hidden");
     gate.style.setProperty("display", "none", "important");
@@ -11940,14 +13183,228 @@ function showEnrollmentScreen() {
   document.documentElement.style.overflow = "hidden";
 
   const nameInput = document.getElementById("enrollNameInput");
+  const emojiInput = document.getElementById("enrollEmojiInput");
+
   if (nameInput) {
     const existing = localStorage.getItem("beast_user_name") || localStorage.getItem("beast_user_id");
     if (existing && existing !== "Shahid Shaikh") nameInput.value = existing;
-    else nameInput.value = "User 1";
+    else if (!nameInput.value) nameInput.value = "User 1";
     setTimeout(() => nameInput.focus(), 150);
   }
+
+  const savedAvatar = localStorage.getItem("beast_user_avatar");
+  if (savedAvatar) {
+    currentEnrollAvatar = savedAvatar;
+    if (savedAvatar.startsWith("data:image/") || savedAvatar.startsWith("http")) {
+      switchAvatarTab("gallery");
+      const galleryBtnText = document.getElementById("galleryBtnText");
+      if (galleryBtnText) galleryBtnText.innerText = "✅ Saved Gallery Photo";
+    } else {
+      switchAvatarTab("emoji");
+      if (emojiInput) emojiInput.value = savedAvatar;
+    }
+  } else {
+    currentEnrollAvatar = "👤";
+    switchAvatarTab("emoji");
+  }
+  renderEnrollAvatarPreview(currentEnrollAvatar);
+  renderPCEmojiGrid("all");
 }
 window.showEnrollmentScreen = showEnrollmentScreen;
+
+// Dual Avatar Mode State: "emoji" or "gallery"
+let currentEnrollAvatar = "👤";
+let currentAvatarMode = "emoji";
+
+function switchAvatarTab(mode) {
+  if (typeof playBeastSound === "function") playBeastSound("click");
+  currentAvatarMode = mode;
+  const tabEmojiBtn = document.getElementById("tabEmojiBtn");
+  const tabGalleryBtn = document.getElementById("tabGalleryBtn");
+  const emojiPane = document.getElementById("avatarEmojiTabPane");
+  const galleryPane = document.getElementById("avatarGalleryTabPane");
+  const sourcePill = document.getElementById("avatarSourcePill");
+
+  if (mode === "emoji") {
+    if (tabEmojiBtn) tabEmojiBtn.classList.add("active");
+    if (tabGalleryBtn) tabGalleryBtn.classList.remove("active");
+    if (emojiPane) emojiPane.style.display = "block";
+    if (galleryPane) galleryPane.style.display = "none";
+    if (sourcePill) sourcePill.innerText = "Normal Emoji";
+
+    const emojiInput = document.getElementById("enrollEmojiInput");
+    if (emojiInput) {
+      currentEnrollAvatar = emojiInput.value.trim() || "👤";
+      renderEnrollAvatarPreview(currentEnrollAvatar);
+    }
+  } else {
+    if (tabGalleryBtn) tabGalleryBtn.classList.add("active");
+    if (tabEmojiBtn) tabEmojiBtn.classList.remove("active");
+    if (galleryPane) galleryPane.style.display = "block";
+    if (emojiPane) emojiPane.style.display = "none";
+    if (sourcePill) sourcePill.innerText = "Gallery Photo";
+  }
+}
+window.switchAvatarTab = switchAvatarTab;
+
+function renderEnrollAvatarPreview(avatarVal) {
+  const display = document.getElementById("enrollAvatarDisplay");
+  if (!display) return;
+  if (avatarVal && (avatarVal.startsWith("data:image/") || avatarVal.startsWith("http"))) {
+    display.innerHTML = `<img src="${avatarVal}" alt="Preview" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />`;
+  } else {
+    display.innerText = avatarVal || "👤";
+  }
+}
+window.renderEnrollAvatarPreview = renderEnrollAvatarPreview;
+
+function handleCustomEmojiInput(val) {
+  const trimmed = val.trim();
+  currentEnrollAvatar = trimmed || "👤";
+  renderEnrollAvatarPreview(currentEnrollAvatar);
+  renderPCEmojiGrid(activePCEmojiCategory);
+}
+window.handleCustomEmojiInput = handleCustomEmojiInput;
+
+// =========================================================================
+// 💻 PC & DESKTOP USERS INTERACTIVE EMOJI PALETTE (36+ CURATED AVATARS)
+// =========================================================================
+const PC_AVATAR_EMOJIS = [
+  // Beast & Power
+  { emoji: "⚡", category: "power", label: "Lightning" },
+  { emoji: "🔥", category: "power", label: "Fire" },
+  { emoji: "🏆", category: "power", label: "Trophy" },
+  { emoji: "👑", category: "power", label: "Crown" },
+  { emoji: "💥", category: "power", label: "Explosion" },
+  { emoji: "⭐", category: "power", label: "Star" },
+  { emoji: "🚀", category: "power", label: "Rocket" },
+  { emoji: "⚔️", category: "power", label: "Swords" },
+  { emoji: "🛡️", category: "power", label: "Shield" },
+  { emoji: "💎", category: "power", label: "Diamond" },
+  // Animals
+  { emoji: "🦁", category: "animals", label: "Lion" },
+  { emoji: "🐯", category: "animals", label: "Tiger" },
+  { emoji: "🐺", category: "animals", label: "Wolf" },
+  { emoji: "🦅", category: "animals", label: "Eagle" },
+  { emoji: "🦈", category: "animals", label: "Shark" },
+  { emoji: "🐉", category: "animals", label: "Dragon" },
+  { emoji: "🦍", category: "animals", label: "Gorilla" },
+  { emoji: "🦊", category: "animals", label: "Fox" },
+  { emoji: "🐻", category: "animals", label: "Bear" },
+  { emoji: "🐆", category: "animals", label: "Leopard" },
+  // Gaming
+  { emoji: "🎮", category: "gaming", label: "Gaming Controller" },
+  { emoji: "🕹️", category: "gaming", label: "Retro Joystick" },
+  { emoji: "👾", category: "gaming", label: "Space Invader" },
+  { emoji: "🤖", category: "gaming", label: "Robot" },
+  { emoji: "🎯", category: "gaming", label: "Bullseye" },
+  { emoji: "🎲", category: "gaming", label: "Dice" },
+  { emoji: "🦾", category: "gaming", label: "Bionic Arm" },
+  { emoji: "🎧", category: "gaming", label: "Gaming Headset" },
+  { emoji: "🏁", category: "gaming", label: "Finish Flag" },
+  { emoji: "🥇", category: "gaming", label: "Gold Medal" },
+  // Faces
+  { emoji: "😎", category: "faces", label: "Cool Shades" },
+  { emoji: "🤩", category: "faces", label: "Star Struck" },
+  { emoji: "🤠", category: "faces", label: "Cowboy" },
+  { emoji: "🥳", category: "faces", label: "Party Face" },
+  { emoji: "🤯", category: "faces", label: "Mind Blown" },
+  { emoji: "🥷", category: "faces", label: "Ninja" },
+  { emoji: "🕵️", category: "faces", label: "Detective" },
+  { emoji: "🦸", category: "faces", label: "Superhero" },
+  { emoji: "🧙", category: "faces", label: "Wizard" },
+  { emoji: "👤", category: "faces", label: "Default Member" }
+];
+
+let activePCEmojiCategory = "all";
+
+function renderPCEmojiGrid(category = "all") {
+  const grid = document.getElementById("pcEmojiGrid");
+  if (!grid) return;
+  activePCEmojiCategory = category;
+
+  const filtered = category === "all"
+    ? PC_AVATAR_EMOJIS
+    : PC_AVATAR_EMOJIS.filter(item => item.category === category);
+
+  grid.innerHTML = filtered.map(item => {
+    const isSelected = currentEnrollAvatar === item.emoji;
+    return `
+      <button
+        type="button"
+        class="pc-emoji-item-btn ${isSelected ? 'active-pc-emoji' : ''}"
+        onclick="selectPCEmoji('${item.emoji}')"
+        title="${item.label} (${item.emoji})"
+      >
+        <span class="pc-emoji-char">${item.emoji}</span>
+      </button>
+    `;
+  }).join("");
+}
+window.renderPCEmojiGrid = renderPCEmojiGrid;
+
+function filterPCEmojis(category, btn) {
+  if (typeof playBeastSound === "function") playBeastSound("click");
+  const container = document.getElementById("pcEmojiPickerContainer");
+  if (container) {
+    const btns = container.querySelectorAll(".pc-category-btn");
+    btns.forEach(b => b.classList.remove("active"));
+  }
+  if (btn) btn.classList.add("active");
+  renderPCEmojiGrid(category);
+}
+window.filterPCEmojis = filterPCEmojis;
+
+function selectPCEmoji(emoji) {
+  if (typeof playBeastSound === "function") playBeastSound("click");
+  currentEnrollAvatar = emoji;
+  const emojiInput = document.getElementById("enrollEmojiInput");
+  if (emojiInput) emojiInput.value = emoji;
+  renderEnrollAvatarPreview(emoji);
+
+  const sourcePill = document.getElementById("avatarSourcePill");
+  if (sourcePill) sourcePill.innerText = "Normal Emoji";
+
+  renderPCEmojiGrid(activePCEmojiCategory);
+}
+window.selectPCEmoji = selectPCEmoji;
+
+
+function handleGalleryFileChosen(e) {
+  const file = e.target.files && e.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function(evt) {
+    const rawDataUrl = evt.target.result;
+    const img = new Image();
+    img.onload = function() {
+      const canvas = document.createElement("canvas");
+      const SIZE = 160;
+      canvas.width = SIZE;
+      canvas.height = SIZE;
+      const ctx = canvas.getContext("2d");
+
+      // Center crop square
+      const minDim = Math.min(img.width, img.height);
+      const sx = (img.width - minDim) / 2;
+      const sy = (img.height - minDim) / 2;
+      ctx.drawImage(img, sx, sy, minDim, minDim, 0, 0, SIZE, SIZE);
+
+      const optimizedDataUrl = canvas.toDataURL("image/jpeg", 0.82);
+      currentEnrollAvatar = optimizedDataUrl;
+      renderEnrollAvatarPreview(currentEnrollAvatar);
+
+      const galleryBtnText = document.getElementById("galleryBtnText");
+      if (galleryBtnText) galleryBtnText.innerText = "✅ Photo Selected (Click to change)";
+      const sourcePill = document.getElementById("avatarSourcePill");
+      if (sourcePill) sourcePill.innerText = "Gallery Photo";
+    };
+    img.src = rawDataUrl;
+  };
+  reader.readAsDataURL(file);
+}
+window.handleGalleryFileChosen = handleGalleryFileChosen;
 
 function handleNameInputCheck(val) {
   const err = document.getElementById("enrollErrorNotice");
@@ -11955,26 +13412,20 @@ function handleNameInputCheck(val) {
 }
 window.handleNameInputCheck = handleNameInputCheck;
 
-function handleEnrollAvatarChange(val) {
-  playBeastSound("click");
-}
-window.handleEnrollAvatarChange = handleEnrollAvatarChange;
-
 function handleEnrollmentSubmit(e) {
   if (e) e.preventDefault();
-  playBeastSound("click");
+  if (typeof playBeastSound === "function") playBeastSound("click");
 
   const nameInput = document.getElementById("enrollNameInput");
-  const avatarSelect = document.getElementById("enrollAvatarSelect");
   const rememberBox = document.getElementById("saveLoginCheckbox");
   const errEl = document.getElementById("enrollErrorNotice");
 
   const rawName = nameInput ? nameInput.value.trim() : "";
   const name = rawName || "User 1";
-  const avatar = avatarSelect ? avatarSelect.value : "👤";
+  const avatar = currentEnrollAvatar || "👤";
   const shouldSave = rememberBox ? rememberBox.checked : true;
 
-  // Secret Owner PIN/ID Check
+  // Secret Owner PIN/ID Check (SRS18062011)
   if (name.toUpperCase() === "SRS18062011") {
     localStorage.setItem("beast_is_owner", "true");
     localStorage.setItem(CHAT_OWNER_TOKEN_KEY, "beast_owner_verified_auth_token_7777");
@@ -11984,17 +13435,19 @@ function handleEnrollmentSubmit(e) {
     localStorage.setItem("beast_chat_user_avatar", "👑");
     localStorage.setItem("beast_save_login_info", "true");
 
+    updateHeaderProfileDisplay();
     if (typeof updateChatIdentityDisplay === "function") updateChatIdentityDisplay();
-    if (typeof updateHeaderProfileDisplay === "function") updateHeaderProfileDisplay();
 
     const enrollScreen = document.getElementById("enrollmentScreen");
-    if (enrollScreen) enrollScreen.style.setProperty("display", "none", "important");
+    if (enrollScreen) {
+      enrollScreen.classList.add("hidden");
+      enrollScreen.style.setProperty("display", "none", "important");
+    }
 
-    // Owner bypasses Step 3 -> proceeds to Step 4 animation & opens website
-    sessionStorage.setItem(FLOW_COMPLETED_SESSION_KEY, "true");
-    playCinematic3DMiniatureTransition(() => {
-      openSiteProperly();
-    });
+    // Direct entry to website - subscription block removed from opening
+    openSiteProperly();
+    if (typeof launchConfetti === "function") launchConfetti();
+    if (typeof launchFireworks === "function") launchFireworks();
     return;
   }
 
@@ -12006,15 +13459,16 @@ function handleEnrollmentSubmit(e) {
     return;
   }
 
-  // Save regular user credentials
+  // Save credentials permanently/per-device
   localStorage.setItem("beast_user_name", name);
   localStorage.setItem("beast_user_id", name);
   localStorage.setItem("beast_user_avatar", avatar);
   localStorage.setItem("beast_chat_user_avatar", avatar);
   localStorage.setItem("beast_save_login_info", shouldSave ? "true" : "false");
 
+  // IMMEDIATELY update header profile avatar with enrolled avatar!
+  updateHeaderProfileDisplay();
   if (typeof updateChatIdentityDisplay === "function") updateChatIdentityDisplay();
-  if (typeof updateHeaderProfileDisplay === "function") updateHeaderProfileDisplay();
 
   const enrollScreen = document.getElementById("enrollmentScreen");
   if (enrollScreen) {
@@ -12022,20 +13476,31 @@ function handleEnrollmentSubmit(e) {
     enrollScreen.style.setProperty("display", "none", "important");
   }
 
-  // STEP 3 — ON SUBMITTING FORM, SHOW SUBSCRIBE TO UNLOCK PANEL (VISIT #1)
-  const currentVisits = parseInt(localStorage.getItem(VISIT_COUNT_KEY) || "1", 10);
-  showSubscribeGate(currentVisits);
+  // Direct entry to website - subscription block removed from opening
+  openSiteProperly();
+  if (typeof launchConfetti === "function") launchConfetti();
+  if (typeof launchFireworks === "function") launchFireworks();
 }
 window.handleEnrollmentSubmit = handleEnrollmentSubmit;
 
 // =========================================================================
-// 🔒 STEP 3 CONTROLLERS: SUBSCRIBE LOCK PANEL
+// 🔒 STEP 3 CONTROLLERS: SUBSCRIPTION GATE BYPASS (OPEN WEBSITE DIRECTLY)
 // =========================================================================
-function showSubscribeGate(visitNumber = 1) {
+function showSubscribeGate() {
+  if (weeklyAutoUnlockTimer) {
+    clearTimeout(weeklyAutoUnlockTimer);
+    weeklyAutoUnlockTimer = null;
+  }
+  openSiteProperly();
+}
+  checkAndVerifyDirectYouTubeReturn();
+
   const gate = document.getElementById("gate");
   const site = document.getElementById("site");
   const enroll = document.getElementById("enrollmentScreen");
+  const overlay = document.getElementById("beastMiniatureTransition");
 
+  if (overlay) overlay.style.setProperty("display", "none", "important");
   if (enroll) {
     enroll.classList.add("hidden");
     enroll.style.setProperty("display", "none", "important");
@@ -12053,35 +13518,9 @@ function showSubscribeGate(visitNumber = 1) {
   document.documentElement.style.overflow = "hidden";
 
   const intervalBadge = document.getElementById("gateIntervalBadge");
-  if (intervalBadge) {
-    intervalBadge.innerText = `🛡️ Community Access Gate • Checkpoint (Visit #${visitNumber} • Appears every 2 visits)`;
-  }
-
-  isSubscribingStep2 = false;
-  const subBtn = document.getElementById("subscribeBtn");
-  const subText = document.getElementById("subBtnText");
-  const subIcon = document.getElementById("subBtnIcon");
-  const subBox = document.getElementById("subVerifyingBox");
-  if (subText) subText.innerText = "🔴 Subscribe on YouTube to Unlock";
-  if (subIcon) subIcon.innerText = "🔥";
-  if (subBtn) {
-    subBtn.className = "gate-btn subscribe-btn fire-wave-btn";
-    subBtn.style.pointerEvents = "auto";
-    subBtn.style.background = "";
-  }
-  if (subBox) subBox.style.display = "none";
-}
-window.showSubscribeGate = showSubscribeGate;
-
-function handleSubscribeAction() {
-  playBeastSound("click");
-  const isOwner = localStorage.getItem("beast_is_owner") === "true";
-
-  if (isOwner) {
-    completeSubscriptionUnlock();
-    return;
-  }
-
+  const mainHeading = document.getElementById("gateMainHeading");
+  const mainDesc = document.getElementById("gateMainDesc");
+  const statusPill = document.getElementById("gateStatusPill");
   const subBtn = document.getElementById("subscribeBtn");
   const subText = document.getElementById("subBtnText");
   const subIcon = document.getElementById("subBtnIcon");
@@ -12089,50 +13528,188 @@ function handleSubscribeAction() {
   const subFill = document.getElementById("subVerifyFill");
   const verifyText = document.getElementById("subVerifyText");
   const spinner = document.getElementById("gateSpinner");
+  const gateAlert = document.getElementById("gateAlert");
 
-  if (!isSubscribingStep2) {
-    isSubscribingStep2 = true;
-    try {
-      const win = window.open("https://www.youtube.com/@TrendzOfShahid?sub_confirmation=1", "_blank");
-      if (!win) {
-        const a = document.createElement("a");
-        a.href = "https://www.youtube.com/@TrendzOfShahid?sub_confirmation=1";
-        a.target = "_blank";
-        a.rel = "noopener noreferrer";
-        a.click();
-      }
-    } catch (e) {}
+  if (gateAlert) gateAlert.style.display = "none";
 
-    if (subBox) subBox.style.display = "block";
-    if (spinner) spinner.style.display = "block";
-    if (subFill) subFill.style.width = "45%";
-    if (verifyText) verifyText.innerText = "Step 1: Subscribed on YouTube? Click below to confirm unlock!";
-    if (subIcon) subIcon.innerText = "🛡️";
-    if (subText) subText.innerText = "Step 2: Confirm & Unlock Website ▶";
+  const sessionVerified = sessionStorage.getItem("beast_session_yt_verified") === "true";
+  const isOwner = localStorage.getItem("beast_is_owner") === "true";
+
+  if (isOwner || sessionVerified) {
+    // Verified session: ready for user to enter
+    const remainingDays = getRemainingDaysText();
+    if (intervalBadge) {
+      intervalBadge.innerText = `🛡️ YouTube Checkpoint • Verified Active (${remainingDays} remaining)`;
+    }
+    if (statusPill) {
+      statusPill.style.display = "inline-block";
+      statusPill.innerText = "✅ YouTube Subscription Confirmed";
+      statusPill.style.background = "#10b981";
+    }
+    if (mainHeading) {
+      mainHeading.innerHTML = `<span class="realistic-fire-flame" aria-hidden="true"><svg class="fire-flame-svg" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="16" cy="30" rx="12" ry="7" fill="url(#realFlameAuraGrad)" class="flame-aura"/><path class="flame-tongue flame-base" d="M16 2 C19 12, 28 17, 28 27 C28 34, 22.5 38, 16 38 C9.5 38, 4 34, 4 27 C4 18, 12 11, 16 2 Z" fill="url(#realFlameBodyGrad)"/><path class="flame-tongue flame-mid" d="M16 8 C18 15, 24 19, 24 28 C24 33, 20.5 36, 16 36 C11.5 36, 8 33, 8 28 C8 20, 14 14, 16 8 Z" fill="url(#realFlameMidGrad)"/><path class="flame-tongue flame-core" d="M16 16 C17.5 21, 21 24, 21 29 C21 33, 18.8 35, 16 35 C13.2 35, 11 33, 11 29 C11 23, 14.5 20, 16 16 Z" fill="url(#realFlameCoreGrad)"/><circle cx="12" cy="18" r="1.2" fill="#fff" class="flame-spark spark-1"/><circle cx="20" cy="14" r="1" fill="#fff" class="flame-spark spark-2"/></svg></span> Weekly Pass Active <span class="realistic-fire-flame" aria-hidden="true"><svg class="fire-flame-svg" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="16" cy="30" rx="12" ry="7" fill="url(#realFlameAuraGrad)" class="flame-aura"/><path class="flame-tongue flame-base" d="M16 2 C19 12, 28 17, 28 27 C28 34, 22.5 38, 16 38 C9.5 38, 4 34, 4 27 C4 18, 12 11, 16 2 Z" fill="url(#realFlameBodyGrad)"/><path class="flame-tongue flame-mid" d="M16 8 C18 15, 24 19, 24 28 C24 33, 20.5 36, 16 36 C11.5 36, 8 33, 8 28 C8 20, 14 14, 16 8 Z" fill="url(#realFlameMidGrad)"/><path class="flame-tongue flame-core" d="M16 16 C17.5 21, 21 24, 21 29 C21 33, 18.8 35, 16 35 C13.2 35, 11 33, 11 29 C11 23, 14.5 20, 16 16 Z" fill="url(#realFlameCoreGrad)"/><circle cx="12" cy="18" r="1.2" fill="#fff" class="flame-spark spark-1"/><circle cx="20" cy="14" r="1" fill="#fff" class="flame-spark spark-2"/></svg></span>`;
+    }
+    if (mainDesc) {
+      mainDesc.innerHTML = `Your subscription to <strong>@TrendzOfShahid</strong> is verified. Click below to enter Beast Games Season 2!`;
+    }
+    if (subText) subText.innerText = "✨ Enter Beast Games Season 2 ▶";
+    if (subIcon) subIcon.innerText = "👑";
     if (subBtn) {
+      subBtn.className = "gate-btn subscribe-btn fire-wave-btn";
+      subBtn.style.pointerEvents = "auto";
       subBtn.style.background = "linear-gradient(90deg, #10b981 0%, #059669 100%)";
       subBtn.style.borderColor = "#10b981";
+      subBtn.style.boxShadow = "0 0 25px rgba(16, 185, 129, 0.6)";
+      subBtn.onclick = function(e) {
+        if (e) e.preventDefault();
+        completeSubscriptionUnlock();
+      };
     }
-  } else {
-    if (verifyText) verifyText.innerText = "Verifying subscription status with YouTube...";
-    if (subFill) subFill.style.width = "85%";
-    if (subBtn) subBtn.style.pointerEvents = "none";
+    if (subBox) subBox.style.display = "block";
+    if (subFill) {
+      subFill.style.width = "100%";
+      subFill.style.background = "linear-gradient(90deg, #10b981, #059669)";
+    }
+    if (spinner) spinner.style.display = "none";
+    if (verifyText) verifyText.innerHTML = "✅ Verified! Click <strong>'Enter Beast Games Season 2 ▶'</strong> above to launch the website.";
 
-    setTimeout(() => {
-      completeSubscriptionUnlock();
-    }, 750);
+    // Strictly NO auto timer! The gate remains stationary waiting for user click.
+  } else {
+    // Locked! Compulsory YouTube redirection required
+    if (intervalBadge) {
+      intervalBadge.innerText = "🛡️ Compulsory Checkpoint • YouTube Subscription Required";
+    }
+    if (statusPill) {
+      statusPill.style.display = "inline-block";
+      statusPill.innerText = "🔒 Channel Subscription Locked";
+      statusPill.style.background = "#ef4444";
+    }
+    if (mainHeading) {
+      mainHeading.innerHTML = `<span class="realistic-fire-flame" aria-hidden="true"><svg class="fire-flame-svg" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="16" cy="30" rx="12" ry="7" fill="url(#realFlameAuraGrad)" class="flame-aura"/><path class="flame-tongue flame-base" d="M16 2 C19 12, 28 17, 28 27 C28 34, 22.5 38, 16 38 C9.5 38, 4 34, 4 27 C4 18, 12 11, 16 2 Z" fill="url(#realFlameBodyGrad)"/><path class="flame-tongue flame-mid" d="M16 8 C18 15, 24 19, 24 28 C24 33, 20.5 36, 16 36 C11.5 36, 8 33, 8 28 C8 20, 14 14, 16 8 Z" fill="url(#realFlameMidGrad)"/><path class="flame-tongue flame-core" d="M16 16 C17.5 21, 21 24, 21 29 C21 33, 18.8 35, 16 35 C13.2 35, 11 33, 11 29 C11 23, 14.5 20, 16 16 Z" fill="url(#realFlameCoreGrad)"/><circle cx="12" cy="18" r="1.2" fill="#fff" class="flame-spark spark-1"/><circle cx="20" cy="14" r="1" fill="#fff" class="flame-spark spark-2"/></svg></span> Weekly YouTube Checkpoint <span class="realistic-fire-flame" aria-hidden="true"><svg class="fire-flame-svg" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="16" cy="30" rx="12" ry="7" fill="url(#realFlameAuraGrad)" class="flame-aura"/><path class="flame-tongue flame-base" d="M16 2 C19 12, 28 17, 28 27 C28 34, 22.5 38, 16 38 C9.5 38, 4 34, 4 27 C4 18, 12 11, 16 2 Z" fill="url(#realFlameBodyGrad)"/><path class="flame-tongue flame-mid" d="M16 8 C18 15, 24 19, 24 28 C24 33, 20.5 36, 16 36 C11.5 36, 8 33, 8 28 C8 20, 14 14, 16 8 Z" fill="url(#realFlameMidGrad)"/><path class="flame-tongue flame-core" d="M16 16 C17.5 21, 21 24, 21 29 C21 33, 18.8 35, 16 35 C13.2 35, 11 33, 11 29 C11 23, 14.5 20, 16 16 Z" fill="url(#realFlameCoreGrad)"/><circle cx="12" cy="18" r="1.2" fill="#fff" class="flame-spark spark-1"/><circle cx="20" cy="14" r="1" fill="#fff" class="flame-spark spark-2"/></svg></span>`;
+    }
+    if (mainDesc) {
+      mainDesc.innerHTML = `Compulsory access: You must visit and subscribe to <strong>@TrendzOfShahid</strong> on YouTube to unlock Beast Games Season 2!`;
+    }
+    if (subText) subText.innerText = "🔴 Go to YouTube & Subscribe to @TrendzOfShahid";
+    if (subIcon) subIcon.innerText = "🔴";
+    if (subBtn) {
+      subBtn.className = "gate-btn subscribe-btn fire-wave-btn";
+      subBtn.style.pointerEvents = "auto";
+      subBtn.style.background = "";
+      subBtn.style.borderColor = "";
+      subBtn.style.boxShadow = "";
+      subBtn.onclick = handleSubscribeAction;
+    }
+    if (subBox) subBox.style.display = "block";
+    if (subFill) {
+      subFill.style.width = "0%";
+      subFill.style.background = "linear-gradient(90deg, #ef4444, #f59e0b)";
+    }
+    if (spinner) spinner.style.display = "none";
+    if (verifyText) {
+      verifyText.innerHTML = "👉 Click the red button above to go to YouTube. Website unlocks when you return from subscribing!";
+    }
   }
+}
+window.showSubscribeGate = showSubscribeGate;
+
+function handleSubscribeAction(e) {
+  if (typeof playBeastSound === "function") playBeastSound("click");
+  const isOwner = localStorage.getItem("beast_is_owner") === "true";
+
+  if (isOwner) {
+    if (e) e.preventDefault();
+    completeSubscriptionUnlock();
+    return;
+  }
+
+  // Strictly DO NOT bypass here: EVERY visitor MUST be redirected to YouTube
+  const ytUrl = "https://www.youtube.com/@TrendzOfShahid?sub_confirmation=1";
+
+  // Record pending redirect timestamp for return verification
+  ytRedirectPendingTime = Date.now();
+  sessionStorage.setItem("beast_yt_redirect_timestamp", Date.now().toString());
+  sessionStorage.setItem("beast_yt_redirect_in_progress", "true");
+
+  const subBox = document.getElementById("subVerifyingBox");
+  const verifyText = document.getElementById("subVerifyText");
+  const spinner = document.getElementById("gateSpinner");
+  const subFill = document.getElementById("subVerifyFill");
+  const gateAlert = document.getElementById("gateAlert");
+
+  if (gateAlert) gateAlert.style.display = "none";
+  if (subBox) subBox.style.display = "block";
+  if (spinner) spinner.style.display = "block";
+  if (subFill) {
+    subFill.style.width = "65%";
+    subFill.style.background = "linear-gradient(90deg, #38bdf8, #06b6d4)";
+  }
+  if (verifyText) {
+    verifyText.innerHTML = "🔄 <strong>Opening @TrendzOfShahid on YouTube...</strong> Please subscribe on YouTube! When you return to this tab, tap <strong>'Enter Beast Games Season 2 ▶'</strong>.";
+  }
+
+  // Guaranteed multi-strategy redirect to YouTube
+  try {
+    window.open(ytUrl, "_blank", "noopener,noreferrer");
+  } catch (err) {}
+  // Do NOT call e.preventDefault(), so the natural link navigation also opens YouTube
 }
 window.handleSubscribeAction = handleSubscribeAction;
 
+function directRedirectToYouTube() {
+  if (typeof playBeastSound === "function") playBeastSound("click");
+  const ytUrl = "https://www.youtube.com/@TrendzOfShahid?sub_confirmation=1";
+  sessionStorage.setItem("beast_yt_redirect_timestamp", Date.now().toString());
+  sessionStorage.setItem("beast_yt_redirect_in_progress", "true");
+  try {
+    window.open(ytUrl, "_blank", "noopener,noreferrer");
+  } catch (e) {}
+  window.location.href = ytUrl;
+}
+window.directRedirectToYouTube = directRedirectToYouTube;
+
+function openChannelDirectly(e) {
+  if (typeof playBeastSound === "function") playBeastSound("click");
+  const ytUrl = "https://www.youtube.com/@TrendzOfShahid?sub_confirmation=1";
+  ytRedirectPendingTime = Date.now();
+  sessionStorage.setItem("beast_yt_redirect_timestamp", Date.now().toString());
+  sessionStorage.setItem("beast_yt_redirect_in_progress", "true");
+
+  const subBox = document.getElementById("subVerifyingBox");
+  const verifyText = document.getElementById("subVerifyText");
+  const spinner = document.getElementById("gateSpinner");
+  const subFill = document.getElementById("subVerifyFill");
+
+  if (subBox) subBox.style.display = "block";
+  if (spinner) spinner.style.display = "block";
+  if (subFill) subFill.style.width = "65%";
+  if (verifyText) {
+    verifyText.innerHTML = "🔄 Opening @TrendzOfShahid on YouTube... Complete your subscription! When you return, your weekly pass will automatically verify.";
+  }
+
+  try {
+    const win = window.open(ytUrl, "_blank", "noopener,noreferrer");
+    if (!win && window.self === window.top) {
+      window.location.href = ytUrl;
+    }
+  } catch (err) {
+    if (window.self === window.top) {
+      window.location.href = ytUrl;
+    }
+  }
+}
+window.openChannelDirectly = openChannelDirectly;
+
 // =========================================================================
-// ✨ STEP 4 CONTROLLERS: REPLAY ANIMATION & OPEN WEBSITE
+// ✨ STEP 4 CONTROLLERS: FINAL WEBSITE TRANSITION (3D DIORAMA) -> OPENS WEBSITE
 // =========================================================================
 function completeSubscriptionUnlock() {
-  sessionStorage.setItem(SESSION_UNLOCKED_KEY, "true");
-  sessionStorage.setItem(FLOW_COMPLETED_SESSION_KEY, "true");
+  if (weeklyAutoUnlockTimer) {
+    clearTimeout(weeklyAutoUnlockTimer);
+    weeklyAutoUnlockTimer = null;
+  }
   localStorage.setItem("beast_user_subscribed", "true");
-  isSubscribingStep2 = false;
+  sessionStorage.setItem(SESSION_UNLOCKED_KEY, "true");
 
   const gate = document.getElementById("gate");
   const subFill = document.getElementById("subVerifyFill");
@@ -12140,8 +13717,11 @@ function completeSubscriptionUnlock() {
   const spinner = document.getElementById("gateSpinner");
 
   if (spinner) spinner.style.display = "none";
-  if (subFill) subFill.style.width = "100%";
-  if (verifyText) verifyText.innerText = "✅ Subscription Confirmed! Launching 3D Hub...";
+  if (subFill) {
+    subFill.style.width = "100%";
+    subFill.style.background = "linear-gradient(90deg, #10b981, #059669)";
+  }
+  if (verifyText) verifyText.innerHTML = "✅ Subscription Confirmed! Launching 3D Hub...";
 
   try {
     if (typeof playBeastSound === "function") playBeastSound("unlock");
@@ -12154,13 +13734,158 @@ function completeSubscriptionUnlock() {
       gate.style.setProperty("display", "none", "important");
     }
 
-    // STEP 4: REPLAY 5-SECOND 3D ANIMATION TRANSITION THEN REVEAL WEBSITE
+    // ---------------------------------------------------------------------
+    // STRICT STEP 4 — FINAL WEBSITE TRANSITION (3D DIORAMA / FLIP CARD LOGIC)
+    // ---------------------------------------------------------------------
     playCinematic3DMiniatureTransition(() => {
       openSiteProperly();
-    });
-  }, 600);
+    }, "unlock");
+  }, 400);
 }
 window.completeSubscriptionUnlock = completeSubscriptionUnlock;
+
+// =========================================================================
+// 🚀 STEP 4 COMPLETION: OPEN MAIN WEBSITE SAFELY & RELIABLY
+// =========================================================================
+function openSiteProperly() {
+  const gate = document.getElementById("gate");
+  const enroll = document.getElementById("enrollmentScreen");
+  const overlay = document.getElementById("beastMiniatureTransition");
+  const site = document.getElementById("site");
+
+  if (overlay) {
+    overlay.style.opacity = "0";
+    overlay.style.setProperty("display", "none", "important");
+  }
+  if (gate) {
+    gate.classList.add("gate-hidden");
+    gate.style.setProperty("display", "none", "important");
+  }
+  if (enroll) {
+    enroll.classList.add("hidden");
+    enroll.style.setProperty("display", "none", "important");
+  }
+  if (site) {
+    site.classList.remove("hidden");
+    site.style.removeProperty("display");
+    site.style.display = "block";
+  }
+
+  document.body.style.overflow = "auto";
+  document.documentElement.style.overflow = "auto";
+
+  // Ensure header profile avatar displays whatever the user enrolled!
+  updateHeaderProfileDisplay();
+
+  if (typeof openScreen === "function") {
+    openScreen("homeScreen");
+  }
+
+  isSiteFullyOpened = true;
+  if (typeof updateAllCardProgress === "function") updateAllCardProgress();
+  if (typeof checkAchievements === "function") checkAchievements();
+  if (typeof fetchGlobalRatings === "function") fetchGlobalRatings();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+window.openSiteProperly = openSiteProperly;
+
+// =========================================================================
+// 👤 USER PROFILE HEADER & MODAL DISPLAY CONTROLLERS
+// =========================================================================
+function updateHeaderProfileDisplay() {
+  const name = localStorage.getItem("beast_user_name") || localStorage.getItem("beast_user_id") || "User 1";
+  const avatar = localStorage.getItem("beast_user_avatar") || "👤";
+  const isOwner = localStorage.getItem("beast_is_owner") === "true";
+
+  // 1. Header Profile Button Avatar Chip (Top Bar)
+  const headerAvatarEl = document.getElementById("headerProfileAvatar");
+  if (headerAvatarEl) {
+    if (avatar.startsWith("data:image/") || avatar.startsWith("http")) {
+      headerAvatarEl.innerHTML = `<img src="${avatar}" alt="Avatar" style="width:100%; height:100%; object-fit:cover; border-radius:50%; display:block;" />`;
+    } else {
+      headerAvatarEl.innerText = avatar;
+    }
+  }
+
+  const headerBtnEl = document.getElementById("headerProfileBtn");
+  if (headerBtnEl) {
+    headerBtnEl.title = `${name} (${isOwner ? "👑 Creator" : "Official Contestant"})`;
+    if (isOwner) {
+      headerBtnEl.style.borderColor = "#facc15";
+      headerBtnEl.style.boxShadow = "0 0 15px rgba(250, 204, 21, 0.6)";
+    }
+  }
+
+  // 2. Profile Modal fields
+  const modalAvatar = document.getElementById("profileModalAvatar");
+  if (modalAvatar) {
+    if (avatar.startsWith("data:image/") || avatar.startsWith("http")) {
+      modalAvatar.innerHTML = `<img src="${avatar}" alt="Avatar" style="width:100%; height:100%; object-fit:cover; border-radius:50%; display:block;" />`;
+    } else {
+      modalAvatar.innerText = avatar;
+    }
+  }
+
+  const modalName = document.getElementById("profileModalName");
+  if (modalName) modalName.innerText = name;
+
+  const modalId = document.getElementById("profileModalIdText");
+  if (modalId) modalId.innerText = name;
+
+  const modalRole = document.getElementById("profileModalRoleBadge");
+  if (modalRole) {
+    if (isOwner) {
+      modalRole.innerText = "👑 Official Creator & Host";
+      modalRole.style.color = "#facc15";
+      modalRole.style.background = "rgba(250, 204, 21, 0.18)";
+      modalRole.style.borderColor = "#facc15";
+    } else {
+      modalRole.innerText = "⭐ Official Contestant";
+      modalRole.style.color = "#38bdf8";
+      modalRole.style.background = "rgba(56, 189, 248, 0.15)";
+      modalRole.style.borderColor = "rgba(56, 189, 248, 0.3)";
+    }
+  }
+
+  const modalSaved = document.getElementById("profileModalSavedStatus");
+  if (modalSaved) {
+    const isSaved = localStorage.getItem("beast_save_login_info") !== "false";
+    modalSaved.innerText = isSaved ? "Saved on Device" : "Temporary Session";
+    modalSaved.style.color = isSaved ? "#10b981" : "#f59e0b";
+  }
+
+  // 3. Live Chat identity sync
+  if (typeof updateChatIdentityDisplay === "function") {
+    try { updateChatIdentityDisplay(); } catch (e) {}
+  }
+}
+window.updateHeaderProfileDisplay = updateHeaderProfileDisplay;
+
+function openProfileModal() {
+  if (typeof playBeastSound === "function") playBeastSound("click");
+  updateHeaderProfileDisplay();
+  const modal = document.getElementById("profileModal");
+  if (modal) {
+    modal.style.display = "flex";
+  }
+}
+window.openProfileModal = openProfileModal;
+
+function closeProfileModal() {
+  if (typeof playBeastSound === "function") playBeastSound("click");
+  const modal = document.getElementById("profileModal");
+  if (modal) {
+    modal.style.display = "none";
+  }
+}
+window.closeProfileModal = closeProfileModal;
+
+function switchUserAccount() {
+  if (typeof playBeastSound === "function") playBeastSound("click");
+  closeProfileModal();
+  showEnrollmentScreen();
+}
+window.switchUserAccount = switchUserAccount;
 
 // Page navigation handled by main showPage routine
 
@@ -12495,9 +14220,44 @@ window.showPage = showPage;
 window.navigateToEpisodes = () => showPage("episodesPage");
 window.navigateToLiveChat = () => showPage("chatPage");
 
+// =========================================================================
+// 💬 REAL-TIME COMMUNITY CHAT STATE & CONTROLLERS
+// =========================================================================
+let activeChatReply = null;
+let selectedChatAvatar = localStorage.getItem("beast_chat_user_avatar") || localStorage.getItem("beast_user_avatar") || "👤";
+let chatMessagesCache = [];
+let chatEventSource = null;
+
+function selectChatAvatar(avatar) {
+  if (typeof playBeastSound === "function") playBeastSound("click");
+  selectedChatAvatar = avatar;
+  localStorage.setItem("beast_chat_user_avatar", avatar);
+  localStorage.setItem("beast_user_avatar", avatar);
+
+  const container = document.getElementById("chatAvatarOptions");
+  if (container) {
+    const buttons = container.querySelectorAll(".chat-avatar-opt");
+    buttons.forEach(btn => {
+      if (btn.innerText.trim() === avatar) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
+    });
+  }
+
+  if (typeof updateHeaderProfileDisplay === "function") {
+    updateHeaderProfileDisplay();
+  }
+  if (typeof updateChatIdentityDisplay === "function") {
+    updateChatIdentityDisplay();
+  }
+}
+window.selectChatAvatar = selectChatAvatar;
+
 // WhatsApp Quoted Reply Management
 function setChatReply(msgId, sender, textSnippet) {
-  playBeastSound("click");
+  if (typeof playBeastSound === "function") playBeastSound("click");
   activeChatReply = {
     id: msgId,
     sender: sender,
@@ -12519,6 +14279,15 @@ function setChatReply(msgId, sender, textSnippet) {
 }
 window.setChatReply = setChatReply;
 
+function handleReplyBtnClick(btn) {
+  if (!btn) return;
+  const id = btn.getAttribute("data-msg-id") || "";
+  const sender = decodeURIComponent(btn.getAttribute("data-sender") || "");
+  const text = decodeURIComponent(btn.getAttribute("data-text") || "");
+  setChatReply(id, sender, text);
+}
+window.handleReplyBtnClick = handleReplyBtnClick;
+
 function cancelChatReply() {
   activeChatReply = null;
   const banner = document.getElementById("chatReplyBanner");
@@ -12536,14 +14305,21 @@ function insertChatEmoji(emoji) {
 }
 window.insertChatEmoji = insertChatEmoji;
 
-// Relative Time Formatter
+// Precise Time & Date Formatter reflecting exact time of message dispatch
 function formatMessageTime(timestamp) {
-  const diffSec = Math.floor((Date.now() - timestamp) / 1000);
-  if (diffSec < 45) return "Just now";
-  if (diffSec < 3600) return `${Math.floor(diffSec / 60)}m ago`;
-  if (diffSec < 86400) return `${Math.floor(diffSec / 3600)}h ago`;
-  const date = new Date(timestamp);
-  return date.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+  if (!timestamp) return "";
+  const d = new Date(timestamp);
+  if (isNaN(d.getTime())) return "";
+  const timeStr = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+  const dateStr = d.toLocaleDateString([], { month: 'short', day: 'numeric', year: 'numeric' });
+  return `${timeStr} • ${dateStr}`;
+}
+
+function formatMessageTimeTooltip(timestamp) {
+  if (!timestamp) return "";
+  const d = new Date(timestamp);
+  if (isNaN(d.getTime())) return "";
+  return `Sent: ${d.toLocaleDateString([], { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} at ${d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true })} (Exact: ${d.toISOString()})`;
 }
 
 // Render Messages List (Only Real Chats)
@@ -12583,17 +14359,28 @@ function renderChatMessages(messages) {
     }
 
     const rx = msg.reactions || { fire: 0, heart: 0, laugh: 0, clap: 0 };
+    const avatarContent = (msg.avatar && (msg.avatar.startsWith("data:image/") || msg.avatar.startsWith("http")))
+      ? `<img src="${msg.avatar}" alt="${msg.sender}" class="chat-msg-avatar-img" />`
+      : (msg.avatar || (isCreator ? '👑' : '👤'));
+
+    const safeSenderAttr = encodeURIComponent(msg.sender || "");
+    const safeTextAttr = encodeURIComponent(msg.text || "");
+    const formattedTime = formatMessageTime(msg.timestamp);
+    const tooltipText = formatMessageTimeTooltip(msg.timestamp);
 
     htmlStr += `
       <div class="chat-msg-item ${isCreator ? 'is-creator' : ''}" id="chat-${msg.id}">
-        <div class="chat-msg-avatar" title="${isCreator ? 'Verified Show Creator' : msg.sender}">${msg.avatar || (isCreator ? '👑' : '👤')}</div>
+        <div class="chat-msg-avatar" title="${isCreator ? 'Verified Show Creator' : msg.sender}">${avatarContent}</div>
         <div class="chat-msg-bubble">
           <div class="chat-msg-header">
             <div class="chat-msg-sender-wrap">
               <span class="chat-msg-sender">${msg.sender}</span>
               ${isCreator ? '<span class="creator-crown-tag">👑 Creator</span>' : ''}
             </div>
-            <span class="chat-msg-time">${formatMessageTime(msg.timestamp)}</span>
+            <span class="chat-msg-time" title="${tooltipText}" aria-label="Sent at ${formattedTime}">
+              <span class="chat-time-icon">🕒</span>
+              <span>${formattedTime}</span>
+            </span>
           </div>
           ${replyHtml}
           <div class="chat-msg-text">${cleanText}</div>
@@ -12604,7 +14391,7 @@ function renderChatMessages(messages) {
               <button type="button" class="chat-react-btn" onclick="reactToMessage('${msg.id}', 'clap')">👏 ${rx.clap || 0}</button>
               <button type="button" class="chat-react-btn" onclick="reactToMessage('${msg.id}', 'laugh')">😂 ${rx.laugh || 0}</button>
             </div>
-            <button type="button" class="chat-reply-action-btn" onclick="setChatReply('${msg.id}', '${msg.sender.replace(/'/g, "\'")}', '${cleanText.replace(/'/g, "\'")}')">
+            <button type="button" class="chat-reply-action-btn" data-msg-id="${msg.id}" data-sender="${safeSenderAttr}" data-text="${safeTextAttr}" onclick="handleReplyBtnClick(this)">
               <span>↩</span>
               <span>Reply</span>
             </button>
@@ -12651,11 +14438,14 @@ async function handleChatSubmit(e) {
 
   const ownerToken = localStorage.getItem(CHAT_OWNER_TOKEN_KEY);
   const enrolledName = getEnrolledChatName();
+  const enrolledAvatar = (ownerToken || localStorage.getItem("beast_is_owner") === "true")
+    ? "👑"
+    : (localStorage.getItem("beast_user_avatar") || selectedChatAvatar || "👤");
 
   const payload = {
     text: text,
     sender: enrolledName,
-    avatar: ownerToken ? "👑" : (selectedChatAvatar || "👤"),
+    avatar: enrolledAvatar,
     token: ownerToken || undefined,
     replyTo: activeChatReply || undefined
   };
@@ -12803,9 +14593,27 @@ function updateChatIdentityDisplay() {
   const badgeEl = document.getElementById("chatCurrentUserBadge");
   const ownerBtn = document.getElementById("chatOwnerBtn");
   const logoutBtn = document.getElementById("chatLogoutBtn");
+  const composerAvatarEl = document.getElementById("chatComposerAvatarPreview");
+  const composerNameEl = document.getElementById("chatComposerNamePreview");
+  const legacyNameEl = document.getElementById("chatEnrolledUserNameDisplay");
 
   if (nameEl) nameEl.innerText = enrolledName;
-  if (avatarEl) avatarEl.innerText = avatar;
+  if (composerNameEl) composerNameEl.innerText = enrolledName;
+  if (legacyNameEl) legacyNameEl.innerText = enrolledName;
+
+  const renderAvatarContent = (el) => {
+    if (!el) return;
+    if (avatar.startsWith("data:image/") || avatar.startsWith("http")) {
+      el.innerHTML = `<img src="${avatar}" alt="Avatar" style="width:100%; height:100%; border-radius:50%; object-fit:cover; display:block;" />`;
+    } else {
+      el.innerText = avatar;
+    }
+  };
+
+  renderAvatarContent(avatarEl);
+  renderAvatarContent(composerAvatarEl);
+
+  selectedChatAvatar = avatar;
 
   if (badgeEl) {
     if (isOwner || ownerToken) {
@@ -12813,7 +14621,7 @@ function updateChatIdentityDisplay() {
       badgeEl.style.display = "inline-flex";
       badgeEl.className = "chat-role-badge creator-role";
     } else {
-      badgeEl.innerText = "👤 Community Member";
+      badgeEl.innerText = "⭐ Contestant";
       badgeEl.style.display = "inline-flex";
       badgeEl.className = "chat-role-badge viewer-role";
     }
