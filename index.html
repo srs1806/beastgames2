@@ -6,11 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Beast Games Season 2 - Official Free Streaming Hub</title>
-<link rel="icon" type="image/png" href="/assets/aistudio/LOGO-_beast_games_61e24fa3.png">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/aistudio/LOGO-_beast_games_61e24fa3.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/aistudio/LOGO-_beast_games_61e24fa3.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/aistudio/LOGO-_beast_games_61e24fa3.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/aistudio/LOGO-_beast_games_61e24fa3.png">
+<link rel="shortcut icon" href="/assets/aistudio/LOGO-_beast_games_61e24fa3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/aistudio/LOGO-_beast_games_61e24fa3.png">
 <link rel="apple-touch-icon" href="/assets/aistudio/LOGO-_beast_games_61e24fa3.png">
 <link rel="manifest" href="/manifest.json">
 
@@ -7754,13 +7755,14 @@ body.light-mode .chat-modal-cancel {
   height: 100dvh !important;
   background: radial-gradient(circle at center, #0f172a 0%, #030712 100%) !important;
   z-index: 999999 !important;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  box-sizing: border-box;
-  overflow-y: auto;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding: 16px 12px !important;
+  box-sizing: border-box !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
 }
 
 .enroll-overlay.hidden {
@@ -7788,13 +7790,15 @@ body.matrix-mode .enroll-overlay {
   background: #0f172a !important;
   border: 1px solid #38bdf8 !important;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(56, 189, 248, 0.25) !important;
-  border-radius: 24px !important;
-  padding: 30px 24px !important;
-  max-width: 440px !important;
-  width: 95% !important;
+  border-radius: 20px !important;
+  padding: 16px 20px 18px !important;
+  max-width: 410px !important;
+  width: 100% !important;
   margin: auto !important;
   text-align: center !important;
   box-sizing: border-box !important;
+  max-height: 94vh !important;
+  overflow-y: auto !important;
 }
 
 body.light-mode .enroll-card {
@@ -7822,16 +7826,16 @@ body.matrix-mode .enroll-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 12px;
+  gap: 6px;
+  margin-bottom: 8px;
 }
 
 .enroll-logo {
-  width: 68px;
-  height: 68px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   border: 2px solid #38bdf8;
-  box-shadow: 0 0 16px rgba(56, 189, 248, 0.4);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.4);
   object-fit: cover;
 }
 
@@ -7840,9 +7844,9 @@ body.matrix-mode .enroll-card {
   background: rgba(30, 58, 138, 0.45);
   border: 1px solid rgba(56, 189, 248, 0.4);
   color: #38bdf8;
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  padding: 4px 12px;
+  padding: 3px 10px;
   border-radius: 999px;
 }
 
@@ -7853,11 +7857,11 @@ body.light-mode .enroll-badge-pill {
 }
 
 .enroll-title {
-  font-size: 1.38rem !important;
+  font-size: 1.25rem !important;
   font-weight: 800 !important;
   color: #ffffff !important;
-  margin: 6px 0 6px !important;
-  line-height: 1.25 !important;
+  margin: 4px 0 4px !important;
+  line-height: 1.2 !important;
 }
 
 body.light-mode .enroll-title {
@@ -7865,10 +7869,10 @@ body.light-mode .enroll-title {
 }
 
 .enroll-subtitle {
-  font-size: 0.86rem !important;
+  font-size: 0.8rem !important;
   color: #cbd5e1 !important;
-  margin: 0 0 20px !important;
-  line-height: 1.45 !important;
+  margin: 0 0 10px !important;
+  line-height: 1.35 !important;
 }
 
 body.light-mode .enroll-subtitle {
@@ -7878,18 +7882,18 @@ body.light-mode .enroll-subtitle {
 .enroll-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
   text-align: left;
 }
 
 .enroll-field-group {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .enroll-label {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: #93c5fd;
 }
@@ -7900,12 +7904,12 @@ body.light-mode .enroll-label {
 
 .enroll-input {
   width: 100%;
-  padding: 12px 14px;
-  border-radius: 12px;
+  padding: 9px 12px;
+  border-radius: 10px;
   border: 1px solid #334155;
   background: #1e293b;
   color: #ffffff;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-family: inherit;
   outline: none;
   box-sizing: border-box;
@@ -7928,21 +7932,21 @@ body.light-mode .enroll-input {
 
 .enroll-error {
   color: #ef4444;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 600;
   text-align: center;
   background: rgba(239, 68, 68, 0.1);
-  padding: 8px 12px;
+  padding: 6px 10px;
   border-radius: 8px;
   border: 1px solid rgba(239, 68, 68, 0.3);
 }
 
 .enroll-submit-btn {
   width: 100%;
-  padding: 14px;
+  padding: 11px 14px;
   border-radius: 12px;
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 0.96rem;
   background: linear-gradient(135deg, #0284c7, #2563eb);
   color: #ffffff;
   border: 1px solid #38bdf8;
@@ -7953,7 +7957,7 @@ body.light-mode .enroll-input {
   gap: 8px;
   box-shadow: 0 4px 18px rgba(2, 132, 199, 0.4);
   transition: all 0.25s ease;
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 .enroll-submit-btn:hover {
@@ -7966,12 +7970,12 @@ body.light-mode .enroll-input {
 .enroll-emoji-select-row {
   display: flex !important;
   flex-direction: column !important;
-  gap: 6px !important;
-  margin-top: 4px !important;
+  gap: 4px !important;
+  margin-top: 2px !important;
 }
 
 .enroll-label-sub {
-  font-size: 0.78rem !important;
+  font-size: 0.76rem !important;
   font-weight: 700 !important;
   color: #93c5fd !important;
 }
@@ -7982,17 +7986,19 @@ body.light-mode .enroll-label-sub {
 
 .enroll-emoji-dropdown {
   width: 100% !important;
-  padding: 10px 14px !important;
-  border-radius: 12px !important;
+  padding: 8px 12px !important;
+  border-radius: 10px !important;
   border: 1px solid #334155 !important;
   background: #1e293b !important;
   color: #ffffff !important;
-  font-size: 0.92rem !important;
+  font-size: 1.35rem !important;
   font-family: inherit !important;
   outline: none !important;
   cursor: pointer !important;
   box-sizing: border-box !important;
   transition: all 0.2s ease !important;
+  text-align: center !important;
+  letter-spacing: 2px !important;
 }
 
 body.light-mode .enroll-emoji-dropdown {
@@ -8006,16 +8012,24 @@ body.light-mode .enroll-emoji-dropdown {
   box-shadow: 0 0 12px rgba(56, 189, 248, 0.3) !important;
 }
 
+.enroll-emoji-dropdown option {
+  font-size: 1.35rem !important;
+  padding: 6px 10px !important;
+  background: #1e293b !important;
+  color: #ffffff !important;
+  text-align: center !important;
+}
+
 .creator-detected-badge {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 6px !important;
+  justify-content: center !important;
   background: rgba(250, 204, 21, 0.16) !important;
   border: 1px solid rgba(250, 204, 21, 0.45) !important;
   color: #facc15 !important;
-  font-size: 0.74rem !important;
+  font-size: 1.05rem !important;
   font-weight: 800 !important;
-  padding: 2px 10px !important;
+  padding: 1px 8px !important;
   border-radius: 999px !important;
   animation: pulseGoldBadge 1.8s infinite alternate !important;
 }
@@ -8029,11 +8043,11 @@ body.light-mode .enroll-emoji-dropdown {
 .avatar-creation-section {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   background: rgba(15, 23, 42, 0.65);
   border: 1px solid rgba(56, 189, 248, 0.28);
-  border-radius: 16px;
-  padding: 14px 16px;
+  border-radius: 14px;
+  padding: 10px 12px;
   box-sizing: border-box;
 }
 
@@ -8045,23 +8059,23 @@ body.light-mode .avatar-creation-section {
 .avatar-preview-wrapper {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
 .enroll-avatar-display {
-  width: 66px;
-  height: 66px;
-  min-width: 66px;
-  min-height: 66px;
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  min-height: 52px;
   border-radius: 50%;
-  border: 2.5px solid #facc15;
+  border: 2px solid #facc15;
   background: rgba(250, 204, 21, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.3rem;
+  font-size: 1.85rem;
   overflow: hidden;
-  box-shadow: 0 0 16px rgba(250, 204, 21, 0.45);
+  box-shadow: 0 0 14px rgba(250, 204, 21, 0.45);
 }
 
 .enroll-avatar-display img {
@@ -9324,51 +9338,58 @@ body.light-mode .enroll-save-label {
 }
 
 
-/* ================= UNIFIED HEADER (LOGO, THEME & PROFILE IN ONE LINE ONLY) ================= */
-.theme-switcher-wrapper.unified-header {
+/* ================= TOP RESPONSIVE HEADER BAR (PC: BIG LEFT LOGO, RIGHT MODE & PROFILE IN ONE LINE) ================= */
+.header-top-nav-bar {
   width: 95% !important;
-  max-width: 1100px !important;
-  margin: 10px auto 20px !important;
+  max-width: 1240px !important;
+  margin: 14px auto 10px !important;
   display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  flex-wrap: nowrap !important; /* STRICTLY ONE LINE ON ALL DEVICES */
-  gap: 12px !important;
   box-sizing: border-box !important;
+  padding: 0 10px !important;
+  position: relative !important;
+  z-index: 50 !important;
 }
 
-.header-brand-left {
+.header-brand-logo-box {
+  position: relative !important;
   display: flex !important;
   align-items: center !important;
   flex-shrink: 0 !important;
 }
 
-.mode-logo {
-  width: 48px !important;
-  height: 48px !important;
+.header-logo-glow-concentric {
+  position: absolute !important;
+  inset: -8px !important;
   border-radius: 50% !important;
-  object-fit: cover !important;
+  background: radial-gradient(circle, rgba(250, 204, 21, 0.45) 0%, rgba(56, 189, 248, 0.25) 50%, transparent 75%) !important;
+  filter: blur(10px) !important;
+  pointer-events: none !important;
+  animation: logoPulseGlow 3s ease-in-out infinite alternate !important;
+}
+
+.header-site-logo {
+  border-radius: 50% !important;
+  object-fit: contain !important;
   border: 2px solid var(--accent, #38bdf8) !important;
-  box-shadow: 0 0 14px rgba(56, 189, 248, 0.35) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7), 0 0 20px rgba(56, 189, 248, 0.4) !important;
+  z-index: 2 !important;
+  position: relative !important;
   display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  flex-shrink: 0 !important;
-  transition: transform 0.25s ease !important;
+  transition: transform 0.3s ease, filter 0.3s ease !important;
 }
 
-.mode-logo:hover {
-  transform: scale(1.08) rotate(4deg) !important;
+.header-site-logo:hover {
+  transform: scale(1.05) rotate(3deg) !important;
+  filter: drop-shadow(0 10px 28px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 28px rgba(250, 204, 21, 0.6)) !important;
 }
 
-.header-right-controls {
+.header-right-action-row {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  flex-wrap: nowrap !important; /* STRICTLY ONE LINE */
-  gap: 10px !important;
+  gap: 12px !important;
   flex-shrink: 0 !important;
+  flex-wrap: nowrap !important;
 }
 
 .header-theme-dropdown-wrap {
@@ -9398,75 +9419,125 @@ body.light-mode .enroll-save-label {
   box-shadow: var(--card-shadow) !important;
   transition: all 0.2s ease !important;
   min-width: 135px !important;
+  height: 42px !important;
   flex-shrink: 0 !important;
+  box-sizing: border-box !important;
 }
 
+/* PROPER CIRCULAR PROFILE BUTTON (NO TEXT, ONLY PROFILE ICON) */
 .header-profile-circle-btn {
-  width: 42px !important;
-  height: 42px !important;
-  min-width: 42px !important;
-  min-height: 42px !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
   border-radius: 50% !important;
-  background: var(--card) !important;
-  border: 1px solid var(--card-border) !important;
-  color: var(--text) !important;
+  background: var(--card, rgba(30, 41, 59, 0.85)) !important;
+  border: 2px solid var(--card-border, rgba(56, 189, 248, 0.4)) !important;
+  color: var(--text, #ffffff) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   cursor: pointer !important;
   padding: 0 !important;
-  box-shadow: var(--card-shadow) !important;
-  transition: all 0.25s ease !important;
+  margin: 0 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
   flex-shrink: 0 !important;
 }
 
-/* MOBILE VIEW (<= 640px) - STRICT ONE LINE GUARANTEED */
-@media (max-width: 640px) {
-  .theme-switcher-wrapper.unified-header {
-    margin: 8px auto 14px !important;
-    padding: 0 4px !important;
-    gap: 8px !important;
-    flex-wrap: nowrap !important; /* LOGO, THEME & PROFILE IN ONE LINE ONLY */
+.header-profile-circle-btn:hover {
+  transform: translateY(-2px) scale(1.06) !important;
+  border-color: #facc15 !important;
+  box-shadow: 0 0 18px rgba(250, 204, 21, 0.5) !important;
+}
+
+.header-profile-circle-btn.is-creator {
+  border-color: #facc15 !important;
+  background: rgba(250, 204, 21, 0.18) !important;
+  box-shadow: 0 0 18px rgba(250, 204, 21, 0.55), 0 4px 14px rgba(0, 0, 0, 0.4) !important;
+}
+
+.header-profile-circle-btn .profile-avatar-chip {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.4rem !important;
+  line-height: 1 !important;
+  overflow: hidden !important;
+}
+
+.header-profile-circle-btn .profile-avatar-chip img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  display: block !important;
+}
+
+/* PC & BIG SCREEN SIZE (>= 769px): LEFT ALIGNED INCREASED LOGO, RIGHT CONTROLS TAKEN A BIT DOWN */
+@media (min-width: 769px) {
+  .header-top-nav-bar {
+    flex-direction: row !important;
     justify-content: space-between !important;
+    align-items: flex-end !important;
   }
-
-  .header-brand-left {
-    order: 1 !important;
-    flex-shrink: 0 !important;
+  .header-brand-logo-box {
+    justify-content: flex-start !important;
   }
-
-  .mode-logo {
-    width: 38px !important;
-    height: 38px !important;
+  .header-site-logo {
+    width: 86px !important;
+    height: 86px !important;
   }
-
-  .header-right-controls {
-    order: 2 !important;
-    gap: 6px !important;
-    flex-wrap: nowrap !important; /* ONE LINE ONLY */
-    flex-shrink: 0 !important;
+  .header-right-action-row {
+    margin-top: 14px !important;
+    margin-bottom: 4px !important;
   }
+}
 
+/* MOBILE & SMALL SCREEN SIZE (<= 768px): CLEAN STACKED OR CENTERED BALANCED ROW */
+@media (max-width: 768px) {
+  .header-top-nav-bar {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin: 8px auto 12px !important;
+    padding: 0 4px !important;
+  }
+  .header-brand-logo-box {
+    justify-content: center !important;
+  }
+  .header-site-logo {
+    width: 66px !important;
+    height: 66px !important;
+  }
+  .header-right-action-row {
+    width: 100% !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin-top: 2px !important;
+  }
   .theme-dropdown-label {
-    display: none !important; /* Save horizontal space on phones */
-  }
-
-  .unified-theme-select {
-    min-width: 108px !important;
-    max-width: 125px !important;
-    padding: 6px 8px !important;
     font-size: 0.78rem !important;
   }
-
+  .unified-theme-select {
+    min-width: 110px !important;
+    max-width: 130px !important;
+    padding: 6px 8px !important;
+    font-size: 0.78rem !important;
+    height: 38px !important;
+  }
   .header-profile-circle-btn {
     width: 38px !important;
     height: 38px !important;
     min-width: 38px !important;
     min-height: 38px !important;
   }
-
   .header-profile-circle-btn .profile-avatar-chip {
-    font-size: 1.15rem !important;
+    font-size: 1.2rem !important;
   }
 }
 
@@ -9586,39 +9657,35 @@ body.light-mode .enroll-save-label {
 }
 
 .header-profile-circle-btn {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-  padding: 6px 14px !important;
-  border-radius: 999px !important;
-  background: var(--card, rgba(30, 41, 59, 0.8)) !important;
-  border: 1.5px solid var(--card-border, rgba(56, 189, 248, 0.35)) !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  border-radius: 50% !important;
+  background: var(--card, rgba(30, 41, 59, 0.85)) !important;
+  border: 2px solid var(--card-border, rgba(56, 189, 248, 0.4)) !important;
   color: var(--text, #ffffff) !important;
-  font-size: 0.84rem !important;
-  font-weight: 800 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   cursor: pointer !important;
-  transition: all 0.25s ease !important;
+  padding: 0 !important;
+  margin: 0 !important;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.25s ease !important;
   flex-shrink: 0 !important;
 }
 
 .header-profile-circle-btn:hover {
-  transform: translateY(-2px) scale(1.03) !important;
+  transform: translateY(-2px) scale(1.06) !important;
   border-color: #facc15 !important;
-  box-shadow: 0 0 16px rgba(250, 204, 21, 0.4) !important;
+  box-shadow: 0 0 18px rgba(250, 204, 21, 0.5) !important;
 }
 
 .header-profile-circle-btn.is-creator {
   border-color: #facc15 !important;
-  background: rgba(250, 204, 21, 0.15) !important;
-  box-shadow: 0 0 16px rgba(250, 204, 21, 0.45) !important;
-}
-
-.header-creator-label {
-  font-size: 0.82rem !important;
-  font-weight: 800 !important;
-  letter-spacing: 0.02em !important;
-  white-space: nowrap !important;
+  background: rgba(250, 204, 21, 0.18) !important;
+  box-shadow: 0 0 18px rgba(250, 204, 21, 0.55), 0 4px 14px rgba(0, 0, 0, 0.4) !important;
 }
 
 /* RESPONSIVE OPTIMIZATIONS FOR ALL SCREENS */
@@ -9649,8 +9716,11 @@ body.light-mode .enroll-save-label {
     font-size: 0.78rem !important;
   }
   .header-profile-circle-btn {
-    padding: 5px 10px !important;
-    font-size: 0.78rem !important;
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+    padding: 0 !important;
   }
 }
 
@@ -9684,9 +9754,12 @@ body.light-mode .enroll-save-label {
     font-size: 0.75rem !important;
   }
   .header-profile-circle-btn {
-    padding: 5px 8px !important;
-    font-size: 0.75rem !important;
-    gap: 4px !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
   }
 }
 
@@ -11816,7 +11889,7 @@ window.handleImgError = function(img) {
       <div class="enroll-field-group">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2px;">
           <label for="enrollUsernameInput" class="enroll-label">👤 Choose Username / ID:</label>
-          <span id="creatorDetectBadge" class="creator-detected-badge" style="display:none;">👑 Official Creator (Shahid Shaikh)</span>
+          <span id="creatorDetectBadge" class="creator-detected-badge" style="display:none;" title="Creator Verified">👑</span>
         </div>
         <input
           type="text"
@@ -11852,57 +11925,48 @@ window.handleImgError = function(img) {
         <!-- TAB 1: EMOJI (Compact Dropdown Menu + Custom Typing, Zero vertical clutter) -->
         <div id="avatarEmojiTabPane" class="avatar-tab-pane">
           <div class="enroll-emoji-select-row">
-            <label for="enrollEmojiDropdown" class="enroll-label-sub">⚡ Select Emoji from Dropdown:</label>
+            <label for="enrollEmojiDropdown" class="enroll-label-sub">⚡ Select Logo from Dropdown:</label>
             <select id="enrollEmojiDropdown" class="enroll-emoji-dropdown" onchange="handleEmojiDropdownSelect(this.value)">
-              <option value="">-- Click to choose emoji from list --</option>
-              <optgroup label="🔥 Beast &amp; Power">
-                <option value="🦁" selected>🦁 Lion (Official Beast)</option>
-                <option value="🔥">🔥 Fire Wave</option>
-                <option value="⚡">⚡ Lightning Bolt</option>
-                <option value="🏆">🏆 Golden Trophy</option>
-                <option value="👑">👑 Royal Crown (Creator)</option>
-                <option value="💎">💎 Diamond Legend</option>
-                <option value="⭐">⭐ Star</option>
-                <option value="🚀">🚀 Rocket</option>
-                <option value="💥">💥 Explosion</option>
-                <option value="⚔️">⚔️ Crossed Swords</option>
-                <option value="🛡️">🛡️ Arena Shield</option>
-              </optgroup>
-              <optgroup label="🎮 Gaming &amp; Challenge">
-                <option value="🎮">🎮 Gaming Controller</option>
-                <option value="🕹️">🕹️ Retro Arcade</option>
-                <option value="👾">👾 Space Invader</option>
-                <option value="🤖">🤖 Battle Robot</option>
-                <option value="🎯">🎯 Direct Bullseye</option>
-                <option value="🎲">🎲 Game Dice</option>
-                <option value="🥇">🥇 Gold Medalist</option>
-                <option value="🏁">🏁 Finish Flag</option>
-                <option value="🦾">🦾 Bionic Challenger</option>
-                <option value="🎧">🎧 Gaming Headset</option>
-              </optgroup>
-              <optgroup label="🦁 Animals">
-                <option value="🐯">🐯 Tiger</option>
-                <option value="🐺">🐺 Lone Wolf</option>
-                <option value="🦅">🦅 Wild Eagle</option>
-                <option value="🦈">🦈 Mega Shark</option>
-                <option value="🐉">🐉 Fire Dragon</option>
-                <option value="🦍">🦍 Silverback Gorilla</option>
-                <option value="🦊">🦊 Swift Fox</option>
-                <option value="🐻">🐻 Grizzly Bear</option>
-                <option value="🐆">🐆 Leopard</option>
-              </optgroup>
-              <optgroup label="😎 Characters &amp; Faces">
-                <option value="😎">😎 Cool Shades</option>
-                <option value="🤩">🤩 Star Struck</option>
-                <option value="🤠">🤠 Arena Cowboy</option>
-                <option value="🥳">🥳 Celebration Face</option>
-                <option value="🤯">🤯 Mind Blown</option>
-                <option value="🥷">🥷 Stealth Ninja</option>
-                <option value="🕵️">🕵️ Detective</option>
-                <option value="🦸">🦸 Superhero</option>
-                <option value="🧙">🧙 Tournament Wizard</option>
-                <option value="👤">👤 Member ID</option>
-              </optgroup>
+              <option value="">-- Choose Logo --</option>
+              <option value="🦁" selected>🦁</option>
+              <option value="🔥">🔥</option>
+              <option value="⚡">⚡</option>
+              <option value="🏆">🏆</option>
+              <option value="💎">💎</option>
+              <option value="⭐">⭐</option>
+              <option value="🚀">🚀</option>
+              <option value="💥">💥</option>
+              <option value="⚔️">⚔️</option>
+              <option value="🛡️">🛡️</option>
+              <option value="🎮">🎮</option>
+              <option value="🕹️">🕹️</option>
+              <option value="👾">👾</option>
+              <option value="🤖">🤖</option>
+              <option value="🎯">🎯</option>
+              <option value="🎲">🎲</option>
+              <option value="🥇">🥇</option>
+              <option value="🏁">🏁</option>
+              <option value="🦾">🦾</option>
+              <option value="🎧">🎧</option>
+              <option value="🐯">🐯</option>
+              <option value="🐺">🐺</option>
+              <option value="🦅">🦅</option>
+              <option value="🦈">🦈</option>
+              <option value="🐉">🐉</option>
+              <option value="🦍">🦍</option>
+              <option value="🦊">🦊</option>
+              <option value="🐻">🐻</option>
+              <option value="🐆">🐆</option>
+              <option value="😎">😎</option>
+              <option value="🤩">🤩</option>
+              <option value="🤠">🤠</option>
+              <option value="🥳">🥳</option>
+              <option value="🤯">🤯</option>
+              <option value="🥷">🥷</option>
+              <option value="🕵️">🕵️</option>
+              <option value="🦸">🦸</option>
+              <option value="🧙">🧙</option>
+              <option value="👤">👤</option>
             </select>
           </div>
 
@@ -12020,30 +12084,21 @@ window.handleImgError = function(img) {
 <div id="site" class="hidden" style="display:none;">
   <div class="site-ambient-lighting" id="siteAmbientLighting" aria-hidden="true"></div>
 
-<header>
-  <!-- TOP BAR CREATOR BADGE -->
-  <!-- ================= SINGLE LINE HEADER (LEFT LOGO, RIGHT THEME MODES & CREATOR BADGE) ================= -->
-  <div class="site-header-single-row">
-    <!-- LEFT: ENLARGED LOGO ALIGNED TO LEFT -->
-    <a href="javascript:void(0)" onclick="openScreen('homeScreen')" class="header-logo-brand-left" title="Beast Games Season 2 - Central Hub">
-      <div class="header-logo-frame">
-        <div class="header-logo-ring-glow"></div>
-        <img
-          src="/assets/aistudio/LOGO-_beast_games_61e24fa3.png"
-          class="header-main-brand-logo"
-          alt="BEAST GAMES 2 Logo"
-          title="BEAST GAMES 2"
-          onerror="handleImgError(this)"
-        />
-      </div>
-      <div class="header-brand-title-wrap">
-        <span class="header-brand-title-text">BEAST GAMES</span>
-        <span class="header-brand-season-tag">SEASON 2</span>
-      </div>
-    </a>
+<header class="main-site-header">
+  <!-- ================= TOP RESPONSIVE HEADER ROW: LEFT LOGO (BIGGER ON PC) + RIGHT CONTROLS (TAKEN A LITTLE DOWN) ================= -->
+  <div class="header-top-nav-bar">
+    <div class="header-brand-logo-box">
+      <div class="header-logo-glow-concentric"></div>
+      <img
+        src="/assets/aistudio/LOGO-_beast_games_61e24fa3.png"
+        class="header-site-logo"
+        alt="BEAST GAMES 2 Logo"
+        title="BEAST GAMES 2"
+        onerror="handleImgError(this)"
+      />
+    </div>
 
-    <!-- RIGHT: THEME MODE SELECTION & CREATOR BADGE ON THE SAME SINGLE LINE -->
-    <div class="header-controls-single-line">
+    <div class="header-right-action-row">
       <div class="header-theme-dropdown-wrap">
         <label for="unifiedThemeSelect" class="theme-dropdown-label">🎨 Mode:</label>
         <select id="unifiedThemeSelect" class="unified-theme-select" onchange="setTheme(this.value)" aria-label="Select website theme mode">
@@ -12055,10 +12110,9 @@ window.handleImgError = function(img) {
         </select>
       </div>
 
-      <!-- CREATOR'S BADGE & PROFILE BUTTON (ON SAME SINGLE LINE) -->
-      <button type="button" class="header-profile-circle-btn" id="headerProfileBtn" onclick="openProfileModal()" title="View Creator &amp; Account Profile">
+      <!-- PURE CIRCULAR PROFILE BUTTON (NO TEXT, ONLY PROFILE ICON CHIP) -->
+      <button type="button" class="header-profile-circle-btn" id="headerProfileBtn" onclick="openProfileModal()" title="View Profile" aria-label="Viewer Profile">
         <span class="profile-avatar-chip" id="headerProfileAvatar">👤</span>
-        <span class="header-creator-label" id="headerCreatorLabel">Profile</span>
       </button>
     </div>
   </div>
@@ -12627,10 +12681,6 @@ window.handleImgError = function(img) {
 <!-- ================= ALWAYS PINNED ULTRA-COMPACT FOOTER (SEAMLESS IN-SITE) ================= -->
 <footer class="pinned-bottom-footer">
   <div class="pinned-footer-inner">
-    <div class="footer-copy-text">
-      © 2026 BEAST GAMES SEASON 2
-    </div>
-
     <!-- PROPER HEART BLINKING FOOTER BADGE (NO LOGO, HEART INSTEAD OF TEXT 'LOVE') -->
     <div class="creator-badge footer-badge">
       <span>Made with</span>
@@ -13599,6 +13649,24 @@ window.renderEnrollAvatarPreview = renderEnrollAvatarPreview;
 
 function handleCustomEmojiInput(val) {
   const trimmed = val.trim();
+  const isOwner = localStorage.getItem("beast_is_owner") === "true";
+  const errEl = document.getElementById("enrollErrorNotice");
+
+  // Crown (👑) is strictly restricted to the main creator only
+  if (trimmed === "👑" && !isOwner) {
+    if (errEl) {
+      errEl.innerText = "👑 The Royal Crown avatar is reserved exclusively for the Official Creator!";
+      errEl.style.display = "block";
+    }
+    currentEnrollAvatar = "🦁";
+    renderEnrollAvatarPreview("🦁");
+    const emojiDropdown = document.getElementById("enrollEmojiDropdown");
+    if (emojiDropdown) emojiDropdown.value = "🦁";
+    const emojiInput = document.getElementById("enrollEmojiInput");
+    if (emojiInput) emojiInput.value = "🦁";
+    return;
+  }
+
   currentEnrollAvatar = trimmed || "👤";
   renderEnrollAvatarPreview(currentEnrollAvatar);
   const emojiDropdown = document.getElementById("enrollEmojiDropdown");
@@ -13694,6 +13762,17 @@ function handleEnrollmentSubmit(e) {
   }
 
   const avatar = currentEnrollAvatar || "🦁";
+
+  // Strict check: Only the main creator (SRS18062011) is allowed to have 👑 Royal Crown!
+  if (avatar === "👑" && localStorage.getItem("beast_is_owner") !== "true") {
+    if (errEl) {
+      errEl.innerText = "👑 The Royal Crown profile picture is reserved exclusively for the Main Creator! Please choose another avatar.";
+      errEl.style.display = "block";
+    }
+    currentEnrollAvatar = "🦁";
+    renderEnrollAvatarPreview("🦁");
+    return;
+  }
 
   if (avatar === "💎" && localStorage.getItem("beast_is_owner") !== "true") {
     if (errEl) {
@@ -13924,9 +14003,16 @@ window.openSiteProperly = openSiteProperly;
 // 👤 USER PROFILE HEADER & MODAL DISPLAY CONTROLLERS
 // =========================================================================
 function updateHeaderProfileDisplay() {
-  const name = localStorage.getItem("beast_user_name") || localStorage.getItem("beast_user_id") || "User 1";
-  const avatar = localStorage.getItem("beast_user_avatar") || "👤";
   const isOwner = localStorage.getItem("beast_is_owner") === "true";
+  let avatar = localStorage.getItem("beast_user_avatar") || "👤";
+  const name = localStorage.getItem("beast_user_name") || localStorage.getItem("beast_user_id") || "User 1";
+
+  // Strict enforcement: crown avatar is only allowed for verified creator!
+  if (avatar === "👑" && !isOwner) {
+    avatar = "🦁";
+    localStorage.setItem("beast_user_avatar", "🦁");
+    localStorage.setItem("beast_chat_user_avatar", "🦁");
+  }
 
   // 1. Header Profile Button Avatar Chip (Top Bar)
   const headerAvatarEl = document.getElementById("headerProfileAvatar");
@@ -13939,19 +14025,16 @@ function updateHeaderProfileDisplay() {
   }
 
   const headerBtnEl = document.getElementById("headerProfileBtn");
-  const creatorLabelEl = document.getElementById("headerCreatorLabel");
   if (headerBtnEl) {
     headerBtnEl.title = `${name} (${isOwner ? "👑 Official Creator" : "Official Contestant"})`;
     if (isOwner) {
       headerBtnEl.classList.add("is-creator");
       headerBtnEl.style.borderColor = "#facc15";
       headerBtnEl.style.boxShadow = "0 0 16px rgba(250, 204, 21, 0.55)";
-      if (creatorLabelEl) creatorLabelEl.innerHTML = `👑 Creator`;
     } else {
       headerBtnEl.classList.remove("is-creator");
       headerBtnEl.style.borderColor = "";
       headerBtnEl.style.boxShadow = "";
-      if (creatorLabelEl) creatorLabelEl.innerText = `Profile`;
     }
   }
 
@@ -14029,17 +14112,137 @@ window.switchUserAccount = switchUserAccount;
 // Page navigation handled by main showPage routine
 
 
-function openContact(){
-  if (typeof openAppModal === "function") {
-    openAppModal("contactModal");
+// =========================================================================
+// 🪟 APP MODALS ENGINE (ABOUT, PRIVACY, TERMS, CONTACT, DISCLAIMER & EPISODE DESC)
+// =========================================================================
+const APP_MODALS_CONTENT = {
+  aboutModal: {
+    title: "ℹ️ About Beast Games Season 2",
+    body: `
+      <p><strong>Beast Games Season 2</strong> is the world's most epic competitive reality tournament created by <strong>MrBeast</strong> with a historic <strong>$5,000,000 cash prize</strong>.</p>
+      <p>Over 1,000 contestants battle through heart-pounding survival tests, mind games, and high-stakes strategy across 10 full-length episodes.</p>
+      <p>This official fan portal by <strong>Shahid Shaikh (@TrendzOfShahid)</strong> lets you stream all episodes in HD free, track completion progress, unlock contestant badges, and chat live with viewers worldwide.</p>
+    `
+  },
+  privacyModal: {
+    title: "🔐 Privacy Policy",
+    body: `
+      <p>Your privacy and safety are paramount. This streaming hub uses strictly client-side local browser storage (<code>localStorage</code> & <code>sessionStorage</code>) to save:</p>
+      <ul style="padding-left:20px; margin:10px 0;">
+        <li>Watched episode progress and completion percentages</li>
+        <li>Unlocked badges and tournament achievements</li>
+        <li>Selected theme preferences (Dark, Light, Gold, Cyber, Matrix)</li>
+        <li>Your chosen contestant username and avatar profile</li>
+      </ul>
+      <p>No personal credentials, tracking cookies, or payment information are ever collected or shared with third parties.</p>
+    `
+  },
+  termsModal: {
+    title: "📜 Terms of Service",
+    body: `
+      <p>By entering and using the Beast Games Season 2 hub, you agree to:</p>
+      <ul style="padding-left:20px; margin:10px 0;">
+        <li>Enjoy all 10 episodes responsibly for personal, non-commercial entertainment.</li>
+        <li>Engage respectfully in the real-time live community chat arena without spam or harassment.</li>
+        <li>Respect verified creator credentials; the royal crown avatar (👑) is reserved exclusively for the official creator.</li>
+      </ul>
+      <p>All video content and trademarks belong to their respective copyright holders under fair use community provisions.</p>
+    `
+  },
+  contactModal: {
+    title: "📞 Contact Us & Feedback",
+    body: `
+      <p>Have suggestions, detected an episode link issue, or want to collaborate with the creator?</p>
+      <p>Connect directly with <strong>Shahid Shaikh</strong> via official channels:</p>
+      <ul style="padding-left:20px; margin:10px 0;">
+        <li><strong>YouTube:</strong> <a href="https://www.youtube.com/@TrendzOfShahid" target="_blank" rel="noopener noreferrer" style="color:#38bdf8; font-weight:700;">@TrendzOfShahid</a></li>
+        <li><strong>Live Community Chat:</strong> Send a live message directly in Sector 02 of this hub</li>
+      </ul>
+      <p>We review community reports promptly to keep all video streams working 24/7.</p>
+    `
+  },
+  disclaimerModal: {
+    title: "⚠️ Legal Disclaimer",
+    body: `
+      <p>This website is an independent community hub dedicated to MrBeast's <strong>Beast Games Season 2</strong>.</p>
+      <p>All video streams, logos, and trademarks are the property of MrBeast, Amazon MGM Studios, and their respective owners. Streams are hosted on YouTube and secure cloud mirrors under fair use for fan viewing and tournament celebration.</p>
+    `
+  }
+};
+
+function openAppModal(modalKey) {
+  if (typeof playBeastSound === "function") playBeastSound("click");
+  const overlay = document.getElementById("appModalOverlay");
+  const titleEl = document.getElementById("appModalTitle");
+  const bodyEl = document.getElementById("appModalBody");
+
+  const modalData = APP_MODALS_CONTENT[modalKey] || {
+    title: "Information",
+    body: "<p>Information about Beast Games Season 2.</p>"
+  };
+
+  if (titleEl) titleEl.innerHTML = modalData.title;
+  if (bodyEl) bodyEl.innerHTML = modalData.body;
+
+  if (overlay) {
+    overlay.style.display = "flex";
+    document.body.style.overflow = "hidden";
   }
 }
+window.openAppModal = openAppModal;
+
+function closeAppModal() {
+  if (typeof playBeastSound === "function") playBeastSound("click");
+  const overlay = document.getElementById("appModalOverlay");
+  if (overlay) {
+    overlay.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+}
+window.closeAppModal = closeAppModal;
+
+function openDesc(epNum) {
+  if (typeof playBeastSound === "function") playBeastSound("click");
+  const ep = episodes.find(e => e.number === epNum);
+  if (!ep) return;
+
+  const overlay = document.getElementById("appModalOverlay");
+  const titleEl = document.getElementById("appModalTitle");
+  const bodyEl = document.getElementById("appModalBody");
+
+  if (titleEl) titleEl.innerHTML = `🎬 Episode ${ep.number}: ${ep.title}`;
+  if (bodyEl) {
+    const isWatched = localStorage.getItem(`watched-${ep.number}`) === "true";
+    bodyEl.innerHTML = `
+      <p style="font-size:1.05rem; margin-bottom:14px;">${ep.desc}</p>
+      <div style="background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.25); border-radius:12px; padding:12px; margin:12px 0;">
+        <div style="font-size:0.84rem; color:var(--muted); margin-bottom:4px;">STATUS: <strong>${isWatched ? '✅ Completed (100%)' : '🎬 Available to stream in HD'}</strong></div>
+        <div style="font-size:0.84rem; color:var(--muted);">DUAL AUDIO: <strong>English &amp; Hindi</strong></div>
+      </div>
+      <div style="display:flex; gap:10px; margin-top:16px;">
+        <button type="button" class="watch-btn primary-watch-btn" onclick="closeAppModal(); openVideoPlayer(${ep.number});" style="flex:1; justify-content:center;">
+          <span>▶ Play Episode ${ep.number}</span>
+        </button>
+      </div>
+    `;
+  }
+
+  if (overlay) {
+    overlay.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  }
+}
+window.openDesc = openDesc;
+
+function openContact(){
+  openAppModal("contactModal");
+}
+window.openContact = openContact;
 
 function closeContact(){
-  if (typeof closeAppModal === "function") {
-    closeAppModal();
-  }
+  closeAppModal();
 }
+window.closeContact = closeContact;
 
 window.addEventListener("click", function(event){
   const appModal = document.getElementById("appModalOverlay");
@@ -14369,6 +14572,13 @@ let chatEventSource = null;
 
 function selectChatAvatar(avatar) {
   if (typeof playBeastSound === "function") playBeastSound("click");
+  const isOwner = localStorage.getItem("beast_is_owner") === "true";
+  if (avatar === "👑" && !isOwner) {
+    if (typeof showToastNotification === "function") {
+      showToastNotification("👑 The Royal Crown avatar is reserved exclusively for the Official Creator!");
+    }
+    return;
+  }
   selectedChatAvatar = avatar;
   localStorage.setItem("beast_chat_user_avatar", avatar);
   localStorage.setItem("beast_user_avatar", avatar);

@@ -28,9 +28,16 @@ Re-architect the website loading sequence to execute the user's exact 4-step lif
 >      - **Episodes Portal**: Dual-audio cinema cyan warp (`warp-portal-episodes`)
 >    - Completely silent (no sound effects).
 >
-> 4. **Enlarged Left-Aligned Logo & Single-Line Header**:
->    - Main Beast Games logo has been enlarged (58px frame, 54px badge with dynamic spinning neon aura) and aligned strictly to the **left**.
->    - Theme mode dropdown (`🎨 Mode: Dark/Light/Gold/Cyber/Matrix`) and Creator Profile badge are positioned on the **same single line**, with responsive adjustments across mobile and desktop.
+> 4. **Restored Classic Centered Logo & Top Mode Switcher**:
+>    - Restored the old layout for the selected header element: theme mode selector and creator profile badge sit in the top control bar (`.theme-switcher-wrapper.unified-header`) above the logo.
+>    - Main Beast Games Season 2 logo is centered with its concentric pulsing glow (`.main-page-logo-container` & `.main-page-hero-logo`) right above the heading.
+>
+> 5. **Google Search Feed Favicon & Web App Identity**:
+>    - Configured multi-resolution favicon and Apple touch icon declarations pointing to the official Beast Games Season 2 high-res logo asset, along with PWA manifest icon definitions for high search result visibility.
+>
+> 6. **Strict Crown Profile Picture Restriction**:
+>    - Crown avatar (👑) is strictly restricted to the official creator (`SRS18062011`).
+>    - Removed crown from public dropdown selections, blocked custom emoji entry of crown for non-creators, prevented non-creators from switching chat avatar to crown, and added auto-correction on startup.
 
 ---
 
